@@ -17,6 +17,6 @@
         <p>Learn and share food-related stories</p>
         <button>Join now</button>
     </div>
-    <?php include('C:\Users\mulog\public_html\footer\footer.html'); ?>
+    <?php include('../footer/footer.html'); ?>
 </body>
 </html>
