@@ -13,12 +13,10 @@
     font-size: 15px;
     line-height: 20px;
     color: #333;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
     width: 100%;
+    margin-top: 50px;
 }
+
 
 
 

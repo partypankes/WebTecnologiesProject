@@ -1,6 +1,13 @@
 body {
-    margin: 0;
+    background: #f8f8f8; /* colore di sfondo chiaro */
+    background-image: radial-gradient(circle at 50% 50%, #ce0dd8 25%, transparent 25%),
+                      radial-gradient(circle at 80% 20%, #f8f8f8 35%, #b6e0ea 35%); /* colore azzurro tenue */
+    background-size: 2000px 2000px;
+    margin:0;
 }
+
+
+
 
 .top_bar {
     display: flex;
@@ -39,11 +46,13 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
 .title {
     font-family: "MontSerrat T";
     text-align: center;
     justify-content: center;
-    margin-top: 50px; 
+    margin-top: 100px; 
+    margin-bottom: 100px; 
 }
 
 .title h1 {
@@ -77,3 +86,21 @@ body {
     border: 2px solid #252525;
     color: #252525;
 }
+
+.media-container {
+    display: flex;
+    overflow: hidden;
+    animation: scrollMedia 40s linear infinite;
+    margin: 5px;
+}
+
+.media-container img,
+.media-container video {
+    width: 340px;
+    height: 273px;
+    border-radius: 10px;
+    margin-right: 50px;
+    object-fit: cover;
+}
+
+

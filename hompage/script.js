@@ -1,15 +1,38 @@
-let currentIndex = 0;
-const images = document.querySelectorAll(".carousel-inner img");
-const totalImages = images.length;
+document.addEventListener("DOMContentLoaded", function () {
+    const mediaContainer = document.querySelector(".media-container");
+    let mediaItems = document.querySelectorAll(".media-container img, .media-container video");
 
-function moveCarousel() {
-    currentIndex++;
-    if (currentIndex >= totalImages) {
-        currentIndex = 0;
+    // Funzione per clonare e aggiungere elementi
+    function cloneAndAppendItems() {
+        mediaItems.forEach(item => {
+            const clone = item.cloneNode(true);
+            mediaContainer.appendChild(clone);
+        });
+        mediaItems = document.querySelectorAll(".media-container img, .media-container video");
     }
-    const newTransformValue = currentIndex * -100;
-    document.querySelector(".carousel-inner").style.transform = `translateX(${newTransformValue}%)`;
-}
 
-// Imposta il carosello per scorrere ogni 3 secondi
-setInterval(moveCarousel, 3000);
+    // Clona inizialmente gli elementi
+    cloneAndAppendItems();
+
+     // Avvia i video automaticamente e disattiva l'audio
+     const videos = document.querySelectorAll(".media-container video");
+     videos.forEach(video => {
+         video.autoplay = true;
+         video.load();
+         video.muted = true; // Disattiva l'audio
+         video.loop=1;
+         video.removeAttribute("controls"); // Rimuove i controlli
+     });
+
+    // Funzione per spostare il contenitore
+    function scrollMedia() {
+        if (mediaContainer.scrollLeft < mediaContainer.scrollWidth - mediaContainer.clientWidth) {
+            mediaContainer.scrollLeft += 1;
+        } else {
+            mediaContainer.scrollLeft = 0;
+        }
+    }
+
+    // Imposta l'intervallo per lo scorrimento
+    setInterval(scrollMedia, 20);
+});
