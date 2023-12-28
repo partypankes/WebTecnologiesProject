@@ -1,31 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
     const mediaContainer = document.querySelector(".media-container");
-    let mediaItems = document.querySelectorAll(".media-container img, .media-container video");
+    const originalMediaItems = document.querySelectorAll(".media-container img, .media-container video");
 
     // Funzione per clonare e aggiungere elementi
     function cloneAndAppendItems() {
-        mediaItems.forEach(item => {
+        originalMediaItems.forEach(item => {
             const clone = item.cloneNode(true);
             mediaContainer.appendChild(clone);
         });
-        mediaItems = document.querySelectorAll(".media-container img, .media-container video");
     }
 
     // Clona inizialmente gli elementi
     cloneAndAppendItems();
 
-     // Avvia i video automaticamente e disattiva l'audio
-     const videos = document.querySelectorAll(".media-container video");
-     videos.forEach(video => {
-         video.autoplay = true;
-         video.load();
-         video.muted = true; // Disattiva l'audio
-         video.loop=1;
-         video.removeAttribute("controls"); // Rimuove i controlli
-     });
+    // Imposta i video
+    function setupVideos() {
+        const videos = mediaContainer.querySelectorAll("video");
+        videos.forEach(video => {
+            video.autoplay = true;
+            video.load();
+            video.muted = true;
+            video.loop = true;
+            video.removeAttribute("controls");
+        });
+    }
+
+    setupVideos();
 
     // Funzione per spostare il contenitore
     function scrollMedia() {
+        // Se siamo vicini alla fine, clona e aggiungi elementi
+        if (mediaContainer.scrollLeft > mediaContainer.scrollWidth - mediaContainer.clientWidth - 100) {
+            cloneAndAppendItems();
+            setupVideos(); // Assicurati di impostare i nuovi video
+        }
+
         if (mediaContainer.scrollLeft < mediaContainer.scrollWidth - mediaContainer.clientWidth) {
             mediaContainer.scrollLeft += 1;
         } else {
