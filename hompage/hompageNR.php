@@ -42,7 +42,7 @@ $mediaPaths = array_merge($imagePaths, $videoPaths);
             if ($item['type'] === 'image') {
                 echo '<img src="' . $item['path'] . '" alt="' . $item['alt'] . '">';
             } elseif ($item['type'] === 'video') {
-                echo '<video controls width="340" height="273" muted>
+                echo '<video>
                         <source src="' . $item['path'] . '" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>';
