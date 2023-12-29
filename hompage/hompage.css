@@ -7,8 +7,6 @@ body {
 }
 
 
-
-
 .top_bar {
     display: flex;
     justify-content: space-between;
@@ -49,10 +47,10 @@ body {
 
 .title {
     font-family: "MontSerrat T";
-    text-align: center;
-    justify-content: center;
+    text-align: left;
     margin-top: 100px; 
     margin-bottom: 100px; 
+    margin-left: 50px;
 }
 
 .title h1 {
@@ -90,17 +88,19 @@ body {
 .media-container {
     display: flex;
     overflow: hidden;
-    animation: scrollMedia 40s linear infinite;
+    justify-content: flex-start;
+    align-items: center;
     margin: 5px;
 }
 
 .media-container img,
 .media-container video {
-    width: 340px;
-    height: 273px;
-    border-radius: 10px;
-    margin-right: 50px;
+    width: 200px; /* Dimensione base */
+    height: auto;
+    transition: transform 0.3s ease, width 0.3s ease;
     object-fit: cover;
+    margin: 0 5px; /* Spaziatura tra gli elementi */
 }
+
 
 
