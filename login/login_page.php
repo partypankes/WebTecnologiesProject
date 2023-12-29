@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,14 +17,14 @@
 
 
     <div class="login-data">
-    <form action="/your-login-endpoint" method="post">
+    <form action="login.php" method="post">
         <label for="username">Enter your email:</label>
         <input type="text" id="username" name="username" placeholder="Your Username" required>
         <br>
         <label for="password">Enter your Password:</label>
         <input type="password" id="password" name="password" placeholder="Your Password" required>
 
-        <button type="submit">Login</button>
+         <button type="submit">Login</button>
     </form>
     </div>
 </div>

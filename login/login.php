@@ -2,25 +2,31 @@
 
 
 session_start();
-$username = $_POST['username'];
-$provided_password = $_POST['password'];
-require_once 'dbconnection.php';
-$sql = "SELECT password FROM users WHERE username = $1";
-if(isset($db)) {
-    $result = pg_query_params($db, $sql, $username);
-}
-else {
-    echo "Db connection error";
-}
 
-if ($row = pg_fetch_assoc($result)) {
-    $hashed_password = $row['password'];
-} else {
-    echo "Username non trovato";
-}
 
-if (password_verify($provided_password, $hashed_password)) {
-    // Successo, le password corrispondono
-} else {
-    // Fallimento, le password non corrispondono
-}
+
+
+    require_once '../dbconnection.php';
+    if(isset($db)) {
+        $username = $_POST['username'];
+        $sql = 'SELECT * FROM users WHERE username = $1';
+
+        $result = pg_query_params($db,$sql,array((string)$username));
+
+        if ($row = pg_fetch_assoc($result)) {
+            $hashed_password = $row['password'];
+            if (password_verify($_POST['password'], $hashed_password)) {
+                echo "le password corrispondono";
+            } else {
+                echo "ha inserito la password sbagliata";
+            }
+        } else {
+            echo "Username non trovato";
+        }
+    }
+    else {
+        echo "Db connection error";
+    }
+
+
+
