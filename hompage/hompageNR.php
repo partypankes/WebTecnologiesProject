@@ -30,69 +30,15 @@
         <button class="join-btn">Join Now</button>
     </nav>
 
-        <div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        <div class="introduction">
+            <div class="description">
+            <h1>Semplice e intuitivo fin da subito</h1>
+            <p>Facile da usare, design semplice e minimalista.</p>
+            </div>
+            <div class="photo">
+                <img src="..\hompage\immagini\IMG7.jpg" alt="IMMAGINE 1">
+            </div>
+
         </div>
 
     <script src="script.js"></script>
