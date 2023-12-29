@@ -5,6 +5,7 @@ body {
     background-size: 2000px 2000px;
     margin: 0;
     padding: 0;
+    font-family: "MontSerrat T";
 }
 
 
@@ -152,3 +153,46 @@ body {
     border: 2px solid #ce0dd8;
     color: #fff;
 }
+
+
+.introduction {
+    margin-top: 300px;
+    margin-bottom: 300px;
+    background-color: #f0f0f0;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.introduction .description {
+    width: 470px;
+    height: 204px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Allineamento orizzontale al centro */
+    justify-content: center; /* Allineamento verticale al centro */
+}
+
+.introduction .description h1 {
+    font-size: 62px;
+}
+
+.introduction .description p {
+    font-size: 24px;
+}
+
+.introduction .photo{
+    margin-right: 150px;
+}
+
+.introduction .photo img{
+    border-radius: 10px;
+    width: 430px;
+    height: 430px;
+}
+
+
+
+
