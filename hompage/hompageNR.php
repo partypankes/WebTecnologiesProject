@@ -34,10 +34,20 @@
             <div class="description">
             <h1>Semplice e intuitivo fin da subito</h1>
             <p>Facile da usare, design semplice e minimalista.</p>
+            <button class="prova-btn">Prova gratuitamente</button>
             </div>
             <div class="photo">
                 <img src="..\hompage\immagini\IMG7.jpg" alt="IMMAGINE 1">
             </div>
+        
+
+        </div>
+        <div class="intermediate">
+        <p>Caratteristiche</p>
+        <h2>Personalizza la tua esperienza</h2>
+        <p>Con l'aumento del lavoro da remoto, è importante che le aziende si adattino al cambiamento.</p>
+        <img src="..\hompage\immagini\IMG5.jpg" alt="IMMAGINE 5">
+
 
         </div>
 

@@ -193,6 +193,25 @@ body {
     height: 430px;
 }
 
+.introduction .description .prova-btn {
+    padding: 10px 20px;
+    border: 2px solid #ce0dd8;
+    border-radius: 50px;
+    background-color: #ce0dd8;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.introduction .description .prova-btn:hover {
+    background-color: transparent;
+    border: 2px solid #252525;
+    color: #252525;
+}
+
 
 
 
