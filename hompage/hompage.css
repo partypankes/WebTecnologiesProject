@@ -1,0 +1,345 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+    background-image:  radial-gradient(circle at 80% 20%, #f8f8f8 35%, #b6e0ea 35%);
+    background-size: 2000px 2000px;
+    font-family: "MontSerrat T"
+}
+
+
+
+
+.top_bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.top_bar img {
+    margin: 10px;
+    width: 120px;
+    height: 30px;
+}
+
+.top_bar button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid #252525;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #252525;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.top_bar button:hover {
+    background-color: #ce0dd8;
+    border: 2px solid #ce0dd8;
+    color: #fff;
+}
+
+@font-face {
+    font-family: "MontSerrat T";
+    src: url('Montserrat.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title {
+    font-family: "MontSerrat T";
+    text-align: left;
+    margin-top: 100px; 
+    margin-bottom: 100px; 
+    margin-left: 50px;
+}
+
+.title h1 {
+    color: #ce0dd8;
+    font-size: 64px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.title p {
+    color: grey;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.title button {
+    padding: 10px 20px;
+    border: 2px solid #ce0dd8;
+    border-radius: 50px;
+    background-color: #ce0dd8;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.title button:hover {
+    background-color: transparent;
+    border: 2px solid #252525;
+    color: #252525;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: -60px; /* Inizialmente nascosta */
+    background-color: #fff;
+    transition: top 0.3s;
+    z-index: 1000; /* Assicura che la navbar sia sopra gli altri elementi */
+}
+
+.navbar.active {
+    top: 0;
+}
+
+.navbar img {
+    margin: 10px;
+    width: 120px;
+    height: 30px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ce0dd8;
+}
+
+.join-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid #252525;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #252525;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #ce0dd8;
+    border: 2px solid #ce0dd8;
+    color: #fff;
+}
+
+
+.introduction {
+    margin-top: 300px;
+    background-color: #f8f8f8;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+
+
+.introduction .description {
+    width: 470px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 62px;
+}
+
+p {
+    font-size: 24px;
+    color: gray;
+}
+
+.introduction .photo img{
+    border-radius: 10px;
+    width: 430px;
+    height: 430px;
+}
+.introduction .photo {
+    margin-right: 150px;
+}
+
+
+
+button {
+    padding: 10px 20px;
+    border: 2px solid #ce0dd8;
+    border-radius: 50px;
+    background-color: #ce0dd8;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid #252525;
+    color: #252525;
+}
+
+
+.intermediate {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f2e0;
+    height: auto;
+    padding: 50px;
+    margin-bottom: -50px;
+}
+
+
+
+.intermediate .first_description{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        margin-bottom: 100px;
+    
+}
+.intermediate h2{
+    font-size: 42px;
+    margin: 0;
+}
+
+.intermediate .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intermediate .image img {
+    border-radius: 10px;
+    width: 430px;
+    height: 430px;
+}
+
+
+.intermediate .second_description{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+}
+
+
+
+
+.third_description {
+    margin-top: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.third_description .text_group {
+    width: 470px; 
+    margin-left: 150px; 
+}
+
+.third_description .image {
+    width: 430px; 
+    height: 430px; 
+    margin-right: 150px; 
+    border-radius: 10px; 
+}
+
+.fourth_description {
+    margin-top: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse; 
+}
+
+.fourth_description .text_group {
+    width: 470px; 
+    margin-right: 150px; 
+}
+
+.fourth_description .image {
+    width: 430px; 
+    height: 430px; 
+    margin-left: 150px; 
+    border-radius: 10px; 
+}
+
+
+
+.animated {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: transform, opacity;
+}
+
+.introduction .photo img:hover, 
+.intermediate .image img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.fadeInUp {
+    transform: translateY(20px);
+}
+
+.fadeInDown {
+    transform: translateY(-20px);
+}
+
+.isVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
