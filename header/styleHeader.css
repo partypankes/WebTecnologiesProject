@@ -1,10 +1,15 @@
+@font-face {
+    font-family: "MontSerrat T";
+    src: url('font/Montserrat.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     position: fixed;
-    top: -60px; /* Inizialmente nascosta */
     background-color: #fff;
     transition: top 0.3s;
     z-index: 1000; /* Assicura che la navbar sia sopra gli altri elementi */
