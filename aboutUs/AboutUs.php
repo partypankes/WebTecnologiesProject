@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - SapurEat</title>
-  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="aboutUs.css">
 </head>
 <body>
 

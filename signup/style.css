@@ -1,32 +1,109 @@
+@font-face {
+    font-family: "MontSerrat T";
+    src: url('Montserrat.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    text-align: center;
     margin: 0;
     padding: 0;
+    font-family: "MontSerrat T";
 }
-.container{
+
+.login-container {
     max-width: 45%;
+    height: auto;
     margin: 100px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login-container .title{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+    text-align: center;
+}
+
+.login-container .title h1{
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+.login-container .title p{
+    margin-top: 1%;
+    color: grey;
+    font-size: 14px;
+}
+
+.login-container .login-data{
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    padding-top: 0;
+}
+
+.login-container .login-data label{
+    font-size: 12px;
 }
 
 input {
-    width: 75%;
-    padding: 10px;
+    width: 100%;
+    padding: 15px;
     margin: 10px 0;
-    border-width: 2px;
-    box-sizing: content-box;
-    border-radius: 50px;
+    border: 2px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+
 }
+
+input:focus{
+    border-color: #c235e2;
+    outline: none;
+    box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
+}
+
+
+.username-container, .password-container {
+    position: relative;
+    align-items: center;
+}
+
+.username-container label, .password-container label {
+    margin-bottom: 5px;
+}
+
+
+.username-container input[type="text"], .password-container input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+.username-container input[type="text"]:focus, .password-container input[type="password"]:focus {
+    border-color: #c235e2;
+    outline: none;
+    box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
+}
+
+#usernameIcon, #togglePassword {
+    font-weight: normal;
+    position: absolute;
+    right: 1%;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+#togglePassword{
+    cursor: pointer;
+}
+
 
 button {
     width: 80%;

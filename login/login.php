@@ -14,10 +14,8 @@ if(isset($db)) {
 
     if ($row = pg_fetch_assoc($result)) {
         $hashed_password = $row['password'];
-        if (password_verify($_POST['password'], $hashed_password)) {
-            echo "Le password corrispondono";
-        } else {
-            echo "ha inserito la password sbagliata";
+        if (!password_verify($_POST['password'], $hashed_password)) {
+            echo "Ha inserito la password sbagliata";
         }
     } else {
         echo "Username non trovato";

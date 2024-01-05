@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             if (data) {
                 document.getElementById('errorMessage').textContent = data;
             } else {
-                // Gestisci il login riuscito
+                window.location.href = '../hompage/hompageNR.php';
             }
         });
 });

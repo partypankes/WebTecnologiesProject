@@ -12,8 +12,11 @@
             <h1>SIGN UP</h1>
             <p>Join our community and start sharing!</p>
         </div>
-<form action="signup.php" method="post">
+<form id="signupForm" method="post">
+    <p id="errorMessage" style="color:red;"></p>
         <div class="info">
+
+
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
             <label for="surname">Surname:</label>
@@ -36,5 +39,6 @@
         <button type="submit">Sign Up</button>
 </form>
     </div>
+<script src="signup_validation.js"></script>
 </body>
 </html>
