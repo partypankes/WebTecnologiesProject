@@ -1,0 +1,76 @@
+@font-face {
+    font-family: "MontSerrat T";
+    src: url('../font/Montserrat.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    width: 100%;
+
+    align-items: center;
+    position: fixed;
+}
+
+.navbar {
+    font-family: "MontSerrat T", serif;
+
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.logo {
+    margin-left: 1%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 50px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ce0dd8;
+}
+
+.search-container {
+    margin-right: 1%;
+}
+
+.search-container form {
+    display: flex;
+}
+
+.search-container input[type="text"] {
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ce0dd8;
+    border-radius: 3px;
+}
+
+.search-container button {
+    background-color: #000;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #c405a4;
+}

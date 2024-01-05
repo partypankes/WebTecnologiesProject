@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "MontSerrat T";
+    src: url('../font/Montserrat.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,9 +13,6 @@ body {
     background-size: 2000px 2000px;
     font-family: "MontSerrat T";
 }
-
-
-
 
 .top_bar {
     display: flex;
@@ -41,13 +45,6 @@ body {
     background-color: #ce0dd8;
     border: 2px solid #ce0dd8;
     color: #fff;
-}
-
-@font-face {
-    font-family: "MontSerrat T";
-    src: url('Montserrat.ttf') format("truetype");
-    font-weight: normal;
-    font-style: normal;
 }
 
 .title {

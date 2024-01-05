@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +8,10 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container">
-    <h1>About Us</h1>
-  </div>
-</header>
+<?php
+    //da poter cambiare nel caso l'utente sia registrato o meno
+    include('../header/headerNonRegistrato.html');
+?>
 
 <main>
 
@@ -84,10 +83,10 @@
 
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <p>&copy; 2024 SapurEat. All rights reserved.</p>
-  </div>
+<footer>
+    <?php
+    include('../footer/footer.html');
+    ?>
 </footer>
 
 </body>
