@@ -16,7 +16,7 @@ session_start();
         if ($row = pg_fetch_assoc($result)) {
             $hashed_password = $row['password'];
             if (password_verify($_POST['password'], $hashed_password)) {
-                echo "le password corrispondono";
+                echo "Le password corrispondono";
             } else {
                 echo "ha inserito la password sbagliata";
             }

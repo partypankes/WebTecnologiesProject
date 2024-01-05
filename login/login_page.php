@@ -17,7 +17,8 @@
 
 
     <div class="login-data">
-    <form action="login.php" method="post">
+    <form id="loginForm" action="login.php" method="post">
+        <p id="errorMessage" style="color:red;"></p>
         <label for="username">Enter your email:</label>
         <input type="text" id="username" name="username" placeholder="Your Username" required>
         <br>
@@ -28,6 +29,6 @@
     </form>
     </div>
 </div>
-
+<script src="login_validation.js"></script>
 </body>
 </html>
