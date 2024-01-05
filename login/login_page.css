@@ -57,7 +57,7 @@ input {
     border-radius: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
-    
+
 }
 
 input:focus{
@@ -69,11 +69,11 @@ input:focus{
 
 .username-container, .password-container {
     position: relative;
-    align-items: center; 
+    align-items: center;
 }
 
 .username-container label, .password-container label {
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
 }
 
 
@@ -96,7 +96,7 @@ input:focus{
     font-weight: normal;
     position: absolute;
     right: 10px;
-    top: 35px; 
+    top: 35px;
     cursor: pointer;
 }
 
