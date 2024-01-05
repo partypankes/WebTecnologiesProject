@@ -8,7 +8,7 @@ require_once '../dbconnection.php';
 if(isset($db)) {
 
     $username = $_POST['username'];
-    $sql = 'SELECT * FROM users WHERE username = $1';
+    $sql = 'SELECT * FROM utente WHERE username = $1';
 
     $result = pg_query_params($db,$sql,array((string)$username));
 
