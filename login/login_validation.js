@@ -16,3 +16,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             }
         });
 });
+
+document.getElementById('togglePassword').addEventListener('click', function () {
+    const password = document.getElementById('password');
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+
+    // Cambia l'icona
+    this.classList.toggle('fa-eye');
+    this.classList.toggle('fa-eye-slash');
+});
