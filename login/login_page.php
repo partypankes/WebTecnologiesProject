@@ -23,7 +23,7 @@
         <p id="errorMessage" style="color:red;"></p>
         <div class="username-container">
             <label for="username">Enter your username:</label>
-            <input type="text" id="username" name="username" placeholder="Your Username" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'username')" required>
+            <input type="text" id="username" name="username" placeholder="Your Username" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
             <i id="usernameIcon" class="fas fa-user"></i> 
         </div>
 
@@ -31,7 +31,7 @@
 
         <div class="password-container">
         <label for="password">Enter your Password:</label>
-        <input type="password" id="password" name="password" placeholder="Your Password" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'password')" required>
+        <input type="password" id="password" name="password" placeholder="Your Password" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Password')" required>
         <i id="togglePassword" class="fas fa-eye-slash" style="cursor: pointer;"></i>
         </div>
 
