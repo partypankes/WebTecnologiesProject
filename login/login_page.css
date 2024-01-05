@@ -60,7 +60,7 @@ input {
     
 }
 
-input:focus{
+.username-container input[type="text"]:focus , .password-container input[type="password"]:focus{
     border-color: #c235e2;
     outline: none;
     box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
@@ -105,13 +105,76 @@ input:focus{
 }
 
 
-button {
-    width: 80%;
-    padding: 10px;
-    background-color: #c235e2;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
+.remember-me-container {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.remember-me-container input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    border: 1px;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+
+
+.remember-me-container input[type="checkbox"]:checked::before {
+    content: '✓';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #c235e2;
+    font-size: 14px;
+}
+
+
+.remember-me-container label {
+    margin-left: 8px;
     cursor: pointer;
 }
+
+
+.login-data .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.login-data .login #submitButton {
+    padding: 10px 20px;
+    border: 2px solid #ce0dd8;
+    border-radius: 50px;
+    background-color: #ce0dd8;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    width: 468px;
+}
+
+.login-data .login #submitButton:hover{
+    background-color: transparent;
+    border: 2px solid #252525;
+    color: #252525;
+}
+
+
 

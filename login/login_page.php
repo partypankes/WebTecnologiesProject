@@ -34,9 +34,16 @@
         <input type="password" id="password" name="password" placeholder="Your Password" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Password')" required>
         <i id="togglePassword" class="fas fa-eye-slash" style="cursor: pointer;"></i>
         </div>
-    
 
-        <button type="submit">Login</button>
+        <div class="remember-me-container">
+            <input type="checkbox" id="rememberMe" name="remember_me">
+            <label for="rememberMe">Remember Me</label>
+        </div>
+
+        <div class="login">
+            <button id="submitButton" type="submit"> Login </button>
+        </div>
+
     </form>
     </div>
 </div>
