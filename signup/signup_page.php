@@ -27,8 +27,8 @@
                 <br>
 
                 <div class="username-container">
-                    <label for="name">Enter your Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
+                    <label for="nome">Enter your Name:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Your Name" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
                 </div>
                     <br>
                 <div class="username-container">

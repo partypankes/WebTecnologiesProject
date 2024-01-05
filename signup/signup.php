@@ -10,14 +10,14 @@ if(isset($db)) {
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $sesso = $_POST['sesso'];
-    $nome = $_POST['name'];
-    $cognome = $_POST['surname'];
+    $nome = $_POST['nome'];
+    $cognome = $_POST['cognome'];
     if(userValidation($db,$username,$email)) {
         echo "Username o Email giá esistente";
     }
     else {
         $sql = 'INSERT INTO utente (username, email, password, nome, cognome, sesso) VALUES ($1,$2,$3,$4,$5,$6)';
-        $result = pg_query_params($db,$sql,array($username,$email,$password,$sesso,$nome,$cognome));
+        $result = pg_query_params($db,$sql,array($username,$email,$password,$nome,$cognome,$sesso));
     }
 
 }
