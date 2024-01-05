@@ -46,6 +46,14 @@
 
     </form>
     </div>
+
+    <hr class="divider" />
+
+    <div class="no-account">
+        <p> I don't have an account. Sign up</p>
+
+    </div>
+
 </div>
 <script src="login_validation.js"></script>
 </body>
