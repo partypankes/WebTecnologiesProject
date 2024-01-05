@@ -26,3 +26,14 @@ document.getElementById('togglePassword').addEventListener('click', function () 
     this.classList.toggle('fa-eye');
     this.classList.toggle('fa-eye-slash');
 });
+
+
+function clearPlaceholder(element) {
+    element.placeholder = '';
+}
+
+function restorePlaceholder(element, defaultPlaceholder) {
+    element.placeholder = element.getAttribute('data-placeholder') || defaultPlaceholder;
+}
+
+
