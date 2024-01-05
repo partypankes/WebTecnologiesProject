@@ -16,7 +16,7 @@ if(isset($db)) {
         echo "Username o Email giá esistente";
     }
     else {
-        $sql = 'INSERT INTO utente (username, email, password, sesso, nome, cognome) VALUES ($1,$2,$3,$4,$5,$6)';
+        $sql = 'INSERT INTO utente (username, email, password, nome, cognome, sesso) VALUES ($1,$2,$3,$4,$5,$6)';
         $result = pg_query_params($db,$sql,array($username,$email,$password,$sesso,$nome,$cognome));
     }
 
