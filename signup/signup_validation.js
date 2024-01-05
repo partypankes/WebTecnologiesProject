@@ -6,12 +6,12 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (username.length < 6 || username.length > 16) {
-        alert('Lo username deve essere lungo tra 6 e 16 caratteri.');
+        document.getElementById('errorMessage').textContent = "Lo username deve essere compreso tra i 6 e 16 caratteri";
         return;
     }
 
     if (!emailPattern.test(email)) {
-        alert('Per favore inserisci un indirizzo email valido.');
+        document.getElementById('errorMessage').
         return;
     }
 

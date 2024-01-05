@@ -4,9 +4,6 @@
 session_start();
 
 
-
-
-
 require_once '../dbconnection.php';
 if(isset($db)) {
     $username = $_POST['username'];
