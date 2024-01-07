@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "MontSerrat T";
+    src: url('../font/Montserrat.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: "MontSerrat T", serif;
+
+}
+
+
+header {
+    top: 0;
+    left: 0 ;
+    right: 0;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+}
+
