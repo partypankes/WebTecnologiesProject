@@ -5,6 +5,8 @@
     font-style: normal;
 }
 
+https://www.blackbox.ai/share/1c9a2420-940d-44ee-8cc4-35ad7ed5f3ad
+
 header {
     width: 100%;
 
@@ -27,42 +29,42 @@ header {
     margin-left: 1%;
 }
 
-.nav-links {
+.menu{
     list-style: none;
     display: flex;
 }
 
-.nav-links li {
+.menu li {
     margin-right: 50px;
 }
 
-.nav-links a {
+.menu a {
     color: black;
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.menu a:hover {
     color: #ce0dd8;
 }
 
-.search-container {
+.search-bar {
     margin-right: 1%;
 }
 
-.search-container form {
+.search-bar form {
     display: flex;
 }
 
-.search-container input[type="text"] {
+.search-bar input[type="text"] {
     padding: 5px;
     margin-right: 5px;
     border: 1px solid #ce0dd8;
     border-radius: 3px;
 }
 
-.search-container button {
+.search-bar button {
     background-color: #000;
     color: white;
     padding: 6px 10px;
@@ -71,6 +73,6 @@ header {
     cursor: pointer;
 }
 
-.search-container button:hover {
+.search-bar button:hover {
     background-color: #c405a4;
 }
