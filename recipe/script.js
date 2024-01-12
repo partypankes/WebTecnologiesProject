@@ -30,6 +30,19 @@ function mostraAnteprima(event) {
         reader.readAsDataURL(file);
     });
 }
+document.getElementById('ricettaForm').onsubmit = function(event) {
+    var categoria = document.getElementById('categoriaRicetta').value;
+    if (categoria === "") {
+        alert("Per favore, seleziona una categoria per la ricetta.");
+        event.preventDefault();
+    }
+};
+
+function nascondiOpzioneIniziale() {
+    var selectElement = document.getElementById('categoriaRicetta');
+    selectElement.options[0].hidden = true; // Nasconde l'opzione iniziale
+}
+
 
 
 

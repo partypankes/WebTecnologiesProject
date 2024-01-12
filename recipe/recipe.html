@@ -23,8 +23,9 @@
 
     <div class="form-section">
         <label for="immagineRicetta">Carica Immagini:</label>
-        <input type="file" id="immagineRicetta" name="immagineRicetta" multiple onchange="mostraAnteprima(event)">
+        <input type="file" id="immagineRicetta" name="immagineRicetta" accept="image/png, image/jpeg" multiple onchange="mostraAnteprima(event)">
     </div>
+
     <div id="anteprimaImmagine"></div>
 
 
@@ -39,6 +40,19 @@
         <label for="procedimentoRicetta">Procedimento:</label>
         <textarea id="procedimentoRicetta" name="procedimentoRicetta"></textarea>
     </div>
+
+    <div class="form-section">
+        <label for="categoriaRicetta">Categoria Ricetta:</label>
+        <select id="categoriaRicetta" name="categoriaRicetta" onchange="nascondiOpzioneIniziale()">
+            <option value="" disabled selected>Seleziona una categoria</option>
+            <option value="vegane">Vegane</option>
+            <option value="dolci">Dolci</option>
+            <option value="veloci">Veloci</option>
+            <option value="tradizionali">Tradizionali</option>
+            <option value="internazionali">Internazionali</option>
+        </select>
+    </div>
+
 
     <button type="submit">Invia Ricetta</button>
 </form>
