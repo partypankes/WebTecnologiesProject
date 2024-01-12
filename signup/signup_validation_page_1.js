@@ -1,27 +1,45 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('signupFormPage1');
-    form.onsubmit = function(event) {
-        event.preventDefault();
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-        // Get the values from the form
-        var username = document.getElementById('username').value;
-        var name = document.getElementById('name').value;
-        var surname = document.getElementById('surname').value;
+    var username = document.getElementById('username').value;
+    var email = document.getElementById('email').value;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        // Perform your validation here...
-        var isValid = true; // Change this based on validation
+    if (username.length < 6 || username.length > 16) {
+        document.getElementById('errorMessage').textContent = "Lo username deve essere compreso tra i 6 e 16 caratteri";
+        return;
+    }
 
-        if (isValid) {
-            // Store in sessionStorage
-            sessionStorage.setItem('username', username);
-            sessionStorage.setItem('name', name);
-            sessionStorage.setItem('surname', surname);
+    if (!emailPattern.test(email)) {
+        document.getElementById('errorMessage').
+            return;
+    }
 
-            // Redirect to the second page
-            window.location.href = form.action;
-        } else {
-            // Show error message
-            document.getElementById('errorMessage').textContent = "Please fill out all fields correctly.";
-        }
-    };
+    var formData = new FormData(this);
+
+    fetch('signup.php', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.text())
+        .then(data => {
+            if (data) {
+                document.getElementById('errorMessage').textContent = data;
+            } else {
+                window.location.href = '../hompage/hompageNR.php';
+            }
+        });
+});
+
+function clearPlaceholder(element) {
+    element.placeholder = '';
+}
+
+function restorePlaceholder(element, defaultPlaceholder) {
+    element.placeholder = element.getAttribute('data-placeholder') || defaultPlaceholder;
+}
+
+document.getElementById('nextButton').addEventListener('click', function() {
+    document.getElementById('formSection1').style.display = 'none';
+    document.getElementById('formSection2').style.display = 'block';
 });
