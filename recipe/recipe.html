@@ -40,6 +40,19 @@
         <textarea id="procedimentoRicetta" name="procedimentoRicetta"></textarea>
     </div>
 
+    <div class="form-section">
+        <label for="categoriaRicetta">Categoria Ricetta:</label>
+        <select id="categoriaRicetta" name="categoriaRicetta" onchange="nascondiOpzioneIniziale()">
+            <option value="" disabled selected>Seleziona una categoria</option>
+            <option value="vegane">Vegane</option>
+            <option value="dolci">Dolci</option>
+            <option value="veloci">Veloci</option>
+            <option value="tradizionali">Tradizionali</option>
+            <option value="internazionali">Internazionali</option>
+        </select>
+    </div>
+
+
     <button type="submit">Invia Ricetta</button>
 </form>
 
