@@ -10,16 +10,27 @@
     <h1>Inserisci la tua Ricetta</h1>
 </header>
 
-<form id="ricettaForm">
+<form id="ricettaForm" action="inserimento_ricetta.php" method="post">
     <div class="form-section">
         <label for="titoloRicetta">Titolo Ricetta:</label>
         <input type="text" id="titoloRicetta" name="titoloRicetta">
     </div>
 
-    <div class="form-section">
+    <div class="form-section" >
         <label for="descrizioneRicetta">Descrizione:</label>
         <textarea id="descrizioneRicetta" name="descrizioneRicetta"></textarea>
     </div>
+
+    <div class="form-section">
+        <label for="tips">Tips:</label>
+        <textarea id="tips" name="tips"></textarea>
+    </div>
+
+    <div class="form-section">
+        <label for="servingSuggestion">Serving:</label>
+        <textarea id="servingSuggestion" name="servingSuggestion"></textarea>
+    </div>
+
 
     <div class="form-section">
         <label for="immagineRicetta">Carica Immagini:</label>
@@ -31,8 +42,8 @@
 
 
     <div class="form-section" id="ingredienti">
-        <label>Ingredienti:</label>
-        <input type="text" class="ingrediente">
+        <label for="ingredienti[]">Ingredienti:</label>
+        <input type="text" class="ingrediente" name="ingredienti[]">
         <button type="button" onclick="aggiungiIngrediente()">Aggiungi Ingrediente</button>
     </div>
 

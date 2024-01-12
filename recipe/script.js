@@ -3,6 +3,7 @@ function aggiungiIngrediente() {
     var input = document.createElement('input');
     input.type = 'text';
     input.className = 'ingrediente';
+    input.name = 'ingredienti[]';
     container.appendChild(input);
 }
 function aggiungiImmagine() {
