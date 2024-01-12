@@ -45,7 +45,7 @@ body {
 .login-container .login-data{
     display: flex;
     flex-direction: column;
-    padding: 0 10%;
+    padding: 3% 10%;
 }
 
 .login-container .login-data label{
@@ -73,6 +73,7 @@ input {
 .username-container, .password-container {
     position: relative;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 .username-container label, .password-container label {
@@ -156,7 +157,9 @@ input {
     justify-content: center;
     align-items: center;
     height: 50px;
+    margin-top: 2%;
 }
+
 
 .login-data .login #submitButton {
     padding: 10px 20px;
