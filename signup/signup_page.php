@@ -28,24 +28,24 @@
 
                 <div class="username-container">
                     <label for="nome">Enter your Name:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Your Name" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
+                    <input type="text" id="nome" name="nome" placeholder="Your Name" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Name')" required>
                 </div>
                     <br>
                 <div class="username-container">
                     <label for="cognome">Enter your Surname:</label>
-                    <input type="text" id="cognome" name="cognome" placeholder="Your Surname" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
+                    <input type="text" id="cognome" name="cognome" placeholder="Your Surname" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Surname')" required>
                 </div>
                     <br>
                 <div class="username-container">
                     <label for="email">Enter your Email:</label>
-                    <input type="text" id="email" name="email" placeholder="Your Email" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
+                    <input type="text" id="email" name="email" placeholder="Your Email" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Email')" required>
                 </div>
 
                 <br>
 
                 <div class="username-container">
                     <label for="sesso">Enter your Sex:</label>
-                    <input type="text" id="sesso" name="sesso" placeholder="Your Sex" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
+                    <input type="text" id="sesso" name="sesso" placeholder="Your Sex" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Sex')" required>
                 </div>
 
                 <br>
@@ -57,7 +57,7 @@
                 <br>
                 <div class="password-container">
                     <label for="confirmpassword">Confirm your Password:</label>
-                    <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Password')" required>
+                    <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Confirm Your Password')" required>
                     <i id="togglePassword" class="fas fa-eye-slash" style="cursor: pointer;"></i>
                 </div>
 

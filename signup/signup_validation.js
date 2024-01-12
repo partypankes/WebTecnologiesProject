@@ -30,3 +30,11 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
             }
         });
 });
+
+function clearPlaceholder(element) {
+    element.placeholder = '';
+}
+
+function restorePlaceholder(element, defaultPlaceholder) {
+    element.placeholder = element.getAttribute('data-placeholder') || defaultPlaceholder;
+}
