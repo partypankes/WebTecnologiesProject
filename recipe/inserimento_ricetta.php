@@ -15,8 +15,8 @@ if(isset($db)) {
 
     pg_query_params($db,$sql1,array($ricetta,$titolo,$tips,$serving_suggestion,$preparation));
 
-    $sql2 = "INSERT INTO relazione_categorie (ricetta, categoria)
-VALUES ((SELECT id FROM ricetta WHERE titolo = $1 ), (SELECT nome_categoria FROM categoria WHERE nome_categoria = $2));";
+    $sql2 = "INSERT INTO relazione_categoria (ricetta, categoria)
+VALUES ((SELECT id FROM ricetta WHERE titolo = $1 ), (SELECT categoria FROM categoria WHERE categoria = $2));";
 
     pg_query_params($db,$sql2,array($titolo,$categoria));
 
