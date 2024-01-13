@@ -15,6 +15,7 @@
 
     background-color: white;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 50.4px;
 }
 .logo {
     margin-left: 1%;
@@ -42,28 +43,44 @@
 
 .search-bar {
     margin-right: 1%;
+    margin-bottom: -10px;
 }
 
 .search-bar form {
     display: flex;
+
 }
 
 .search-bar input[type="text"] {
     padding: 5px;
     margin-right: 5px;
-    border: 1px solid #ce0dd8;
+    border: 1px solid lightgrey;
     border-radius: 3px;
+    width: 250px;
+    padding-right: 25px;
 }
 
 .search-bar button {
-    background-color: #000;
-    color: white;
+    background-color: transparent;
+    color: black;
     padding: 6px 10px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    margin-left: -35px;
 }
 
 .search-bar button:hover {
-    background-color: #c405a4;
+    background-color: transparent;
+    color: #c405a4;
+}
+
+
+
+.profile-pic{
+  height: inherit;
+    width: inherit;
+    margin-left: -300px;
+    padding-right: 30px;
+    padding-bottom: 5px;
 }
