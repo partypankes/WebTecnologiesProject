@@ -5,6 +5,7 @@ session_start();
 require_once '../dbconnection.php';
 
 
+
 if(isset($db)) {
 
     $username = $_POST['username'];
@@ -14,7 +15,11 @@ if(isset($db)) {
 
     if ($row = pg_fetch_assoc($result)) {
         $hashed_password = $row['password'];
-        if (!password_verify($_POST['password'], $hashed_password)) {
+        if (password_verify($_POST['password'], $hashed_password)) {
+
+            $_SESSION['loggedin'] = true;
+            $_SESSION['username'] = $username;
+        } else {
             echo "Ha inserito la password sbagliata";
         }
     } else {
