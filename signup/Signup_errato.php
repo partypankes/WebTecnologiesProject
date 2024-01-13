@@ -16,7 +16,7 @@
         <p>Join our community and start sharing!</p>
     </div>
     <div class="login-data">
-        <form id="signupFormPage1" action="signup_page_2.php" method="POST">
+        <form id="signupFormPage1" action="Signup_definitivo.php" method="POST">
 
             <p id="errorMessage" style="color:red;"></p>
             <div class="username-container">
@@ -67,7 +67,7 @@
         <p>Join our community and start sharing!</p>
     </div>
     <div class="login-data">
-        <form id="signupFormPage1" action="signup_page_2.php" method="POST">
+        <form id="signupFormPage1" action="Signup_definitivo.php" method="POST">
 
             <p id="errorMessage" style="color:red;"></p>
             <div class="username-container">

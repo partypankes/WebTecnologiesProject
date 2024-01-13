@@ -195,4 +195,15 @@ input {
     align-items: center;
 }
 
+.scroll-container {
+    display: flex;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling */
 
+}
+.scroll-section {
+    flex: 0 0 100%; /* Each section takes full width of the container */
+    padding: 30px;
+    box-sizing: border-box;
+
+}
