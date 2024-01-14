@@ -5,19 +5,21 @@
     font-style: normal;
 }
 
-body{
-    font-family: "MontSerrat T", serif;
-    font-size: 16px;
+*{box-sizing: border-box;font-family: "MontSerrat T", serif;}
+
+body,
+html{
+    margin: 0;
+    padding: 0;
 }
 
 header {
     top: 0;
     left: 0 ;
     right: 0;
-    width: auto;
+    width: 100%;
     align-items: center;
     position: fixed;
-
 }
 
 @media (max-width: 768px) {
