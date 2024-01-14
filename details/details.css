@@ -54,59 +54,89 @@ img {
     height: auto;
 }
 
-/* Header styles */
-
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    text-align: center;
-}
-
-header h1 {
-    margin-top: 0;
-}
-
-header p {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-header a {
-    display: block;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 0.25rem;
-}
-
 /* Main styles */
-
 main {
     padding: 2rem;
 }
 
+#title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Assicurati che #title occupi l'intera larghezza */
+}
+
+#details{
+    display: flex;
+    justify-content: space-between;
+}
+
 #contents {
-    margin-bottom: 2rem;
+    width: 20%; /* Imposta la larghezza dei contenuti a 20% del parent */
+    margin-right: 2%; /* Aggiungi un margine destro per separare i contenuti dal dettaglio della ricetta */
+}
+
+#recipe-content {
+    width: 80%; /* Imposta la larghezza del contenuto della ricetta a 80% del parent */
+    /* Assicurati che il contenuto della ricetta occupi lo spazio rimanente */
 }
 
 #contents h2 {
-    font-size: 1.5rem;
     margin-top: 0;
 }
 
+/* Stili per #contents */
+/* Stili per #contents */
 #contents ul {
-    padding-left: 1.5rem;
+    padding-left: 0;
 }
 
-#recipe {
-    margin-bottom: 2rem;
+#contents li {
+    position: relative;
+    margin-left: 0;
+    padding-left: 5%;
+    cursor: pointer;
 }
 
-#recipe h2 {
-    margin-top: 3rem;
+
+#contents li:nth-child(1) {
+    margin-left: 0;
 }
+
+#contents li:nth-child(2) {
+    margin-left: 5%;
+}
+
+#contents li:nth-child(3) {
+    margin-left: 10%;
+}
+
+#contents li:nth-child(4) {
+    margin-left: 15%;
+}
+
+#contents a {
+    display: block;
+    padding: 1% 1% 1% 5%;
+}
+
+#contents a.active {
+    background-color: #ddd;
+
+}
+
+
+/* Stili aggiuntivi per i titoli e i paragrafi dentro #recipe-content, se necessario */
+#recipe-content h2 {
+    font-size: 2rem;
+    color: #666;
+    margin-top: 0; /* Rimuovi il margine superiore per allinearlo con il titolo dei contenuti */
+}
+
+#recipe-content p {
+    margin-bottom: 1rem;
+}
+
+
 
 #gallery {
     margin-bottom: 2rem;
@@ -120,15 +150,3 @@ main {
     margin-top: 0;
 }
 
-/* Footer styles */
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-}

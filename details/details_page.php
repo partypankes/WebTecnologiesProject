@@ -17,46 +17,39 @@
 
 </header>
 
+
+
+
 <main>
-    <section id="contents">
-        <h2>Contents</h2>
-        <ul>
-            <li><a href="#ingredients">Ingredients</a></li>
-            <li><a href="#preparation">Preparation</a></li>
-            <li><a href="#cooking-time">Cooking Time</a></li>
-            <li><a href="#serving-suggestions">Serving Suggestions</a></li>
-            <li><a href="#tips-tricks">Tips & Tricks</a></li>
-        </ul>
+    <section id="title">
+        <div class="title">
+            <h1>Delicious and Easy Homemade Pizza Recipe</h1>
+            <p>By John Doe - 11 Jan 2022 - 5-minute read</p>
+        </div>
+        <div class="photo">
+            <img src="image.jpg" alt="Homemade Pizza">
+        </div>
     </section>
 
-    <section id="recipe">
-        <h2 id="ingredients">Ingredients</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio nisl, aliquam vestibulum turpis mi
-            bibendum, tempor aliquam felis. Integer aliquam in mauris vitae malesuada.
-        </p>
 
-        <h2 id="preparation">Preparation</h2>
-        <p>
-            Vestibulum sit amet quam ac diam tincidunt dictum quis montes. Aliquam enim unna, aliquam sit amet feugiat vitae,
-            tincidunt at tellus.
-        </p>
+    <section id="details">
+        <section id="contents">
+            <h2>Contents</h2>
+            <ul>
+                <li><a href="#ingredients" data-section="ingredients">Ingredients</a></li>
+                <li><a href="#preparation" data-section="preparation">Preparation</a></li>
+                <li><a href="#serving-suggestions" data-section="servingSuggestions">Serving Suggestions</a></li>
+                <li><a href="#tips-tricks" data-section="tipsTricks">Tips & Tricks</a></li>
+            </ul>
 
-        <h2 id="cooking-time">Cooking Time</h2>
-        <p>
-            Mauris posuere vulputate arcu, vitae tincidunt nisi tincidunt at. Suspendisse potenti.
-        </p>
+        </section>
 
-        <h2 id="serving-suggestions">Serving Suggestions</h2>
-        <p>
-            Quisque ligula ac diam, aliquet fermentum lacus. Etiam suspendisse eleifend faucibus.
-        </p>
+        <section id="recipe-content">
 
-        <h2 id="tips-tricks">Tips & Tricks</h2>
-        <p>
-            Donec aliquam, mauris id aliquam vulputate, sapien est suscipit enim, at laoreet lectus nunc ac nunc.
-        </p>
+        </section>
+
     </section>
+
 
     <section id="gallery">
         <h2>Recipe Gallery</h2>
@@ -72,6 +65,8 @@
 <footer>
     <p>Copyright © 2022 John Doe</p>
 </footer>
+
+<script src="detailsjs.js"></script>
 
 </body>
 
