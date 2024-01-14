@@ -1,0 +1,134 @@
+/* Global styles */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #444;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #666;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header styles */
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+header a {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 0.25rem;
+}
+
+/* Main styles */
+
+main {
+    padding: 2rem;
+}
+
+#contents {
+    margin-bottom: 2rem;
+}
+
+#contents h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+#contents ul {
+    padding-left: 1.5rem;
+}
+
+#recipe {
+    margin-bottom: 2rem;
+}
+
+#recipe h2 {
+    margin-top: 3rem;
+}
+
+#gallery {
+    margin-bottom: 2rem;
+}
+
+#gallery h2 {
+    margin-top: 3rem;
+}
+
+#gallery p {
+    margin-top: 0;
+}
+
+/* Footer styles */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
