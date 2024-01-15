@@ -1,16 +1,12 @@
-<?php include "../auth/auth.php"?>
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <title>Inserisci Ricetta</title>
+    <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <h1>Inserisci la tua Ricetta</h1>
-</header>
 
 <form id="ricettaForm" action="inserimento_ricetta.php" method="post">
     <div class="form-section">
