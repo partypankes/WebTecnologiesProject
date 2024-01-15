@@ -10,7 +10,7 @@
 <body>
 <div class="login-container">
     <div class="title">
-        <h1>SIGN UP</h1>
+        <h1>Sign Up</h1>
         <p>Join our community and start sharing!</p>
     </div>
     <div class="login-data">
