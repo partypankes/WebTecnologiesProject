@@ -31,13 +31,11 @@
                         <input type="date" name="birthdate" id="birthdate" class="input-field" placeholder="Date of Birth">
                     </div>
                     <div class="input-container">
-                        <label for="Gender">Enter your Gender:</label>
-                        <select  name="Gender" id="Gender" class="input-field">
-                            <option value="" disabled selected>Choose your Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
-                            <option value="other">Other</option>
-                        </select>
+                        <label for="Gender">Enter your Gender: </label>
+                        <label for="Gender" > &emsp;Male</label>
+                        <input type="radio" id="Gender" name="Gender" value="Male">
+                        <label for="Gender"> &emsp;Bene</label>
+                        <input type="radio" id="Gender" name="Gender" value="Female">
                     </div>
 
                     <div class="login">
@@ -64,7 +62,11 @@
                         <label for="confirmpassword">Confirm Password:</label>
                         <input type="password" name="confirmpassword" id="confirmpassword" class="input-field" placeholder="Confirm Password">
                     </div>
-                    <input type="submit" class="submit-button" value="Register">
+
+                    <div class = "login">
+                        <input type="submit" class="submit-button" value="Register">
+                    </div>
+
                 </div>
             </div>
         </form>

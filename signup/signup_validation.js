@@ -5,16 +5,35 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     var email = document.getElementById('email').value;
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    /*lunghezza username*/
     if (username.length < 6 || username.length > 16) {
         document.getElementById('errorMessage').textContent = "Lo username deve essere compreso tra i 6 e 16 caratteri";
         return;
     }
+    /*fine controllo username*/
 
-    if (!emailPattern.test(email)) {
-        document.getElementById('errorMessage').
+    /*controllo validita email*/
+    if (!validaEmail(email)) {
+        document.getElementById('errorMessage').textContent = "La mail inserita non e' valida"
         return;
     }
-    
+    /*fine controllo email*/
+
+    /*Controllo lunghezza password*/
+    if (password.length < 8 || pasword.length > 20) {
+        document.getElementById('errorMessage').textContent = "La password deve essere compresa tra gli 8 e 20 caratteri";
+        return;
+    }
+
+    /*controllo presenza lettere maiuscole*/
+
+    /*controllo presenza lettere minuscole*/
+
+    /*controllo presenza carattere speciale*/
+    if(){}
+
+
+    /*fine controllo password*/
 
     var formData = new FormData(this);
 
@@ -50,4 +69,9 @@ function clearPlaceholder(element) {
 
 function restorePlaceholder(element, defaultPlaceholder) {
     element.placeholder = element.getAttribute('data-placeholder') || defaultPlaceholder;
+}
+
+function validaEmail(email) {
+    var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return regex.test(email);
 }
