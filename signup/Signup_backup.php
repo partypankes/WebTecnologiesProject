@@ -18,7 +18,7 @@
 
             <form id="signupForm" method="post">
                 <p id="errorMessage" style="color:red;"></p>
-                <div class="username-container">
+                <div class="input-container">
                     <label for="username">Enter your username:</label>
                     <input type="text" id="username" name="username" placeholder="Your Username" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
                     <i id="usernameIcon" class="fas fa-user"></i>
@@ -26,24 +26,24 @@
 
                 <br>
 
-                <div class="username-container">
+                <div class="input-container">
                     <label for="nome">Enter your Name:</label>
                     <input type="text" id="nome" name="nome" placeholder="Your Name" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Name')" required>
                 </div>
                     <br>
-                <div class="username-container">
+                <div class="input-container">
                     <label for="cognome">Enter your Surname:</label>
                     <input type="text" id="cognome" name="cognome" placeholder="Your Surname" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Surname')" required>
                 </div>
                     <br>
-                <div class="username-container">
+                <div class="input-container">
                     <label for="email">Enter your Email:</label>
                     <input type="text" id="email" name="email" placeholder="Your Email" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Email')" required>
                 </div>
 
                 <br>
 
-                <div class="username-container">
+                <div class="input-container">
                     <label for="sesso">Enter your Sex:</label>
                     <input type="text" id="sesso" name="sesso" placeholder="Your Sex" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Sex')" required>
                 </div>

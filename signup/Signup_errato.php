@@ -19,17 +19,17 @@
         <form id="signupFormPage1" action="Signup_definitivo.php" method="POST">
 
             <p id="errorMessage" style="color:red;"></p>
-            <div class="username-container">
+            <div class="input-container">
                 <label for="nome">Enter your Name:</label>
                 <input type="text" id="nome" name="nome" placeholder="Your Name" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Name')" required>
             </div>
 
-            <div class="username-container">
+            <div class="input-container">
                 <label for="cognome">Enter your Surname:</label>
                 <input type="text" id="cognome" name="cognome" placeholder="Your Surname" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Name')" required>
             </div>
 
-            <div class="username-container">
+            <div class="input-container">
                 <label for="sesso">Enter your Sex:</label>
                 <select id="sex" name="sex" required>
                 <option value="">Select...</option>
@@ -39,7 +39,7 @@
                 <input type="text" id="sesso" name="sesso" placeholder="Your Sex" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Name')" required>
             </div>
 
-            <div class="username-container">
+            <div class="input-container">
                 <label for="data di nascita">Enter your Birth Date:</label>
                 <input type="date" id="data di nascita" name="data di nascita" placeholder="Your Birth Date" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Name')" required>
             </div>
@@ -70,13 +70,13 @@
         <form id="signupFormPage1" action="Signup_definitivo.php" method="POST">
 
             <p id="errorMessage" style="color:red;"></p>
-            <div class="username-container">
+            <div class="input-container">
                 <label for="username">Enter your Username:</label>
                 <input type="text" id="username" name="username" placeholder="Your Username" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
                 <i id="usernameIcon" class="fas fa-user"></i>
             </div>
 
-            <div class="username-container">
+            <div class="input-container">
                 <label for="email">Enter your Email:</label>
                 <input type="text" id="email" name="email" placeholder="Your Email" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
             </div>
