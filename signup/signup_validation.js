@@ -4,6 +4,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     var username = document.getElementById('username').value;
     var email = document.getElementById('email').value;
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var password = document.getElementById('password').value;
 
     /*lunghezza username*/
     if (username.length < 6 || username.length > 16) {
@@ -20,7 +21,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     /*fine controllo email*/
 
     /*Controllo lunghezza password*/
-    if (password.length < 8 || pasword.length > 20) {
+    if (password.length < 8 || password.length > 20) {
         document.getElementById('errorMessage').textContent = "La password deve essere compresa tra gli 8 e 20 caratteri";
         return;
     }
@@ -30,7 +31,6 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     /*controllo presenza lettere minuscole*/
 
     /*controllo presenza carattere speciale*/
-    if(){}
 
 
     /*fine controllo password*/

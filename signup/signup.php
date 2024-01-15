@@ -12,12 +12,13 @@ if(isset($db)) {
     $sesso = $_POST['sesso'];
     $nome = $_POST['nome'];
     $cognome = $_POST['cognome'];
+    $data_di_nascita = $_POST['data_di_nascita'];
     if(userValidation($db,$username,$email)) {
         echo "Username o Email giá esistente";
     }
     else {
-        $sql = 'INSERT INTO utente (username, email, password, nome, cognome, sesso) VALUES ($1,$2,$3,$4,$5,$6)';
-        $result = pg_query_params($db,$sql,array($username,$email,$password,$nome,$cognome,$sesso));
+        $sql = 'INSERT INTO utente (username, email, password, nome, cognome, sesso,data_di_nascita) VALUES ($1,$2,$3,$4,$5,$6,$7)';
+        $result = pg_query_params($db,$sql,array($username,$email,$password,$nome,$cognome,$sesso,$data_di_nascita));
     }
 
 }

@@ -20,22 +20,22 @@
                     <!-- Section 1: Personal Information -->
                     <div class="input-container">
                         <label for="name">Enter your Name:</label>
-                        <input type="text" name="firstname" id="name" class="input-field" placeholder="Name">
+                        <input type="text" name="nome" id="name" class="input-field" placeholder="Name">
                     </div>
                     <div class="input-container">
                         <label for="surname">Enter your Surname:</label>
-                        <input type="text" name="lastname" id="surname" class="input-field" placeholder="Surname">
+                        <input type="text" name="cognome" id="surname" class="input-field" placeholder="Surname">
                     </div>
                     <div class="input-container">
                         <label for="birthdate">Enter your Date of Birth:</label>
-                        <input type="date" name="birthdate" id="birthdate" class="input-field" placeholder="Date of Birth">
+                        <input type="date" name="data_di_nascita" id="birthdate" class="input-field" placeholder="Date of Birth">
                     </div>
                     <div class="input-container">
                         <label for="Gender">Enter your Gender: </label>
                         <label for="Gender" > &emsp;Male</label>
-                        <input type="radio" id="Gender" name="Gender" value="Male">
+                        <input type="radio" id="Gender" name="sesso" value="M">
                         <label for="Gender"> &emsp;Bene</label>
-                        <input type="radio" id="Gender" name="Gender" value="Female">
+                        <input type="radio" id="Gender" name="sesso" value="F">
                     </div>
 
                     <div class="login">
@@ -44,6 +44,7 @@
 
                 </div>
                 <div id="section2" class="scroll-section">
+                    <p id="errorMessage" style="color:red;"></p>
                     <!-- Section 2: Account Information -->
                     <div class="input-container">
                         <label for="username">Enter your Username:</label>
@@ -64,7 +65,7 @@
                     </div>
 
                     <div class = "login">
-                        <input type="submit" class="submit-button" value="Register">
+                        <input type="submit" class="submit-button" form="signupForm" value="Register">
                     </div>
 
                 </div>
@@ -79,5 +80,6 @@
         setTimeout(function(){a.hidden = true}, 485);
     }
 </script>
+<script src="signup_validation.js"></script>
 </body>
 </html>
