@@ -4,12 +4,13 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+    overflow: hidden;
+    max-height:  75vh;
 }
 
 .login-container {
     max-width: 45%;
-    height: auto;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 2%;
     background-color: #fff;
     border-radius: 20px;
