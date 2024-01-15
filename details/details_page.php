@@ -8,6 +8,7 @@
     <title>Homemade Pizza Recipe - Delicious and Easy</title>
     <meta name="description" content="A delicious and easy homemade pizza recipe by John Doe">
     <meta name="author" content="John Doe">
+    <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="details.css">
 </head>
 

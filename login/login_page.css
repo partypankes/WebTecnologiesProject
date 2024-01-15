@@ -16,35 +16,33 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.login-container .title {
+.title {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.login-container .title h1 {
+.title h1 {
     font-size: 3em;
     margin-bottom: 0;
 }
 
-.login-container .title p {
+.title p {
     margin-top: 1%;
     color: grey;
     font-size: 1.2em;
 }
 
-.login-container .login-data {
-    display: flex;
-    flex-direction: column;
-    padding: 0 10%;
+.input-container {
+    position: relative;
+    align-items: center;
 }
 
-.login-container .login-data label {
-    font-size: 1em;
+.input-container label {
+    margin-bottom: 2%;
 }
 
-input[type="text"],
-input[type="password"] {
+.input-field {
     width: 100%;
     padding: 2%;
     margin: 2% 0;
@@ -54,27 +52,13 @@ input[type="password"] {
     border: 2px transparent;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+.input-field:focus {
     border-color: #c235e2;
     outline: none;
     box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
 }
 
-.username-container,
-.password-container {
-    position: relative;
-    align-items: center;
-}
-
-.username-container label,
-.password-container label {
-    margin-bottom: 2%;
-}
-
-#usernameIcon,
-#togglePassword {
-    font-weight: normal;
+.input-icon {
     position: absolute;
     right: 3%;
     top: 62%;
@@ -119,14 +103,14 @@ input[type="password"]:focus {
     cursor: pointer;
 }
 
-.login-data .login {
+.login {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 5%;
 }
 
-.login-data .login #submitButton {
+.submit-button {
     padding: 1% 2%;
     border: 2px solid #ce0dd8;
     border-radius: 50px;
@@ -141,7 +125,7 @@ input[type="password"]:focus {
     width: 90%;
 }
 
-.login-data .login #submitButton:hover {
+.submit-button:hover {
     background-color: transparent;
     border: 2px solid #252525;
     color: #252525;
@@ -160,17 +144,10 @@ input[type="password"]:focus {
     align-items: center;
 }
 
-
 @media (max-width: 460px) {
 
-    #usernameIcon,
-    #togglePassword {
-        font-weight: normal;
-        position: absolute;
-        right: 3%;
-        top: 72%;
-        transform: translateY(-50%);
+    .input-icon {
+        top: 75%;
     }
-
 
 }
