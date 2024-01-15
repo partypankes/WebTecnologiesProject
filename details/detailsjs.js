@@ -1,27 +1,32 @@
-const sectionTexts = {
-    ingredients: `<p>Lorem ipsum dolor sit amet...</p>`,
-    preparation: `<p>Vestibulum sit amet quam ac diam...</p>`,
-    servingSuggestions: `<p>Quisque ligula ac diam...</p>`,
-    tipsTricks: `<p>Donec aliquam, mauris id aliquam...</p>`
-};
 
-document.addEventListener('DOMContentLoaded', function () {
-    const links = document.querySelectorAll('#contents a');
 
-    links.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
+function caricaContenuto(sezione) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'details_query.php?section=' + encodeURIComponent(sezione), true);
 
-            // Rimuovi la classe 'active' da tutti i link
-            links.forEach(l => l.classList.remove('active'));
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            // Aggiorna il contenuto della pagina con la risposta
+            document.getElementById('recipe-content').innerHTML = xhr.responseText;
+        } else {
+            document.getElementById('recipe-content').innerHTML = '<table border="1" id="tabella-ingredienti"><tr><th>Numero</th><th>Quantità</th><th>Nome Ingrediente</th></tr></table>';
+        }
+    };
 
-            // Aggiungi la classe 'active' al link cliccato
-            link.classList.add('active');
+    xhr.onerror = function () {
+        console.error('Errore nella richiesta di rete');
+    };
 
-            // Carica il contenuto corrispondente
-            const section = event.target.dataset.section.replace(/-([a-z])/g, function (g) { return g[1].toUpperCase(); });
-            document.getElementById('recipe-content').innerHTML = sectionTexts[section];
-        });
-    });
-});
+    xhr.send();
+}
 
+function createTable(data) {
+    var table = document.getElementById("tabella-ingredienti");
+    for (var i = 0; i < data.length; i++) {
+        var row = table.insertRow(i + 1);
+        var cell1 = row.insertCell(0);
+
+
+        cell1.innerHTML = data[i];
+        }
+}
