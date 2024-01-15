@@ -14,21 +14,34 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         document.getElementById('errorMessage').
         return;
     }
+    
 
     var formData = new FormData(this);
 
-    fetch('signup.php', {
-        method: 'POST',
-        body: formData
-    })
-        .then(response => response.text())
-        .then(data => {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'signup.php', true);
+
+    xhr.onload = function() {
+        if (this.status >= 200 && this.status < 300) {
+            // Richiesta completata con successo
+            var data = this.responseText;
             if (data) {
                 document.getElementById('errorMessage').textContent = data;
             } else {
                 window.location.href = '../hompage/hompageNR.php';
             }
-        });
+        } else {
+            // Gestisci errori di rete o errori HTTP qui
+            console.error('Errore nella richiesta:', this.statusText);
+        }
+    };
+
+    xhr.onerror = function() {
+        // Gestisci errori di rete qui
+        console.error('Errore nella richiesta di rete');
+    };
+
+    xhr.send(formData);
 });
 
 function clearPlaceholder(element) {
