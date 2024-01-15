@@ -33,11 +33,11 @@
                     <div class="username-container">
                         <label for="Gender">Enter your Gender:</label>
                         <select name="gender">
+                            <option value="" disabled selected>Choose your Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                             <option value="other">Other</option>
                         </select>
-                        <input type="text" name="gender" placeholder="Gender">
                     </div>
 
                     <div class="login">

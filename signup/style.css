@@ -52,7 +52,7 @@ body {
     font-size: 12px;
 }
 
-input {
+input, select{
     width: 100%;
     padding: 15px;
     margin: 10px 0;
@@ -63,25 +63,26 @@ input {
 
 }
 
-.username-container input[type="text"]:focus , .password-container input[type="password"]:focus{
+
+.username-container input:focus{
     border-color: #c235e2;
     outline: none;
     box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
 }
 
 
-.username-container, .password-container {
+.username-container{
     position: relative;
     align-items: center;
     margin-bottom: 2%;
 }
 
-.username-container label, .password-container label {
+.username-container label{
     margin-bottom: 5px;
 }
 
 
-.username-container input[type="text"], .password-container input[type="password"] {
+.username-container input, select{
     width: 100%;
     padding: 15px;
     margin: 10px 0;
@@ -90,7 +91,8 @@ input {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
 }
-.username-container input[type="text"]:focus, .password-container input[type="password"]:focus {
+
+.username-container input:focus{
     border-color: #c235e2;
     outline: none;
     box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
@@ -108,7 +110,7 @@ input {
     cursor: pointer;
 }
 
-
+/*
 .remember-me-container {
     display: flex;
     align-items: center;
@@ -150,7 +152,7 @@ input {
     margin-left: 8px;
     cursor: pointer;
 }
-
+*/
 
 .login-data .login{
     display: flex;
@@ -189,12 +191,13 @@ input {
     margin: 50px 70px 20px;
 }
 
+/*
 .no-account {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+*/
 .scroll-container {
     display: flex;
     overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -203,7 +206,7 @@ input {
 }
 .scroll-section {
     flex: 0 0 100%; /* Each section takes full width of the container */
-    padding: 30px;
+    padding: 6%;
     box-sizing: border-box;
 
 }
