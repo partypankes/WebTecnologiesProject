@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="login_page.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <title>Login Page</title>
@@ -23,7 +24,7 @@
         <p id="errorMessage" style="color:red;"></p>
         <div class="username-container">
             <label for="username">Enter your username:</label>
-            <input type="text" id="username" name="username" placeholder="Your Username" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')" required>
+            <input type="text" id="username" name="username" placeholder="Your Username" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Username')">
             <i id="usernameIcon" class="fas fa-user"></i> 
         </div>
 
@@ -31,7 +32,7 @@
 
         <div class="password-container">
         <label for="password">Enter your Password:</label>
-        <input type="password" id="password" name="password" placeholder="Your Password" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Password')" required>
+        <input type="password" id="password" name="password" placeholder="Your Password" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Password')">
         <i id="togglePassword" class="fas fa-eye-slash" style="cursor: pointer;"></i>
         </div>
 
@@ -41,7 +42,7 @@
         </div>
 
         <div class="login">
-            <button id="submitButton" type="submit"><div style="font-family:'MontSerrat T',serif">Login</div></button>
+            <button id="submitButton" type="submit">Login</button>
         </div>
 
     </form>

@@ -1,137 +1,108 @@
-@font-face {
-    font-family: "MontSerrat T";
-    src: url('Montserrat.ttf') format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
     background-image: url('sfondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center; 
-    margin: 0;
-    padding: 0;
-    font-family: "MontSerrat T";
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .login-container {
     max-width: 45%;
     height: auto;
     margin: 10% auto;
-    padding: 10px;
+    padding: 2%;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.login-container .title{
+
+.login-container .title {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.login-container .title h1{
-    font-size: 48px;
+.login-container .title h1 {
+    font-size: 3em;
     margin-bottom: 0;
 }
 
-.login-container .title p{
+.login-container .title p {
     margin-top: 1%;
     color: grey;
-    font-size: 14px;
+    font-size: 1.2em;
 }
 
-.login-container .login-data{
+.login-container .login-data {
     display: flex;
     flex-direction: column;
     padding: 0 10%;
 }
 
-.login-container .login-data label{
-    font-size: 12px;
+.login-container .login-data label {
+    font-size: 1em;
 }
 
-input {
+input[type="text"],
+input[type="password"] {
     width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: 2px;
+    padding: 2%;
+    margin: 2% 0;
     border-radius: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
-    
+    border: 2px transparent;
 }
 
-.username-container input[type="text"]:focus , .password-container input[type="password"]:focus{
+input[type="text"]:focus,
+input[type="password"]:focus {
     border-color: #c235e2;
     outline: none;
     box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
 }
 
-
-.username-container, .password-container {
+.username-container,
+.password-container {
     position: relative;
-    align-items: center; 
+    align-items: center;
 }
 
-.username-container label, .password-container label {
-    margin-bottom: 5px; 
+.username-container label,
+.password-container label {
+    margin-bottom: 2%;
 }
 
-
-.username-container input[type="text"], .password-container input[type="password"] {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    border: 2px;
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s;
-}
-.username-container input[type="text"]:focus, .password-container input[type="password"]:focus {
-    border-color: #c235e2;
-    outline: none;
-    box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
-}
-
-#usernameIcon, #togglePassword {
+#usernameIcon,
+#togglePassword {
     font-weight: normal;
     position: absolute;
-    right: 1%;
-    top: 60%;
+    right: 3%;
+    top: 62%;
     transform: translateY(-50%);
 }
-
-#togglePassword{
-    cursor: pointer;
-}
-
 
 .remember-me-container {
     display: flex;
     align-items: center;
-    padding-left: 10px;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    padding-left: 2%;
+    margin-top: 4%;
+    margin-bottom: 2%;
 }
-
 
 .remember-me-container input[type="checkbox"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    width: 16px;
-    height: 16px;
+    width: 1.2em;
+    height: 1.2em;
     margin: 0;
     padding: 0;
-    border: 1px;
+    border: 1px solid lightgrey;
     border-radius: 3px;
     outline: none;
     cursor: pointer;
     position: relative;
 }
-
-
 
 .remember-me-container input[type="checkbox"]:checked::before {
     content: '✓';
@@ -140,39 +111,37 @@ input {
     top: 50%;
     transform: translate(-50%, -50%);
     color: #c235e2;
-    font-size: 14px;
+    font-size: 1.2em;
 }
 
-
 .remember-me-container label {
-    margin-left: 8px;
+    margin-left: 2%;
     cursor: pointer;
 }
 
-
-.login-data .login{
+.login-data .login {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 5%;
 }
 
 .login-data .login #submitButton {
-    padding: 10px 20px;
+    padding: 1% 2%;
     border: 2px solid #ce0dd8;
     border-radius: 50px;
     background-color: #ce0dd8;
     color: #fff;
-    font-size: 16px;
+    font-size: 1.2em;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 10px;
-    width: 468px;
+    margin-top: 2%;
+    width: 90%;
 }
 
-.login-data .login #submitButton:hover{
+.login-data .login #submitButton:hover {
     background-color: transparent;
     border: 2px solid #252525;
     color: #252525;
@@ -182,7 +151,7 @@ input {
     border: 0;
     height: 1px;
     background-color: lightgrey;
-    margin: 50px 70px 20px;
+    margin: 4% 5% 2%;
 }
 
 .no-account {
@@ -192,3 +161,16 @@ input {
 }
 
 
+@media (max-width: 460px) {
+
+    #usernameIcon,
+    #togglePassword {
+        font-weight: normal;
+        position: absolute;
+        right: 3%;
+        top: 72%;
+        transform: translateY(-50%);
+    }
+
+
+}
