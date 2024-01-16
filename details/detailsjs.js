@@ -26,3 +26,4 @@ document.querySelectorAll('#contents a').forEach(function(link) {
         link.classList.add('active');
     });
 });
+

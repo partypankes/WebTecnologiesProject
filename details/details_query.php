@@ -36,7 +36,7 @@ if(isset($db)) {
             break;
 
         case 'tips' :
-            $query = 'SELECT tips FROM ricetta WHERE id = 4';
+            $query = 'SELECT tips FROM ricetta WHERE id = 1';
             $result = pg_query($db,$query);
             if($row = pg_fetch_assoc($result)) {
                 echo "<p>" . $row['tips'] . "</p>";

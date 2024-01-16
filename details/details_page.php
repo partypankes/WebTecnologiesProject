@@ -51,29 +51,7 @@
             <p>Browse through user-uploaded images of recipe variations</p>
         </div>
 
-        <div class="row">
-            <div class="column">
-                <img src="image1.jpg" style="width:100%">
-                <img src="image2.jpg" style="width:100%">
-                <img src="image3.jpg" style="width:100%">
 
-            </div>
-            <div class="column">
-                <img src="image1.jpg" style="width:100%">
-                <img src="image2.jpg" style="width:100%">
-                <img src="image3.jpg" style="width:100%">
-            </div>
-            <div class="column">
-                <img src="image1.jpg" style="width:100%">
-                <img src="image2.jpg" style="width:100%">
-                <img src="image3.jpg" style="width:100%">
-            </div>
-            <div class="column">
-                <img src="image1.jpg" style="width:100%">
-                <img src="image2.jpg" style="width:100%">
-                <img src="image3.jpg" style="width:100%">
-            </div>
-        </div>
 
     </section>
 </main>
