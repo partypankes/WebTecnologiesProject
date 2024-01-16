@@ -193,5 +193,6 @@ input[type="radio"]:checked::before {
 
 .info-password{
     display: none;
-    color: deeppink;
+    color: grey;
 }
+

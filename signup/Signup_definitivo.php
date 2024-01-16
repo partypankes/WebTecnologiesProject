@@ -48,7 +48,7 @@
                     <!-- Section 2: Account Information -->
                     <div class="input-container">
                         <label for="username">Enter your Username:</label>
-                        <input type="text" name="username" id="username" class="input-field" placeholder="Username">
+                        <input type="text" name="username" id="username" class="input-field" placeholder="Username" maxlength="16">
                     </div>
                     <div class="input-container">
                         <label for="email">Enter your Email:</label>
@@ -56,15 +56,15 @@
                     </div>
                     <div class="input-container" id="password-div">
                         <label for="password">Enter your Password:</label>
-                        <input type="password" name="password" id="password" class="input-field" placeholder="Password" onfocus="showText('info-password')" onblur="hideText('info-password')">
+                        <input type="password" name="password" id="password" class="input-field" placeholder="Password" onfocus="showText('info-password')" onblur="hideText('info-password')" maxlength="20">
                         <div class="info-password" id="info-password">
-                            <label for="password">La password deve avere:</label>
+                            <label for="password" id="f0">La password deve avere:</label>
                             <ul>
-                                <li>Una lunghezza compresa tra 8 e 20 caratteri</li>
-                                <li>Almeno una lettera maiuscola</li>
-                                <li>Almeno una lettera minuscola</li>
-                                <li>Almeno un numero</li>
-                                <li>Almeno un carattere speciale</li>
+                                <li id="f1">Una lunghezza compresa tra 8 e 20 caratteri</li>
+                                <li id="f2">Almeno una lettera maiuscola</li>
+                                <li id="f3">Almeno una lettera minuscola</li>
+                                <li id="f4">Almeno un numero</li>
+                                <li id="f5">Almeno un carattere speciale</li>
                             </ul>
                         </div>
                     </div>
@@ -99,25 +99,47 @@
         var a = document.getElementById(sectionId1);
         setTimeout(function(){a.hidden = true}, 485);
     }
-    function passwordControl(divID) {
-        document.getElementById('divID').addEventListener('input', function () {
-            const testo = this.value;
-            let risultato = '';
 
-            for (let i = 0; i < testo.length; i++) {
-                const char = testo[i];
-                if (char.match(/[a-zA-Z]/)) {
-                    risultato += `Lettera: ${char}<br>`;
-                } else if (char.match(/[0-9]/)) {
-                    risultato += `Numero: ${char}<br>`;
-                } else {
-                    risultato += `Altro: ${char}<br>`;
-                }
-            }
 
-            document.getElementById('risultato').innerHTML = risultato;
-        });
-    }
+    document.getElementById('password').addEventListener('input', function () {
+        const password = this.value;
+
+        if (password.length>=8 && password.length<=20)
+            document.getElementById('f1').style.color = 'limegreen';
+        else
+            document.getElementById('f1').style.color = 'grey';
+
+        /**/
+        if (password.match(/[a-z]/))
+            document.getElementById('f3').style.color ='limegreen';
+        else
+            document.getElementById('f3').style.color='grey';
+
+        /**/
+        if (password.match(/[A-Z]/))
+            document.getElementById('f2').style.color='limegreen';
+         else
+            document.getElementById('f2').style.color='grey';
+
+        /**/
+        if (password.match(/[0-9]/))
+            document.getElementById('f4').style.color='limegreen';
+         else
+            document.getElementById('f4').style.color='grey';
+
+        /**/
+        if (password.match(/[^a-zA-Z0-9]/))
+            document.getElementById('f5').style.color='limegreen';
+        else
+            document.getElementById('f5').style.color='grey';
+
+        /**/
+        if( password.length>=8 && password.length<=20 && password.match(/[a-z]/) && password.match(/[A-Z]/) && password.match(/[0-9]/) && password.match(/[^a-zA-Z0-9]/))
+            document.getElementById('f0').style.color='limegreen';
+        else
+            document.getElementById('f0').style.color='grey';
+    });
+
 </script>
 <script src="signup_validation.js"></script>
 </body>
