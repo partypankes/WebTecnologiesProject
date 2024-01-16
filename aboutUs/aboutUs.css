@@ -25,7 +25,7 @@
 }
 
 .button {
-    background-color: #333;
+    background-color: var(--color-2);
     border: none;
     color: white;
     cursor: pointer;
@@ -36,7 +36,7 @@
 }
 
 .button:hover {
-    background-color: #555;
+    background-color: var(--main_color);
 }
 
 .team {

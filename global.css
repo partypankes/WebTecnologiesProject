@@ -2,20 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
 
 :root{
-    --main_color: #000000;
-    --main-hover-color: #a420d0;
-    --color_2: #dbdbdb;
-    --main-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    --main_color: #BB255F;
+    --color-2: #2F6690;
+    --color-3: #3C6997;
+    --bkg-color: #F5F5F5;
+    /*--main-hover-color: #a420d0;*/
+
+    --header_color: #F4F4F4;
+    --main-text-color: #0A0A0A;
+    --main-shadow-no-color: 0px 4px 4px 0px;
+
+    font-size: 16px;
 }
 
-*{font-family: 'Montserrat', sans-serif; box-sizing: border-box; text-decoration-line: none}
+*{text-decoration-line: none; font-family: 'Montserrat', sans-serif; margin: 0; padding: 0; box-sizing: border-box;}
 
-body,
+
 html{
-    margin: 0;
-    padding: 0;
+    font-size: 16px;
+    background-color: #F5F5F5;
 }
-
 
 
 @media (max-width: 768px) {
