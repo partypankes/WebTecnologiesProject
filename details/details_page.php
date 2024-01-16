@@ -30,10 +30,10 @@
         <section id="contents">
             <h2>Contents</h2>
             <ul>
-                <li><a href="#" onclick="caricaContenuto('ingredienti')" data-section="ingredients">Ingredients</a></li>
-                <li><a href="#" onclick="caricaContenuto('preparazione')" data-section="preparation">Preparation</a></li>
-                <li><a href="#" onclick="caricaContenuto('serving')" data-section="servingSuggestions">Serving Suggestions</a></li>
-                <li><a href="#" onclick="caricaContenuto('tips')" data-section="tipsTricks">Tips & Tricks</a></li>
+                <li><a  onclick="caricaContenuto('ingredienti')" data-section="ingredients">Ingredients</a></li>
+                <li><a  onclick="caricaContenuto('preparazione')" data-section="preparation">Preparation</a></li>
+                <li><a  onclick="caricaContenuto('serving')" data-section="servingSuggestions">Serving Suggestions</a></li>
+                <li><a  onclick="caricaContenuto('tips')" data-section="tipsTricks">Tips & Tricks</a></li>
             </ul>
 
         </section>
