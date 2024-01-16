@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- head section contains metadata and scripts that are not displayed on the page itself -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="details.css">
 </head>
 
-<!-- body section contains the main content of the page -->
+
 <body>
 <main>
     <section id="title">
@@ -46,19 +46,39 @@
 
 
     <section id="gallery">
-        <h2>Recipe Gallery</h2>
-        <p>Browse through user-uploaded images of recipe variations</p>
-        <ul>
-            <li><img src="image1.jpg" alt="Homemade Pizza Variation 1"></li>
-            <li><img src="image2.jpg" alt="Homemade Pizza Variation 2"></li>
-            <li><img src="image3.jpg" alt="Homemade Pizza Variation 3"></li>
-        </ul>
+        <div class="textGallery">
+            <h2>Recipe Gallery</h2>
+            <p>Browse through user-uploaded images of recipe variations</p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img src="image1.jpg" style="width:100%">
+                <img src="image2.jpg" style="width:100%">
+                <img src="image3.jpg" style="width:100%">
+
+            </div>
+            <div class="column">
+                <img src="image1.jpg" style="width:100%">
+                <img src="image2.jpg" style="width:100%">
+                <img src="image3.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="image1.jpg" style="width:100%">
+                <img src="image2.jpg" style="width:100%">
+                <img src="image3.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="image1.jpg" style="width:100%">
+                <img src="image2.jpg" style="width:100%">
+                <img src="image3.jpg" style="width:100%">
+            </div>
+        </div>
+
     </section>
 </main>
 
-<footer>
-    <p>Copyright © 2022 John Doe</p>
-</footer>
+<?php include ('../footer/footer.html'); ?>
 
 <script src="detailsjs.js"></script>
 

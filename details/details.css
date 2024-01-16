@@ -1,3 +1,16 @@
+main {
+    padding: 20px;
+}
+
+section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#title{
+    margin-top: 0;
+}
+
 #title, #details{
     display: flex;
     flex-wrap: wrap;
@@ -6,7 +19,7 @@
     padding: 50px 40px 20px 50px;
 }
 
-#title .text {
+#title .text{
     flex: 1 1 60%;
     padding-right: 20px;
 }
@@ -49,7 +62,7 @@ p {
 
 
 a {
-    color: #007bff;
+    color: black;
     text-decoration: none;
 }
 
@@ -90,15 +103,15 @@ li {
 }
 
 #contents li:nth-child(2) {
-    margin-left: 5%;
-}
-
-#contents li:nth-child(3) {
     margin-left: 10%;
 }
 
+#contents li:nth-child(3) {
+    margin-left: 20%;
+}
+
 #contents li:nth-child(4) {
-    margin-left: 15%;
+    margin-left: 30%;
 }
 
 #contents a {
@@ -106,20 +119,22 @@ li {
     padding: 1% 1% 1% 5%;
 }
 
-#contents a.active {
-    background-color: lightgrey;
+#contents a.active{
+    background-color: whitesmoke;
 
 }
 
 
-#recipe-content {
-    width: 80%;
+#details #recipe-content {
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    max-height: 422px;
 }
 
 #recipe-content h2 {
     font-size: 2rem;
-    color: #666;
-    margin-top: 0; /* Rimuovi il margine superiore per allinearlo con il titolo dei contenuti */
+    margin-top: 0;
 }
 
 #recipe-content p {
@@ -129,14 +144,51 @@ li {
 
 
 #gallery {
-    margin-bottom: 2rem;
+    box-sizing: border-box;
 }
 
-#gallery h2 {
-    margin-top: 3rem;
+#gallery .textGallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#gallery p {
-    margin-top: 0;
+#gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#gallery .column {
+    flex-basis: calc(25% - 10px);
+    margin-bottom: 20px;
+}
+
+#gallery .column img {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    height: auto;
+}
+section {
+    padding-bottom: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+    #gallery .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #gallery .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
 }
 

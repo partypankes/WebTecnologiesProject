@@ -18,13 +18,11 @@ function caricaContenuto(sezione) {
     xhr.send();
 }
 
-function createTable(data) {
-    var table = document.getElementById("tabella-ingredienti");
-    for (var i = 0; i < data.length; i++) {
-        var row = table.insertRow(i + 1);
-        var cell1 = row.insertCell(0);
-
-
-        cell1.innerHTML = data[i];
-        }
-}
+document.querySelectorAll('#contents a').forEach(function(link) {
+    link.addEventListener('click', function() {
+        document.querySelectorAll('#contents a').forEach(function(l) {
+            l.classList.remove('active');
+        });
+        link.classList.add('active');
+    });
+});
