@@ -29,4 +29,3 @@ if(isset($db)) {
 
 
 // Supponiamo che $output sia il risultato HTML da inviare indietro
-?>

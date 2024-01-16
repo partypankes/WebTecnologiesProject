@@ -23,7 +23,7 @@ VALUES ((SELECT id FROM ricetta WHERE titolo = $1 ), (SELECT categoria FROM cate
     $sql3 = "INSERT INTO ingrediente (ingrediente_name) VALUES ($1)
 ON CONFLICT (ingrediente_name) DO NOTHING;";
 
-    $sql4 = "INSERT INTO relazione (ricetta, ingrediente)
+    $sql4 = "INSERT INTO ricetta_ingrediente (ricetta, ingrediente)
 VALUES ((SELECT id FROM ricetta WHERE titolo = $1 ), (SELECT ingrediente_name FROM ingrediente WHERE ingrediente_name = $2));";
     foreach ($_POST['ingredienti'] as $value) {
         pg_query_params($db,$sql3,array($value));
