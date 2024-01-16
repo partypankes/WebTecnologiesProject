@@ -18,7 +18,7 @@
 <body>
 <main>
     <section id="title">
-        <div class="text"><?php name_and_user(4)?>
+        <div class="text"><?php name_and_user(1)?>
         </div>
         <div class="photo">
             <img src="immagine_prova.jpg" alt="Homemade Pizza">
