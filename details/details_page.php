@@ -14,13 +14,6 @@
 
 <!-- body section contains the main content of the page -->
 <body>
-<header>
-
-</header>
-
-
-
-
 <main>
     <section id="title">
         <div class="title">
