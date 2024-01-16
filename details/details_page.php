@@ -16,12 +16,20 @@
 <body>
 <main>
     <section id="title">
-        <div class="title">
+        <div class="text">
             <h1>Delicious and Easy Homemade Pizza Recipe</h1>
             <p>By John Doe - 11 Jan 2022 - 5-minute read</p>
+            <p style="color: black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur rhoncus ipsum eu purus malesuada,
+                sed dignissim ipsum interdum. Integer sit amet interdum ex. Nam vehicula libero id justo molestie imperdiet.
+                Quisque auctor elit tincidunt lorem fermentum dapibus. Sed placerat pulvinar risus. Aenean libero magna,
+                sagittis eget quam id, feugiat consectetur arcu. Mauris ullamcorper ipsum et dignissim mattis.
+                Cras eu nisl elementum nisi ornare tincidunt.Donec non rhoncus eros, sit amet semper nisl.
+                Phasellus consequat ac quam eget iaculis. Maecenas tellus mi, molestie nec ligula sit amet, rutrum fermentum
+                lorem.
+            </p>
         </div>
         <div class="photo">
-            <img src="image.jpg" alt="Homemade Pizza">
+            <img src="immagine_prova.jpg" alt="Homemade Pizza">
         </div>
     </section>
 

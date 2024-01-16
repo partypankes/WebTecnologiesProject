@@ -1,5 +1,3 @@
-
-
 function caricaContenuto(sezione) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'details_query.php?section=' + encodeURIComponent(sezione), true);

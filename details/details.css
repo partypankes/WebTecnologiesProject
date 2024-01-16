@@ -1,34 +1,52 @@
-/* Global styles */
-
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
+#title, #details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 40px 20px 50px;
 }
+
+#title .text {
+    flex: 1 1 60%;
+    padding-right: 20px;
+}
+
+
+#title .text p {
+
+}
+
+#title .photo {
+    flex: 1 1 35%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#title .photo img {
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+    max-height: 422px;
+}
+
 
 h1, h2 {
-    font-weight: normal;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5em;
 }
-
-h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-    color: #444;
+h1{
+    font-size: 3em;
 }
-
-h2 {
-    font-size: 2rem;
-    color: #666;
+h2{
+    font-size: 2em;
 }
 
 p {
-    margin-bottom: 1rem;
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 1em;
 }
+
 
 a {
     color: #007bff;
@@ -36,7 +54,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #c235e2;
 }
 
 ul {
@@ -49,43 +67,12 @@ li {
     margin-bottom: 0.5rem;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Main styles */
-main {
-    padding: 2rem;
-}
-
-#title {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; /* Assicurati che #title occupi l'intera larghezza */
-}
-
-#details{
-    display: flex;
-    justify-content: space-between;
-}
-
 #contents {
-    width: 20%; /* Imposta la larghezza dei contenuti a 20% del parent */
-    margin-right: 2%; /* Aggiungi un margine destro per separare i contenuti dal dettaglio della ricetta */
+    width: 20%;
+    margin-right: 2%;
 }
 
-#recipe-content {
-    width: 80%; /* Imposta la larghezza del contenuto della ricetta a 80% del parent */
-    /* Assicurati che il contenuto della ricetta occupi lo spazio rimanente */
-}
 
-#contents h2 {
-    margin-top: 0;
-}
-
-/* Stili per #contents */
-/* Stili per #contents */
 #contents ul {
     padding-left: 0;
 }
@@ -125,7 +112,10 @@ main {
 }
 
 
-/* Stili aggiuntivi per i titoli e i paragrafi dentro #recipe-content, se necessario */
+#recipe-content {
+    width: 80%;
+}
+
 #recipe-content h2 {
     font-size: 2rem;
     color: #666;
