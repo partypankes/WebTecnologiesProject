@@ -20,20 +20,18 @@
 .navbar{
     width: 50%;
     margin: 0 3% 0 3%;
+    align-self: baseline;
 }
 
 .navbar .menu{
     width: 100%;
     display: inline-flex;
-    justify-content: space-between;
-    align-content: baseline;
-    align-items: center;
+
 }
 
 .menu li {list-style: none;}
 .menu li a{
     color: #000;
-    align-content: baseline;
     text-align: center;
     font-size: 18px;
     font-style: normal;

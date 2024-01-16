@@ -34,6 +34,17 @@ if(isset($db)) {
             }
             pg_close($db);
             break;
+
+        case 'tips' :
+            $query = 'SELECT tips FROM ricetta WHERE id = 4';
+            $result = pg_query($db,$query);
+            if($row = pg_fetch_assoc($result)) {
+                echo "<p>" . $row['tips'] . "</p>";
+            } else {
+                echo "Errore nella query";
+            }
+            pg_close($db);
+            break;
         // Altri casi
     }
 }
