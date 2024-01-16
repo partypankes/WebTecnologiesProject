@@ -21,7 +21,7 @@
         <div class="text"><?php name_and_user(1)?>
         </div>
         <div class="photo">
-            <img src="immagine_prova.jpg" alt="Homemade Pizza">
+            <img src="<?php echo immagine_banner(1)?>" alt="Homemade Pizza">
         </div>
     </section>
 
