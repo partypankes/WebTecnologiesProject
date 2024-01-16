@@ -23,6 +23,17 @@ if(isset($db)) {
         case 'preparazione':
             // Query per la preparazione
             break;
+
+        case 'serving':
+            $query = 'SELECT serving_suggestion FROM ricetta WHERE id = 4';
+            $result = pg_query($db,$query);
+            if($row = pg_fetch_assoc($result)) {
+                echo "<p>" . $row['serving_suggestion'] . "</p>";
+            } else {
+                echo "errore nella query";
+            }
+            pg_close($db);
+            break;
         // Altri casi
     }
 }
