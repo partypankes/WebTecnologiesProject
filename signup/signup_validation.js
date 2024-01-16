@@ -26,12 +26,29 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         return;
     }
 
+    /*inizio controllo password*/
+
+    /*Controllo lunghezza password*/
+    if (password.length < 8 || pasword.length > 20) {
+        document.getElementById('errorMessage').textContent = "La password deve essere compresa tra gli 8 e 20 caratteri";
+        return;
+    }
+
     /*controllo presenza lettere maiuscole*/
-
+    if(!password.includes([A-Z])){
+        document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere maiuscolo ";
+        return;
+    }
     /*controllo presenza lettere minuscole*/
-
+    if(!password.includes([a-z])){
+        document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere maiuscolo";
+        return;
+    }
     /*controllo presenza carattere speciale*/
-
+    if(!password.includes("")){
+        document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere speciale";
+        return;
+    }
 
     /*fine controllo password*/
 

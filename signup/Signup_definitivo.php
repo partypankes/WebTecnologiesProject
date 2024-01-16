@@ -32,9 +32,9 @@
                     </div>
                     <div class="input-container">
                         <label for="Gender">Enter your Gender: </label>
-                        <label for="Gender" > &emsp;Male</label>
+                        <label for="Gender" > &emsp;Con diritti</label>
                         <input type="radio" id="Gender" name="sesso" value="M">
-                        <label for="Gender"> &emsp;Bene</label>
+                        <label for="Gender"> &emsp;Senza Diritti</label>
                         <input type="radio" id="Gender" name="sesso" value="F">
                     </div>
 
@@ -54,9 +54,19 @@
                         <label for="email">Enter your Email:</label>
                         <input type="email" name="email" id="email" class="input-field" placeholder="Email">
                     </div>
-                    <div class="input-container">
+                    <div class="input-container" id="password-div">
                         <label for="password">Enter your Password:</label>
-                        <input type="password" name="password" id="password" class="input-field" placeholder="Password">
+                        <input type="password" name="password" id="password" class="input-field" placeholder="Password" onfocus="showText('info-password')" onblur="hideText('info-password')">
+                        <div class="info-password" id="info-password">
+                            <label for="password">La password deve avere:</label>
+                            <ul>
+                                <li>Una lunghezza compresa tra 8 e 20 caratteri</li>
+                                <li>Almeno una lettera maiuscola</li>
+                                <li>Almeno una lettera minuscola</li>
+                                <li>Almeno un numero</li>
+                                <li>Almeno un carattere speciale</li>
+                            </ul>
+                        </div>
                     </div>
 
                     <div class="input-container">
@@ -74,10 +84,39 @@
     </div>
 </div>
 <script>
+    function hideText(divID){
+        document.getElementById(divID).style.display='none';
+    }
+
+    function showText(divID){
+        document.getElementById(divID).style.display='inline';
+    }
+
+
+
     function scrollToSection(sectionId, sectionId1) {
         document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
         var a = document.getElementById(sectionId1);
         setTimeout(function(){a.hidden = true}, 485);
+    }
+    function passwordControl(divID) {
+        document.getElementById('divID').addEventListener('input', function () {
+            const testo = this.value;
+            let risultato = '';
+
+            for (let i = 0; i < testo.length; i++) {
+                const char = testo[i];
+                if (char.match(/[a-zA-Z]/)) {
+                    risultato += `Lettera: ${char}<br>`;
+                } else if (char.match(/[0-9]/)) {
+                    risultato += `Numero: ${char}<br>`;
+                } else {
+                    risultato += `Altro: ${char}<br>`;
+                }
+            }
+
+            document.getElementById('risultato').innerHTML = risultato;
+        });
     }
 </script>
 <script src="signup_validation.js"></script>
