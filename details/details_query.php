@@ -21,7 +21,19 @@ if(isset($db)) {
 
             break;
         case 'preparazione':
-            // Query per la preparazione
+            $query = 'SELECT preparation_json FROM ricetta WHERE id = 1';
+            $result = pg_query($db, $query);
+            if($row = pg_fetch_assoc($result)) {
+                $str = null;
+                $jsonData = json_decode($row['preparation_json'], true);
+                for($i = 0; $i < count($jsonData); $i++) {
+                    $str.= "<p>" . $jsonData[$i] . "</p>>";
+                }
+                echo $str;
+            } else {
+                echo "errore nella query";
+            }
+            pg_close($db);
             break;
 
         case 'serving':
