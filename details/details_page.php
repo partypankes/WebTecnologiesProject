@@ -51,6 +51,7 @@
             <p>Browse through user-uploaded images of recipe variations</p>
         </div>
 
+       
 
 
     </section>

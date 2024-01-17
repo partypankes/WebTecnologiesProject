@@ -26,10 +26,6 @@ section {
 }
 
 
-#title .text p {
-
-}
-
 #title .photo {
     flex: 1 1 35%;
     display: flex;
