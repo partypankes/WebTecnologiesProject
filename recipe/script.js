@@ -1,19 +1,54 @@
 function aggiungiIngrediente() {
     var container = document.getElementById('ingredienti');
-    var input = document.createElement('input');
-    input.type = 'text';
-    input.className = 'ingrediente';
-    input.name = 'ingredienti[]';
-    container.appendChild(input);
+    var gruppo = document.createElement('div');
+    gruppo.className = 'ingrediente-gruppo';
+
+    var inputIngrediente = document.createElement('input');
+    inputIngrediente.type = 'text';
+    inputIngrediente.name = 'ingredienti[]';
+    inputIngrediente.className = 'ingrediente';
+
+    var inputQuantita = document.createElement('input');
+    inputQuantita.type = 'text';
+    inputQuantita.name = 'quantita[]';
+    inputQuantita.className = 'quantita';
+    inputQuantita.placeholder = 'Quantità'; // Aggiungi il placeholder
+
+    var selectUnita = document.createElement('select');
+    selectUnita.name = 'unita[]';
+    selectUnita.className = 'unita';
+
+    // Aggiungi l'opzione di placeholder
+    var optionPlaceholder = document.createElement('option');
+    optionPlaceholder.value = "";
+    optionPlaceholder.disabled = true;
+    optionPlaceholder.selected = true;
+    optionPlaceholder.textContent = '-'; // Usa textContent o innerText
+    selectUnita.appendChild(optionPlaceholder);
+
+    // Aggiungi le altre opzioni
+    var unita = ["g", "ml", /* altre unità */];
+    unita.forEach(function(u) {
+        var option = document.createElement('option');
+        option.value = u;
+        option.textContent = u; // Usa textContent o innerText
+        selectUnita.appendChild(option);
+    });
+
+    gruppo.appendChild(inputIngrediente);
+    gruppo.appendChild(inputQuantita);
+    gruppo.appendChild(selectUnita);
+    container.insertBefore(gruppo, document.querySelector('.aggiungi-ingrediente'));
 }
-function aggiungiImmagine() {
-    var container = document.getElementById('immagini');
-    var input = document.createElement('input');
-    input.type = 'file';
-    input.className = 'immagineRicetta';
-    input.onchange = mostraAnteprima; // Aggiunta della funzione per mostrare l'anteprima
-    container.appendChild(input);
+
+function clearPlaceholder(element) {
+    element.placeholder = '';
 }
+
+function restorePlaceholder(element, defaultPlaceholder) {
+    element.placeholder = element.getAttribute('data-placeholder') || defaultPlaceholder;
+}
+
 
 function mostraAnteprima(event) {
     var files = event.target.files;
