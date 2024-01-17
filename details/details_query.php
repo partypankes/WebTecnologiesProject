@@ -26,8 +26,8 @@ if(isset($db)) {
             if($row = pg_fetch_assoc($result)) {
                 $str = null;
                 $jsonData = json_decode($row['preparation_json'], true);
-                for($i = 0; $i < count($jsonData); $i++) {
-                    $str.= "<p>" . $jsonData[$i] . "</p>>";
+                foreach ($jsonData as $elemento) {
+                    echo "<p>" . $elemento['id'] . ") " . $elemento['text'] . "</p>";
                 }
                 echo $str;
             } else {
