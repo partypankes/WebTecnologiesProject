@@ -4,13 +4,13 @@ $section = $_GET['section'] ?? '';
 if(isset($db)) {
     switch ($section) {
         case 'ingredienti':
-            $query = "SELECT i.ingrediente_name, ri.quantita, ri.misurazione FROM ingrediente i INNER JOIN ricetta_ingrediente ri ON i.id = ri.ingrediente WHERE ri.ricetta = 1";
+            $query = "SELECT i.ingrediente_name, ri.quantita, ri.misurazione FROM ingrediente i INNER JOIN ricetta_ingrediente ri ON i.id = ri.ingrediente WHERE ri.ricetta = 4";
             $result = pg_query($db, $query);
             if ($result) {
-                $tableHTML = "<table border='1' id='tabella-ingredienti'><tr><th>Quantitá</th><th>Misurazione</th><th>Nome Ingrediente</th></tr>";
+                $tableHTML = "<table  id='ingredienti'><tr><th>Ingrediente</th><th>Quantità</th></tr>";
                 $i = 1;
                 while ($row = pg_fetch_assoc($result)) {
-                    $tableHTML .= "<tr><td>".$row['quantita']."</td><td>".$row['misurazione']."</td><td>".$row['ingrediente_name']."</td></tr>";
+                    $tableHTML .= "<tr><td>".$row['ingrediente_name']."</td><td>".$row['quantita']."</td></tr>";
                 }
                 $tableHTML .= "</table>";
                 pg_close($db);
@@ -21,7 +21,7 @@ if(isset($db)) {
 
             break;
         case 'preparazione':
-            $query = 'SELECT preparation_json FROM ricetta WHERE id = 1';
+            $query = 'SELECT preparation_json FROM ricetta WHERE id = 4';
             $result = pg_query($db, $query);
             if($row = pg_fetch_assoc($result)) {
                 $str = null;
@@ -37,7 +37,7 @@ if(isset($db)) {
             break;
 
         case 'serving':
-            $query = 'SELECT serving_suggestion FROM ricetta WHERE id = 1';
+            $query = 'SELECT serving_suggestion FROM ricetta WHERE id = 4';
             $result = pg_query($db,$query);
             if($row = pg_fetch_assoc($result)) {
                 echo "<p>" . $row['serving_suggestion'] . "</p>";
@@ -48,7 +48,7 @@ if(isset($db)) {
             break;
 
         case 'tips' :
-            $query = 'SELECT tips FROM ricetta WHERE id = 1';
+            $query = 'SELECT tips FROM ricetta WHERE id = 4';
             $result = pg_query($db,$query);
             if($row = pg_fetch_assoc($result)) {
                 echo "<p>" . $row['tips'] . "</p>";

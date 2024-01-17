@@ -1,33 +1,32 @@
 main {
-    padding: 20px;
+    margin: 10vh 5% 0 5%;
 }
 
 section {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin: 0.5%;
+    padding: 3%; /* Adjusted from 50px, based on container size */
+    border: 1px solid #0A0A0A;
 }
 
-#title{
-    margin-top: 0;
+#title {
+    background-color: #a12abb;
+    border-radius: 20px; /* Reverted to original value */
 }
 
-#title, #details{
+#title, #details {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 50px 40px 20px 50px;
 }
 
-#title .text{
+#title .text {
     flex: 1 1 60%;
-    padding-right: 20px;
+    padding-right: 1.5%; /* Adjusted from 20px */
 }
-
 
 #title .photo {
-    flex: 1 1 35%;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -35,12 +34,12 @@ section {
 
 #title .photo img {
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; /* Max-width in px retained for image size control */
     height: 100%;
-    max-height: 500px;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 10px;
+    max-height: 500px; /* Max-height in px retained for image size control */
+    border-radius: 20px; /* Reverted to original value */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reverted to original value */
+    margin: 1%; /* Adjusted from 10px */
 }
 
 #title .photo img:hover {
@@ -48,15 +47,12 @@ section {
     transition: transform 0.3s ease;
 }
 
-
-h1, h2 {
+h1 {
     margin-bottom: 0.5em;
+    font-size: 3em; /* Font sizes typically kept in em or px for consistency */
 }
-h1{
-    font-size: 3em;
-}
-h2{
-    font-size: 2em;
+h2 {
+    font-size: 2em; /* Font sizes typically kept in em or px for consistency */
 }
 
 p {
@@ -65,15 +61,12 @@ p {
     margin-bottom: 1em;
 }
 
-
 a {
+
     color: black;
     text-decoration: none;
 }
 
-a:hover {
-    color: #c235e2;
-}
 
 ul {
     list-style: none;
@@ -81,64 +74,78 @@ ul {
     margin: 0;
 }
 
-li {
-    margin-bottom: 0.5rem;
-}
+
 
 #contents {
     width: 20%;
     margin-right: 2%;
+
 }
 
+#contents h2 {
+    padding: 0.2em;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: pink;
+    background-color: pink;
+    text-align: center;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
 
 #contents ul {
     padding-left: 0;
 }
 
 #contents li {
-    position: relative;
+    text-align: center;
     margin-left: 0;
-    padding-left: 5%;
     cursor: pointer;
 }
 
 
-#contents li:nth-child(1) {
-    margin-left: 0;
-}
-
-#contents li:nth-child(2) {
-    margin-left: 10%;
-}
-
-#contents li:nth-child(3) {
-    margin-left: 20%;
-}
-
-#contents li:nth-child(4) {
-    margin-left: 30%;
-}
 
 #contents a {
     display: block;
     padding: 1% 1% 1% 5%;
 }
 
-#contents a.active{
-    background-color: whitesmoke;
+#contents a.active {
+    background-color: gray;
+    border-radius: 20px;
+
 
 }
 
 
-#details #recipe-content {
-    width: 100%;
-    max-width: 750px;
-    height: 100%;
-    max-height: 422px;
+
+#contents li:nth-child(1) {
+    border-bottom: 1px solid;
+
+}
+
+#contents li:nth-child(2) {
+    border-bottom: 1px solid;
+
+}
+
+#contents li:nth-child(3) {
+    border-bottom: 1px solid;
+
+}
+
+#contents li:nth-child(4) {
+    border-bottom: 1px solid;
+}
+
+#recipe-content {
+    border-style: solid;
+    border-radius: 20px;
+    width: 80%;
+    padding: 2%;
 }
 
 #recipe-content h2 {
-    font-size: 2rem;
+    font-size: 2rem; /* Font sizes typically kept in em or px for consistency */
     margin-top: 0;
 }
 
@@ -146,21 +153,65 @@ li {
     margin-bottom: 1rem;
 }
 
-
-
 #gallery {
     box-sizing: border-box;
 }
 
-#gallery .textGallery{
+#gallery .textGallery {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+#ingredienti {
+    width: 100%; /* Si adatta alla larghezza del contenitore */
+    border-collapse: separate;
+    border-spacing: 0;
 
+    margin: 0; /* Rimuove i margini predefiniti */
+}
 
+#ingredienti td, #ingredienti th {
+    padding: 1em; /* Aumenta il padding per dare la sensazione di una lista */
+    border-bottom: 1px solid #ddd; /* Solo un bordo sotto ogni riga */
+    text-align: left; /* Allinea il testo a sinistra */
+}
 
+#ingredienti th {
+    background-color: pink; /* Colore di sfondo per l'intestazione */
+    color: white;
+    font-weight: bold;
+}
 
+#ingredienti th:first-child {
+     border-top-left-radius: 20px;
+}
+#ingredienti th:last-child {
+    border-top-right-radius: 20px;
+}
 
+#ingredienti td {
+    background-color: #F5F5F5; /* Colore di sfondo per le celle */
+}
 
+/* Rimuove il bordo dall'ultima riga in basso */
+#ingredienti tr:last-child td {
+    border-bottom: none;
+}
+
+/* Aggiunge uno stile hover per le righe per migliorare l'interattività */
+#ingredienti tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Rende il testo più leggibile su sfondi colorati */
+#ingredienti th, #ingredienti tr:hover {
+    color: black;
+}
+
+/* Responsive Design: Assicura che la tabella non sia mai più larga del suo contenitore */
+@media screen and (max-width: 600px) {
+    #ingredienti td, #ingredienti th {
+        padding: 0.5em; /* Riduce il padding su schermi piccoli */
+    }
+}

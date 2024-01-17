@@ -16,18 +16,19 @@
 
 
 <body>
+<?php include '../_header/provaheader_1.html' ?>
 <main>
     <section id="title">
-        <div class="text"><?php name_and_user(1)?>
+        <div class="text"><?php name_and_user(4)?>
         </div>
         <div class="photo">
-            <img src="<?php echo immagine_banner(1)?>" alt="Homemade Pizza">
+            <img src="<?php echo immagine_banner(4)?>" alt="Homemade Pizza">
         </div>
     </section>
 
 
     <section id="details">
-        <section id="contents">
+        <div id="contents">
             <h2>Contents</h2>
             <ul>
                 <li><a  onclick="caricaContenuto('ingredienti')" data-section="ingredients">Ingredients</a></li>
@@ -36,11 +37,40 @@
                 <li><a  onclick="caricaContenuto('tips')" data-section="tipsTricks">Tips & Tricks</a></li>
             </ul>
 
-        </section>
+        </div>
 
-        <section id="recipe-content">
-
-        </section>
+        <div id="recipe-content">
+            <table id="ingredienti">
+                <tr>
+                    <th>Ingrediente</th>
+                    <th>Quantità</th>
+                </tr>
+                <tr>
+                    <td>Pasta</td>
+                    <td>500g</td>
+                </tr>
+                <tr>
+                    <td>Pomodori</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Aglio</td>
+                    <td>2 spicchi</td>
+                </tr>
+                <tr>
+                    <td>Olio d'oliva</td>
+                    <td>2 cucchiai</td>
+                </tr>
+                <tr>
+                    <td>Sale</td>
+                    <td>q.b.</td>
+                </tr>
+                <tr>
+                    <td>Basilico</td>
+                    <td>A piacere</td>
+                </tr>
+            </table>
+        </div>
 
     </section>
 
