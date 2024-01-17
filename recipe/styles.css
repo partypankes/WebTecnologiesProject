@@ -1,5 +1,5 @@
 body{
-    background-color: whitesmoke;
+    background-color: ghostwhite;
 }
 
 
@@ -92,12 +92,6 @@ select option[disabled] {
     width: 15%;
 }
 
-.invio button:hover {
-    background-color: transparent;
-    border: 1px solid #252525;
-    color: #252525;
-}
-
 .invio{
     display: flex;
     align-items: center;
@@ -126,6 +120,60 @@ select option[disabled] {
 .ingrediente-gruppo .unita {
     flex-basis: 15%;
 }
+
+#immaginiContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.anteprimaDiv {
+    border: 1px solid #ddd;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.anteprimaDiv img {
+    width: auto;
+    height: 100px;
+    display: block;
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+.aggiungi-immagine {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.procedimento-gruppo {
+    display: flex;
+    align-items: center;
+    gap: .5%;
+}
+
+.procedimento-numero {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.aggiungi-procedimento {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
 
 
 

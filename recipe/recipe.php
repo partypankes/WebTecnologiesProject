@@ -35,12 +35,16 @@
             </div>
 
 
-            <div class="form-section">
+            <div class="form-section" id="caricamentoImmagini">
                 <label for="immagineRicetta">Carica Immagini:</label>
-                <input type="file" id="immagineRicetta" name="immagineRicetta" accept="image/png, image/jpeg" multiple onchange="mostraAnteprima(event)">
+                <div id="immaginiContainer">
+                    <input type="file" class="input-immagine" name="immagineRicetta[]" accept="image/png, image/jpeg" onchange="mostraAnteprima(this)">
+                </div>
+                <button type="button" class="aggiungi-immagine" onclick="aggiungiImmagine()">+</button>
             </div>
 
-            <div id="anteprimaImmagine"></div>
+            <div id="anteprimaImmagini"></div>
+
 
 
 
@@ -59,10 +63,15 @@
             </div>
 
 
-            <div class="form-section">
-                <label for="procedimentoRicetta">Procedimento:</label>
-                <input type="text" id="procedimentoRicetta" name="procedimentoRicetta"></input>
+            <div class="form-section" id="procedimentiContainer">
+                <label for="procedimentiRicetta">Procedimento:</label>
+                <div class="procedimento-gruppo" id="procedimento1">
+                    <span class="procedimento-numero">1.</span>
+                    <input type="text" class="procedimento" name="procedimentiRicetta[]">
+                </div>
+                <button type="button" class="aggiungi-procedimento" onclick="aggiungiProcedimento()">+</button>
             </div>
+
 
             <div class="form-section">
                 <label for="categoriaRicetta">Categoria Ricetta:</label>

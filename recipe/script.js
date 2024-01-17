@@ -50,22 +50,6 @@ function restorePlaceholder(element, defaultPlaceholder) {
 }
 
 
-function mostraAnteprima(event) {
-    var files = event.target.files;
-    var anteprimaContainer = document.getElementById('anteprimaImmagine');
-    anteprimaContainer.innerHTML = ''; // Pulisce le anteprime precedenti
-
-    Array.from(files).forEach(file => {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-            var img = document.createElement('img');
-            img.src = e.target.result;
-            img.style.marginRight = '10px';
-            anteprimaContainer.appendChild(img);
-        }
-        reader.readAsDataURL(file);
-    });
-}
 document.getElementById('ricettaForm').onsubmit = function(event) {
     var categoria = document.getElementById('categoriaRicetta').value;
     if (categoria === "") {
@@ -79,6 +63,66 @@ function nascondiOpzioneIniziale() {
     selectElement.options[0].hidden = true; // Nasconde l'opzione iniziale
 }
 
+
+function aggiungiImmagine() {
+    var immaginiContainer = document.getElementById('immaginiContainer');
+    var nuovoInput = document.createElement('input');
+    nuovoInput.type = 'file';
+    nuovoInput.className = 'input-immagine';
+    nuovoInput.name = 'immagineRicetta[]';
+    nuovoInput.accept = 'image/png, image/jpeg';
+    nuovoInput.onchange = function() { mostraAnteprima(this); };
+    immaginiContainer.appendChild(nuovoInput);
+}
+
+function mostraAnteprima(input) {
+    if (input.files) {
+        Array.from(input.files).forEach(file => {
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var anteprimaDiv = document.createElement('div');
+                    anteprimaDiv.className = 'anteprimaDiv';
+
+                    var img = document.createElement('img');
+                    img.src = e.target.result;
+
+                    anteprimaDiv.appendChild(img);
+
+                    var immaginiContainer = document.getElementById('immaginiContainer');
+                    immaginiContainer.insertBefore(anteprimaDiv, input);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        // Nascondi l'input file originale dopo aver selezionato un'immagine
+        input.style.display = 'none';
+    }
+}
+
+function aggiungiProcedimento() {
+    var container = document.getElementById('procedimentiContainer');
+    var numeroProcedimenti = container.getElementsByClassName('procedimento-gruppo').length;
+    var nuovoProcedimento = document.createElement('div');
+    nuovoProcedimento.className = 'procedimento-gruppo';
+    nuovoProcedimento.id = 'procedimento' + (numeroProcedimenti + 1);
+
+    var spanNumero = document.createElement('span');
+    spanNumero.className = 'procedimento-numero';
+    spanNumero.textContent = (numeroProcedimenti + 1) + '.';
+
+    var inputProcedimento = document.createElement('input');
+    inputProcedimento.type = 'text';
+    inputProcedimento.className = 'procedimento';
+    inputProcedimento.name = 'procedimentiRicetta[]';
+
+    nuovoProcedimento.appendChild(spanNumero);
+    nuovoProcedimento.appendChild(inputProcedimento);
+
+    // Inserisci il nuovo procedimento prima del pulsante "+"
+    var aggiungiButton = document.querySelector('.aggiungi-procedimento');
+    container.insertBefore(nuovoProcedimento, aggiungiButton);
+}
 
 
 
