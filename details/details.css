@@ -79,12 +79,17 @@ ul {
 #contents {
     width: 20%;
     margin-right: 2%;
-    border-style: solid;
-    border-radius: 20px;
+
 }
 
 #contents h2 {
+    padding: 0.2em;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: pink;
+    background-color: pink;
     text-align: center;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 
 #contents ul {
@@ -92,10 +97,12 @@ ul {
 }
 
 #contents li {
-    position: relative;
+    text-align: center;
     margin-left: 0;
     cursor: pointer;
 }
+
+
 
 #contents a {
     display: block;
@@ -104,8 +111,30 @@ ul {
 
 #contents a.active {
     background-color: gray;
+    border-radius: 20px;
 
 
+}
+
+
+
+#contents li:nth-child(1) {
+    border-bottom: 1px solid;
+
+}
+
+#contents li:nth-child(2) {
+    border-bottom: 1px solid;
+
+}
+
+#contents li:nth-child(3) {
+    border-bottom: 1px solid;
+
+}
+
+#contents li:nth-child(4) {
+    border-bottom: 1px solid;
 }
 
 #recipe-content {
@@ -124,29 +153,6 @@ ul {
     margin-bottom: 1rem;
 }
 
-#contents li:nth-child(1) {
-    border-top: 1px solid;
-}
-
-#contents li:nth-child(2) {
-    border-top: 1px solid;
-
-}
-
-#contents li:nth-child(3) {
-    border-top: 1px solid;
-
-}
-
-#contents li:nth-child(4) {
-    border-top: 1px solid;
-
-}
-#contents li:nth-child(4) a.active {
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
-
 #gallery {
     box-sizing: border-box;
 }
@@ -156,4 +162,56 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#ingredienti {
+    width: 100%; /* Si adatta alla larghezza del contenitore */
+    border-collapse: separate;
+    border-spacing: 0;
+
+    margin: 0; /* Rimuove i margini predefiniti */
+}
+
+#ingredienti td, #ingredienti th {
+    padding: 1em; /* Aumenta il padding per dare la sensazione di una lista */
+    border-bottom: 1px solid #ddd; /* Solo un bordo sotto ogni riga */
+    text-align: left; /* Allinea il testo a sinistra */
+}
+
+#ingredienti th {
+    background-color: pink; /* Colore di sfondo per l'intestazione */
+    color: white;
+    font-weight: bold;
+}
+
+#ingredienti th:first-child {
+     border-top-left-radius: 20px;
+}
+#ingredienti th:last-child {
+    border-top-right-radius: 20px;
+}
+
+#ingredienti td {
+    background-color: #F5F5F5; /* Colore di sfondo per le celle */
+}
+
+/* Rimuove il bordo dall'ultima riga in basso */
+#ingredienti tr:last-child td {
+    border-bottom: none;
+}
+
+/* Aggiunge uno stile hover per le righe per migliorare l'interattività */
+#ingredienti tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Rende il testo più leggibile su sfondi colorati */
+#ingredienti th, #ingredienti tr:hover {
+    color: black;
+}
+
+/* Responsive Design: Assicura che la tabella non sia mai più larga del suo contenitore */
+@media screen and (max-width: 600px) {
+    #ingredienti td, #ingredienti th {
+        padding: 0.5em; /* Riduce il padding su schermi piccoli */
+    }
 }

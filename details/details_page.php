@@ -40,7 +40,36 @@
         </div>
 
         <div id="recipe-content">
-
+            <table id="ingredienti">
+                <tr>
+                    <th>Ingrediente</th>
+                    <th>Quantità</th>
+                </tr>
+                <tr>
+                    <td>Pasta</td>
+                    <td>500g</td>
+                </tr>
+                <tr>
+                    <td>Pomodori</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Aglio</td>
+                    <td>2 spicchi</td>
+                </tr>
+                <tr>
+                    <td>Olio d'oliva</td>
+                    <td>2 cucchiai</td>
+                </tr>
+                <tr>
+                    <td>Sale</td>
+                    <td>q.b.</td>
+                </tr>
+                <tr>
+                    <td>Basilico</td>
+                    <td>A piacere</td>
+                </tr>
+            </table>
         </div>
 
     </section>
