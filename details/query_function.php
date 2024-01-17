@@ -14,7 +14,7 @@ function name_and_user($id): void
     }
 }
 
-function immagine_banner($id)
+function immagine_banner($id): string
 {
     include '../dbconnection.php';
     if(isset($db)) {
@@ -30,4 +30,20 @@ function immagine_banner($id)
         }
     }
     return ''; // Ritorna una stringa vuota in caso di errore
+}
+
+function image_gallery(): void
+{
+    include '../dbconnection.php';
+    if(isset($db)) {
+        $sql = "SELECT  immagine FROM immagini i WHERE ricetta = $1";
+        $result = pg_query_params($db, $sql, array(4));
+        $i = 0;
+        $row = pg_fetch_assoc($result);
+        $imageData = pg_unescape_bytea($row['immagine']);
+        echo '<img src="' . ('data:image/jpeg;base64,' . base64_encode($imageData)) . '" alt="image' . $i . '">';
+
+
+    }
+
 }
