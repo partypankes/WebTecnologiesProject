@@ -11,7 +11,7 @@
 
 <?php
     //da poter cambiare nel caso l'utente sia registrato o meno
-    include('../_header/provaheader_1.html');
+    include('../_header/nonRegistratoHeader.html');
 ?>
 
 <main>
@@ -38,7 +38,7 @@
       <h2>Meet Our Team</h2>
       <div class="team-members">
         <article class="team-member">
-          <img src="placeholder-profile.jpg" alt="John Doe">
+          <img src="../resources/profile-prova.png" alt="John Doe">
           <h3>John Doe</h3>
           <p>Chef</p>
           <p>John is a talented chef with a passion for creating unique and delicious dishes.</p>
