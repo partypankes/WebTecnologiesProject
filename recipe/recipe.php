@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<?php include('../_header/nonRegistratoHeader.html')?>
+
     <section id="container">
         <div class="title">
             <h1>Inserisci La Tua Ricetta</h1>
