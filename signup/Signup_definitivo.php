@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="login">
-                        <button type="button" id="next-button" class="submit-button" form="signupForm1" onclick="scrollToSection('section2', 'section1')" ><div style="font-family:'MontSerrat T',serif" >Next</div> </button>
+                        <button type="button" id="next-button" class="submit-button" form="signupForm1" ><div style="font-family:'MontSerrat T',serif" >Next</div> </button>
                     </div>
 
 

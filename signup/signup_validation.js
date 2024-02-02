@@ -4,6 +4,7 @@ document.getElementById('next-button').addEventListener('click', function(event)
     var name = document.getElementById('name').value;
     var surname = document.getElementById('surname').value;
     var birthdate = document.getElementById('birthdate').value;
+    var genderSelected = document.querySelector('input[name="Gender"]:checked');
 
     var isValid= true;
 
@@ -25,8 +26,13 @@ document.getElementById('next-button').addEventListener('click', function(event)
         isValid = false;
     }
 
-    if(!isValid){
-        return false;
+    if (!genderSelected) {
+        document.getElementById('errorMessage').textContent = "Selezionare genere";
+        isValid = false;
+    }
+
+    if(isValid){
+        scrollToSection('section2', 'section1');
     }
 });
 
