@@ -1,10 +1,62 @@
+document.getElementById('next-button').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    var name = document.getElementById('name').value;
+    var surname = document.getElementById('surname').value;
+    var birthdate = document.getElementById('birthdate').value;
+
+    var isValid= true;
+
+    /*inserimento nome*/
+    if (name.length <= 1) {
+        document.getElementById('errorMessage').textContent = "Inserire il nome";
+        isValid = false;
+    }
+
+    /*inserimento cognome*/
+    if (surname.length <= 1) {
+        document.getElementById('errorMessage').textContent = "Inserire il cognome";
+        isValid = false;
+    }
+
+    /*inserimento data di nascita*/
+    if (birthdate == null) {
+        document.getElementById('errorMessage').textContent = "Inserire data di nascita";
+        isValid = false;
+    }
+
+    if(isValid){
+        return false;
+    }
+});
 document.getElementById('signupForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
+    var name = document.getElementById('name').value;
+    var surname = document.getElementById('surname').value;
+    var birthdate = document.getElementById('birthdate').value;
     var username = document.getElementById('username').value;
     var email = document.getElementById('email').value;
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var password = document.getElementById('password').value;
+
+    /*inserimento nome*/
+    if (name.length <=1) {
+        document.getElementById('errorMessage').textContent = "Inserire il nome";
+        return;
+    }
+
+    /*inserimento cognome*/
+    if (surname.length <= 1) {
+        document.getElementById('errorMessage').textContent = "Inserire il cognome";
+        return;
+    }
+
+    /*inserimento data di nascita*/
+    if (birthdate == null) {
+        document.getElementById('errorMessage').textContent = "Inserire data di nascita";
+        return;
+    }
 
     /*lunghezza username*/
     if (username.length < 6 || username.length > 16) {
