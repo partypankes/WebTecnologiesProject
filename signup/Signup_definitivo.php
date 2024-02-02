@@ -12,59 +12,64 @@
     <div class="title">
         <h1>Sign Up</h1>
         <p>Join our community and start sharing!</p>
+        <p id="errorMessage" style="color:red;"></p>
     </div>
     <div class="login-data">
         <form id="signupForm" method="post">
             <div class="scroll-container">
                 <div id="section1" class="scroll-section">
+
                     <!-- Section 1: Personal Information -->
                     <div class="input-container">
-                        <label for="name">Enter your Name:</label>
+                        <label for="name">Name:</label>
                         <input type="text" name="nome" id="name" class="input-field" placeholder="Name">
                     </div>
                     <div class="input-container">
-                        <label for="surname">Enter your Surname:</label>
+                        <label for="surname">Surname:</label>
                         <input type="text" name="cognome" id="surname" class="input-field" placeholder="Surname">
                     </div>
                     <div class="input-container">
-                        <label for="birthdate">Enter your Date of Birth:</label>
+                        <label for="birthdate">Date of Birth:</label>
                         <input type="date" name="data_di_nascita" id="birthdate" class="input-field" placeholder="Date of Birth">
                     </div>
                     <div class="input-container">
-                        <label for="Gender">Enter your Gender: </label>
-                        <label for="Gender" > &emsp;Con diritti</label>
+                        <label for="Gender">Gender: </label>
+                        <label for="Gender" > &emsp;Uomo</label>
                         <input type="radio" id="Gender" name="sesso" value="M">
-                        <label for="Gender"> &emsp;Senza Diritti</label>
+                        <label for="Gender"> &emsp;Donna</label>
                         <input type="radio" id="Gender" name="sesso" value="F">
+                        <label for="Gender"> &emsp;Altro</label>
+                        <input type="radio" id="Gender" name="sesso" value="O">
                     </div>
 
                     <div class="login">
-                        <button type="button" class="submit-button" onclick="scrollToSection('section2', 'section1')" ><div style="font-family:'MontSerrat T',serif" >Next</div> </button>
+                        <button type="button" id="next-button" class="submit-button" form="signupForm1" ><div style="font-family:'MontSerrat T',serif" >Next</div> </button>
                     </div>
+
 
                 </div>
                 <div id="section2" class="scroll-section">
-                    <p id="errorMessage" style="color:red;"></p>
+                    <!--<p id="errorMessage" style="color:red;"></p> -->
                     <!-- Section 2: Account Information -->
                     <div class="input-container">
-                        <label for="username">Enter your Username:</label>
+                        <label for="username">Username:</label>
                         <input type="text" name="username" id="username" class="input-field" placeholder="Username" maxlength="16">
                     </div>
                     <div class="input-container">
-                        <label for="email">Enter your Email:</label>
+                        <label for="email">Email:</label>
                         <input type="email" name="email" id="email" class="input-field" placeholder="Email">
                     </div>
                     <div class="input-container" id="password-div">
-                        <label for="password">Enter your Password:</label>
+                        <label for="password">Password:</label>
                         <input type="password" name="password" id="password" class="input-field" placeholder="Password" onfocus="showText('info-password')" onblur="hideText('info-password')" maxlength="20">
                         <div class="info-password" id="info-password">
-                            <label for="password" id="f0">La password deve avere:</label>
+                            <label for="password" id="intro_requisiti">La password deve avere:</label>
                             <ul>
-                                <li id="f1">Una lunghezza compresa tra 8 e 20 caratteri</li>
-                                <li id="f2">Almeno una lettera maiuscola</li>
-                                <li id="f3">Almeno una lettera minuscola</li>
-                                <li id="f4">Almeno un numero</li>
-                                <li id="f5">Almeno un carattere speciale</li>
+                                <li id="lunghezza">Una lunghezza compresa tra 8 e 20 caratteri</li>
+                                <li id="maiuscola">Almeno una lettera maiuscola</li>
+                                <li id="minuscola">Almeno una lettera minuscola</li>
+                                <li id="numero">Almeno un numero</li>
+                                <li id="carspeciale">Almeno un carattere speciale</li>
                             </ul>
                         </div>
                     </div>
@@ -105,39 +110,39 @@
         const password = this.value;
 
         if (password.length>=8 && password.length<=20)
-            document.getElementById('f1').style.color = 'limegreen';
+            document.getElementById('lunghezza').style.color = 'limegreen';
         else
-            document.getElementById('f1').style.color = 'grey';
+            document.getElementById('lunghezza').style.color = 'grey';
 
         /**/
         if (password.match(/[a-z]/))
-            document.getElementById('f3').style.color ='limegreen';
+            document.getElementById('minuscola').style.color ='limegreen';
         else
-            document.getElementById('f3').style.color='grey';
+            document.getElementById('minuscola').style.color='grey';
 
         /**/
         if (password.match(/[A-Z]/))
-            document.getElementById('f2').style.color='limegreen';
+            document.getElementById('maiuscola').style.color='limegreen';
          else
-            document.getElementById('f2').style.color='grey';
+            document.getElementById('maiuscola').style.color='grey';
 
         /**/
         if (password.match(/[0-9]/))
-            document.getElementById('f4').style.color='limegreen';
+            document.getElementById('numero').style.color='limegreen';
          else
-            document.getElementById('f4').style.color='grey';
+            document.getElementById('numero').style.color='grey';
 
         /**/
         if (password.match(/[^a-zA-Z0-9]/))
-            document.getElementById('f5').style.color='limegreen';
+            document.getElementById('carspeciale').style.color='limegreen';
         else
-            document.getElementById('f5').style.color='grey';
+            document.getElementById('carspeciale').style.color='grey';
 
         /**/
         if( password.length>=8 && password.length<=20 && password.match(/[a-z]/) && password.match(/[A-Z]/) && password.match(/[0-9]/) && password.match(/[^a-zA-Z0-9]/))
-            document.getElementById('f0').style.color='limegreen';
+            document.getElementById('intro_requisiti').style.color='limegreen';
         else
-            document.getElementById('f0').style.color='grey';
+            document.getElementById('intro_requisiti').style.color='grey';
     });
 
 </script>

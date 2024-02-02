@@ -8,12 +8,24 @@ body {
 }
 
 .login-container {
+
     max-width: 45%;
     margin: 5% auto;
     padding: 2%;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.login-data {
+
+
+    margin: auto;
+    padding: 2%;
+    background-color: #fff;
+    position: relative;
+    align-items: center;
 
 }
 
@@ -130,7 +142,7 @@ input[type="radio"]:checked::before {
 }
 
 .submit-button{
-    padding: 1% 2%;
+    padding: 1%;
     border: 2px solid #ce0dd8;
     border-radius: 50px;
     background-color: #ce0dd8;
@@ -140,7 +152,7 @@ input[type="radio"]:checked::before {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 2%;
+    margin-top: 5%;
     width: 90%;
 }
 
@@ -186,9 +198,9 @@ input[type="radio"]:checked::before {
 }
 .scroll-section {
     flex: 0 0 100%; /* Each section takes full width of the container */
-    padding: 6%;
+    padding: 2%;
     box-sizing: border-box;
-
+    height: inherit;
 }
 
 .info-password{
