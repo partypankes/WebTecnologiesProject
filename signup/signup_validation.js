@@ -8,55 +8,35 @@ document.getElementById('next-button').addEventListener('click', function(event)
     var isValid= true;
 
     /*inserimento nome*/
-    if (name.length <= 1) {
+    if (!name.trim()) {
         document.getElementById('errorMessage').textContent = "Inserire il nome";
         isValid = false;
     }
 
     /*inserimento cognome*/
-    if (surname.length <= 1) {
+    if (!surname.trim()) {
         document.getElementById('errorMessage').textContent = "Inserire il cognome";
         isValid = false;
     }
 
     /*inserimento data di nascita*/
-    if (birthdate == null) {
+    if (!birthdate.trim()) {
         document.getElementById('errorMessage').textContent = "Inserire data di nascita";
         isValid = false;
     }
 
-    if(isValid){
+    if(!isValid){
         return false;
     }
 });
+
 document.getElementById('signupForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    var name = document.getElementById('name').value;
-    var surname = document.getElementById('surname').value;
-    var birthdate = document.getElementById('birthdate').value;
     var username = document.getElementById('username').value;
     var email = document.getElementById('email').value;
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var password = document.getElementById('password').value;
-
-    /*inserimento nome*/
-    if (name.length <=1) {
-        document.getElementById('errorMessage').textContent = "Inserire il nome";
-        return;
-    }
-
-    /*inserimento cognome*/
-    if (surname.length <= 1) {
-        document.getElementById('errorMessage').textContent = "Inserire il cognome";
-        return;
-    }
-
-    /*inserimento data di nascita*/
-    if (birthdate == null) {
-        document.getElementById('errorMessage').textContent = "Inserire data di nascita";
-        return;
-    }
 
     /*lunghezza username*/
     if (username.length < 6 || username.length > 16) {
@@ -72,13 +52,8 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     }
     /*fine controllo email*/
 
-    /*Controllo lunghezza password*/
-    if (password.length < 8 || password.length > 20) {
-        document.getElementById('errorMessage').textContent = "La password deve essere compresa tra gli 8 e 20 caratteri";
-        return;
-    }
 
-    /*inizio controllo password*/
+    /********************************************** INIZIO CONTROLLO PASSWORD **********************************************/
 
     /*Controllo lunghezza password*/
     if (password.length < 8 || pasword.length > 20) {
@@ -102,7 +77,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         return;
     }
 
-    /*fine controllo password*/
+    /********************************************** FINE CONTROLLO PASSWORD **********************************************/
 
     var formData = new FormData(this);
 
