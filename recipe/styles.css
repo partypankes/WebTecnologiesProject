@@ -260,3 +260,26 @@ select option[disabled] {
     padding: 5px 10px;
     cursor: pointer;
 }
+
+.icona-eliminazione {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: red;
+    cursor: pointer;
+    display: none; /* Nasconde l'icona di default */
+}
+
+.anteprimaDiv:hover .icona-eliminazione {
+    display: block; /* Mostra l'icona al passaggio del mouse */
+}
+
+.anteprimaDiv {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px; /* A seconda del layout desiderato */
+}
+

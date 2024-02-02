@@ -132,9 +132,17 @@ function mostraAnteprima(input) {
                     var anteprimaDiv = document.createElement('div');
                     anteprimaDiv.className = 'anteprimaDiv';
 
+                    // Aggiungi l'icona di eliminazione
+                    var iconaEliminazione = document.createElement('i');
+                    iconaEliminazione.className = 'fas fa-trash icona-eliminazione';
+                    iconaEliminazione.onclick = function() {
+                        anteprimaDiv.remove(); // Rimuove l'elemento dell'anteprima
+                    };
+
                     var img = document.createElement('img');
                     img.src = e.target.result;
 
+                    anteprimaDiv.appendChild(iconaEliminazione);
                     anteprimaDiv.appendChild(img);
 
                     var immaginiContainer = document.getElementById('immaginiContainer');
@@ -147,6 +155,7 @@ function mostraAnteprima(input) {
         input.style.display = 'none';
     }
 }
+
 
 
 
