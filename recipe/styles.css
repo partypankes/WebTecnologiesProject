@@ -244,7 +244,7 @@ select option[disabled] {
     cursor: pointer;
 }
 
-.icona-eliminazione {
+.anteprimaDiv .icona-eliminazione {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
