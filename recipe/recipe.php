@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<?php include('../_header/nonRegistratoHeader.html')?>
 
     <section id="container">
         <div class="title">

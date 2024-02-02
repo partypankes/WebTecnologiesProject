@@ -110,8 +110,19 @@ select option[disabled] {
 
 .ingrediente-gruppo {
     display: flex;
+    align-items: center;
     gap: 10px;
+    position: relative;
 }
+
+.icona-eliminazione {
+    position: absolute;
+    right: -30px; /* A seconda delle dimensioni dell'icona, regola questa distanza */
+    cursor: pointer;
+    background: transparent;
+    padding: 5px;
+}
+
 
 .ingrediente-gruppo .ingrediente, .ingrediente-gruppo .quantita {
     flex-grow: 1;
@@ -175,10 +186,77 @@ select option[disabled] {
 }
 
 
+.meno-eliminazione{
+    cursor: pointer;
+    position: absolute;
+    right: 100%;
+    top: 35%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: transparent;
+    padding: 2px;
+    font-weight: bold;
+}
+
+.icona-eliminazione {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background: transparent;
+    padding: 2px;
+}
+
+.procedimento-gruppo, .ingrediente-gruppo {
+    position: relative;
+}
+
+.menu-eliminazione {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    right: 0;
+    top: 100%;
+    z-index: 1000;
+    display: none;
+}
 
 
+.procedimento-gruppo, .ingrediente-gruppo {
+    position: relative;
+}
+
+.procedimento-gruppo:hover .icona-eliminazione,
+.ingrediente-gruppo:hover .icona-eliminazione {
+    display: block;
+}
+
+/* Stili per l'anteprima delle immagini */
+.anteprimaDiv {
+    position: relative;
+    /* Altri stili per l'anteprima dell'immagine */
+}
+
+.anteprimaDiv:hover .icona-eliminazione {
+    display: block;
+}
+
+.anteprimaDiv:hover img {
+    filter: brightness(50%);
+}
 
 
+.menu-eliminazione ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-
-
+.menu-eliminazione li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
