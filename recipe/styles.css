@@ -139,13 +139,7 @@ select option[disabled] {
     margin-bottom: 20px;
 }
 
-.anteprimaDiv {
-    border: 1px solid #ddd;
-    padding: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    background-color: #fff;
-}
+
 
 .anteprimaDiv img {
     width: auto;
@@ -218,7 +212,7 @@ select option[disabled] {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     right: 0;
     top: 100%;
     z-index: 1000;
@@ -235,19 +229,8 @@ select option[disabled] {
     display: block;
 }
 
-/* Stili per l'anteprima delle immagini */
-.anteprimaDiv {
-    position: relative;
-    /* Altri stili per l'anteprima dell'immagine */
-}
 
-.anteprimaDiv:hover .icona-eliminazione {
-    display: block;
-}
 
-.anteprimaDiv:hover img {
-    filter: brightness(50%);
-}
 
 
 .menu-eliminazione ul {
@@ -270,16 +253,24 @@ select option[disabled] {
     text-align: center;
     color: red;
     cursor: pointer;
-    display: none; /* Nasconde l'icona di default */
+    visibility: hidden;
 }
 
-.anteprimaDiv:hover .icona-eliminazione {
-    display: block; /* Mostra l'icona al passaggio del mouse */
-}
 
 .anteprimaDiv {
     position: relative;
     display: inline-block;
     margin-right: 10px; /* A seconda del layout desiderato */
+    border: 1px solid #ddd;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+}
+.anteprimaDiv:hover img {
+    filter: brightness(50%);
+}
+.anteprimaDiv:hover .icona-eliminazione {
+    visibility: visible;
 }
 
