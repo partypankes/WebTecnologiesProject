@@ -4,9 +4,12 @@ document.getElementById('next-button').addEventListener('click', function(event)
     var name = document.getElementById('name').value;
     var surname = document.getElementById('surname').value;
     var birthdate = document.getElementById('birthdate').value;
-    var genderSelected = document.querySelector('input[name="Gender"]:checked');
+
+    var genderRadios = document.getElementsByName('sesso');
+    var selected = false; // Flag per indicare se è stato selezionato un genere
 
     var isValid= true;
+
 
     /*inserimento nome*/
     if (!name.trim()) {
@@ -26,11 +29,20 @@ document.getElementById('next-button').addEventListener('click', function(event)
         isValid = false;
     }
 
-    if (!genderSelected) {
+    /*controllo genere*/
+    for(var i = 0; i < genderRadios.length; i++) {
+        if (genderRadios[i].checked) {
+            selected = true;
+            break;
+        }
+    }
+
+    if (!selected) {
         document.getElementById('errorMessage').textContent = "Selezionare genere";
         isValid = false;
     }
 
+    /*scroll se dati sono validi*/
     if(isValid){
         scrollToSection('section2', 'section1');
     }
