@@ -2,24 +2,18 @@ body{
     background-color: ghostwhite;
 }
 
-
-
 label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     font-weight: bold;
 }
 
-
-
-
 #anteprimaImmagine img {
-    margin-top: 10px;
+    margin-top: 1rem;
     max-width: 100px;
     max-height: 100px;
-    margin-right: 10px;
+    margin-right: 1rem;
 }
-
 
 #container{
     max-width: 80%;
@@ -31,9 +25,9 @@ label {
 }
 
 .form-section {
-    margin: 20px;
+    margin: 2em;
     background-color: white;
-    padding: 20px;
+    padding: 2em;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -42,34 +36,27 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 1.375rem;
+}
+
+textarea, input, select{
+    width: 100%;
+    padding: 0.625rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
 }
 
 textarea {
-    width: 100%;
     height: 150px;
-    padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 4px;
     resize: none;
-
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+input, select{
+    margin-bottom: .7rem;
 }
 
 select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
     background-color: white;
 }
 
@@ -98,31 +85,45 @@ select option[disabled] {
     justify-content: center;
 }
 
-.aggiungi-ingrediente {
-    font-size: 24px;
+.aggiungi-ingrediente, .aggiungi-procedimento, .aggiungi-immagine{
+    font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
     background: none;
     border: none;
     padding: 0;
-    margin: 10px 0;
+}
+
+.aggiungi-ingrediente {
+    margin: .625rem 0;
+}
+
+.aggiungi-procedimento {
+    margin-top: .625rem;
+}
+
+.ingrediente-gruppo, .procedimento-gruppo{
+    display: flex;
+    align-items: center;
+    gap: .5%;
 }
 
 .ingrediente-gruppo {
+    position: relative;
+}
+
+.procedimento-gruppo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    position: relative;
 }
 
 .icona-eliminazione {
     position: absolute;
-    right: -30px; /* A seconda delle dimensioni dell'icona, regola questa distanza */
+    right: -1.875rem;
     cursor: pointer;
     background: transparent;
-    padding: 5px;
+    padding: 0.3125rem;
 }
-
 
 .ingrediente-gruppo .ingrediente, .ingrediente-gruppo .quantita {
     flex-grow: 1;
@@ -135,33 +136,16 @@ select option[disabled] {
 #immaginiContainer {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap:  0.625rem;
+    margin-bottom: 1.25rem;
 }
-
-
 
 .anteprimaDiv img {
     width: auto;
-    height: 100px;
+    height: 6.25rem;
     display: block;
     max-width: 100%;
-    border-radius: 3px;
-}
-
-.aggiungi-immagine {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-.procedimento-gruppo {
-    display: flex;
-    align-items: center;
-    gap: .5%;
+    border-radius: 0.1875rem;
 }
 
 .procedimento-numero {
@@ -169,42 +153,23 @@ select option[disabled] {
     font-size: 1em;
 }
 
-.aggiungi-procedimento {
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-
-.meno-eliminazione{
+.meno-eliminazione, .icona-eliminazione{
     cursor: pointer;
     position: absolute;
-    right: 100%;
-    top: 35%;
     transform: translateY(-50%);
     z-index: 1;
     background: transparent;
-    padding: 2px;
+    padding: .125rem;
+}
+.meno-eliminazione{
+    right: 100%;
+    top: 35%;
     font-weight: bold;
 }
 
 .icona-eliminazione {
-    cursor: pointer;
-    position: absolute;
-    right: 5px;
+    right: .3125rem;
     top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    background: transparent;
-    padding: 2px;
-}
-
-.procedimento-gruppo, .ingrediente-gruppo {
-    position: relative;
 }
 
 .menu-eliminazione {
@@ -219,7 +184,6 @@ select option[disabled] {
     display: none;
 }
 
-
 .procedimento-gruppo, .ingrediente-gruppo {
     position: relative;
 }
@@ -229,10 +193,6 @@ select option[disabled] {
     display: block;
 }
 
-
-
-
-
 .menu-eliminazione ul {
     list-style: none;
     padding: 0;
@@ -240,7 +200,7 @@ select option[disabled] {
 }
 
 .menu-eliminazione li {
-    padding: 5px 10px;
+    padding: .3125rem .3125rem;
     cursor: pointer;
 }
 
@@ -256,15 +216,14 @@ select option[disabled] {
     visibility: hidden;
 }
 
-
 .anteprimaDiv {
     position: relative;
     display: inline-block;
-    margin-right: 10px; /* A seconda del layout desiderato */
+    margin-right: .625rem;
     border: 1px solid #ddd;
-    padding: 5px;
+    padding: .3125rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+    border-radius: .25rem;
     background-color: #fff;
 }
 .anteprimaDiv:hover img {
