@@ -1,0 +1,57 @@
+.container{
+    width: 100%;
+    border: 2px solid;
+    height: auto;
+}
+.header {
+    background-color: green;
+    padding: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+.topnav a {
+    border-right: 1px solid white;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: grey;
+    color: black;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+    width: 12%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 76%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 5px;
+    text-align: center;
+    line-height: 2;
+}
+
