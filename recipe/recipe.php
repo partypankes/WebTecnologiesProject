@@ -40,6 +40,7 @@
             <div class="form-section" id="caricamentoImmagini">
                 <label for="immagineRicetta">Carica Immagini:</label>
                 <div id="immaginiContainer">
+                    <div id="inserimentoAnteprimeMarker"></div>
                     <input type="file" class="input-immagine" name="immagineRicetta[]" accept="image/png, image/jpeg" onchange="mostraAnteprima(this)">
                 </div>
                 <button type="button" class="aggiungi-immagine" onclick="aggiungiImmagine()">+</button>

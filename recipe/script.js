@@ -123,6 +123,47 @@ function aggiungiImmagine() {
     immaginiContainer.appendChild(nuovoInput);
 }
 
+document.getElementById('immaginiContainer').addEventListener('dragover', function(event) {
+    event.preventDefault(); // Previene il comportamento predefinito per consentire il drop
+});
+
+document.getElementById('immaginiContainer').addEventListener('drop', function(event) {
+    event.preventDefault(); // Previene il comportamento predefinito del browser
+    var files = event.dataTransfer.files; // Ottiene i file trascinati
+    Array.from(files).forEach(file => {
+        if (file.type.match('image.*')) { // Verifica che il file sia un'immagine
+            mostraAnteprimaFile(file);
+        }
+    });
+});
+
+
+
+function mostraAnteprimaFile(file) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+        var anteprimaDiv = document.createElement('div');
+        anteprimaDiv.className = 'anteprimaDiv';
+
+        var iconaEliminazione = document.createElement('i');
+        iconaEliminazione.className = 'fas fa-trash icona-eliminazione';
+        iconaEliminazione.onclick = function() {
+            anteprimaDiv.remove();
+        };
+
+        var img = document.createElement('img');
+        img.src = e.target.result;
+
+        anteprimaDiv.appendChild(iconaEliminazione);
+        anteprimaDiv.appendChild(img);
+
+        var marker = document.getElementById('inserimentoAnteprimeMarker');
+        marker.parentNode.insertBefore(anteprimaDiv, marker);
+    };
+    reader.readAsDataURL(file);
+}
+
+
 function mostraAnteprima(input) {
     if (input.files) {
         Array.from(input.files).forEach(file => {
