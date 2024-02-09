@@ -16,7 +16,7 @@
 
 
 <body>
-<?php include '../_header/provaheader_1.html' ?>
+<?php include '../_header/nonRegistratoHeader.html' ?>
 <main>
     <section id="title">
         <div class="text"><?php name_and_user(4)?>
@@ -43,7 +43,7 @@
             <table id="ingredienti">
                 <tr>
                     <th>Ingrediente</th>
-                    <th>Quantità</th>
+                    <th>Quantità</th>ricetta
                 </tr>
                 <tr>
                     <td>Pasta</td>

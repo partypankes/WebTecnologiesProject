@@ -9,6 +9,7 @@ section {
 }
 
 #title {
+    margin-top: 5%;
     background-color: #a12abb;
     border-radius: 20px; /* Reverted to original value */
 }
@@ -22,7 +23,7 @@ section {
 
 #title .text {
     flex: 1 1 60%;
-    padding-right: 1.5%; /* Adjusted from 20px */
+
 }
 
 #title .photo {
@@ -34,9 +35,11 @@ section {
 
 #title .photo img {
     width: 100%;
+    min-width: 50px;
     max-width: 300px; /* Max-width in px retained for image size control */
     height: 100%;
-    max-height: 500px; /* Max-height in px retained for image size control */
+    min-height: 50px;
+    max-height: 300px; /* Max-height in px retained for image size control */
     border-radius: 20px; /* Reverted to original value */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reverted to original value */
     margin: 1%; /* Adjusted from 10px */
@@ -48,16 +51,16 @@ section {
 }
 
 h1 {
-    margin-bottom: 0.5em;
-    font-size: 3em; /* Font sizes typically kept in em or px for consistency */
+    margin-bottom: 0.1em;
+    font-size: 4vw; /* Font sizes typically kept in em or px for consistency */
 }
 h2 {
-    font-size: 2em; /* Font sizes typically kept in em or px for consistency */
+    font-size: 3vw; /* Font sizes typically kept in em or px for consistency */
 }
 
 p {
     color: #666;
-    font-size: 1em;
+    font-size: 1.5vw;
     margin-bottom: 1em;
 }
 
