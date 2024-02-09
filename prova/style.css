@@ -1,16 +1,14 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
+
+#first {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #1daf;
 }
+
 .box{
-    height: 30px;
+    height: 50px;
     display: flex;
     cursor: pointer;
     padding: 10px 20px;
