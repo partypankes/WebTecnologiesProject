@@ -15,7 +15,7 @@
             <h1>Inserisci La Tua Ricetta</h1>
         </div>
 
-        <form id="ricettaForm" action="inserimento_ricetta.php" method="post">
+        <form id="ricettaForm" action="inserimento_ricetta.php" method="post" enctype="multipart/form-data">
             <div class="form-section">
                 <label for="titoloRicetta">Titolo Ricetta:</label>
                 <input type="text" id="titoloRicetta" name="titoloRicetta">
@@ -58,8 +58,8 @@
                     <input type="text" class="quantita" name="quantita[]" placeholder="Quantità" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Quantità')">
                     <select class="unita" name="unita[]">
                         <option value="" disabled selected>-</option>
-                        <option value="g">g</option>
-                        <option value="ml">ml</option>
+                        <option value="grammi">grammi</option>
+                        <option value="litri">litri</option>
                     </select>
                 </div>
                 <button type="button" class="aggiungi-ingrediente" onclick="aggiungiIngrediente()">+</button>
