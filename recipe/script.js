@@ -74,7 +74,7 @@ function aggiungiIngrediente() {
     selectUnita.appendChild(optionPlaceholder);
 
     // Aggiungi le altre opzioni
-    var unita = ["g", "ml", /* altre unità */];
+    var unita = ["grammi", "litri", /* altre unità */];
     unita.forEach(function(u) {
         var option = document.createElement('option');
         option.value = u;
