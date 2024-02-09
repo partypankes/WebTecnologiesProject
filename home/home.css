@@ -1,0 +1,13 @@
+header {
+    position: fixed;
+    width: 100%;
+    top: -80px;
+    right: 0;
+    left: 0 ; /* ??? */
+    z-index: 1000;
+    background-color: var(--header-color);
+    box-shadow: var(--main-shadow-no-color) #d7cfcf;
+}
+.showHeader{
+    top:0;
+}
