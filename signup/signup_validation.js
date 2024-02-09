@@ -44,7 +44,8 @@ document.getElementById('next-button').addEventListener('click', function(event)
 
     /*scroll se dati sono validi*/
     if(isValid){
-        scrollToSection('section2', 'section1');
+        scrollToSection('section2', 'section1')
+        document.getElementById('errorMessage').textContent = "";
     }
 });
 
