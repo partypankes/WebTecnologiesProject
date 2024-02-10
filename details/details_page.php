@@ -1,9 +1,7 @@
 <?php include 'query_function.php' ?>
 
 <!DOCTYPE html>
-<html lang="en">
-
-
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,17 +17,16 @@
 <?php include '../_header/nonRegistratoHeader.html' ?>
 <main>
     <section id="title">
-        <div class="text"><?php name_and_user(4)?>
+        <div class="text"><?php name_and_user(1)?>
         </div>
         <div class="photo">
-            <img src="<?php echo immagine_banner(4)?>" alt="Homemade Pizza">
+            <img src="<?php echo immagine_banner(1)?>" alt="Homemade Pizza">
         </div>
     </section>
 
 
     <section id="details">
         <div id="contents">
-            <h2>Contents</h2>
             <ul>
                 <li><a  onclick="caricaContenuto('ingredienti')" data-section="ingredients">Ingredients</a></li>
                 <li><a  onclick="caricaContenuto('preparazione')" data-section="preparation">Preparation</a></li>
