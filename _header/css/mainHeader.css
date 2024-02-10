@@ -83,7 +83,6 @@ header {
 
 }
 .search-icn{
-
     transform: scaleX(-1);
     color: var(--main_color);
     font-size: 1.8rem;
@@ -136,14 +135,17 @@ header {
 }
 
 @media (max-width: 1090px){
+    body{
+        overflow-x: hidden;
+    }
     #menu-icon {
         display: block;
     }
     .menu{
         position: absolute;
-        top: 100%;
-        right: -100%;
-        width: 16.8rem;
+        top: 6%;
+        right:-40%;
+        width: 12rem;
         height: 20vh;
         background-color: var(--main_color);
         display: flex;
@@ -155,7 +157,7 @@ header {
     .menu a{
         display: block;
         margin: 0.8rem 0;
-        padding: 0 1.8rem;
+        padding: 0 1rem;
         transition: all .50s ease;
     }
     .menu a:hover{
@@ -164,7 +166,7 @@ header {
     }
     /*.menu a. pagina attiva*/
     .menu.open{
-        right: 1%;
+        right:2%;
     }
 }
 
