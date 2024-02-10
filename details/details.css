@@ -5,14 +5,35 @@ main {
 section {
     margin: 0.5%;
     padding: 3%; /* Adjusted from 50px, based on container size */
-    border: 1px solid #0A0A0A;
 }
 
 #title {
     margin-top: 5%;
-    background-color: #a12abb;
-    border-radius: 20px; /* Reverted to original value */
+    background-color: #400c45;
+    border-radius: 50px; /* Reverted to original value */
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 Q50,50 100,100 Q75,90 50,100 Q25,110 0,100" fill="none" stroke="magenta" stroke-width=".5"/></svg>');
 }
+/*
+viewBox:
+è un attributo che definisce l'area visibile e scalabile del contenuto SVG.
+Il valore è una lista di quattro numeri: min-x, min-y, width e height.
+
+preserveAspectRatio="none":
+Questo attributo indica come l'immagine SVG deve essere scalata per adattarsi al suo contenitore.
+Il valore none significa che il rapporto tra altezza e larghezza dell'SVG può essere alterato
+per riempire completamente il contenitore di sfondo.
+
+path è un elemento SVG che definisce un percorso, che può essere una linea, una curva, ecc.
+d è l'attributo che descrive il percorso da seguire. Qui, è composto da comandi come M per moveto (sposta il penna in un punto),
+e Q per curveto quadratica (disegna una curva con un punto di controllo).
+M100,0 inizia il percorso nell'angolo in alto a destra.
+Q50,50 100,100 disegna una curva quadratica dal punto di inizio al punto (100,100) usando (50,50)
+come punto di controllo.
+I comandi successivi creano ulteriori curve che formano il nodo e terminano il percorso.
+
+fill specifica il colore di riempimento dell'elemento.
+
+*/
 
 #title, #details {
     width: 100%;
@@ -22,8 +43,7 @@ section {
 }
 
 #title .text {
-    flex: 1 1 60%;
-
+    flex: 1 1 30%;
 }
 
 #title .photo {
@@ -42,7 +62,11 @@ section {
     max-height: 300px; /* Max-height in px retained for image size control */
     border-radius: 20px; /* Reverted to original value */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reverted to original value */
-    margin: 1%; /* Adjusted from 10px */
+    border: 4px solid transparent;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #FF69B4, #8A2BE2);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin: 1%;
 }
 
 #title .photo img:hover {
@@ -59,13 +83,11 @@ h2 {
 }
 
 p {
-    color: #666;
     font-size: 1.5vw;
     margin-bottom: 1em;
 }
 
 a {
-
     color: black;
     text-decoration: none;
 }
@@ -77,23 +99,20 @@ ul {
     margin: 0;
 }
 
+#details{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 #contents {
     width: 20%;
-    margin-right: 2%;
-
+    margin-right: 4%;
 }
 
-#contents h2 {
-    padding: 0.2em;
-    border-style: solid;
-    border-radius: 20px;
-    border-color: pink;
-    background-color: pink;
-    text-align: center;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
-}
+
 
 #contents ul {
     padding-left: 0;
@@ -103,6 +122,8 @@ ul {
     text-align: center;
     margin-left: 0;
     cursor: pointer;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 
@@ -115,30 +136,12 @@ ul {
 #contents a.active {
     background-color: gray;
     border-radius: 20px;
-
-
 }
 
-
-
-#contents li:nth-child(1) {
-    border-bottom: 1px solid;
-
-}
-
-#contents li:nth-child(2) {
-    border-bottom: 1px solid;
-
-}
-
-#contents li:nth-child(3) {
-    border-bottom: 1px solid;
-
-}
-
-#contents li:nth-child(4) {
+#contents li{
     border-bottom: 1px solid;
 }
+
 
 #recipe-content {
     border-style: solid;
