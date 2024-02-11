@@ -100,7 +100,7 @@ ul {
 }
 
 #details{
-    margin-top: 10%;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,20 +122,19 @@ ul {
     text-align: center;
     margin-left: 0;
     cursor: pointer;
-    padding-bottom: 20px;
-    padding-top: 20px;
 }
 
 
 
 #contents a {
     display: block;
-    padding: 1% 1% 1% 5%;
+    padding: 15px 1% 15px 5%;
+    transition: 0.8s;
 }
 
 #contents a.active {
-    background-color: gray;
-    border-radius: 20px;
+   padding-top: 50px ;
+    padding-bottom: 50px;
 }
 
 #contents li{
@@ -144,8 +143,6 @@ ul {
 
 
 #recipe-content {
-    border-style: solid;
-    border-radius: 20px;
     width: 80%;
     padding: 2%;
 }
@@ -173,7 +170,6 @@ ul {
     width: 100%; /* Si adatta alla larghezza del contenitore */
     border-collapse: separate;
     border-spacing: 0;
-
     margin: 0; /* Rimuove i margini predefiniti */
 }
 
@@ -181,10 +177,11 @@ ul {
     padding: 1em; /* Aumenta il padding per dare la sensazione di una lista */
     border-bottom: 1px solid #ddd; /* Solo un bordo sotto ogni riga */
     text-align: left; /* Allinea il testo a sinistra */
+    border-left: 1px solid lightgrey;
 }
 
 #ingredienti th {
-    background-color: pink; /* Colore di sfondo per l'intestazione */
+    background-color: magenta; /* Colore di sfondo per l'intestazione */
     color: white;
     font-weight: bold;
 }

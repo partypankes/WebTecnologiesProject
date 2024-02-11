@@ -40,7 +40,7 @@
             <table id="ingredienti">
                 <tr>
                     <th>Ingrediente</th>
-                    <th>Quantità</th>ricetta
+                    <th>Quantità</th>
                 </tr>
                 <tr>
                     <td>Pasta</td>
