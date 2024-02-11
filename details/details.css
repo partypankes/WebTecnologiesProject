@@ -110,6 +110,7 @@ ul {
 #contents {
     width: 20%;
     margin-right: 4%;
+    font-weight: bold;
 }
 
 
@@ -122,6 +123,7 @@ ul {
     text-align: center;
     margin-left: 0;
     cursor: pointer;
+
 }
 
 
@@ -133,8 +135,8 @@ ul {
 }
 
 #contents a.active {
-   padding-top: 50px ;
-    padding-bottom: 50px;
+    padding-top: 30px ;
+    padding-bottom: 30px;
 }
 
 #contents li{
@@ -177,11 +179,10 @@ ul {
     padding: 1em; /* Aumenta il padding per dare la sensazione di una lista */
     border-bottom: 1px solid #ddd; /* Solo un bordo sotto ogni riga */
     text-align: left; /* Allinea il testo a sinistra */
-    border-left: 1px solid lightgrey;
 }
 
 #ingredienti th {
-    background-color: magenta; /* Colore di sfondo per l'intestazione */
+    background-color: darkmagenta; /* Colore di sfondo per l'intestazione */
     color: white;
     font-weight: bold;
 }
@@ -198,23 +199,79 @@ ul {
 }
 
 /* Rimuove il bordo dall'ultima riga in basso */
-#ingredienti tr:last-child td {
+#ingredienti tr:last-child td{
     border-bottom: none;
 }
 
-/* Aggiunge uno stile hover per le righe per migliorare l'interattività */
-#ingredienti tr:hover {
-    background-color: #f2f2f2;
+#ingredienti tr:last-child td:last-child{
+    border-bottom-right-radius: 20px;
 }
 
-/* Rende il testo più leggibile su sfondi colorati */
-#ingredienti th, #ingredienti tr:hover {
-    color: black;
+#ingredienti tr:last-child td:first-child{
+    border-bottom-left-radius: 20px;
 }
+
+
 
 /* Responsive Design: Assicura che la tabella non sia mai più larga del suo contenitore */
 @media screen and (max-width: 600px) {
     #ingredienti td, #ingredienti th {
         padding: 0.5em; /* Riduce il padding su schermi piccoli */
+    }
+}
+#gallery {
+    text-align: center;
+    width: 100%; /* Modifica questa larghezza in base al contenitore desiderato */
+    margin: auto;
+}
+
+.textGallery h2, .textGallery p {
+    margin-bottom: 20px;
+}
+
+.carousel {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 50px; /* Spazio per le frecce */
+}
+
+.carousel-slide {
+    flex: 0 0 auto;
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px; /* Distanza tra gli slide */
+}
+
+.carousel-slide img {
+    width: 350px; /* Dimensioni delle immagini - regola per il tuo design */
+    height: 400px; /* Altezza per mantenere l'aspetto quadrato */
+    object-fit: cover;
+    border-radius: 20px; /* Bordi arrotondati come su TikTok */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombreggiatura leggera */
+}
+
+.control {
+    background-color: #ddd;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 15px;
+    margin: 0 20px;
+}
+
+#prev, #next {
+    position: static; /* Rimuovi il posizionamento assoluto */
+    display: inline-block; /* Per posizionarli in linea */
+}
+
+@media (max-width: 768px) {
+    .carousel-slide img {
+        width: 80px; /* Dimensioni più piccole per dispositivi mobili */
+        height: 80px;
     }
 }
