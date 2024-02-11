@@ -1,13 +1,13 @@
-header {
-    position: fixed;
+
+
+.banner-logged{
+    /*
+    display: flex;
+    align-items: center;
+    */
+}
+.ricette{
     width: 100%;
-    top: -80px;
-    right: 0;
-    left: 0 ; /* ??? */
-    z-index: 1000;
-    background-color: var(--header-color);
-    box-shadow: var(--main-shadow-no-color) #d7cfcf;
+    height: 100vh;
 }
-.showHeader{
-    top:0;
-}
+

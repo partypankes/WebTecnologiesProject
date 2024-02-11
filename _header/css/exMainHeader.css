@@ -1,46 +1,39 @@
+/*
+** PSEUDO-CLASS **
+
+** PSEUDO-ELEMENTS **
+::marker
+::first-line
+::first-letter
+::before -> insert some content before the content of an element
+::after -> insert some content after the content of an element
+
+::selection -> matches the portion of an element that is selected by a user
+*/
+/*
 header {
     position: fixed;
     width: 100%;
-    height:2rem;
-    z-index: 1000;
-}
-
-#nav-container{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.navbar-bg{
-    position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    padding:1.6rem;
-
-    background-color: #000000;
-    transition: transform 0.3s ease-out;
-    transform: translateY(-100%);
-}
+    right: 0;
+    left: 0 ;
+    z-index: 1000;
+    background-color: var(--header-color);
+    box-shadow: var(--main-shadow-no-color) #d7cfcf;
+*/
 .navbar{
-    position: relative;
-    background-color: transparent;
     width: 100%;
-    height:100%;
-    margin: 1.3rem 3rem 0 3rem;
-    padding: 0 2%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem 10%;
     transition: all .50s ease;
 }
 
 .logo{
+    color: var(--text-color);
     font-size: 2rem;
     font-weight: 600;
-    color: var(--main_color);
 }
 
 .menu{
@@ -52,7 +45,7 @@ header {
 }
 
 .menu a{
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 1.1rem;
     font-weight: 500;
     padding: 0.5rem 0;
@@ -63,6 +56,38 @@ header {
     color: var(--main_color);
     transition: 0.3s ease;
 }
+/*Aggiungere una cosa per far capire in quale delle pagine ci troviamo*/
+
+#search-form{
+    display: none;
+    border: 2px solid red;
+
+    justify-content: center;
+    align-items: center;
+}
+#search-form input{
+    border:0;
+
+    padding: 0.3rem;
+    border-radius: 40px;
+    color:white;
+}
+#search-form input::placeholder{
+    color: red;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    border:0;
+
+}
+.search-icn{
+    transform: scaleX(-1);
+    color: var(--main_color);
+    font-size: 1.8rem;
+}
+
 
 .r-side {
     display: flex;
@@ -71,7 +96,7 @@ header {
 .r-side a {
     margin-right: 1.5rem;
     margin-left: 1.5rem;
-    color: #ffffff;
+    color: var(--text-color);
     font-size: 1.2rem;
     font-weight: 600;
     transition: all .50s ease;
@@ -99,20 +124,12 @@ header {
 
 
 @media (max-width: 1280px){
-    .logo{
-        font-size: 2rem;
-        font-weight: 600;
-        color: var(--main_color);
-    }
-    .navbar-bg{
-        transition: .2s ease;
-    }
     .navbar{
         padding: 0.5rem 2%;
-        transition: .2s ease;
+        transition: .2s;
     }
     .menu a{
-        padding: 0.5rem 0;
+        padding: 0.2rem;
         margin: 0 1.5rem;
     }
 }
@@ -126,8 +143,8 @@ header {
     }
     .menu{
         position: absolute;
-        top: 3.5rem;
-        right:-100%;
+        top: 6%;
+        right:-40%;
         width: 12rem;
         height: 20vh;
         background-color: var(--main_color);

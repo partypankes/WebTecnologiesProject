@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
 
 :root{
-    --main_color: #BB255F;
+    --main_color: #d79711;
     --color-2: #2F6690;
     --color-3: #3C6997;
     --bg-color: #F5F5F5;
@@ -24,17 +24,24 @@
 
 
 html, body{
+    height: 100%;
+    margin: 0;
     color: #000000;
-    background-color: #F4F4F4;
+    background-color: #3C6997;
 }
 main{
 
 }
 
-
+@media (max-width: 1090px) {
+    body {
+        overflow-x: hidden;
+    }
+}
 @media (max-width: 768px) {
 
     body {
-
+        overflow-x: hidden;
     }
 }
+

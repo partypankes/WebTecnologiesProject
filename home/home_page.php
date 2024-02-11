@@ -10,23 +10,30 @@
     <header>
         <?php
         //tipologia header differente per utente registato e per non registrato
-        include('../_header/nonRegistratoHeader.html');
+        include('../_header/mainHeader.html');
         ?>
     </header>
     
     <main>
-        <?php
+        <section class="banner-logged">
+            <?php
             //da visualizzare se è il primo acceso dell'utente non registrato o non è registrato
             include('../home/banner_home/banner_home.html');
-        ?>
+            ?>
+        </section>
+        <section class="ricette-home">
+            <div class="ricette">Sient</div>
+        </section>
+
+
+
+
     </main>
 
     <?php
         //tipologia header differente per utente registato e per non registrato
         include('../footer/footer.html');
     ?>
-    
-    
     
 
 </body>
