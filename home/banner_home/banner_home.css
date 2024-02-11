@@ -7,30 +7,18 @@
     background-color: #000000;
 }
 #bg-video{
-    align-items: center;
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 20%;
-    z-index: 0;
-}
-
-.logo-start{
-    font-size: 2rem;
-    font-weight: bold;
-    position: absolute;
-    top:1%;
-    left: 1%;
-    z-index: 1;
-    color: #ffffff;
+    opacity: 40%;
 }
 
 .bn-intro{
-    position: absolute;
-    z-index: 1;
     backdrop-filter: blur(10px);
     border-radius: 30px;
+    position: absolute;
+    z-index: 1;
 }
 .content{
     display: flex;

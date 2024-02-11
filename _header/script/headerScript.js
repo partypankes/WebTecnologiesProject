@@ -5,8 +5,8 @@ menu.onclick = ()=> {
     categories.classList.toggle('open');
 
     if(categories.classList.contains('open')){
-        menu.classList = 'fa-solid fa-bars';
-    }else{
         menu.classList = 'fa-solid fa-xmark';
+    }else{
+        menu.classList = 'fa-solid fa-bars';
     }
 }
