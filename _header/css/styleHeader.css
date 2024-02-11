@@ -62,7 +62,6 @@ header {
     font-size: 2rem;
     color: var(--main_color);
     cursor: pointer;
-    z-index: 10001;
     display: none;
 }
 
