@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             if (data) {
                 document.getElementById('errorMessage').textContent = data;
             } else {
-                window.location.href = '../hompage/hompageNR.php';
+                window.location.href = '../deprecated/hompage/hompageNR.php';
             }
         });
 });

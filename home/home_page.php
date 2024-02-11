@@ -13,22 +13,37 @@ require('../auth/auth.php');
 </head>
 <body>
 
-        <?php
-        include('../_header/mainHeader.php');
-        ?>
+    <?php
+    include('../_header/mainHeader.php');
+    ?>
 
-        <section class="banner-logged">
-            <?php
-            //da visualizzare se è il primo acceso dell'utente non registrato o non è registrato
-            include('../home/banner_home/banner_home.html');
-            ?>
-        </section>
+    <section class="intro">
+        <?php
+        //da visualizzare se è il primo acceso dell'utente non registrato o non è registrato
+        include('../home/banner_home/banner_home.html');
+        ?>
+    </section>
+
     <main>
       
         <section class="ricette-home">
-            <div class="ricette">Sient</div>
+
         </section>
 
+        <section class="nuove-ricette">
+            <div class="ricette-btn-altro">
+                <button><span>Scopri altre ricette</span></button>
+            </div>
+            <div class="ricette-title">
+                <p id="ricette-top">Scopri qui le nuove e deliziose ricette</p>
+                <p id="ricette-sub">Esplora una varietà di ricette per piatto e preferenze.</p>
+            </div>
+
+            <div class="table-ricette">
+
+            </div>
+
+        </section>
 
     </main>
 

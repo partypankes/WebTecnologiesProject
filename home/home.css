@@ -8,8 +8,44 @@ main {
     align-items: center;
     */
 }
-.ricette{
+
+.ricette-home{
     width: 100%;
     height: 100vh;
 }
 
+.ricette{
+    position:relative;
+    width: 100%;
+    height: 50vh;
+    border: 1px solid red;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ricette-btn-altro{
+    position: absolute;
+    height: 2rem;
+    right:0;
+    padding:1%;
+}
+
+.ricette-title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#ricette-top{
+    font-size: 2rem;
+    font-weight: 600;
+}
+#ricette-sub{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.table-ricette{
+
+}
