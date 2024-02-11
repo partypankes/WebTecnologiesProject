@@ -11,7 +11,7 @@
 
 <?php
     //da poter cambiare nel caso l'utente sia registrato o meno
-    include('../_header/mainHeader.html');
+    include('../_header/baseHeader.html');
 ?>
 
 <main>
