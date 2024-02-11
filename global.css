@@ -6,7 +6,7 @@
     --color-2: #2F6690;
     --color-3: #3C6997;
     --bg-color: #F5F5F5;
-    --header-color: #F4F4F4;
+    --header-color: rgba(178, 178, 178, 0.7);
     --text-color: #0A0A0A;
     --main-shadow-no-color: 0px 4px 4px 0px;
 
@@ -22,25 +22,20 @@
     box-sizing: border-box;
 }
 
-
 html, body{
+    overflow-x: hidden;
     height: 100%;
     margin: 0;
-    background-color: #3C6997;
+    background-color: #FAFAFA;
 }
 main{
-
+    margin: 4%;
 }
 
 @media (max-width: 1090px) {
-    body {
-        overflow-x: hidden;
-    }
+
 }
 @media (max-width: 768px) {
 
-    body {
-        overflow-x: hidden;
-    }
 }
 
