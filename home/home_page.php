@@ -35,8 +35,6 @@
         include('../footer/footer.html');
     ?>
     
-    
-    
 
 </body>
 </html>

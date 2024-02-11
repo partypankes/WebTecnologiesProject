@@ -19,6 +19,10 @@
     border-radius: 30px;
     position: absolute;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 .content{
     display: flex;
@@ -31,20 +35,23 @@
     text-align: center;
 }
 #intro{
-    font-size:4rem;
+    font-size:4vw;
+    min-font-size: 3vw;
     font-weight: 500;
 }
-#aaa{
+#key{
     color: #d79711;
     font-weight: bold;
 }
 #sub{
-    font-size:1rem;
+    font-size:1.2vw;
+    min-font-size: 1vw;
     font-weight: 300;
     color: #c5c5c5;
 }
 
 .bn-search{
+    width:100%;
     margin-top: 2rem;
     display: flex;
     justify-content: center;
@@ -84,6 +91,20 @@ input[type="text"]::placeholder {
     font-style: italic;
     color: #ffffff;
     font-size: 1rem;
+}
+
+@media (max-width: 1280px){
+    .bn-search{
+        width:80%;
+        transition: .2s ease;
+    }
+    #intro{
+        font-size:3rem;
+    }
+    #sub{
+        font-size:1rem;
+    }
+
 }
 
 
