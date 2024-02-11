@@ -1,3 +1,8 @@
+<?php
+require('../auth/auth.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -11,7 +16,7 @@
 
 <?php
     //da poter cambiare nel caso l'utente sia registrato o meno
-    include('../_header/baseHeader.html');
+    include('../_header/baseHeader.php');
 ?>
 
 <main>

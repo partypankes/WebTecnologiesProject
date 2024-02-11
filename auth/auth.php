@@ -1,6 +1,9 @@
 <?php
 
 session_start();
+$_SESSION['loggedin'] = false;
+$_SESSION['username'] = "gilvestro_03";
+
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     session_destroy();
     if (ini_get("session.use_cookies")) {
@@ -10,6 +13,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             $params["secure"], $params["httponly"]
         );
     }
-    header("Location: ../login/login_page.php");
-    exit;
+
+    /*
+     * header("Location: ../login/login_page.php");
+    */
+
 }

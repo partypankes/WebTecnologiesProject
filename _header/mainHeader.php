@@ -1,13 +1,13 @@
 <link rel="stylesheet" href="../global.css">
 <link rel="stylesheet" href="../_header/css/styleHeader.css">
-<link rel="stylesheet" href="../_header/css/baseHeader.css">
+<link rel="stylesheet" href="../_header/css/mainHeader.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
-
-<!--Header Altro-->
+<!--Header HomePage-->
 <header>
     <nav id="nav-container">
-
+        <!--Background dietro navbar-->
+        <div class="navbar-bg"></div>
         <div class="navbar">
             <a class="logo" href="#home">SapurEat</a>
 
@@ -17,11 +17,15 @@
             </ul>
             <!--Lato Utente-->
             <div class="r-side">
-                <a class="user" href="#">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <!--da cambiare con nome utente backend-->
-                    Accedi
-                </a>
+
+                    <?php
+                    if($_SESSION['loggedin']){
+                        echo '<a class="user" href="../aboutUs/AboutUs.php"><i class="fa-solid fa-circle-user"></i>' . $_SESSION['username'] . '</a>';
+                    }else{
+                        echo '<a class="user" href="../login/login_page.php"><i class="fa-solid fa-circle-user"></i>Accedi</a>';
+                    }
+                    ?>
+
                 <i id="menu-icon" class="fa-solid fa-bars"></i>
             </div>
         </div>
@@ -35,6 +39,7 @@
 
     menu.onclick = ()=> {
         categories.classList.toggle('open');
+
         if (categories.classList.contains('open')) {
             menu.classList = 'fa-solid fa-xmark';
         } else {
@@ -52,13 +57,15 @@
 
             // Controlla se la posizione di scroll supera la soglia e aggiorna la trasformazione di conseguenza
             if (scrollPosition > triggerPosition) {
-            // Fa scendere il .navbar-bg
+                // Fa scendere il .navbar-bg
                 navbarbg.style.transform = 'translateY(0)';
                 navbarbg.style.backgroundColor = 'black'; // Assicurati che lo sfondo sia nero
             } else {
-            // Nasconde il .navbar-bg al di sopra della vista
+                // Nasconde il .navbar-bg al di sopra della vista
                 navbarbg.style.transform = 'translateY(-100%)';
             }
         });
     });
 </script>
+
+

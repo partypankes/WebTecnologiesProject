@@ -1,3 +1,7 @@
+<?php
+require('../auth/auth.php');
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -10,17 +14,17 @@
 <body>
 
         <?php
-        include('../_header/mainHeader.html');
+        include('../_header/mainHeader.php');
         ?>
 
-
-    <main>
         <section class="banner-logged">
             <?php
             //da visualizzare se è il primo acceso dell'utente non registrato o non è registrato
             include('../home/banner_home/banner_home.html');
             ?>
         </section>
+    <main>
+      
         <section class="ricette-home">
             <div class="ricette">Sient</div>
         </section>
