@@ -13,8 +13,6 @@
     width: 100%;
     padding:1.7rem;
 
-    border: 1px solid red;
-
     background-color: #000000;
     transition: transform 0.3s ease-out;
     transform: translateY(-100%);
