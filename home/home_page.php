@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <header>
+
         <?php
         //tipologia header differente per utente registato e per non registrato
         include('../_header/mainHeader.html');
         ?>
-    </header>
     
     <main>
         <section class="banner-logged">
