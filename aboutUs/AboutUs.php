@@ -11,7 +11,7 @@
 
 <?php
     //da poter cambiare nel caso l'utente sia registrato o meno
-    include('../_header/nonRegistratoHeader.html');
+    include('../_header/mainHeader.html');
 ?>
 
 <main>
@@ -84,11 +84,10 @@
 
 </main>
 
-<footer>
-    <?php
+<?php
     include('../footer/footer.html');
-    ?>
-</footer>
+?>
+
 
 </body>
 </html>
