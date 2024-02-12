@@ -1,4 +1,4 @@
-var uploadedFiles = [];
+
 
 function aggiungiIconaEliminazione(elemento) {
     var iconaEliminazione = document.createElement('span');
@@ -103,7 +103,7 @@ function restorePlaceholder(element, defaultPlaceholder) {
 document.getElementById('ricettaForm').onsubmit = function(event) {
     var categoria = document.getElementById('categoriaRicetta').value;
     if (categoria === "") {
-        alert("Per favore, seleziona una categoria per la ricetta.");
+        alert("Per favore, seleziona una Portata per la ricetta.");
         event.preventDefault();
     }
 };
@@ -114,56 +114,7 @@ function nascondiOpzioneIniziale() {
 }
 
 
-document.getElementById('inserimentoAnteprimeMarker').addEventListener('click', function() {
-    document.getElementById('image-input').click();
-});
 
-document.getElementById('inserimentoAnteprimeMarker').addEventListener('dragover', function(event) {
-    event.preventDefault();
-});
-
-document.getElementById('inserimentoAnteprimeMarker').addEventListener('drop', function(event) {
-    event.preventDefault();
-    var files = event.dataTransfer.files;
-    handleFiles(files);
-});
-
-document.getElementById('image-input').addEventListener('change', function() {
-    var files = this.files;
-    handleFiles(files);
-});
-
-
-function handleFiles(files) {
-    for (let i = 0; i < files.length; i++) {
-        if (files[i].type.startsWith('image/')) {
-            uploadedFiles.push(files[i]); // Aggiungi il file all'array
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                var anteprimaDiv = document.createElement('div');
-                anteprimaDiv.className = 'anteprimaDiv';
-
-                // Aggiungi l'icona di eliminazione
-                var iconaEliminazione = document.createElement('i');
-                iconaEliminazione.className = 'fas fa-trash icona-eliminazione';
-                var img = document.createElement('img');
-                img.src = e.target.result;
-
-                anteprimaDiv.appendChild(iconaEliminazione);
-                anteprimaDiv.appendChild(img);
-                document.getElementById('inserimentoAnteprimeMarker').appendChild(anteprimaDiv);
-                iconaEliminazione.addEventListener('click', function() {
-                    var index = uploadedFiles.indexOf(files[i]);
-                    if (index > -1) {
-                        uploadedFiles.splice(index, 1); // Rimuovi il file dall'array
-                        anteprimaDiv.remove(); // Rimuovi l'anteprima dell'immagine
-                    }
-                });
-            };
-            reader.readAsDataURL(files[i]);
-        }
-    }
-}
 
 
 function aggiungiProcedimento() {
@@ -214,32 +165,3 @@ function aggiornaNumeriProcedimenti() {
     });
 }
 
-
-document.getElementById('ricettaForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Previene l'invio normale del form
-
-    var formData = new FormData(document.getElementById('ricettaForm'));
-    uploadedFiles.forEach(function(file, index) {
-        if (file instanceof Blob) { // Assicurati che l'oggetto sia un Blob o File
-            formData.append('images[]', file, file.name);
-        } else {
-            console.error('Un elemento nell\'array non è un file.', file);
-        }
-    });
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST",'inserimento_ricetta.php', true);
-
-    // Non è necessario impostare il Content-Type per FormData con multipart/form-data,
-    // poiché l'oggetto XMLHttpRequest lo farà automaticamente, includendo anche il boundary.
-    // xhr.setRequestHeader("Content-Type", "multipart/form-data"); // Questa linea è commentata intenzionalmente
-
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log(xhr.responseText); // Gestisce la risposta del server
-        }
-    };
-
-
-    // Invia i dati del form, inclusi i file
-    xhr.send(formData);
-});

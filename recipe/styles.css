@@ -85,7 +85,7 @@ select option[disabled] {
     justify-content: center;
 }
 
-.aggiungi-ingrediente, .aggiungi-procedimento, .aggiungi-immagine{
+.aggiungi-ingrediente, .aggiungi-procedimento, .aggiungi-immagine, .aggiungi-tips{
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
@@ -133,11 +133,14 @@ select option[disabled] {
     flex-basis: 15%;
 }
 
-#immaginiContainer {
+.immaginiContainer {
+
     display: flex;
     flex-wrap: wrap;
     gap:  0.625rem;
     margin-bottom: 1.25rem;
+    border: 1px solid;
+    padding: 20px 20px 20px 20px;
 }
 
 .anteprimaDiv img {

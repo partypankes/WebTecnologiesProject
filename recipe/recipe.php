@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -26,34 +28,18 @@
                 <textarea id="descrizioneRicetta" name="descrizioneRicetta"></textarea>
             </div>
 
-            <div class="form-section">
-                <label for="tips">Tips:</label>
-                <textarea id="tips" name="tips"></textarea>
-            </div>
-
-            <div class="form-section">
-                <label for="servingSuggestion">Serving:</label>
-                <textarea id="servingSuggestion" name="servingSuggestion"></textarea>
-            </div>
-
-
-            <div class="form-section" id="caricamentoImmagini">
-                <label for="immagineRicetta">Carica Immagini:</label>
-                <div id="immaginiContainer">
-                    <div id="inserimentoAnteprimeMarker"></div>
-                    <input type="file" class="input-immagine" name="immagineRicetta[]" accept="image/png, image/jpeg" onchange="mostraAnteprima(this)">
+            <div class="form-section" id="banner">
+                <label for="immagine_banner">Banner:</label>
+                <input type="file" class="input-immagine" id="input-banner" accept="image/png, image/jpeg" style="display: none">
+                <div class="immaginiContainer" id="immagine_banner">
                 </div>
-                <button type="button" class="aggiungi-immagine" onclick="aggiungiImmagine()">+</button>
             </div>
-
-            <div id="anteprimaImmagini"></div>
-
-
-
 
             <div class="form-section" id="ingredienti">
                 <label for="ingredienti[]">Ingredienti:</label>
+                <input type="number" name="tempo_preparazione" placeholder="Inserisci il tempo di preparazione">
                 <div class="ingrediente-gruppo">
+
                     <input type="text" class="ingrediente" name="ingredienti[]">
                     <input type="text" class="quantita" name="quantita[]" placeholder="Quantità" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Quantità')">
                     <select class="unita" name="unita[]">
@@ -65,7 +51,6 @@
                 <button type="button" class="aggiungi-ingrediente" onclick="aggiungiIngrediente()">+</button>
             </div>
 
-
             <div class="form-section" id="procedimentiContainer">
                 <label for="procedimentiRicetta">Procedimento:</label>
                 <div class="procedimento-gruppo" id="procedimento1">
@@ -76,15 +61,36 @@
             </div>
 
 
+            <div class="form-section" id="tips">
+                <label for="tips[]">Tips:</label>
+                <div class="gruppo-tips">
+                    <input type="text" class="tips" name="tips[]">
+                </div>
+                <button type="button" class="aggiungi-tips" onclick="aggiungiTips()">+</button>
+            </div>
+
+
+            <!--<div class="form-section" id="caricamentoImmagini">
+                <label for="immagineRicetta">Carica Immagini:</label>
+                <div class="immaginiContainer" id="inserimentoAnteprimeMarker" style="border: 1px solid">
+                    <input type="file" class="input-immagine" id="image-input" accept="image/png, image/jpeg" style="display: none">
+                </div>
+                <button type="button" class="aggiungi-immagine" onclick="aggiungiImmagine()">+</button>
+            </div>-->
+
+
+
             <div class="form-section">
                 <label for="categoriaRicetta">Categoria Ricetta:</label>
                 <select id="categoriaRicetta" name="categoriaRicetta" onchange="nascondiOpzioneIniziale()">
-                    <option value="" disabled selected>Seleziona una categoria</option>
-                    <option value="vegane">Vegane</option>
-                    <option value="dolci">Dolci</option>
-                    <option value="veloci">Veloci</option>
-                    <option value="tradizionali">Tradizionali</option>
-                    <option value="internazionali">Internazionali</option>
+                    <option value="" disabled selected>Seleziona una Portata</option>
+                    <option value="antipasto">Antipasto</option>
+                    <option value="primoPiatto">Primo Piatto</option>
+                    <option value="secondoPiatto">SecondoPiatto</option>
+                    <option value="dessert">Dessert</option>
+                    <option value="piattoUnico">Piatto Unico</option>
+                    <option value="brunch">Bruch</option>
+
                 </select>
             </div>
 
@@ -97,6 +103,9 @@
 
     </section>
 
-<script src="script.js"></script>
+<script src="script/main_script.js"></script>
+<script src="script/banner_drag_drop.js"></script>
+<script src="script/ajax_inserimento.js"></script>
+<script src="script/script_tips.js"></script>
 </body>
 </html>

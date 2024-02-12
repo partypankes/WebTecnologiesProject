@@ -22,7 +22,7 @@ function immagine_banner($id): string
         $escapedData = pg_escape_bytea($data);
         pg_query_params($db,"UPDATE ricetta  SET copertina = $1 WHERE id = $2", array($escapedData,$id));
         */
-        $sql = "SELECT copertina FROM ricetta WHERE id = $1";
+        $sql = "SELECT banner FROM ricetta WHERE id = $1";
         $result = pg_query_params($db, $sql, array($id));
         if ($row = pg_fetch_assoc($result)) {
             $imageData = pg_unescape_bytea($row['copertina']);
