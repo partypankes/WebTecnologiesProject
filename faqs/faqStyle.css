@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "MontSerrat T";
-    src: url('../font/Montserrat.ttf') format("truetype");
-    font-style: normal;
-}
 
 body {
     font-family: "MontSerrat T", sans-serif;

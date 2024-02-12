@@ -24,6 +24,13 @@ require('../auth/auth.php');
         ?>
     </section>
 
+    <section class="intro-logged">
+        <?php
+        //da visualizzare se è il primo acceso dell'utente non registrato o non è registrato
+        include('../home/banner_home/banner_home_logged.html');
+        ?>
+    </section>
+
     <main>
       
         <section class="ricette-home">
