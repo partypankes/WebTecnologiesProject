@@ -78,7 +78,7 @@ h1 {
     margin-bottom: 0.1em;
     font-size: 4vw; /* Font sizes typically kept in em or px for consistency */
 }
-h2 {
+h2{
     font-size: 3vw; /* Font sizes typically kept in em or px for consistency */
 }
 
@@ -219,9 +219,11 @@ ul {
         padding: 0.5em; /* Riduce il padding su schermi piccoli */
     }
 }
+
+/*
 #gallery {
     text-align: center;
-    width: 100%; /* Modifica questa larghezza in base al contenitore desiderato */
+    width: 100%;
     margin: auto;
 }
 
@@ -230,12 +232,11 @@ ul {
 }
 
 .carousel {
-    overflow: hidden;
+    overflow-x: scroll;
     display: flex;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 50px; /* Spazio per le frecce */
+
 }
+
 
 .carousel-slide {
     flex: 0 0 auto;
@@ -243,15 +244,15 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 5px; /* Distanza tra gli slide */
+    margin: 0 5px;
 }
 
 .carousel-slide img {
-    width: 350px; /* Dimensioni delle immagini - regola per il tuo design */
-    height: 400px; /* Altezza per mantenere l'aspetto quadrato */
+    width: 350px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 20px; /* Bordi arrotondati come su TikTok */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombreggiatura leggera */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .control {
@@ -265,13 +266,79 @@ ul {
 }
 
 #prev, #next {
-    position: static; /* Rimuovi il posizionamento assoluto */
-    display: inline-block; /* Per posizionarli in linea */
+    position: static;
+    display: inline-block;
 }
 
 @media (max-width: 768px) {
     .carousel-slide img {
-        width: 80px; /* Dimensioni più piccole per dispositivi mobili */
+        width: 80px;
         height: 80px;
     }
+}
+*/
+
+#reviews-section{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.reviews-title{
+    text-align: center;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+
+}
+
+#reviews-container{
+    margin-bottom: 20px;
+}
+
+.review{
+    margin-top: 10px;
+    padding: 8px;
+}
+.review p{
+    font-size: 1vw;
+    margin-left: 50px;
+    width: calc(100% - 50px);
+    padding-top: 5px;
+}
+
+strong{
+    font-size: 1.3vw;
+}
+#review-form{
+    padding: 8px;
+}
+
+#review-form textarea {
+    margin-bottom: 10px;
+    margin-left: 50px;
+    width: calc(100% - 50px);
+    padding: 5px;
+    box-sizing: border-box;
+    resize: none;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 2px solid lightgrey;
+}
+
+.invio-recensione{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#review-form button {
+    background-color: darkmagenta;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#review-form button:hover {
+    background-color: #b709b7;
 }
