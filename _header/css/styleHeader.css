@@ -48,11 +48,22 @@ header {
 .user {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .user i {
     color: var(--main_color);
     font-size: 2rem;
     margin-right: 0.5rem;
+}
+.user > a{
+    margin:0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#logout-icon{
+    margin:0;
+    text-align: center;
 }
 .r-side a:hover {
     color: var(--main_color);
