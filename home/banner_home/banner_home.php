@@ -10,12 +10,9 @@
                 <p id="sub">Cerca qui la tua ricetta e scopri una lista di piatti scelti e condivisi dagli utenti migliori.<br>Crea il tuo piatto, crea la tua storia </p>
             </div>
 
-            <div class="bn-search">
-                <div class="box">
-                    <input type="text" placeholder="Trova qui la tua ispirazione..." maxlength="60">
-                    <button type="submit" aria-label="Cerca"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
+            <?php
+            include('../home/banner_home/search-bar.html')
+            ?>
 
         </div>
 

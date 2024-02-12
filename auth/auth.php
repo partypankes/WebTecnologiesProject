@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-$_SESSION['loggedin'] = true;
+$_SESSION['loggedin'] = false;
 $_SESSION['username'] = "gilvestro_03";
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
