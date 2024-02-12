@@ -75,57 +75,38 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     /********************************************** INIZIO CONTROLLO PASSWORD **********************************************/
 
     /*Controllo lunghezza password*/
-    if (password.length >= 8 && password.length <= 20) {
-        document.getElementById('lunghezza').style.color = 'limegreen';
-    } else {
+    if (!(password.length >= 8 && password.length <= 20)) {
         document.getElementById('errorMessage').textContent = "La password deve essere compresa tra gli 8 e 20 caratteri";
-        document.getElementById('lunghezza').style.color = 'grey';
         return;
     }
     /*controllo presenza lettere maiuscole*/
-    if (password.match(/[A-Z]/)) {
-        document.getElementById('maiuscola').style.color = 'limegreen';
-    } else {
+    if (!(password.match(/[A-Z]/))) {
         document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere maiuscolo ";
-        document.getElementById('maiuscola').style.color = 'grey';
         return;
     }
     /*controllo presenza lettere minuscole*/
-    if (password.match(/[a-z]/)) {
-        document.getElementById('minuscola').style.color = 'limegreen';
-    } else{
+    if (!(password.match(/[a-z]/))) {
         document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere maiuscolo";
-        document.getElementById('minuscola').style.color = 'grey';
         return;
     }
 
 
     /*controllo presenza numeri*/
-    if (password.match(/[0-9]/)) {
-        document.getElementById('numero').style.color = 'limegreen';
-    } else{
+    if (!(password.match(/[0-9]/))) {
         document.getElementById('errorMessage').textContent = "La password deve contenere almeno un numero";
-        document.getElementById('numero').style.color='grey';
         return;
     }
 
 
     /*controllo presenza carattere speciale*/
-    if(password.match(/[^a-zA-Z0-9]/)){
-        document.getElementById('carspeciale').style.color='limegreen';
-    }else{
+    if(!(password.match(/[^a-zA-Z0-9]/))){
         document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere speciale";
-        document.getElementById('carspeciale').style.color='grey';
+
         return;
     }
 
 
     /*trasforma scritta sopra ai requsiiti in verede se sono tutti rispettati*/
-    if( password.length>=8 && password.length<=20 && password.match(/[a-z]/) && password.match(/[A-Z]/) && password.match(/[0-9]/) && password.match(/[^a-zA-Z0-9]/))
-        document.getElementById('intro_requisiti').style.color='limegreen';
-    else
-        document.getElementById('intro_requisiti').style.color='grey';
-
 
     /********************************************** FINE CONTROLLO PASSWORD **********************************************/
 
