@@ -1,43 +1,40 @@
 .bg-logged{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
-    height: 40vh;
-    background-color: #000000;
+    height:60vh;
+    max-height: 60vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#bg-video{
+#bg-video-logged{
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
     opacity: 40%;
 }
-
-.bn-intro{
+.benvenuto-content{
     backdrop-filter: blur(10px);
     border-radius: 30px;
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-}
-.content{
+
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     flex-direction: column;
+    margin-top: 3rem;
+
 }
-.content > p{
+.benvenuto-content > p{
     color: #ffffff;
-    text-align: center;
+    text-align: left;
 }
+
 #intro{
     font-size:4vw;
     min-font-size: 3vw;
     font-weight: 500;
+    margin-bottom:0.3rem;
 }
 #key{
     color: #d79711;

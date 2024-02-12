@@ -19,15 +19,11 @@ require('../auth/auth.php');
 
     <section class="intro">
         <?php
-        //da visualizzare se è il primo acceso dell'utente non registrato o non è registrato
-        include('../home/banner_home/banner_home.html');
-        ?>
-    </section>
-
-    <section class="intro-logged">
-        <?php
-        //da visualizzare se è il primo acceso dell'utente non registrato o non è registrato
-        include('../home/banner_home/banner_home_logged.html');
+            if($_SESSION['loggedin']){
+                include('../home/logged_banner_home/banner_home_logged.php');
+            }else{
+                include('../home/banner_home/banner_home.html');
+            }
         ?>
     </section>
 
