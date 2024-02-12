@@ -6,7 +6,7 @@
 
     <div class="benvenuto-content">
         <?php
-            echo '<p id="intro">Benvenuto <span id="key">@' . $_SESSION['username'] . '</span>...</p>';
+            echo '<p id="intro">Benvenuto <span id="key">' . $_SESSION['username'] . '</span>...</p>';
         ?>
         <p id="sub">Su SapurEat lasciati ispirare da 100+ ricette scelte dagli utenti, lanciati in un mondo culinario tutto nuovo</p>
 

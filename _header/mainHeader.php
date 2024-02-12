@@ -13,14 +13,14 @@
 
             <ul class="menu">
                 <li><a href="#ricette">Ricette</a></li>
-                <li><a href="#about_us">AboutUs</a></li>
+                <li><a href="../aboutUs/AboutUs.php">AboutUs</a></li>
             </ul>
             <!--Lato Utente-->
             <div class="r-side">
 
                     <?php
                     if($_SESSION['loggedin']){
-                        echo '<a class="user" href="../aboutUs/AboutUs.php"><i class="fa-solid fa-circle-user"></i>' . $_SESSION['username'] . '</a>';
+                        echo '<a class="user" href="../login/login_page.php"><i class="fa-solid fa-circle-user"></i>' . $_SESSION['username'] . '</a>';
                     }else{
                         echo '<a class="user" href="../login/login_page.php"><i class="fa-solid fa-circle-user"></i>Accedi</a>';
                     }
