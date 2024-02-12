@@ -4,7 +4,7 @@ $section = $_GET['section'] ?? '';
 if(isset($db)) {
     switch ($section) {
         case 'ingredienti':
-            $query = "SELECT i.nome, ri.quantita, ri.misurazione FROM ingrediente i INNER JOIN relazione_ingrediente ri ON i.nome = ri.ingrediente WHERE ri.ricetta = 1";
+            $query = "SELECT i.nome, ri.quantita, ri.misurazione FROM ingrediente i INNER JOIN relazione_ingrediente ri ON i.nome = ri.ingrediente WHERE ri.ricetta = 3";
             $result = pg_query($db, $query);
             if ($result) {
                 $tableHTML = "<table  id='ingredienti'><tr><th>Ingrediente</th><th>Quantità</th><th>Misurazione</th></tr>";
@@ -21,15 +21,16 @@ if(isset($db)) {
 
             break;
         case 'preparazione':
-            $query = 'SELECT procedimento FROM ricetta WHERE id = 1';
+            $query = 'SELECT procedimento FROM ricetta WHERE id = 3';
             $result = pg_query($db, $query);
             if($row = pg_fetch_assoc($result)) {
                 $str = null;
                 $jsonData = json_decode($row['procedimento'], true);
                 foreach ($jsonData as $elemento) {
-                    echo "<p>" . $elemento['id'] . ") " . $elemento['text'] . "</p>";
+                    echo "<div style='margin-bottom: 10px; padding: 8px; background-color: whitesmoke; border-left: 4px solid darkmagenta'>";
+                    echo "<p style='margin: 0; font-size: 15px'>" . $elemento['id'] . ") " . $elemento['text'] . "</p>";
+                    echo "</div>";
                 }
-                echo $str;
             } else {
                 echo "errore nella query";
             }
@@ -37,7 +38,7 @@ if(isset($db)) {
             break;
 
         case 'tips' :
-            $query = 'SELECT tips FROM ricetta WHERE id = 1';
+            $query = 'SELECT tips FROM ricetta WHERE id = 3';
             $result = pg_query($db,$query);
 
             if($row = pg_fetch_assoc($result)) {

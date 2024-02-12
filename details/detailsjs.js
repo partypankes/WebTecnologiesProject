@@ -90,6 +90,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    caricaContenuto('ingredienti');
+});
+
+
 /*
 
 let currentIndex = 0;

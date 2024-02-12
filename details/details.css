@@ -100,10 +100,11 @@ ul {
 }
 
 #details{
-    margin-top: 5%;
+    margin-top: 2%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 

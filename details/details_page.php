@@ -23,10 +23,10 @@ include('../_header/baseHeader.php');
 <body>
 <main>
     <section id="title">
-        <div class="text"><?php name_and_user(1)?>
+        <div class="text"><?php name_and_user(3)?>
         </div>
         <div class="photo">
-            <img src="<?php echo immagine_banner(1)?>" alt="Homemade Pizza">
+            <img src="<?php echo immagine_banner(3)?>" alt="Homemade Pizza">
         </div>
     </section>
 
@@ -43,36 +43,7 @@ include('../_header/baseHeader.php');
         </div>
 
         <div id="recipe-content">
-            <table id="ingredienti">
-                <tr>
-                    <th>Ingrediente</th>
-                    <th>Quantità</th>
-                </tr>
-                <tr>
-                    <td>Pasta</td>
-                    <td>500g</td>
-                </tr>
-                <tr>
-                    <td>Pomodori</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>Aglio</td>
-                    <td>2 spicchi</td>
-                </tr>
-                <tr>
-                    <td>Olio d'oliva</td>
-                    <td>2 cucchiai</td>
-                </tr>
-                <tr>
-                    <td>Sale</td>
-                    <td>q.b.</td>
-                </tr>
-                <tr>
-                    <td>Basilico</td>
-                    <td>A piacere</td>
-                </tr>
-            </table>
+            <table id="ingredienti"> </table>
         </div>
 
     </section>
