@@ -62,6 +62,7 @@
                     <div class="input-container" id="password-div">
                         <label for="password">Password:</label>
                         <input type="password" name="password" id="password" class="input-field" placeholder="Password" onfocus="showText('info-password')" onblur="hideText('info-password')" maxlength="20">
+                        <i id="togglePassword" class="input-icon fas fa-eye-slash" style="cursor: pointer; font-weight: normal;"></i>
                         <div class="info-password" id="info-password">
                             <label for="password" id="intro_requisiti">La password deve avere:</label>
                             <ul>
@@ -88,64 +89,6 @@
         </form>
     </div>
 </div>
-<script>
-    function hideText(divID){
-        document.getElementById(divID).style.display='none';
-    }
-
-    function showText(divID){
-        document.getElementById(divID).style.display='inline';
-    }
-
-
-
-    function scrollToSection(sectionId, sectionId1) {
-        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-        var a = document.getElementById(sectionId1);
-        setTimeout(function(){a.hidden = true}, 485);
-    }
-
-
-    document.getElementById('password').addEventListener('input', function () {
-        const password = this.value;
-
-        if (password.length>=8 && password.length<=20)
-            document.getElementById('lunghezza').style.color = 'limegreen';
-        else
-            document.getElementById('lunghezza').style.color = 'grey';
-
-        /**/
-        if (password.match(/[a-z]/))
-            document.getElementById('minuscola').style.color ='limegreen';
-        else
-            document.getElementById('minuscola').style.color='grey';
-
-        /**/
-        if (password.match(/[A-Z]/))
-            document.getElementById('maiuscola').style.color='limegreen';
-         else
-            document.getElementById('maiuscola').style.color='grey';
-
-        /**/
-        if (password.match(/[0-9]/))
-            document.getElementById('numero').style.color='limegreen';
-         else
-            document.getElementById('numero').style.color='grey';
-
-        /**/
-        if (password.match(/[^a-zA-Z0-9]/))
-            document.getElementById('carspeciale').style.color='limegreen';
-        else
-            document.getElementById('carspeciale').style.color='grey';
-
-        /**/
-        if( password.length>=8 && password.length<=20 && password.match(/[a-z]/) && password.match(/[A-Z]/) && password.match(/[0-9]/) && password.match(/[^a-zA-Z0-9]/))
-            document.getElementById('intro_requisiti').style.color='limegreen';
-        else
-            document.getElementById('intro_requisiti').style.color='grey';
-    });
-
-</script>
 <script src="signup_validation.js"></script>
 </body>
 </html>

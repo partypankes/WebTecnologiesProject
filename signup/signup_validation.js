@@ -10,25 +10,6 @@ document.getElementById('next-button').addEventListener('click', function(event)
 
     var isValid= true;
 
-
-    /*inserimento nome*/
-    if (!name.trim()) {
-        document.getElementById('errorMessage').textContent = "Inserire il nome";
-        isValid = false;
-    }
-
-    /*inserimento cognome*/
-    if (!surname.trim()) {
-        document.getElementById('errorMessage').textContent = "Inserire il cognome";
-        isValid = false;
-    }
-
-    /*inserimento data di nascita*/
-    if (!birthdate.trim()) {
-        document.getElementById('errorMessage').textContent = "Inserire data di nascita";
-        isValid = false;
-    }
-
     /*controllo genere*/
     for(var i = 0; i < genderRadios.length; i++) {
         if (genderRadios[i].checked) {
@@ -41,6 +22,27 @@ document.getElementById('next-button').addEventListener('click', function(event)
         document.getElementById('errorMessage').textContent = "Selezionare genere";
         isValid = false;
     }
+
+    /*inserimento data di nascita*/
+    if (!birthdate.trim()) {
+        document.getElementById('errorMessage').textContent = "Inserire data di nascita";
+        isValid = false;
+    }
+
+    /*inserimento cognome*/
+    if (!surname.trim()) {
+        document.getElementById('errorMessage').textContent = "Inserire il cognome";
+        isValid = false;
+    }
+
+    /*inserimento nome*/
+    if (!name.trim()) {
+        document.getElementById('errorMessage').textContent = "Inserire il nome";
+        isValid = false;
+    }
+
+
+
 
     /*scroll se dati sono validi*/
     if(isValid){
@@ -110,7 +112,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
             if (data) {
                 document.getElementById('errorMessage').textContent = data;
             } else {
-                window.location.href = '../deprecated/hompage/hompageNR.php';
+                window.location.href = '../hompage/hompageNR.php';
             }
         } else {
             // Gestisci errori di rete o errori HTTP qui
@@ -138,3 +140,70 @@ function validaEmail(email) {
     var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return regex.test(email);
 }
+
+document.getElementById('togglePassword').addEventListener('click', function () {
+    const password = document.getElementById('password');
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+
+    // Cambia l'icona
+    this.classList.toggle('fa-eye');
+    this.classList.toggle('fa-eye-slash');
+});
+
+
+function hideText(divID){
+    document.getElementById(divID).style.display='none';
+}
+
+function showText(divID){
+    document.getElementById(divID).style.display='inline';
+}
+
+
+
+function scrollToSection(sectionId, sectionId1) {
+    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    var a = document.getElementById(sectionId1);
+    setTimeout(function(){a.hidden = true}, 485);
+}
+
+
+document.getElementById('password').addEventListener('input', function () {
+    const password = this.value;
+
+    if (password.length>=8 && password.length<=20)
+        document.getElementById('lunghezza').style.color = 'limegreen';
+    else
+        document.getElementById('lunghezza').style.color = 'grey';
+
+
+    if (password.match(/[a-z]/))
+        document.getElementById('minuscola').style.color ='limegreen';
+    else
+        document.getElementById('minuscola').style.color='grey';
+
+
+    if (password.match(/[A-Z]/))
+        document.getElementById('maiuscola').style.color='limegreen';
+    else
+        document.getElementById('maiuscola').style.color='grey';
+
+
+    if (password.match(/[0-9]/))
+        document.getElementById('numero').style.color='limegreen';
+    else
+        document.getElementById('numero').style.color='grey';
+
+
+    if (password.match(/[^a-zA-Z0-9]/))
+        document.getElementById('carspeciale').style.color='limegreen';
+    else
+        document.getElementById('carspeciale').style.color='grey';
+
+
+    if( password.length>=8 && password.length<=20 && password.match(/[a-z]/) && password.match(/[A-Z]/) && password.match(/[0-9]/) && password.match(/[^a-zA-Z0-9]/))
+        document.getElementById('intro_requisiti').style.color='limegreen';
+    else
+        document.getElementById('intro_requisiti').style.color='grey';
+});
