@@ -147,7 +147,11 @@ ul {
 #recipe-content {
     width: 80%;
     padding: 2%;
+   /* transition: height 0.5s ease-out;  Regola la durata e la funzione di easing secondo necessità
+    overflow: hidden;  Impedisce il contenuto di fuoriuscire durante la transizione di altezza */
 }
+
+
 
 #recipe-content h2 {
     font-size: 2rem; /* Font sizes typically kept in em or px for consistency */

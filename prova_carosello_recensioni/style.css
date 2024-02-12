@@ -1,0 +1,39 @@
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+}
+
+.slider {
+    display: flex;
+    will-change: transform;
+}
+
+.review {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 20px;
+    background-color: #121212;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    flex: 0 0 auto;
+}
+
+.name {
+    font-weight: bold;
+    margin-bottom: 10px; /* Spazio sotto il nome */
+}
+
+.text {
+    margin-bottom: 10px; /* Spazio sopra la valutazione */
+}
+
+.rating {
+    font-size: 1.2em;
+    color: gold; /* Colore delle stelle */
+}
+
+
+
