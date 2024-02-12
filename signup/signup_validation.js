@@ -75,7 +75,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     /********************************************** INIZIO CONTROLLO PASSWORD **********************************************/
 
     /*Controllo lunghezza password*/
-    if (password.length < 8 || pasword.length > 20) {
+    if (password.length < 8 || password.length > 20) {
         document.getElementById('errorMessage').textContent = "La password deve essere compresa tra gli 8 e 20 caratteri";
         return;
     }
