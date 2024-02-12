@@ -22,11 +22,9 @@ function submitFilter(){
        }
     });
 
-    var query = "SELECT * FROM ricetta WHERE tempo_preparazione = <" + tempo_box + "AND portata = " + portata_box + ";";
-
     var xhr = new XMLHttpRequest();
     xhr.open("POST",'query_ricerca.php', true);
-
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 
     xhr.onreadystatechange = function() {
@@ -36,6 +34,6 @@ function submitFilter(){
     };
 
 
-    xhr.send(query);
+    xhr.send("tempo_preparazione=" + encodeURIComponent(tempo_box) + "&portata=" + encodeURIComponent(portata_box));
 
 }
