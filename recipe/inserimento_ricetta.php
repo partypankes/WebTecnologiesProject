@@ -19,11 +19,12 @@ if(isset($db)) {
     foreach($_POST['procedimentiRicetta'] as $fase) {
         $procedimento = array("id" => $count, "text" => $fase);
         $preparation[] = $procedimento;
+        $count++;
     }
 
     $total_tips = array();
     foreach($_POST['tips'] as $temp) {
-        $tips = array($temp);
+        $tips = array("text" => $temp);
         $total_tips[] = $tips;
     }
 
