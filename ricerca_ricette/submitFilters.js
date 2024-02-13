@@ -9,7 +9,7 @@ let ricerca;
 document.addEventListener('DOMContentLoaded', function() {
     search_bar.addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
-            console.log("mammt");
+
             event.preventDefault();
             document.getElementById("search_button").click();
         }

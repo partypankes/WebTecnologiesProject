@@ -10,11 +10,13 @@ require('../auth/auth.php');
     <title>SapurEat - Homepage</title>
     <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="/home/home.css">
+
+    <script src="showSectionForUser.js"></script>
 </head>
 <body>
 
     <?php
-    include('../_header/mainHeader.php');
+        include('../_header/mainHeader.php');
     ?>
 
     <section class="intro">
@@ -27,14 +29,16 @@ require('../auth/auth.php');
         ?>
     </section>
 
-    <main>
+    <main id="home-main">
       
         <section class="ricette-home">
 
         </section>
 
+
         <section class="nuove-ricette">
-            <div class="ricette-btn-altro">
+
+            <div id="ricette-btn-altro">
                 <button><span>Scopri altre ricette</span></button>
             </div>
             <div class="ricette-title">
@@ -45,15 +49,20 @@ require('../auth/auth.php');
             <div class="table-ricette">
 
             </div>
-
         </section>
 
     </main>
 
     <?php
-    include('../structure/footer/footer.html');
+        include('../structure/footer/footer.html');
     ?>
     
+<script>
+    let status = "<?php
+        echo $_SESSION['loggedin'];
+        ?>";
 
+    showSection(status);
+</script>
 </body>
 </html>

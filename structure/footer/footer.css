@@ -2,12 +2,11 @@
     font-family: "MontSerrat T", serif;
     box-sizing: border-box;
     background-color: #f5f5f5;
-    padding: 1.5% 0; /* Converted from 20px */
-    font-size: 15px; /* Font size typically kept in px for consistency */
-    line-height: 20px; /* Same as above */
+    padding: 1.5% 0;
+    font-size: 15px;
+    line-height: 20px;
     color: #333;
     width: 100%;
-    margin-top: 3%; /* Converted from 50px */
 }
 
 .footer-container {

@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="../../global.css">
-<link rel="stylesheet" href="../../home/banner_home/banner_home.css">
+<link rel="stylesheet" href="/global.css">
+<link rel="stylesheet" href="/home/banner_home/banner_home.css">
 
     <div class="bg">
         <video id="bg-video" src="../../resources/video_prova.mp4" autoplay muted loop disablePictureInPicture></video>
@@ -11,7 +11,7 @@
             </div>
 
             <?php
-            include('../home/banner_home/search-bar.html')
+            include('../home/banner_home/search-bar.php')
             ?>
 
         </div>

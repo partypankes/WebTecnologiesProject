@@ -7,10 +7,21 @@ require '../auth/auth.php'
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SapurEat - Homepage</title>
+    <title>SapurEat - Ricette</title>
     <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="/ricerca_ricette/ricette.css">
     <link rel="stylesheet" href="/structure/xcard/xcard.css">
+
+    <script>
+        /*
+        document.addEventListener('DOMContentLoaded' , function(){
+
+            console.log(this.location.href.);
+            document.getElementById('search_button').value = "a";
+        });
+        */
+    </script>
+
 </head>
 <body>
 
@@ -19,11 +30,10 @@ include('../_header/baseHeader.php');
 ?>
 
 <main>
-
     <section class="ricerca-ricetta">
         <div id="search-bar">
             <?php
-            include('../home/banner_home/search-bar.html')
+            include('../home/banner_home/search-bar.php')
             ?>
         </div>
         <div class="filters">
