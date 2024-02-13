@@ -226,61 +226,6 @@ ul {
 }
 
 
-#gallery {
-    text-align: center;
-    width: 100%;
-    margin: auto;
-}
-
-.textGallery h2, .textGallery p {
-    margin-bottom: 20px;
-}
-
-.carousel {
-    overflow-x: scroll;
-    display: flex;
-
-}
-
-
-.carousel-slide {
-    flex: 0 0 auto;
-    transition: transform 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-}
-
-.carousel-slide img {
-    width: 350px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.control {
-    background-color: #ddd;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 15px;
-    margin: 0 20px;
-}
-
-#prev, #next {
-    position: static;
-    display: inline-block;
-}
-
-@media (max-width: 768px) {
-    .carousel-slide img {
-        width: 80px;
-        height: 80px;
-    }
-}
 
 
 #reviews-section{

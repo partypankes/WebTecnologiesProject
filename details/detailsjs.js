@@ -94,29 +94,3 @@ document.addEventListener('DOMContentLoaded', function() {
     caricaContenuto('ingredienti');
 });
 
-
-/*
-
-let currentIndex = 0;
-const slides = document.querySelectorAll('.carousel-slide');
-const totalSlides = slides.length;
-const carouselContainer = document.querySelector('.carousel');
-const slideWidth = slides[0].getBoundingClientRect().width + 10; // Larghezza dello slide più margine
-
-function updateCarousel() {
-    carouselContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-}
-
-document.getElementById('next').addEventListener('click', () => {
-    currentIndex = Math.min(currentIndex + 1, totalSlides - 1);
-    updateCarousel();
-});
-
-document.getElementById('prev').addEventListener('click', () => {
-    currentIndex = Math.max(currentIndex - 1, 0);
-    updateCarousel();
-});
-
-updateCarousel(); // Inizializza il carosello
-
- */

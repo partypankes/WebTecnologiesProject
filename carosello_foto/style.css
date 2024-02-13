@@ -1,0 +1,64 @@
+#gallery {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+
+.textGallery h2, .textGallery p {
+    margin-bottom: 20px;
+}
+
+
+#prev, #next {
+    position: static;
+    display: inline-block;
+}
+
+
+.carousel {
+    display: flex;
+    justify-content: start;
+    align-items: center; /* Permette agli elementi di allinearsi all'inizio, facendo espandere il contenitore */
+    overflow: hidden;
+    transition: height 0.5s ease; /* Transizione fluida dell'altezza */
+    height: 500px;
+}
+
+.carousel-slide img {
+    display: flex;
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.5s ease; /* Mantiene la transizione per lo zoom */
+}
+
+.carousel-slide.active img {
+    transform: scale(1.1); /* Applica uno zoom sull'immagine attiva */
+}
+
+
+.carousel-slide {
+    flex: 0 0 auto;
+    margin: 0 15px; /* Increased margin for better spacing */
+}
+
+.control {
+    background-color: #ddd;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px; /* Slightly larger for better visibility */
+    margin: 0 20px;
+    z-index: 2; /* Ensure controls are above the slides */
+    position: relative; /* Needed to apply z-index */
+}
+
+
+@media (max-width: 768px) {
+    .carousel-slide img {
+        width: 80px;
+        height: 80px;
+    }
+}
