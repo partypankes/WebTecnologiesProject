@@ -117,6 +117,6 @@ include('../structure/footer/footer.html')
 <script src="script/main_script.js"></script>
 <script src="script/banner_drag_drop.js"></script>
 <script src="script/ajax_inserimento.js"></script>
-<script src="script/script_tips.js"></script>
+<script src="script/tips_script.js"></script>
 </body>
 </html>
