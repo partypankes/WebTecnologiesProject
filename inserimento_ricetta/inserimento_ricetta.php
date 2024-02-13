@@ -1,23 +1,27 @@
-
-
+<?php
+    include('../auth/auth.php')
+?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <title>Inserisci Ricetta</title>
-    <link rel="stylesheet" href="../global.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/inserimento_ricetta/inserimento_ricetta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 </head>
 <body>
 
-
+<?php
+    include('../_header/baseHeader.php')
+?>
+<main>
     <section id="container">
         <div class="title">
             <h1>Inserisci La Tua Ricetta</h1>
         </div>
 
-        <form id="ricettaForm" action="inserimento_ricetta.php" method="post" enctype="multipart/form-data">
+        <form id="ricetta-form" action="inserimento_ricetta.php" method="post" enctype="multipart/form-data">
             <div class="form-section">
                 <label for="titoloRicetta">Titolo Ricetta:</label>
                 <input type="text" id="titoloRicetta" name="titoloRicetta">
@@ -28,12 +32,31 @@
                 <textarea id="descrizioneRicetta" name="descrizioneRicetta"></textarea>
             </div>
 
-            <div class="form-section" id="banner">
-                <label for="immagine_banner">Banner:</label>
-                <input type="file" class="input-immagine" id="input-banner" accept="image/png, image/jpeg" style="display: none">
-                <div class="immaginiContainer" id="immagine_banner">
+
+                <div class="form-section" id="banner">
+                    <div id="mini-container">
+                        <div id="intra-mc">
+                            <!--
+                            <label for="immagine_banner"></label>
+                            !-->
+                            <input type="file" class="input-immagine" id="input-banner" accept="image/png, image/jpeg" style="display: none">
+                            <div class="immaginiContainer" id="immagine_banner"><i id="banner-ico" class="fa-solid fa-image"></i></div>
+                        </div>
+                        <div id="intra-mc">
+                            <label for="categoriaRicetta">Categoria Ricetta:</label>
+                            <select id="categoriaRicetta" name="categoriaRicetta" onchange="nascondiOpzioneIniziale()">
+                                <option value="" disabled selected>Seleziona una Portata</option>
+                                <option value="antipasto">Antipasto</option>
+                                <option value="primoPiatto">Primo Piatto</option>
+                                <option value="secondoPiatto">SecondoPiatto</option>
+                                <option value="dessert">Dessert</option>
+                                <option value="piattoUnico">Piatto Unico</option>
+                                <option value="brunch">Bruch</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
 
             <div class="form-section" id="ingredienti">
                 <label for="ingredienti[]">Ingredienti:</label>
@@ -78,30 +101,18 @@
                 <button type="button" class="aggiungi-immagine" onclick="aggiungiImmagine()">+</button>
             </div>-->
 
-
-
-            <div class="form-section">
-                <label for="categoriaRicetta">Categoria Ricetta:</label>
-                <select id="categoriaRicetta" name="categoriaRicetta" onchange="nascondiOpzioneIniziale()">
-                    <option value="" disabled selected>Seleziona una Portata</option>
-                    <option value="antipasto">Antipasto</option>
-                    <option value="primoPiatto">Primo Piatto</option>
-                    <option value="secondoPiatto">SecondoPiatto</option>
-                    <option value="dessert">Dessert</option>
-                    <option value="piattoUnico">Piatto Unico</option>
-                    <option value="brunch">Bruch</option>
-
-                </select>
-            </div>
-
-
             <div class="invio">
-                <button type="submit">Invia Ricetta</button>
+                <button type="submit">Salva la tua Ricetta</button>
             </div>
 
         </form>
 
     </section>
+</main>
+
+<?php
+include('../structure/footer/footer.html')
+?>
 
 <script src="script/main_script.js"></script>
 <script src="script/banner_drag_drop.js"></script>

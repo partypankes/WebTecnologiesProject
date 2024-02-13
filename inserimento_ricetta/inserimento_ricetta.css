@@ -1,42 +1,73 @@
 body{
     background-color: ghostwhite;
 }
-
-label {
-    display: block;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
-
-#anteprimaImmagine img {
-    margin-top: 1rem;
-    max-width: 100px;
-    max-height: 100px;
-    margin-right: 1rem;
+main{
+    margin:2% 5vw;
 }
 
 #container{
-    max-width: 80%;
+    width: 65%;
     margin: 5% auto;
     padding: 2%;
-    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    background-color: #757575;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-.form-section {
-    margin: 2em;
-    background-color: white;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 #container .title{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.375rem;
+}
+#ricetta-form{
+    width:100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-section {
+    width:100%;
+    height: 100%;
+    margin: 1% 3%;
+    padding: 2% 3%;
+
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#mini-container{
+    width:100%;
+    margin:auto;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+#intra-mc{
+    width:100%;
+    margin:auto;
+    padding: 3%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 1rem;
+    display: block;
+    font-weight: bold;
 }
 
 textarea, input, select{
@@ -64,28 +95,87 @@ select option[disabled] {
     color: grey;
 }
 
-.invio button {
-    padding: .7%;
-    border: 1px solid #ce0dd8;
-    border-radius: 50px;
-    background-color: #ce0dd8;
-    color: #fff;
-    font-size: 1em;
+.immaginiContainer {
+    width:100%;
+    margin:auto;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.625rem;
+
+    border: 1px solid black;
+}
+#banner-ico{
+    font-size: 6rem;
+
+}
+
+.anteprimaDiv img {
+    width: auto;
+    object-fit: contain;
+    height: 6.25rem;
+    display: block;
+    max-width: 100%;
+    border-radius: 0.1875rem;
+}
+.anteprimaDiv .icona-eliminazione {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     text-align: center;
-    text-decoration: none;
+    color: red;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: .2%;
-    width: 15%;
+    visibility: hidden;
+}
+
+.anteprimaDiv {
+    position: relative;
+    display: inline-block;
+    margin-right: .625rem;
+    border: 1px solid #ddd;
+    padding: .3125rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    background-color: #fff;
+}
+.anteprimaDiv:hover img {
+    filter: brightness(50%);
+}
+.anteprimaDiv:hover .icona-eliminazione {
+    visibility: visible;
 }
 
 .invio{
+    width:100%;
+    margin-top: 1%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.aggiungi-ingrediente, .aggiungi-procedimento, .aggiungi-immagine, .aggiungi-tips{
+.invio button {
+    width:35%;
+    padding: 1%;
+
+
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+    border: 1px solid #ce0dd8;
+    border-radius: 50px;
+    background-color: #ce0dd8;
+    color: #fff;
+}
+
+
+
+.aggiungi-ingrediente, .aggiungi-procedimento, /*.aggiungi-immagine,*/ .aggiungi-tips{
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
@@ -133,23 +223,7 @@ select option[disabled] {
     flex-basis: 15%;
 }
 
-.immaginiContainer {
 
-    display: flex;
-    flex-wrap: wrap;
-    gap:  0.625rem;
-    margin-bottom: 1.25rem;
-    border: 1px solid;
-    padding: 20px 20px 20px 20px;
-}
-
-.anteprimaDiv img {
-    width: auto;
-    height: 6.25rem;
-    display: block;
-    max-width: 100%;
-    border-radius: 0.1875rem;
-}
 
 .procedimento-numero {
     font-weight: bold;
@@ -207,32 +281,5 @@ select option[disabled] {
     cursor: pointer;
 }
 
-.anteprimaDiv .icona-eliminazione {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: red;
-    cursor: pointer;
-    visibility: hidden;
-}
 
-.anteprimaDiv {
-    position: relative;
-    display: inline-block;
-    margin-right: .625rem;
-    border: 1px solid #ddd;
-    padding: .3125rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: .25rem;
-    background-color: #fff;
-}
-.anteprimaDiv:hover img {
-    filter: brightness(50%);
-}
-.anteprimaDiv:hover .icona-eliminazione {
-    visibility: visible;
-}
 
