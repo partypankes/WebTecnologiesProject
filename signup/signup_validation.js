@@ -66,7 +66,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
 
     /*controllo validita email*/
     if (!validaEmail(email)) {
-        document.getElementById('errorMessage').textContent = "La mail inserita non e' valida"
+        document.getElementById('errorMessage').textContent = "L'E-mail inserita non e' valida"
         return;
     }
     /*fine controllo email*/
@@ -104,6 +104,9 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
 
         return;
     }
+
+
+    /*CONTROLLO SE LE DUE PASSWORD SONO UGUALI*/
 
 
     /*trasforma scritta sopra ai requsiiti in verede se sono tutti rispettati*/
