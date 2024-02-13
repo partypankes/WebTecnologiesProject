@@ -12,21 +12,23 @@ require '../auth/auth.php';
     <meta name="author" content="John Doe">
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 </head>
 
+
+
+
+<body>
 <?php
 //da poter cambiare nel caso l'utente sia registrato o meno
 include('../_header/baseHeader.php');
 ?>
-
-
-<body>
 <main>
     <section id="title">
-        <div class="text"><?php name_and_user(3)?>
+        <div class="text"><?php name_and_user(13)?>
         </div>
         <div class="photo">
-            <img src="<?php echo immagine_banner(3)?>" alt="Homemade Pizza">
+            <img src="<?php echo immagine_banner(13)?>" alt="Homemade Pizza">
         </div>
     </section>
 
@@ -48,7 +50,7 @@ include('../_header/baseHeader.php');
 
     </section>
 
-<!--
+
     <section id="gallery">
         <div class="textGallery">
             <h2>Recipe Gallery</h2>
@@ -67,7 +69,7 @@ include('../_header/baseHeader.php');
 
     </section>
 
-  -->
+
 
     <section id="reviews-section">
         <div class="reviews-title">
@@ -88,13 +90,16 @@ include('../_header/baseHeader.php');
             </div>
         </div>
         <form id="review-form">
-            <strong>NOME DA DATABASE</strong>
+            <strong style="display: flex; align-items: center">
+                <i class="fa-solid fa-circle-user"></i>
+                NOME DA DATABASE
+            </strong>
             <textarea id="review-content" placeholder="La tua recensione" required></textarea>
             <div class="invio-recensione">
                 <button type="submit">Invia Recensione</button>
             </div>
-
         </form>
+
     </section>
 
 

@@ -1,5 +1,5 @@
 main {
-    margin: 10vh 5% 0 5%;
+    margin: 2% 5vw;
 }
 
 section {
@@ -225,7 +225,7 @@ ul {
     }
 }
 
-/*
+
 #gallery {
     text-align: center;
     width: 100%;
@@ -281,7 +281,7 @@ ul {
         height: 80px;
     }
 }
-*/
+
 
 #reviews-section{
     width: 80%;
@@ -314,6 +314,14 @@ ul {
 strong{
     font-size: 1.3vw;
 }
+
+i {
+    color: darkmagenta;;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+
 #review-form{
     padding: 8px;
 }
