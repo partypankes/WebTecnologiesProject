@@ -37,7 +37,7 @@
 
             <div class="form-section" id="ingredienti">
                 <label for="ingredienti[]">Ingredienti:</label>
-                <input type="number" name=" " placeholder="Inserisci il tempo di preparazione">
+                <input type="number" name="tempo_preparazione" placeholder="Inserisci il tempo di preparazione">
                 <div class="ingrediente-gruppo">
 
                     <input type="text" class="ingrediente" name="ingredienti[]">
