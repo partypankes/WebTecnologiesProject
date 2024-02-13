@@ -13,6 +13,8 @@ if(isset($db)) {
     $username = $_SESSION['username'];
     $tempo_preparazione = $_POST['tempo_preparazione'];
 
+    echo $tempo_preparazione;
+
 
     $preparation = array();
     $count = 1;
@@ -43,7 +45,7 @@ if(isset($db)) {
     }
 
 
-    $sql3 = "INSERT INTO ingrediente (nome) VALUES ($1);";
+    $sql3 = "INSERT INTO ingrediente (nome) VALUES ($1) ON CONFLICT DO NOTHING;";
     //$sql3 = "INSERT INTO ingrediente (ingrediente_name) VALUES ($1) ON CONFLICT (ingrediente_name) DO NOTHING;";
 
     $sql4 = "INSERT INTO relazione_ingrediente (ricetta, ingrediente,quantita,misurazione) VALUES ($1, (SELECT nome FROM ingrediente WHERE nome = $2),$3,$4);";
