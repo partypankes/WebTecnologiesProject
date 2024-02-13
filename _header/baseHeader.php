@@ -28,6 +28,7 @@
                     echo '<a class="user" href="../login/login_page.php"><i class="fa-solid fa-circle-user"></i>Accedi</a>';
                 }
                 ?>
+
                 <i id="menu-icon" class="fa-solid fa-bars"></i>
             </div>
         </div>
