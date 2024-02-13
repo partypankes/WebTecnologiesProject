@@ -28,6 +28,21 @@ function immagine_banner($id): string
     return ''; // Ritorna una stringa vuota in caso di errore
 }
 
+function carica_recensione($id) {
+    include '../dbconnection.php';
+    if(isset($db)) {
+        $sql = "SELECT descrizione_recensione,voto,utente FROM recensione WHERE ricetta = $1";
+        $result = pg_query_params($db, $sql, array($id));
+        while($row = pg_fetch_assoc($result)){
+            echo '<div class="review">
+                <strong>'. $row['utente'] .'</strong>
+                <p>' . $row['descrizione_recensione'] . '</p>
+            </div>' ;
+        }
+    }
+
+}
+
 /*function image_gallery(): void
 {
     include '../dbconnection.php';

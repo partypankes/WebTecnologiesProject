@@ -1,6 +1,16 @@
+
+
+
 function caricaContenuto(sezione) {
+
+    const queryString = window.location.search;
+
+    const urlParams = new URLSearchParams(queryString);
+
+    const id = urlParams.get('id');
+
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'details_query.php?section=' + encodeURIComponent(sezione), true);
+    xhr.open('GET',  'details_query.php?section=' + encodeURIComponent(sezione) + '&id=' + encodeURIComponent(id), true);
 
     xhr.onload = function() {
         if (xhr.status === 200) {
@@ -14,6 +24,9 @@ function caricaContenuto(sezione) {
     xhr.onerror = function () {
         console.error('Errore nella richiesta di rete');
     };
+
+
+
 
     xhr.send();
 }

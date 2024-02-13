@@ -11,7 +11,7 @@ if(isset($db) && isset($sql) && isset($parametri)) {
             echo '<div class="xcard"> 
                     <img class="banner-xcard" src="data:image/jpeg;base64,'. base64_encode($imageData) .'"/>'.
                     '<div class="info-xcard">
-                        <a>' . $row['titolo'] . '</a>
+                        <a href="../details/details_page.php?id='. $row['id'] . '">' . $row['titolo'] . '</a>
                         <div class="sub-xcard">
                             <p>by <span>' . $row['utente'] . '</span></p>
                             <div class="extra-xcard">

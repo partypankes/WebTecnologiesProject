@@ -25,10 +25,10 @@ require '../auth/auth.php';
 ?>
 <main>
     <section id="title">
-        <div class="text"><?php name_and_user(13)?>
+        <div class="text"><?php name_and_user($_GET['id'])?>
         </div>
         <div class="photo">
-            <img src="<?php echo immagine_banner(13)?>" alt="Homemade Pizza">
+            <img src="<?php echo immagine_banner($_GET['id'])?>" alt="Homemade Pizza">
         </div>
     </section>
 
@@ -53,6 +53,7 @@ require '../auth/auth.php';
             <h2>Recensioni</h2>
         </div>
         <div id="reviews-container">
+            <?php carica_recensione($_GET['id'])?>
             <div class="review">
                 <strong>Mario Rossi</strong>
                 <p>La pizza era incredibile, croccante fuori e morbida dentro, condita perfettamente!</p>
@@ -69,7 +70,9 @@ require '../auth/auth.php';
         <form id="review-form">
             <strong style="display: flex; align-items: center">
                 <i class="fa-solid fa-circle-user"></i>
-                NOME DA DATABASE
+                <?php if($_SESSION['loggedin']) {
+                    echo $_SESSION['username'];
+                } ?>
             </strong>
             <textarea id="review-content" placeholder="La tua recensione" required></textarea>
             <div class="invio-recensione">
