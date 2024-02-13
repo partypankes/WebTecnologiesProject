@@ -1,14 +1,29 @@
 let tempo = document.getElementsByName('tempo');
 
-
 let portata = document.getElementsByName('portata');
+
+let search_bar = document.getElementById('search'); // Assicurati che questo sia l'ID corretto
+let ricerca;
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    search_bar.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            console.log("mammt");
+            event.preventDefault();
+            document.getElementById("search_button").click();
+        }
+    });
+
+});
+
 console.log(portata);
 
 function submitFilter(){
     var portata_box;
     var tempo_box;
 
-
+    ricerca = search_bar.value;
 
     portata.forEach(function(checkbox) {
         if(checkbox.checked) {
@@ -31,11 +46,14 @@ function submitFilter(){
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById('ricette').innerHTML = xhr.responseText;
+            document.getElementById('sezione-ricette').innerHTML = xhr.responseText;
+
         }
     };
 
 
-    xhr.send("tempo_preparazione=" + encodeURIComponent(tempo_box) + "&portata=" + encodeURIComponent(portata_box));
+
+    xhr.send("tempo_preparazione=" + encodeURIComponent(tempo_box) + "&portata=" + encodeURIComponent(portata_box) + "&ricerca=" + encodeURIComponent(ricerca));
+
 
 }

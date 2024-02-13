@@ -10,6 +10,7 @@ require '../auth/auth.php'
     <title>SapurEat - Homepage</title>
     <link rel="stylesheet" href="/global.css">
     <link rel="stylesheet" href="/ricerca_ricette/ricette.css">
+    <link rel="stylesheet" href="/structure/xcard/xcard.css">
 </head>
 <body>
 
@@ -54,9 +55,9 @@ include('../_header/baseHeader.php');
             </div>
 
         </div>
-
     </section>
 
+    <section id="sezione-ricette" class="sezione-ricette"></section>
 </main>
 
 <?php
