@@ -18,58 +18,6 @@ function caricaContenuto(sezione) {
     xhr.send();
 }
 
-/*
-* function caricaContenuto(sezione) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'details_query.php?section=' + encodeURIComponent(sezione), true);
-
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            // Prepara il contenitore per la transizione aggiornando l'altezza
-            const contenitore = document.getElementById('recipe-content');
-            const altezzaIniziale = contenitore.offsetHeight;
-
-            contenitore.style.height = altezzaIniziale + 'px'; // Imposta l'altezza iniziale per iniziare la transizione
-
-            requestAnimationFrame(() => {
-                // Aggiorna il contenuto della pagina con la risposta
-                contenitore.innerHTML = xhr.responseText;
-
-                // Calcola la nuova altezza necessaria
-                const altezzaFinale = contenitore.scrollHeight + "px";
-
-                // Applica la nuova altezza per avviare la transizione
-                contenitore.style.height = altezzaFinale;
-
-                // Reset dell'altezza a 'auto' dopo la transizione per adattarsi al contenuto variabile
-                contenitore.addEventListener('transitionend', function(e) {
-                    if (e.propertyName === 'height') {
-                        contenitore.style.height = 'auto';
-                    }
-                }, {once: true}); // Assicura che l'event listener sia chiamato solo una volta
-            });
-        } else {
-            document.getElementById('recipe-content').innerHTML = '<table border="1" id="tabella-ingredienti"><tr><th>Numero</th><th>Quantità</th><th>Nome Ingrediente</th></tr></table>';
-        }
-    };
-
-    xhr.onerror = function () {
-        console.error('Errore nella richiesta di rete');
-    };
-
-    xhr.send();
-}
-*/
-
-document.querySelectorAll('#contents a').forEach(function(link) {
-    link.addEventListener('click', function() {
-        document.querySelectorAll('#contents a').forEach(function(l) {
-            l.classList.remove('active');
-        });
-        link.classList.add('active');
-    });
-});
-
 document.addEventListener("DOMContentLoaded", function() {
     // Aggiunge la classe 'active' al primo elemento della lista
     var firstElement = document.querySelector('#contents a:first-child');

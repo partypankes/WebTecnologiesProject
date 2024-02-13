@@ -45,7 +45,9 @@ if(isset($db)) {
                 $str = null;
                 $jsonData = json_decode($row['tips'], true);
                 foreach ($jsonData as $elemento) {
-                    echo "<p>" . $elemento['text'] . "</p>";
+                    echo "<div style='margin-bottom: 10px; padding: 8px; background-color: whitesmoke; border-left: 4px solid darkmagenta'>";
+                    echo "<p style='margin: 0; font-size: 15px'>" . $elemento['text'] . "</p>";
+                    echo "</div>";
                 }
             } else {
                 echo "Errore nella query";
