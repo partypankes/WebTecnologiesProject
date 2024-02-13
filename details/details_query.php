@@ -4,7 +4,7 @@ $section = $_GET['section'] ?? '';
 if(isset($db)) {
     switch ($section) {
         case 'ingredienti':
-            $query = "SELECT i.nome, ri.quantita, ri.misurazione FROM ingrediente i INNER JOIN relazione_ingrediente ri ON i.nome = ri.ingrediente WHERE ri.ricetta = 3";
+            $query = "SELECT i.nome, ri.quantita, ri.misurazione FROM ingrediente i INNER JOIN relazione_ingrediente ri ON i.nome = ri.ingrediente WHERE ri.ricetta = 13";
             $result = pg_query($db, $query);
             if ($result) {
                 $tableHTML = "<table  id='ingredienti'><tr><th>Ingrediente</th><th>Quantità</th><th>Misurazione</th></tr>";
@@ -21,7 +21,7 @@ if(isset($db)) {
 
             break;
         case 'preparazione':
-            $query = 'SELECT procedimento FROM ricetta WHERE id = 3';
+            $query = 'SELECT procedimento FROM ricetta WHERE id = 13';
             $result = pg_query($db, $query);
             if($row = pg_fetch_assoc($result)) {
                 $str = null;
@@ -38,7 +38,7 @@ if(isset($db)) {
             break;
 
         case 'tips' :
-            $query = 'SELECT tips FROM ricetta WHERE id = 3';
+            $query = 'SELECT tips FROM ricetta WHERE id = 13';
             $result = pg_query($db,$query);
 
             if($row = pg_fetch_assoc($result)) {
