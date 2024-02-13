@@ -21,7 +21,7 @@ require '../auth/auth.php';
 <body>
 <?php
 //da poter cambiare nel caso l'utente sia registrato o meno
-include('../_header/baseHeader.php');
+//include('../_header/baseHeader.php');
 ?>
 <main>
     <section id="title">
