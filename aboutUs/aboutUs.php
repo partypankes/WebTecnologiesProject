@@ -90,7 +90,7 @@ require('../auth/auth.php');
 </main>
 
 <?php
-    include('../footer/footer.html');
+include('../structure/footer/footer.html');
 ?>
 
 

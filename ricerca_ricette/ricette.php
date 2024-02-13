@@ -60,10 +60,10 @@ include('../_header/baseHeader.php');
 </main>
 
 <?php
-include('../footer/footer.html');
+include('../structure/footer/footer.html');
 ?>
 
-    <script src="../faqs/script_faqs.js"></script>
+    <script src="../structure/faqs/script_faqs.js"></script>
     <script src="../ricerca_ricette/submitFilters.js"></script>
 </body>
 </html>

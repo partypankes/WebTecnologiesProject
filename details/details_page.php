@@ -101,7 +101,9 @@ include('../_header/baseHeader.php');
 
 </main>
 
-<?php include ('../footer/footer.html'); ?>
+<?php
+include('../structure/footer/footer.html');
+?>
 
 <script src="detailsjs.js"></script>
 

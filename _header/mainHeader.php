@@ -13,7 +13,7 @@
 
             <ul class="menu">
                 <li><a href="#ricette">Ricette</a></li>
-                <li><a href="../aboutUs/AboutUs.php">AboutUs</a></li>
+                <li><a href="../aboutUs/aboutUs.php">AboutUs</a></li>
             </ul>
             <!--Lato Utente-->
             <div class="r-side">
