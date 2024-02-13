@@ -12,8 +12,7 @@ if(isset($db)) {
     $unita = $_POST['unita'];
     $username = $_SESSION['username'];
     $tempo_preparazione = $_POST['tempo_preparazione'];
-
-    echo $tempo_preparazione;
+    
 
 
     $preparation = array();
