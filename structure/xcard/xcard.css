@@ -70,11 +70,11 @@ main{
     /*align-items: flex-start;*/
 
 }
+.extra-card p{
+    text-align: center;
+}
 
 .extra-xcard i{
     padding-left:3px;
-}
-.stars i{
-    padding-left:0;
 }
 
