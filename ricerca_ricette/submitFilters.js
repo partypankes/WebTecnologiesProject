@@ -22,6 +22,8 @@ function submitFilter(){
        }
     });
 
+    console.log(tempo_box);
+
     var xhr = new XMLHttpRequest();
     xhr.open("POST",'query_ricerca.php', true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -29,7 +31,7 @@ function submitFilter(){
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            console.log(xhr.responseText);
+            document.getElementById('ricette').innerHTML = xhr.responseText;
         }
     };
 
