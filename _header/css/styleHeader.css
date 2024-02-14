@@ -29,7 +29,7 @@ header{
     transition: all .50s ease;
 }
 .menu a:hover {
-    color: var(--main_color);
+    color: var(--main-hover);
     transition: 0.3s ease;
 }
 
@@ -45,6 +45,10 @@ header{
     font-size: 1.2rem;
     font-weight: 600;
     transition: all .50s ease;
+}
+.r-side i{
+    margin:auto;
+    padding: 0 10%;
 }
 .user {
     display: flex;
@@ -67,7 +71,7 @@ header{
     text-align: center;
 }
 .r-side a:hover {
-    color: var(--main_color);
+    color: var(--main-hover);
     transition: 0.3s ease;
 }
 #menu-icon {
@@ -82,7 +86,6 @@ header{
     .logo{
         font-size: 2rem;
         font-weight: 600;
-        color: var(--main_color);
     }
     .navbar{
         padding: 0.5rem 2%;
@@ -103,8 +106,8 @@ header{
         top: 3.5rem;
         right:-100%;
         width: 12rem;
-        height: 20vh;
-        background-color: var(--main_color);
+        height: auto;
+        background-color: var(--header-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
