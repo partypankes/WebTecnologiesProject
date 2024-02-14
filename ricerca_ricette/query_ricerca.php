@@ -20,7 +20,7 @@ if (!($_POST['portata'] == 'undefined')) {
     $parametri[] = $_POST['portata'];
 }
 
-$sql = "SELECT * FROM ricetta";
+$sql = "SELECT id,banner,utente,tempo_preparazione,descrizione,voto,titolo FROM ricetta";
 if (!empty($condizioni)) {
     $sql .= " WHERE " . implode(' AND ', $condizioni);
     if(!($_POST['ricerca'] == 'undefined')) {

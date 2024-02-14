@@ -12,16 +12,6 @@ require '../auth/auth.php'
     <link rel="stylesheet" href="/ricerca_ricette/ricette.css">
     <link rel="stylesheet" href="/structure/xcard/xcard.css">
 
-    <script>
-        /*
-        document.addEventListener('DOMContentLoaded' , function(){
-
-            console.log(this.location.href.);
-            document.getElementById('search_button').value = "a";
-        });
-        */
-    </script>
-
 </head>
 <body>
 
@@ -30,6 +20,7 @@ include('../_header/baseHeader.php');
 ?>
 
 <main>
+
     <section class="ricerca-ricetta">
         <div id="search-bar">
             <?php
@@ -67,7 +58,9 @@ include('../_header/baseHeader.php');
         </div>
     </section>
 
-    <section id="sezione-ricette" class="sezione-ricette"></section>
+    <section id="sezione-ricette" class="sezione-ricette">
+            <?php include 'inizializzazione_pagina.php' ?>
+    </section>
 </main>
 
 <?php

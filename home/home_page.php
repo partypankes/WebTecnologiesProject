@@ -64,5 +64,6 @@ require('../auth/auth.php');
 
     showSection(status);
 </script>
+<script src="search_bar_home.js"></script>
 </body>
 </html>

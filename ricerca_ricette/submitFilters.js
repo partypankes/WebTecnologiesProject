@@ -7,14 +7,19 @@ let ricerca;
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    search_bar.addEventListener("keydown", function(event) {
+    search_bar.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
 
             event.preventDefault();
             document.getElementById("search_button").click();
         }
-    });
 
+    });
+    document.getElementById("search_button").addEventListener("click", function (event) {
+        event.preventDefault();
+        submitFilter();
+
+    });
 });
 
 console.log(portata);
@@ -22,6 +27,7 @@ console.log(portata);
 function submitFilter(){
     var portata_box;
     var tempo_box;
+
 
     ricerca = search_bar.value;
 
