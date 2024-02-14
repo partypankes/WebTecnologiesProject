@@ -2,12 +2,12 @@ body{
     background-color: ghostwhite;
 }
 main{
-    margin:2% 5vw;
+    margin: 2% 5vw;
 }
 
 #container{
     width: 65%;
-    margin: 5% auto;
+    margin: auto;
     padding: 2%;
 
     display: flex;
@@ -25,6 +25,7 @@ main{
     justify-content: center;
     align-items: center;
     font-size: 1.375rem;
+    padding-bottom:1%;
 }
 #ricetta-form{
     width:100%;

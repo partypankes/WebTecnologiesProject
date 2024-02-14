@@ -35,6 +35,7 @@
 
     </nav>
 </header>
+<div class="h-header"></div>
 
 <script>
     let menu = document.querySelector('#menu-icon');

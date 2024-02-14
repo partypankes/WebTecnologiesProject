@@ -24,12 +24,12 @@
         <form id="ricetta-form" action="inserimento_ricetta.php" method="post" enctype="multipart/form-data">
             <div class="form-section">
                 <label for="titoloRicetta">Titolo Ricetta:</label>
-                <input type="text" id="titoloRicetta" name="titoloRicetta">
+                <input type="text" id="titoloRicetta" name="titoloRicetta" maxlength="50">
             </div>
 
             <div class="form-section" >
                 <label for="descrizioneRicetta">Descrizione:</label>
-                <textarea id="descrizioneRicetta" name="descrizioneRicetta"></textarea>
+                <textarea id="descrizioneRicetta" name="descrizioneRicetta" maxlength="800"></textarea>
             </div>
 
 
@@ -60,11 +60,11 @@
 
             <div class="form-section" id="ingredienti">
                 <label for="ingredienti[]">Ingredienti:</label>
-                <input type="number" name="tempo_preparazione" placeholder="Inserisci il tempo di preparazione">
+                <input type="number" name="tempo_preparazione" placeholder="Inserisci il tempo di preparazione" maxlength="3">
                 <div class="ingrediente-gruppo">
 
-                    <input type="text" class="ingrediente" name="ingredienti[]">
-                    <input type="text" class="quantita" name="quantita[]" placeholder="Quantità" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Quantità')">
+                    <input type="text" class="ingrediente" name="ingredienti[]" maxlength="40">
+                    <input type="number" class="quantita" name="quantita[]" maxlength="3" placeholder="Quantità" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Quantità')">
                     <select class="unita" name="unita[]">
                         <option value="" disabled selected>-</option>
                         <option value="grammi">grammi</option>
@@ -78,7 +78,7 @@
                 <label for="procedimentiRicetta">Procedimento:</label>
                 <div class="procedimento-gruppo" id="procedimento1">
                     <span class="procedimento-numero">1.</span>
-                    <input type="text" class="procedimento" name="procedimentiRicetta[]">
+                    <input type="text" class="procedimento" name="procedimentiRicetta[]" maxlength="150">
                 </div>
                 <button type="button" class="aggiungi-procedimento" onclick="aggiungiProcedimento()">+</button>
             </div>
@@ -87,7 +87,7 @@
             <div class="form-section" id="tips">
                 <label for="tips[]">Tips:</label>
                 <div class="gruppo-tips">
-                    <input type="text" class="tips" name="tips[]">
+                    <input type="text" class="tips" name="tips[]" maxlength="150">
                 </div>
                 <button type="button" class="aggiungi-tips" onclick="aggiungiTips()">+</button>
             </div>
