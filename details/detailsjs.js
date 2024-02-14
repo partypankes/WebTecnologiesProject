@@ -55,3 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     caricaContenuto('ingredienti');
 });
 
+function nascondiOpzioneIniziale() {
+    var selectElement = document.getElementById('categoriaRicetta');
+    selectElement.options[0].hidden = true; // Nasconde l'opzione iniziale
+}

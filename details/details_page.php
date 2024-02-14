@@ -20,8 +20,7 @@ require '../auth/auth.php';
 
 <body>
 <?php
-//da poter cambiare nel caso l'utente sia registrato o meno
-//include('../_header/baseHeader.php');
+include('../_header/baseHeader.php');
 ?>
 <main>
     <section id="title">
@@ -67,18 +66,34 @@ require '../auth/auth.php';
                 <p>La varietà delle pizze è fantastica, e ogni volta è un piacere scoprirne di nuove. Super consigliato!</p>
             </div>
         </div>
+
         <form id="review-form">
             <strong style="display: flex; align-items: center">
                 <i class="fa-solid fa-circle-user"></i>
                 <?php if($_SESSION['loggedin']) {
-                    echo $_SESSION['username'];
+                    echo  $_SESSION['username'];
                 } ?>
             </strong>
-            <textarea id="review-content" placeholder="La tua recensione" required></textarea>
+            <div id="recensione">
+                <textarea id="review-content" name="descrizione-recensione" placeholder="La tua recensione" required></textarea>
+                <div id="div-voto-recensione">
+                    <label for="voto-recensione">Voto:</label>
+                    <select id="voto-recensione" name="voto-recensione" onchange="nascondiOpzioneIniziale()">
+                        <option value="" disabled selected>Voto</option>
+                        <option value="1">1/5</option>
+                        <option value="2">2/5</option>
+                        <option value="3">3/5</option>
+                        <option value="4">4/5</option>
+                        <option value="5">5/5</option>
+                    </select>
+                </div>
+            </div>
+
             <div class="invio-recensione">
                 <button type="submit">Invia Recensione</button>
             </div>
         </form>
+
 
     </section>
 
