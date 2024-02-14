@@ -28,7 +28,8 @@ function immagine_banner($id): string
     return ''; // Ritorna una stringa vuota in caso di errore
 }
 
-function carica_recensione($id) {
+function carica_recensione($id): void
+{
     include '../dbconnection.php';
     if(isset($db)) {
         $sql = "SELECT descrizione_recensione,voto,utente FROM recensione WHERE ricetta = $1";
@@ -37,10 +38,26 @@ function carica_recensione($id) {
             echo '<div class="review">
                 <strong>'. $row['utente'] .'</strong>
                 <p>' . $row['descrizione_recensione'] . '</p>
+                <p>'. $row['voto'] .'</p>
             </div>' ;
         }
     }
 
+}
+
+function esistenza_recensione($id, $utente): bool {
+    include '../dbconnection.php';
+    if (isset($db)) {
+        $sql = "SELECT id FROM recensione WHERE ricetta = $1 AND utente = $2";
+        $result = pg_query_params($db, $sql, array($id, $utente));
+
+        if ($result && pg_num_rows($result) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    return false;
 }
 
 /*function image_gallery(): void

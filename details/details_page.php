@@ -66,34 +66,34 @@ include('../_header/baseHeader.php');
                 <p>La varietà delle pizze è fantastica, e ogni volta è un piacere scoprirne di nuove. Super consigliato!</p>
             </div>
         </div>
+        <?php if ($_SESSION['loggedin']) {
 
-        <form id="review-form">
-            <strong style="display: flex; align-items: center">
-                <i class="fa-solid fa-circle-user"></i>
-                <?php if($_SESSION['loggedin']) {
-                    echo  $_SESSION['username'];
-                } ?>
-            </strong>
-            <div id="recensione">
-                <textarea id="review-content" name="descrizione-recensione" placeholder="La tua recensione" required></textarea>
-                <div id="div-voto-recensione">
-                    <label for="voto-recensione">Voto:</label>
-                    <select id="voto-recensione" name="voto-recensione" onchange="nascondiOpzioneIniziale()">
-                        <option value="" disabled selected>Voto</option>
-                        <option value="1">1/5</option>
-                        <option value="2">2/5</option>
-                        <option value="3">3/5</option>
-                        <option value="4">4/5</option>
-                        <option value="5">5/5</option>
-                    </select>
-                </div>
-            </div>
+            echo '<form method = "post" id = "review-form" >
+            <strong style = "display: flex; align-items: center" >
+                <i class="fa-solid fa-circle-user" ></i >';
+                    echo $_SESSION['username'];
+            echo '</strong >
+            <div id = "recensione" >
+                <textarea id = "review-content" name = "descrizione-recensione" placeholder = "La tua recensione" required ></textarea >
+                <div id = "div-voto-recensione" >
+                    <label for="voto-recensione" > Voto:</label >
+                    <select id = "voto-recensione" name = "voto-recensione" onchange = "nascondiOpzioneIniziale()" >
+                        <option value = "" disabled selected > Voto</option >
+                        <option value = "1" > 1 / 5</option >
+                        <option value = "2" > 2 / 5</option >
+                        <option value = "3" > 3 / 5</option >
+                        <option value = "4" > 4 / 5</option >
+                        <option value = "5" > 5 / 5</option >
+                    </select >
+                </div >
+            </div >
 
-            <div class="invio-recensione">
-                <button type="submit">Invia Recensione</button>
-            </div>
-        </form>
-
+            <div class="invio-recensione" >
+                <button type = "submit" > Invia Recensione </button >
+            </div >
+        </form >';
+        }
+       ?>
 
     </section>
 
@@ -106,6 +106,7 @@ include('../structure/footer/footer.html');
 ?>
 
 <script src="detailsjs.js"></script>
+<script src="ajax_invio_recensione.js"></script>
 
 </body>
 
