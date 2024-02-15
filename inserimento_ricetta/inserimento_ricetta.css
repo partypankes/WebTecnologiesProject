@@ -283,4 +283,12 @@ select option[disabled] {
 }
 
 
+.error::placeholder {
+    color: red;
+}
+
+.error{
+    color: red;
+    border-color: red;
+}
 

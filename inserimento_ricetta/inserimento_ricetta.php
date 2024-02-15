@@ -40,7 +40,7 @@
                             <label for="immagine_banner"></label>
                             !-->
                             <input type="file" class="input-immagine" id="input-banner" accept="image/png, image/jpeg" style="display: none">
-                            <div class="immaginiContainer" id="immagine_banner"><i id="banner-ico" class="fa-solid fa-image"></i></div>
+                            <div class="immaginiContainer" id="immagine_banner" style="cursor: pointer"><i id="banner-ico" class="fa-solid fa-image"></i></div>
                         </div>
                         <div id="intra-mc">
                             <label for="categoriaRicetta">Categoria Ricetta:</label>
@@ -60,7 +60,7 @@
 
             <div class="form-section" id="ingredienti">
                 <label for="ingredienti[]">Ingredienti:</label>
-                <input type="number" name="tempo_preparazione" placeholder="Inserisci il tempo di preparazione" maxlength="3">
+                <input type="number" id="tempo_preparazione" name="tempo_preparazione" placeholder="Inserisci il tempo di preparazione" maxlength="3">
                 <div class="ingrediente-gruppo">
 
                     <input type="text" class="ingrediente" name="ingredienti[]" maxlength="40">
@@ -115,6 +115,7 @@ include('../structure/footer/footer.html')
 ?>
 
 <script src="script/main_script.js"></script>
+<script src="script/controlli.js"></script>
 <script src="script/banner_drag_drop.js"></script>
 <script src="script/ajax_inserimento.js"></script>
 <script src="script/tips_script.js"></script>

@@ -103,7 +103,6 @@ function restorePlaceholder(element, defaultPlaceholder) {
 document.getElementById('ricetta-form').onsubmit = function(event) {
     var categoria = document.getElementById('categoriaRicetta').value;
     if (categoria === "") {
-        alert("Per favore, seleziona una Portata per la ricetta.");
         event.preventDefault();
     }
 };
