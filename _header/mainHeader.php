@@ -18,9 +18,9 @@
             <div class="r-side">
 
                     <?php
-                    if($_SESSION['loggedin']){
+                    if(isset($_SESSION['loggedin'])){
                         echo '<div class="user">
-                    <a href="#logout">
+                    <a href="../auth/logout.php">
                         <i id="logout-icon" class="fa-solid fa-right-from-bracket"></i>
                     </a><a href="../login/login_page.php">' . $_SESSION['username'] . '</a></div>';
                     }else{

@@ -1,8 +1,6 @@
 <?php
 
 session_start();
-$_SESSION['loggedin'] = true;
-$_SESSION['username'] = "gilvestro_03";
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     session_destroy();

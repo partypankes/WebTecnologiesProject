@@ -21,7 +21,7 @@ require('../auth/auth.php');
 
     <section class="intro">
         <?php
-            if($_SESSION['loggedin']){
+            if(isset($_SESSION['loggedin'])){
                 include('../home/logged_banner_home/banner_home_logged.php');
             }else{
                 include('../home/banner_home/banner_home.php');

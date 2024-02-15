@@ -43,7 +43,6 @@ function submitFilter(){
        }
     });
 
-    console.log(tempo_box);
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST",'query_ricerca.php', true);
