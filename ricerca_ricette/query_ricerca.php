@@ -24,12 +24,12 @@ $sql = "SELECT id,banner,utente,tempo_preparazione,descrizione,voto,titolo FROM 
 if (!empty($condizioni)) {
     $sql .= " WHERE " . implode(' AND ', $condizioni);
     if(!($_POST['ricerca'] == 'undefined')) {
-        $sql .= " AND titolo LIKE $" . $i++;
+        $sql .= " AND titolo ILIKE $" . $i++;
         $parametri[] = '%' . pg_escape_string($ricerca) . '%';
     }
 
 } else {
-    $sql .= " WHERE titolo LIKE $" . $i++;
+    $sql .= " WHERE titolo ILIKE $" . $i++;
     $parametri[] = '%' . pg_escape_string($ricerca) . '%';
 }
 
