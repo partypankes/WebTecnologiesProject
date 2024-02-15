@@ -30,9 +30,9 @@ if(isset($db)) {
                 $str = null;
                 $jsonData = json_decode($row['procedimento'], true);
                 foreach ($jsonData as $elemento) {
-                    echo "<div style='margin-bottom: 10px; padding: 8px; background-color: whitesmoke; border-left: 4px solid darkmagenta'>";
-                    echo "<p style='margin: 0; font-size: 15px'>" . $elemento['id'] . ") " . $elemento['text'] . "</p>";
-                    echo "</div>";
+                    echo "<div class='preparazione'>
+                            <p>" . $elemento['id'] . ") " . $elemento['text'] . "</p>
+                        </div>";
                 }
             } else {
                 echo "errore nella query";
@@ -48,9 +48,9 @@ if(isset($db)) {
                 $str = null;
                 $jsonData = json_decode($row['tips'], true);
                 foreach ($jsonData as $elemento) {
-                    echo "<div style='margin-bottom: 10px; padding: 8px; background-color: whitesmoke; border-left: 4px solid darkmagenta'>";
-                    echo "<p style='margin: 0; font-size: 15px'>" . $elemento['text'] . "</p>";
-                    echo "</div>";
+                    echo "<div class='consigli'>
+                            <p>" . $elemento['text'] . "</p>
+                        </div>";
                 }
             } else {
                 echo "Errore nella query";

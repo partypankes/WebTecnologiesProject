@@ -19,23 +19,30 @@ I comandi successivi creano ulteriori curve che formano il nodo e terminano il p
 fill specifica il colore di riempimento dell'elemento.
 
 */
+
+
 main {
     margin: 2% 8vw;
+
 }
 section {
     width: 100%;
 }
-
+h1 {
+    font-size: 2.2em;
+    font-weight: 600;
+}
+/*Titolo, descrizione e banner ricetta*/
 #title {
     width: 100%;
     height: auto;
-    padding: 3%;
+    padding: 2%;
 
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
 
-    background-color: #400c45;
+    background-color: var(--header-color);
     border-radius: 30px;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 Q50,50 100,100 Q75,90 50,100 Q25,110 0,100" fill="none" stroke="magenta" stroke-width=".5"/></svg>');
 }
@@ -46,20 +53,49 @@ section {
     font-size: 1rem;
 }
 .text h1 {
-    font-size: 2.2em;
-    font-weight: 600;
     color: var(--main_color);
+    margin-bottom: 0.5%;
 }
 .text p {
     font-size: 1.3em;
     font-weight: 400;
-    color: lightslategrey;
+    color: #d2d2d2;
+    text-align: justify;
 }
 .text #user{
     font-size: 1.1em;
-    font-weight: 400;
-    color: #4d5d6c;
-    margin: 0.4% 0;
+    font-weight: 300;
+    color: lightgray;
+    margin: 1% 0 0 0 ;
+    font-style: italic;
+    transition: color 0.7s ease;
+}
+.text #user span:hover{
+    transition: color 0.7s ease;
+    color: var(--color-3);
+    /*cursor: pointer;*/
+}
+#title .photo {
+    min-width: 10rem;
+    width: 30%;
+    height: 100%;
+    margin: auto;
+}
+.photo img {
+    object-fit: cover;
+    width: 100%;
+    min-height: 18rem;
+
+    border-radius: 30px;
+    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.2); /* Ombra proporzionale alla larghezza del viewport */
+    border: 0.32vw solid transparent; /* Bordi proporzionali alla larghezza del viewport */
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #FF69B4, #8A2BE2);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+#title .photo img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 1090px) {
@@ -86,137 +122,81 @@ section {
     }
 }
 
-#title .photo {
-    width: 30%;
-    height: auto;
-    margin: auto 0;
-
-}
-
-.photo img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    min-height: 200px;
-
-
-
-    border-radius: 30px; /* Esempio di valore relativo per il border-radius */
-    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.2); /* Ombra proporzionale alla larghezza del viewport */
-    border: 0.32vw solid transparent; /* Bordi proporzionali alla larghezza del viewport */
-    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #FF69B4, #8A2BE2);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-}
-#title .photo img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-h2{
-    font-size: 3vw; /* Font sizes typically kept in em or px for consistency */
-}
-a{
-    color: black;
-    text-decoration: none;
-}
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
+/*Parte dei dettagli riguardanti la ricetta*/
 #details{
     width: 100%;
-    margin-top: 4%;
+    height: auto;
+    padding: 2%;
+    margin: 2% auto;
+
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 2%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    background-color: var(--main_color);
+    border-radius: 30px;
 }
 
-#contents {
-    width: 20%;
-    margin-right: 4%;
-    font-weight: bold;
+#contents{
+    width:100%;
+
 }
-
-
-
-#contents ul {
-    padding-left: 0;
+#contents ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
-
-#contents li {
+#contents li{
+    width: 30%;
     text-align: center;
-    margin-left: 0;
     cursor: pointer;
-
+    color: var(--main_color);
 }
-
-
-
 #contents a {
     display: block;
-    padding: 15px 1% 15px 5%;
-    transition: 0.8s;
+    padding: 2% 0;
+    font-weight: 500;
+    background-color: var(--color-3);
+    border-radius: 20px;
 }
-
-#contents a.active {
-    padding-top: 30px ;
-    padding-bottom: 30px;
+#contents a:hover{
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
 }
-
-#contents li{
-    border-bottom: 1px solid;
+#contents a.active{
+    padding: 4% 0;
 }
-
 
 #recipe-content {
-    width: 80%;
-    padding: 2%;
-   /* transition: height 0.5s ease-out;  Regola la durata e la funzione di easing secondo necessità
-    overflow: hidden;  Impedisce il contenuto di fuoriuscire durante la transizione di altezza */
+    width:100%;
 }
-
-
-
 #recipe-content h2 {
-    font-size: 2rem; /* Font sizes typically kept in em or px for consistency */
-    margin-top: 0;
+    font-size: 2rem;
 }
-
 #recipe-content p {
     margin-bottom: 1rem;
 }
 
-#gallery {
-    box-sizing: border-box;
-}
-
-#gallery .textGallery {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 #ingredienti {
-    width: 100%; /* Si adatta alla larghezza del contenitore */
+    width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    margin: 0; /* Rimuove i margini predefiniti */
+    margin: 0;
 }
 
 #ingredienti td, #ingredienti th {
-    padding: 1em; /* Aumenta il padding per dare la sensazione di una lista */
-    border-bottom: 1px solid #ddd; /* Solo un bordo sotto ogni riga */
-    text-align: left; /* Allinea il testo a sinistra */
+    padding: 1em;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
 }
 
 #ingredienti th {
-    background-color: darkmagenta; /* Colore di sfondo per l'intestazione */
-    color: white;
-    font-weight: bold;
+    background-color: var(--header-color);
+    color: var(--main_color);
+    font-weight: 600;
 }
 
 #ingredienti th:first-child {
@@ -225,110 +205,125 @@ ul {
 #ingredienti th:last-child {
     border-top-right-radius: 20px;
 }
-
-#ingredienti td {
-    background-color: #F5F5F5; /* Colore di sfondo per le celle */
-}
-
 /* Rimuove il bordo dall'ultima riga in basso */
 #ingredienti tr:last-child td{
     border-bottom: none;
 }
-
 #ingredienti tr:last-child td:last-child{
     border-bottom-right-radius: 20px;
 }
-
 #ingredienti tr:last-child td:first-child{
     border-bottom-left-radius: 20px;
 }
 
-
-
-/* Responsive Design: Assicura che la tabella non sia mai più larga del suo contenitore */
-@media screen and (max-width: 600px) {
-    #ingredienti td, #ingredienti th {
-        padding: 0.5em; /* Riduce il padding su schermi piccoli */
-    }
+.preparazione{
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: whitesmoke;
+    border-left: 4px solid darkmagenta;
 }
+.consigli{
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: whitesmoke;
+    border-left: 4px solid darkmagenta;
+}
+#ingredienti p {
+    margin: 0;
+    font-size: 1rem;
+}
+/*
+#gallery {
+    box-sizing: border-box;
+}
+#gallery .textGallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+*/
 
 
-
+/*Sezione Recensioni*/
 
 #reviews-section{
     width: 100%;
-    margin: 2% auto;
-    padding: 3%;
-
+    padding: 2%;
+    background-color: var(--main_color);
+    border-radius: 30px;
 }
 
 .reviews-title{
     text-align: center;
     border-bottom: 1px solid grey;
-    padding-bottom: 10px;
-
+    padding-bottom: 1%;
 }
 
 #reviews-container{
-    margin-bottom: 20px;
+    width: 100%;
+    margin: 1% auto;
+    border-bottom: 1px solid grey;
+    padding-bottom: 1%;
+
 }
 
-.review{
-    margin-top: 10px;
-    padding: 8px;
+.up-rec{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1%;
+    margin: 1% 0 0.3% 0;
 }
-.review p{
-    font-size: 1vw;
-    margin-left: 50px;
-    width: calc(100% - 50px);
-    padding-top: 5px;
+
+#rec-p{
+    margin: 5px 0 10px 1.6%;
+    padding: 0 0 0 0.5%;
+    width: 95%;
+    font-size: 1rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-left: 4px solid darkmagenta;
+}
+#voto-p{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size:  1rem;
+
+}
+#voto-p i{
+    font-size: 1.2rem;
+
 }
 
 strong{
+    font-weight: 600;
     font-size: 1.3vw;
 }
 
-i {
-    color: darkmagenta;;
+i{
+    color: var(--color-3);
+}
+strong i {
     font-size: 2rem;
     margin-right: 0.5rem;
 }
 
 
 #review-form{
-    padding: 8px;
+
 }
 
 #review-form textarea {
-    margin-bottom: 10px;
-    margin-left: 50px;
-    width: calc(100% - 50px);
-    padding: 5px;
-    box-sizing: border-box;
+    margin: 5px 0 10px 2.7%;
+    padding: 0.5% 0 1% 0.5%;
+    width: 95%;
+
     resize: none;
-    margin-top: 5px;
     border-radius: 10px;
     border: 2px solid lightgrey;
 }
-
-.invio-recensione{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#review-form button {
-    background-color: darkmagenta;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
-#review-form button:hover {
-    background-color: #b709b7;
-}
-
 #voto-recensione{
     margin-bottom: 10px;
     margin-left: 8px;
@@ -337,5 +332,25 @@ i {
     border: 2px solid lightgrey;
     cursor: pointer;
 }
+
+
+.invio-recensione{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#review-form button {
+    background-color: var(--color-3);
+    color: var(--main_color);
+    padding: 1% 2%;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+#review-form button:hover {
+    background-color: #b709b7;
+}
+
 
 

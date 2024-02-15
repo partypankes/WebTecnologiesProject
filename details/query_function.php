@@ -7,7 +7,7 @@ function name_and_user($id): void
         $sql = "SELECT titolo,utente,descrizione FROM ricetta WHERE id = $1";
         $result = pg_query_params($db,$sql,array($id));
         if($row = pg_fetch_assoc($result)) {
-            echo "<h1>" . $row['titolo'] . "</h1><p id='user'>By " . $row['utente'] . "</p><p>". $row['descrizione'] ."</p>";
+            echo "<h1>" . $row['titolo'] . "</h1><p>". $row['descrizione'] ."</p><p id='user'>By <span>" . $row['utente'] . "</span></p>";
         } else {
             echo "Errore";
         }
@@ -35,10 +35,16 @@ function carica_recensione($id): void
         $sql = "SELECT descrizione_recensione,voto,utente FROM recensione WHERE ricetta = $1";
         $result = pg_query_params($db, $sql, array($id));
         while($row = pg_fetch_assoc($result)){
+            $stars = str_repeat('<i class="fa-solid fa-star"></i>', $row['voto']);
+            if($row['voto']<5){
+                $stars .= str_repeat('<i class="fa-regular fa-star"></i>', 5-$row['voto']);
+            }
             echo '<div class="review">
-                <strong>'. $row['utente'] .'</strong>
-                <p>' . $row['descrizione_recensione'] . '</p>
-                <p>'. $row['voto'] .'</p>
+                <div class="up-rec">
+                    <strong>'. $row['utente'] .'</strong>
+                    <p id="voto-p">' . $stars .'</p>
+                </div>
+                <p id="rec-p">' . $row['descrizione_recensione'] . '</p>
             </div>' ;
         }
     }

@@ -6,7 +6,7 @@
     --main_color: #F5F5F5;
     --main-hover: #fd00fd;
     --color-2: #2F6690;
-    --color-3: #3C6997;
+    --color-3: #8a008a;
     --bg-color: #F5F5F5;
 
     --text-color: #0A0A0A;
@@ -24,13 +24,30 @@
     box-sizing: border-box;
 }
 
+body,html{
+    margin: 0;
+    padding: 0;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/resources/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: -1;
+}
+/*
 body{
     margin: 0;
-    background-color: #FAFAFA;
-}
-main {
 
-}
+}*/
+
+
 
 @media (max-width: 1090px) {
 

@@ -18,6 +18,8 @@ require '../auth/auth.php'
 <?php
 include('../_header/baseHeader.php');
 ?>
+<div class="backdrop"></div>
+
 
 <main>
 
@@ -67,7 +69,7 @@ include('../_header/baseHeader.php');
 include('../structure/footer/footer.html');
 ?>
 
-    <script src="../structure/faqs/script_faqs.js"></script>
-    <script src="../ricerca_ricette/submitFilters.js"></script>
+    <script src="/structure/faqs/script_faqs.js"></script>
+    <script src="/ricerca_ricette/submitFilters.js"></script>
 </body>
 </html>
