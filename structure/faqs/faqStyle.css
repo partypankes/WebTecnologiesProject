@@ -1,9 +1,7 @@
 
-body {
-    font-family: "MontSerrat T", sans-serif;
-    background: #f7f7f7;
-    margin: 0;
-    padding: 20px;
+/* Annulla il box-sizing solo per la sezione FAQ */
+.sezione-faq * {
+    box-sizing: content-box;
 }
 
 .sezione-faq {

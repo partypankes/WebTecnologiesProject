@@ -1,0 +1,128 @@
+.container{
+    display: flex;
+}
+
+.sidebar{
+    background: #ffffff;
+    width: 200px;
+    min-width: 200px;
+    overflow-x: hidden;
+    padding-top: 3px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin-top: 51px;
+}
+
+.sidebar a{
+    color: #333;
+    padding: 15px 20px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid transparent;
+}
+
+.sidebar i {
+    margin-right: 10px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    color: white;
+    background-color: #212020;
+    border-left: 3px solid white;
+}
+
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.logout-btn{
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background: none;
+
+}
+
+.content{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+#account{
+    width: 80%;
+}
+#account h2{
+    text-align: center;
+
+}
+
+#account form{
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#account form label {
+    display: flex;
+    margin-top: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#account .gender_div{
+    display: flex;
+}
+
+#account form input[type="text"],
+#account form input[type="email"],
+#account form input[type="password"],
+#account form input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.confirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
+}
+#account form button{
+   cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    border-color: transparent;
+    background: darkblue;
+    color: white;
+}
+
+#account form input[type="radio"] {
+    margin-right: 0.5em;
+}
+
+#account form input[type="radio"] + label {
+    margin-right: 20px;
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    cursor: pointer;
+}
