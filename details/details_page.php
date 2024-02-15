@@ -23,7 +23,7 @@ include('../_header/baseHeader.php');
 ?>
 
 <main>
-    <section class="first-view">
+    <section class="view">
 
         <section id="title">
             <div class="text"><?php name_and_user($_GET['id'])?></div>
