@@ -13,9 +13,9 @@ require('../auth/auth.php');
   <link rel="stylesheet" href="aboutUs.css">
 </head>
 <body>
+<div class="backdrop"></div>
 
 <?php
-    //da poter cambiare nel caso l'utente sia registrato o meno
     include('../_header/baseHeader.php');
 ?>
 

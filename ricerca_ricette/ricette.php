@@ -14,12 +14,11 @@ require '../auth/auth.php'
 
 </head>
 <body>
+<div class="backdrop"></div>
 
 <?php
 include('../_header/baseHeader.php');
 ?>
-<div class="backdrop"></div>
-
 
 <main>
 

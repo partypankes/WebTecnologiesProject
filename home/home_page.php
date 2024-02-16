@@ -14,6 +14,7 @@ require('../auth/auth.php');
     <script src="showSectionForUser.js"></script>
 </head>
 <body>
+<div class="backdrop"></div>
 
     <?php
         include('../_header/mainHeader.php');

@@ -11,4 +11,7 @@
         <p id="sub">Su SapurEat lasciati ispirare da 100+ ricette scelte dagli utenti, lanciati in un mondo culinario tutto nuovo</p>
 
     </div>
+    <?php
+    include('../home/banner_home/search-bar.php')
+    ?>
 </div>

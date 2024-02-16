@@ -1,11 +1,3 @@
-body {
-    background-image: url('sfondo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    max-height:  75vh;
-}
 
 .login-container {
 

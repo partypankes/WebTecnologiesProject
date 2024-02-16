@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="backdrop"></div>
+
 <div class="login-container">
     <div class="title">
         <h1>Sign Up</h1>

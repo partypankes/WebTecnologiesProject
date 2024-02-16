@@ -15,8 +15,6 @@ if(isset($db)) {
         $parametri[] = '%%';
     }
 
-
-
     include 'xcard.php';
 
 }

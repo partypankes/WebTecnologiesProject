@@ -1,9 +1,12 @@
+main {
+    margin: 2% 0;
+}
 .container{
     display: flex;
 }
 
 .sidebar{
-    background: #ffffff;
+    background: var(--main_color);
     width: 200px;
     min-width: 200px;
     overflow-x: hidden;
@@ -57,7 +60,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
     margin-left: 200px;
 }
 #account{
