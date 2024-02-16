@@ -2,11 +2,12 @@
     position: relative;
     height:60vh;
     max-height: 60vh;
-    background-color: #000000;
+
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #6a5f6c;
 }
 #bg-video-logged{
     position: absolute;
@@ -36,7 +37,7 @@
     margin-bottom:0.3rem;
 }
 #key{
-    color: #d79711;
+    color: var(--header-color);
     font-weight: bold;
 }
 #sub{

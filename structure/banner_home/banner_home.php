@@ -6,7 +6,7 @@
 
         <div class="bn-intro">
             <div class="content">
-                <p id="intro">Cerca ora la tua <span id="key">ispirazione</span>...</p>
+                <p id="intro">Cerca ora la tua <span id="key">Ispirazione</span>...</p>
                 <p id="sub">Cerca qui la tua ricetta e scopri una lista di piatti scelti e condivisi dagli utenti migliori.<br>Crea il tuo piatto, crea la tua storia </p>
             </div>
 

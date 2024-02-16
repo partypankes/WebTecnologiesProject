@@ -2,8 +2,7 @@
 <link rel="stylesheet" href="assets/css/inserimento_ricetta.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
-<body>
-    <main>
+
     <section id="container">
         <div class="title">
             <h1>Inserisci La Tua Ricetta</h1>
@@ -81,7 +80,6 @@
 
         </form>
     </section>
-    </main>
 
     <script src="assets/js/inserimento_ricetta/main.js"></script>
     <script src="assets/js/inserimento_ricetta/controlli.js"></script>
@@ -89,5 +87,4 @@
     <script src="assets/js/inserimento_ricetta/ajax_inserimento.js"></script>
     <script src="assets/js/inserimento_ricetta/tips_inserimento.js"></script>
 
-</body>
 

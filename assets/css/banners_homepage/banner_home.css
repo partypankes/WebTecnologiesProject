@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000000;
+    background-color: #6a5f6c;
 }
 
 #bg-video{
@@ -14,7 +14,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 40%;
+    opacity: 80%;
     filter: blur(5px);
 }
 
@@ -40,16 +40,18 @@
     font-size:4vw;
     min-font-size: 3vw;
     font-weight: 500;
+
 }
 #key{
-    color: #d79711;
-    font-weight: bold;
+    color: var(--main-hover);
+    font-weight: 600;
 }
+
 #sub{
     font-size:1.2vw;
     min-font-size: 1vw;
     font-weight: 300;
-    color: #c5c5c5;
+    color: #d3d3d3;
 }
 
 @media (max-width: 1280px){
