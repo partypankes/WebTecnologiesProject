@@ -56,7 +56,7 @@ include('structure/_header/baseHeader.php');
             <?php carica_recensione($_GET['id'])?>
         </div>
 
-        <?php if ($_SESSION['loggedin']) {
+        <?php if (isset($_SESSION['loggedin'])) {
 
             echo '<form method = "post" id = "review-form" >
             <strong>

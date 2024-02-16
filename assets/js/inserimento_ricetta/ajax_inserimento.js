@@ -11,7 +11,7 @@ document.getElementById('ricetta-form').addEventListener('submit', function(e) {
         }
     });
     var xhr = new XMLHttpRequest();
-    xhr.open("POST",'query_inserimentoRicetta.php', true);
+    xhr.open("POST",'core/query_inserimentoRicetta.php', true);
 
     // Non è necessario impostare il Content-Type per FormData con multipart/form-data,
     // poiché l'oggetto XMLHttpRequest lo farà automaticamente, includendo anche il boundary.
@@ -22,8 +22,7 @@ document.getElementById('ricetta-form').addEventListener('submit', function(e) {
             console.log(xhr.responseText); // Gestisce la risposta del server
         }
     };
-
-
+    
     // Invia i dati del form, inclusi i file
     xhr.send(formData);
 });
