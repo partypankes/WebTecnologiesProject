@@ -125,7 +125,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
             if (data) {
                 document.getElementById('errorMessage').textContent = data;
             } else {
-                window.location.href = '../hompage/hompageNR.php';
+                window.location.href = '/gruppo10/hompage/hompageNR.php';
             }
         } else {
             // Gestisci errori di rete o errori HTTP qui
