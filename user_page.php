@@ -110,7 +110,7 @@
 
 </main>
 
-    <script src="assets/js/user_page_script.js"></script>
+    <script src="assets/js/user_page/user_page_script.js"></script>
 
 </body>
 </html>

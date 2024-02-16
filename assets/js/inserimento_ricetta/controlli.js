@@ -1,40 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let validate = 0;
     const form = document.getElementById('ricetta-form');
 
     form.addEventListener('submit', function(e) {
-        e.preventDefault(); // Impedisce l'invio del form
-        let isFormValid = false;
-
+        e.preventDefault(); // Prevents form submission
+        let isFormValid = true;
         const inputs = form.querySelectorAll('input, textarea, select');
-        inputs.forEach(input => {
+        let validInputs = 0;
 
-            validateField(input); // Valida il campo al momento del submit
+        inputs.forEach(input => {
+            if (validateField(input)) { // Validates the field at the time of submit
+                validInputs += 1;
+            }
         });
 
-        //console.log("Input: " + inputs.length);
+        console.log("Valid inputs: " + validInputs);
 
-        console.log("validate: " + validate);
-        if(validate === inputs.length - 1){
-            isFormValid = true;
-        }
-
-        /*Controllo sulle immagini*/
+        // Check on images
         const imageInput = document.getElementById('input-banner');
         const imageContainer = document.getElementById('immagine_banner');
         if (!imageInput.files.length) {
             imageContainer.classList.add('error');
-            console.log("Formvalid: " + isFormValid);
             isFormValid = false;
         } else {
             imageContainer.classList.remove('error');
         }
 
-        console.log("Formvalid2: " + isFormValid);
+        console.log("Form valid before image check: " + isFormValid);
+
+        // Final form validity check
+        isFormValid = isFormValid && (validInputs === inputs.length);
+
+        console.log("Form valid after image check: " + isFormValid);
+
         if (isFormValid) {
-            ajax_inserimento(); // Invia il form se tutti i campi sono stati compilati
+            ajax_inserimento(); // Submits the form if all fields are filled
         }
-        validate = 0;
     });
 
     document.querySelectorAll('input, textarea, select').forEach(input => {
@@ -44,11 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         input.addEventListener('blur', function() {
-            validateField(this);
+            validateField(this); // Validates the field when it loses focus
         });
 
         input.addEventListener('input', function() {
-            // Rimuove lo stato di errore durante la digitazione
+            // Removes the error state during typing
             if (this.classList.contains('error')) {
                 this.classList.remove('error');
                 this.placeholder = '';
@@ -60,11 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!field.value.trim()) {
             field.classList.add('error');
             field.placeholder = '*Campo obbligatorio';
-
+            return false;
         } else {
             field.classList.remove('error');
-            validate += 1;
-            console.log(field.id);
+            return true;
         }
     }
 });
