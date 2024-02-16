@@ -12,6 +12,6 @@
 
     </div>
     <?php
-    include('../search-bar.php')
+    include('structure/search-bar.php')
     ?>
 </div>

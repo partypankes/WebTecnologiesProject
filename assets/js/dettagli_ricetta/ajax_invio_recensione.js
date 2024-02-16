@@ -10,7 +10,7 @@ document.getElementById('review-form').addEventListener('submit', function(e) {
     var formData = new FormData(document.getElementById('review-form'));
     formData.append('id', id);
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", 'inserimento_recensione.php', true);
+    xhr.open("POST", 'core/dettagli_ricetta/inserimento_recensione.php', true);
 
 
     xhr.onreadystatechange = function () {

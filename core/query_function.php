@@ -2,7 +2,7 @@
 
 function name_and_user($id): void
 {
-    include '../dbconnection.php';
+    include 'dbconnection.php';
     if(isset($db)) {
         $sql = "SELECT titolo,utente,descrizione FROM ricetta WHERE id = $1";
         $result = pg_query_params($db,$sql,array($id));
@@ -16,7 +16,7 @@ function name_and_user($id): void
 
 function immagine_banner($id): string
 {
-    include '../dbconnection.php';
+    include 'dbconnection.php';
     if(isset($db)) {
         $sql = "SELECT banner FROM ricetta WHERE id = $1";
         $result = pg_query_params($db, $sql, array($id));
@@ -30,7 +30,7 @@ function immagine_banner($id): string
 
 function carica_recensione($id): void
 {
-    include '../dbconnection.php';
+    include 'dbconnection.php';
     if(isset($db)) {
         $sql = "SELECT descrizione_recensione,voto,utente FROM recensione WHERE ricetta = $1";
         $result = pg_query_params($db, $sql, array($id));
@@ -52,7 +52,7 @@ function carica_recensione($id): void
 }
 
 function esistenza_recensione($id, $utente): bool {
-    include '../dbconnection.php';
+    include 'dbconnection.php';
     if (isset($db)) {
         $sql = "SELECT id FROM recensione WHERE ricetta = $1 AND utente = $2";
         $result = pg_query_params($db, $sql, array($id, $utente));

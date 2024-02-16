@@ -9,4 +9,4 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-header("Location: ../home/homepage.php");
+header("Location: ../homepage.php");

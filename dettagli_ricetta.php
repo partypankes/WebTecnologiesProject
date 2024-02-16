@@ -1,5 +1,5 @@
 <?php
-    include 'core/dettagli_ricetta/query_function.php';
+    include 'core/query_function.php';
     require 'core/auth.php';
 ?>
 

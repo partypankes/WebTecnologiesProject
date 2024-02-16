@@ -1,7 +1,6 @@
-
 <?php
-include '../auth/auth.php';
-require_once '../dbconnection.php';
+include 'auth.php';
+require_once 'dbconnection.php';
 
 if(isset($db)) {
     $descrizione = $_POST['descrizioneRicetta'];

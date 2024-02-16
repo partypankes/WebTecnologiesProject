@@ -3,7 +3,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     var formData = new FormData(this);
 
-    fetch('login.php', {
+    fetch('core/login.php', {
         method: 'POST',
         body: formData
     })
@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             if (data) {
                 document.getElementById('errorMessage').textContent = data;
             } else {
-                window.location.href = '../../homepage.php';
+                window.location.href = 'homepage.php';
             }
         });
 });

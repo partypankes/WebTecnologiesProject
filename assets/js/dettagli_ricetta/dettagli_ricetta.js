@@ -1,6 +1,4 @@
 
-
-
 function caricaContenuto(sezione) {
 
     const queryString = window.location.search;
@@ -10,7 +8,7 @@ function caricaContenuto(sezione) {
     const id = urlParams.get('id');
 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET',  'details_query.php?section=' + encodeURIComponent(sezione) + '&id=' + encodeURIComponent(id), true);
+    xhr.open('GET',  'core/dettagli_ricetta/dettagli_ricetta_query.php?section=' + encodeURIComponent(sezione) + '&id=' + encodeURIComponent(id), true);
 
     xhr.onload = function() {
         if (xhr.status === 200) {

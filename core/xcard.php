@@ -1,7 +1,6 @@
 <?php
 
-
-require '../dbconnection.php';
+require 'dbconnection.php';
 
 if(isset($db) && isset($sql) && isset($parametri)) {
     $result = pg_query_params($db,$sql,$parametri);
@@ -11,7 +10,7 @@ if(isset($db) && isset($sql) && isset($parametri)) {
             echo '<div class="xcard"> 
                     <img class="banner-xcard" src="data:image/jpeg;base64,'. base64_encode($imageData) .'"/>'.
                     '<div class="info-xcard">
-                        <a href="../dettagli_ricetta/details_page.php?id='. $row['id'] . '">' . $row['titolo'] . '</a>
+                        <a href="dettagli_ricetta?id='. $row['id'] . '">' . $row['titolo'] . '</a>
                         <div class="sub-xcard">
                             <p>by <span>' . $row['utente'] . '</span></p>
                             <div class="extra-xcard">

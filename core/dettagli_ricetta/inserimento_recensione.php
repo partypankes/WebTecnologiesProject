@@ -1,8 +1,8 @@
 <?php
 
 require '../dbconnection.php';
-require 'query_function.php';
-require '../auth/auth.php';
+require '../query_function.php';
+require '../auth.php';
 
 
 $descrizione_recensione = $_POST['descrizione-recensione'];

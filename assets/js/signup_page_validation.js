@@ -116,7 +116,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     var formData = new FormData(this);
 
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'signup.php', true);
+    xhr.open('POST', 'core/signup.php', true);
 
     xhr.onload = function() {
         if (this.status >= 200 && this.status < 300) {
@@ -125,7 +125,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
             if (data) {
                 document.getElementById('errorMessage').textContent = data;
             } else {
-                window.location.href = '../hompage/hompageNR.php';
+                window.location.href = 'homepage.php';
             }
         } else {
             // Gestisci errori di rete o errori HTTP qui

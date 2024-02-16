@@ -31,7 +31,7 @@ if (!empty($condizioni)) {
     $parametri[] = '%' . pg_escape_string($ricerca) . '%';
 }
 
-include 'xcard.php';
+include '../xcard.php';
 
 
 //SELECT * FROM ricetta WHERE portata = primoPiatto

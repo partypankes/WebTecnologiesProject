@@ -1,6 +1,6 @@
 <?php
 
-require '../dbconnection.php';
+require 'core/dbconnection.php';
 
 
 if(isset($db)) {
@@ -13,7 +13,7 @@ if(isset($db)) {
         $parametri[] = '%%';
     }
 
-    include 'xcard.php';
+    include 'core/xcard.php';
 
 }
 
