@@ -1,6 +1,3 @@
-
-
-
 function caricaContenuto(sezione) {
 
     const queryString = window.location.search;
@@ -24,8 +21,6 @@ function caricaContenuto(sezione) {
     xhr.onerror = function () {
         console.error('Errore nella richiesta di rete');
     };
-
-
 
 
     xhr.send();
@@ -54,4 +49,3 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', function() {
     caricaContenuto('ingredienti');
 });
-

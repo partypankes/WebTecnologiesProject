@@ -8,8 +8,8 @@ require('../auth/auth.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SapurEat - Homepage</title>
-    <link rel="stylesheet" href="/global.css">
-    <link rel="stylesheet" href="/home/home.css">
+    <link rel="stylesheet" href="/gruppo10/global.css">
+    <link rel="stylesheet" href="/gruppo10/home/home.css">
 
     <script src="showSectionForUser.js"></script>
 </head>
@@ -58,13 +58,13 @@ require('../auth/auth.php');
         include('../structure/footer/footer.html');
     ?>
     
-<script>
-    let status = "<?php
-        echo $_SESSION['loggedin'];
-        ?>";
+    <script>
+        let status = "<?php
+            echo $_SESSION['loggedin'];
+            ?>";
 
-    showSection(status);
-</script>
-<script src="search_bar_home.js"></script>
+        showSection(status);
+    </script>
+    <script src="/gruppo10/home/search_bar_home.js"></script>
 </body>
 </html>

@@ -9,8 +9,8 @@ require('../auth/auth.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - SapurEat</title>
-    <link rel="stylesheet" href="../global.css">
-  <link rel="stylesheet" href="aboutUs.css">
+    <link rel="stylesheet" href="/gruppo10/global.css">
+  <link rel="stylesheet" href="/gruppo10/aboutUs/aboutUs.css">
 </head>
 <body>
 <div class="backdrop"></div>
@@ -43,7 +43,7 @@ require('../auth/auth.php');
       <h2>Meet Our Team</h2>
       <div class="team-members">
         <article class="team-member">
-          <img src="../resources/profile-prova.png" alt="John Doe">
+          <img src="/gruppo10/resources/profile-prova.png" alt="John Doe">
           <h3>John Doe</h3>
           <p>Chef</p>
           <p>John is a talented chef with a passion for creating unique and delicious dishes.</p>

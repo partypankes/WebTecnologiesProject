@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/global.css">
-<link rel="stylesheet" href="/home/banner_home/search-bar.css">
+<link rel="stylesheet" href="/gruppo10/global.css">
+<link rel="stylesheet" href="/gruppo10/home/banner_home/search-bar.css">
 
 
 

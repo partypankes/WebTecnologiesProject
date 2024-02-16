@@ -1,5 +1,4 @@
 <?php
-
 function name_and_user($id): void
 {
     include '../dbconnection.php';

@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/_header/css/styleHeader.css">
-<link rel="stylesheet" href="/_header/css/mainHeader.css">
+<link rel="stylesheet" href="/gruppo10/_header/css/styleHeader.css">
+<link rel="stylesheet" href="/gruppo10/_header/css/mainHeader.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
 <!--Header HomePage-->
@@ -11,8 +11,8 @@
             <a class="logo" href="#home">SapurEat</a>
 
             <ul class="menu">
-                <li><a href="/ricerca_ricette/ricette.php">Ricette</a></li>
-                <li><a href="/aboutUs/aboutUs.php">AboutUs</a></li>
+                <li><a href="/gruppo10/ricerca_ricette/ricette.php">Ricette</a></li>
+                <li><a href="/gruppo10/aboutUs/aboutUs.php">AboutUs</a></li>
             </ul>
             <!--Lato Utente-->
             <div class="r-side">

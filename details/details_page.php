@@ -9,8 +9,8 @@ require '../auth/auth.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dettagli Ricetta</title>
     <meta name="description" content="A delicious and easy homemade pizza recipe by John Doe">
-    <link rel="stylesheet" href="/global.css">
-    <link rel="stylesheet" href="/details/details.css">
+    <link rel="stylesheet" href="/gruppo10/global.css">
+    <link rel="stylesheet" href="/gruppo10/details/details.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 </head>
 
@@ -93,9 +93,9 @@ include('../_header/baseHeader.php');
 <?php
 include('../structure/footer/footer.html');
 ?>
-</hero>
-<script src="/details/detailsjs.js"></script>
-<script src="/details/ajax_invio_recensione.js"></script>
+
+<script src="/gruppo10/details/detailsjs.js"></script>
+<script src="/gruppo10/details/ajax_invio_recensione.js"></script>
 
 </body>
 
