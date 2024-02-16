@@ -1,20 +1,10 @@
-<?php
-    include('../auth/auth.php')
-?>
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>Inserisci Ricetta</title>
-    <link rel="stylesheet" href="/global.css">
-    <link rel="stylesheet" href="/inserimento_ricetta/inserimento_ricetta.css">
+
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../inserimento_ricetta/inserimento_ricetta.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-</head>
+
 <body>
 
-<?php
-    include('../_header/baseHeader.php')
-?>
 <main>
     <section id="container">
         <div class="title">
@@ -109,15 +99,10 @@
 
     </section>
 </main>
-
-<?php
-include('../structure/footer/footer.html')
-?>
-
-<script src="script/main_script.js"></script>
-<script src="script/controlli.js"></script>
-<script src="script/banner_drag_drop.js"></script>
-<script src="script/ajax_inserimento.js"></script>
-<script src="script/tips_script.js"></script>
+<script src="../inserimento_ricetta/script/main_script.js"></script>
+<script src="../inserimento_ricetta/script/controlli.js"></script>
+<script src="../inserimento_ricetta/script/banner_drag_drop.js"></script>
+<script src="../inserimento_ricetta/script/ajax_inserimento.js"></script>
+<script src="../inserimento_ricetta/script/tips_script.js"></script>
 </body>
-</html>
+

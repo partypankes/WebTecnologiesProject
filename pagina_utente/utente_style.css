@@ -128,3 +128,7 @@ main {
     display: inline-block;
     cursor: pointer;
 }
+
+#crea_piatto{
+    width: 100%;
+}

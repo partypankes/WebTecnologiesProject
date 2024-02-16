@@ -22,10 +22,10 @@ include('../_header/baseHeader.php');
     <section class="container">
         <div class="sidebar">
             <a><i class="fas fa-user-edit"></i> Account</a>
-            <a><i class="fas fa-ticket-alt"></i> Post</a>
+            <a><i class="fas fa-blog"></i> Post</a>
             <a><i class="fas fa-headset"></i> Assistenza</a>
             <a><i class="fas fa-star"></i> Recensioni</a>
-            <a><i class="fas fa-star"></i> Crea un piatto</a>
+            <a><i class="fas fa-utensils"></i> Crea un piatto</a>
 
             <div class="logout">
                 <button class="logout-btn" type="submit"><i class="fas fa-sign-out-alt"></i>Logout</button>
@@ -98,9 +98,10 @@ include('../_header/baseHeader.php');
                 <p>Qui puoi visualizzare ed eliminare le tue recensioni.</p>
             </div>
 
-            <div id="crea piatto" class="section_show" style="display:none;">
-                <h2>Crea un piatto</h2>
-                <p>Qui puoi visualizzare ed eliminare le tue recensioni.</p>
+            <div id="crea_piatto" class="section_show" style="display:none;">
+
+                <?php include('../inserimento_ricetta/inserimento_ricetta.php');?>
+
             </div>
         </div>
 
