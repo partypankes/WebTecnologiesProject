@@ -45,7 +45,7 @@ function submitFilter(){
 
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST",'/gruppo10/ricerca_ricette/query_ricerca.php', true);
+    xhr.open("POST",'query_ricerca.php', true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
 

@@ -8,9 +8,9 @@ require '../auth/auth.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SapurEat - Ricette</title>
-    <link rel="stylesheet" href="/gruppo10/global.css">
-    <link rel="stylesheet" href="/gruppo10/ricerca_ricette/ricette.css">
-    <link rel="stylesheet" href="/gruppo10/structure/xcard/xcard.css">
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/ricerca_ricette/ricette.css">
+    <link rel="stylesheet" href="/structure/xcard/xcard.css">
 
 </head>
 <body>
@@ -68,7 +68,7 @@ include('../_header/baseHeader.php');
 include('../structure/footer/footer.html');
 ?>
 
-    <script src="/gruppo10/structure/faqs/script_faqs.js"></script>
-    <script src="/gruppo10/ricerca_ricette/submitFilters.js"></script>
+    <script src="/structure/faqs/script_faqs.js"></script>
+    <script src="/ricerca_ricette/submitFilters.js"></script>
 </body>
 </html>

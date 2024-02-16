@@ -6,8 +6,8 @@ require '../auth/auth.php';
 <head>
     <meta charset="UTF-8">
     <title>Pagina Utente</title>
-    <link rel="stylesheet" href="/gruppo10/global.css">
-    <link rel="stylesheet" href="/gruppo10/pagina_utente/utente_style.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../pagina_utente/utente_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>

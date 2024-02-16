@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/gruppo10/global.css">
-    <link rel="stylesheet" href="/gruppo10/login/login_page.css">
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/login/login_page.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <title>Login Page</title>
 </head>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="login-data">
-            <form id="loginForm" action="/gruppo10/login/login.php" method="post">
+            <form id="loginForm" action="login.php" method="post">
                 <p id="errorMessage" style="color:red;"></p>
                 <div class="input-container">
                     <label for="username">Enter your username:</label>
@@ -49,11 +49,11 @@
         <hr class="divider" />
 
         <div class="no-account">
-            <p> I don't have an account. <a href="/gruppo10/signup/signup_definitivo.php">Sign up</a></p>
+            <p> I don't have an account. <a href="/signup/signup_definitivo.php">Sign up</a></p>
         </div>
 
     </div>
 
-    <script src="/gruppo10/login/login_validation.js"></script>
+    <script src="/login/login_validation.js"></script>
 </body>
 </html>

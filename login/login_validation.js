@@ -3,7 +3,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     var formData = new FormData(this);
 
-    fetch('/gruppo10/login/login.php', {
+    fetch('login.php', {
         method: 'POST',
         body: formData
     })
@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
             if (data) {
                 document.getElementById('errorMessage').textContent = data;
             } else {
-                window.location.href = '/gruppo10/home/home_page.php';
+                window.location.href = '../home/home_page.php';
             }
         });
 });
