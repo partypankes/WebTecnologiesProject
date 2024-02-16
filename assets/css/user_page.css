@@ -55,6 +55,23 @@ main {
 
 }
 
+
+#anagrafica{
+    display: none;
+}
+.content-anagrafica p{
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 2%;
+}
+.content-anagrafica p span{
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+
+
+
 .content{
     flex-grow: 1;
     display: flex;
@@ -70,7 +87,7 @@ main {
 
 }
 
-#account form{
+#account form, .content-anagrafica{
     max-width: 100%;
     margin: 20px auto;
     padding: 20px;
@@ -102,13 +119,13 @@ main {
     font-size: 16px;
     box-sizing: border-box;
 }
-.confirm{
+.conferma, .modifica{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 0.5em;
 }
-#account form button{
+#account form button, .modifica-btn{
    cursor: pointer;
     padding: 5px;
     border-radius: 10px;
