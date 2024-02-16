@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.getElementById("search_button").addEventListener("click", function (event) {
         event.preventDefault();
-        window.location.href = "/gruppo10/ricerca_ricette/ricette.php?input=" + search_bar.value;
+        window.location.href = "../ricerca_ricette/ricette.php?input=" + search_bar.value;
 
     });
 });

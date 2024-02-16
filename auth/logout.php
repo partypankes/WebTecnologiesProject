@@ -9,4 +9,4 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-header("Location: /gruppo10/home/home_page.php");
+header("Location: ../home/home_page.php");

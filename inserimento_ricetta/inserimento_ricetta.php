@@ -1,6 +1,6 @@
 
-    <link rel="stylesheet" href="/gruppo10/global.css">
-    <link rel="stylesheet" href="/gruppo10/inserimento_ricetta/inserimento_ricetta.css">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../inserimento_ricetta/inserimento_ricetta.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
 <body>
@@ -99,10 +99,10 @@
 
     </section>
 </main>
-<script src="/gruppo10/inserimento_ricetta/script/main_script.js"></script>
-<script src="/gruppo10/inserimento_ricetta/script/controlli.js"></script>
-<script src="/gruppo10/inserimento_ricetta/script/banner_drag_drop.js"></script>
-<script src="/gruppo10/inserimento_ricetta/script/ajax_inserimento.js"></script>
-<script src="/gruppo10/inserimento_ricetta/script/tips_script.js"></script>
+<script src="../inserimento_ricetta/script/main_script.js"></script>
+<script src="../inserimento_ricetta/script/controlli.js"></script>
+<script src="../inserimento_ricetta/script/banner_drag_drop.js"></script>
+<script src="../inserimento_ricetta/script/ajax_inserimento.js"></script>
+<script src="../inserimento_ricetta/script/tips_script.js"></script>
 </body>
 

@@ -1,3 +1,26 @@
+/*
+viewBox:
+è un attributo che definisce l'area visibile e scalabile del contenuto SVG.
+Il valore è una lista di quattro numeri: min-x, min-y, width e height.
+
+preserveAspectRatio="none":
+Questo attributo indica come l'immagine SVG deve essere scalata per adattarsi al suo contenitore.
+Il valore none significa che il rapporto tra altezza e larghezza dell'SVG può essere alterato
+per riempire completamente il contenitore di sfondo.
+
+path è un elemento SVG che definisce un percorso, che può essere una linea, una curva, ecc.
+d è l'attributo che descrive il percorso da seguire. Qui, è composto da comandi come M per moveto (sposta il penna in un punto),
+e Q per curveto quadratica (disegna una curva con un punto di controllo).
+M100,0 inizia il percorso nell'angolo in alto a destra.
+Q50,50 100,100 disegna una curva quadratica dal punto di inizio al punto (100,100) usando (50,50)
+come punto di controllo.
+I comandi successivi creano ulteriori curve che formano il nodo e terminano il percorso.
+
+fill specifica il colore di riempimento dell'elemento.
+
+*/
+
+
 main {
     margin: 2% 8vw;
 

@@ -1,9 +1,11 @@
+
+
 function aggiungiIconaEliminazione(elemento) {
-    let iconaEliminazione = document.createElement('span');
+    var iconaEliminazione = document.createElement('span');
     iconaEliminazione.className = 'icona-eliminazione';
     iconaEliminazione.innerHTML = '...';
 
-    let menuEliminazione = document.createElement('div');
+    var menuEliminazione = document.createElement('div');
     menuEliminazione.className = 'menu-eliminazione';
     menuEliminazione.innerHTML = '<ul><li onclick="rimuoviElemento(this.closest(\'.procedimento-gruppo\'))">Elimina</li></ul>';
     menuEliminazione.style.display = 'none';
@@ -11,7 +13,7 @@ function aggiungiIconaEliminazione(elemento) {
     iconaEliminazione.appendChild(menuEliminazione);
     iconaEliminazione.onclick = function(event) {
         event.stopPropagation(); // Impedisce al click di propagarsi agli elementi superiori
-        let isMenuOpen = menuEliminazione.style.display === 'block';
+        var isMenuOpen = menuEliminazione.style.display === 'block';
         // Chiudi tutti i menu aperti
         document.querySelectorAll('.menu-eliminazione').forEach(function(menu) {
             menu.style.display = 'none';
@@ -34,6 +36,8 @@ function rimuoviElemento(elemento) {
     elemento.remove();
     aggiornaNumeriProcedimenti();
 }
+
+
 
 
 
