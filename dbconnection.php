@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $port = '5432';
-$db = 'gruppo11';
+$db = 'gruppo10';
 $username = 'www';
 $password = 'tw2024';
 $connection_string = "host=$host port=$port dbname=$db user=$username password=$password";
