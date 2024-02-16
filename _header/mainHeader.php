@@ -17,16 +17,9 @@
             <!--Lato Utente-->
             <div class="r-side">
 
-                    <?php
-                    if(isset($_SESSION['loggedin'])){
-                        echo '<div class="user">
-                    <a href="../auth/logout.php">
-                        <i id="logout-icon" class="fa-solid fa-right-from-bracket"></i>
-                    </a><a href="../login/login_page.php">' . $_SESSION['username'] . '</a></div>';
-                    }else{
-                        echo '<a class="user" href="../login/login_page.php"><i class="fa-solid fa-circle-user"></i>Accedi</a>';
-                    }
-                    ?>
+                <?php
+                include('../_header/user-side.php');
+                ?>
 
                 <i id="menu-icon" class="fa-solid fa-bars"></i>
             </div>
