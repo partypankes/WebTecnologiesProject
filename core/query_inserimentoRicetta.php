@@ -36,7 +36,7 @@ if(isset($db)) {
 
     if ($result) {
         $id = pg_fetch_result($result, 0, 'id');
-        echo "ID della nuova ricetta: " . $id;
+        echo $id;
     } else {
         echo "Errore nell'inserimento della ricetta";
         return;
@@ -53,6 +53,8 @@ if(isset($db)) {
         pg_query_params($db,$sql4,array($id,$value,$quantita[$iter],$unita[$iter]));
         $iter++;
     }
+
+
 
     /*$sql5 = "INSERT INTO immagini (ricetta,immagine) VALUES ($1,$2) ;";
     foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {

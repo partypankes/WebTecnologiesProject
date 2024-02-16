@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (isFormValid) {
-            form.submit(); // Invia il form se tutti i campi sono stati compilati
+            ajax_inserimento(); // Invia il form se tutti i campi sono stati compilati
         }
     });
 
