@@ -80,11 +80,11 @@
                         <label for="gender">Sesso</label>
                         <div class="gender_div">
                             <input type="radio" id="male" name="sesso" value="M">
-                            <label for="male">M</label>
+                            <label for="male">Uomo</label>
                             <input type="radio" id="female" name="sesso" value="F">
-                            <label for="female">F</label>
+                            <label for="female">Donna</label>
                             <input type="radio" id="other" name="sesso" value="O">
-                            <label for="other">O</label>
+                            <label for="other">Altro</label>
                         </div>
                     </div>
 

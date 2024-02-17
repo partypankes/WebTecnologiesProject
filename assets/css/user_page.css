@@ -71,8 +71,6 @@ main {
 }
 
 
-
-
 .content{
     flex-grow: 1;
     display: flex;
@@ -89,15 +87,17 @@ main {
 }
 
 
-#account form label {
-    display: flex;
-    margin-top: 20px;
-    color: #333;
-    margin-bottom: 5px;
-}
-
 #account .gender_div{
     display: flex;
+    position: relative;
+    align-items: center;
+}
+
+#account .gender_div label{
+    margin-top: 1.8%;
+    margin-right: 10%;
+    margin-left: 1%;
+    font-weight: normal;
 }
 
 #account form input[type="text"],
@@ -119,18 +119,33 @@ main {
     margin-top: 0.5em;
 }
 
-
-#account form input[type="radio"] {
-    margin-right: 0.5em;
-}
-
-#account form input[type="radio"] + label {
-    margin-right: 20px;
-    font-size: 14px;
-    color: #333;
-    display: inline-block;
+#account form input[type="radio"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 1.2em;
+    height: 1.2em;
+    margin: 0;
+    padding: 0;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    outline: none;
     cursor: pointer;
+    position: relative;
+
 }
+
+#account form input[type="radio"]:checked::before {
+    content: '✓';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #c235e2;
+    font-size: 1.2em;
+}
+
+
 
 
 .post, .anagrafica, #account form{
