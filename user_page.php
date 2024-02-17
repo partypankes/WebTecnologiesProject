@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/xcard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="assets/js/user_page/user_page_script.js"></script>
-    <script src="assets/js/user_page/ajax_ricette.js"></script>
+    <script src="assets/js/user_page/funzion_ajax.js"></script>
 </head>
 <body>
 
@@ -28,7 +28,7 @@
             <a><i class="fas fa-user-edit"></i> Account</a>
             <a onclick="ajax_ricette()"><i class="fas fa-blog"></i> Post</a>
             <a ><i class="fas fa-headset"></i> Assistenza</a>
-            <a><i class="fas fa-star"></i> Recensioni</a>
+            <a onclick="ajax_recensioni()"><i class="fas fa-star"></i> Recensioni</a>
             <a><i class="fas fa-utensils"></i> Crea un piatto</a>
 
             <div class="logout">
@@ -39,17 +39,20 @@
         <div class="content">
 
             <section id="account" class="section_show">
-                <h2>Informazioni personali</h2>
 
                 <div class="anagrafica">
+                    <h2>Informazioni personali</h2>
                     <div id="content-anagrafica">
                         <!--Caricamento Asincrono!-->
                         <?php include 'core/user_page/fetch_dati_utente.php';?>
+
+
                     </div>
 
                     <div class="modifica">
                         <button class="modifica-btn" onclick="showFormAnagrafica()" type="button">Modifica</button>
                     </div>
+
                 </div>
 
                 <form id="anagrafica">

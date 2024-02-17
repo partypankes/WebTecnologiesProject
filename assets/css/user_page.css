@@ -88,14 +88,6 @@ main {
 
 }
 
-#account form, .content-anagrafica{
-    max-width: 100%;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
 
 #account form label {
     display: flex;
@@ -148,7 +140,7 @@ main {
 }
 
 
-.post{
+.post, .anagrafica, #account form{
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
