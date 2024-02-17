@@ -66,6 +66,22 @@ function esistenza_recensione($id, $utente): bool {
     return false;
 }
 
+function utente_ricetta ($id,$utente): bool {
+    include 'dbconnection.php';
+    if(isset($db)) {
+        $sql = "SELECT utente FROM ricetta WHERE id = $1";
+        $result = pg_query_params($db, $sql, array($id));
+        $row = pg_fetch_assoc($result);
+        if($row['utente'] == $utente) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    return false;
+
+}
 /*function image_gallery(): void
 {
     include '../dbconnection.php';
