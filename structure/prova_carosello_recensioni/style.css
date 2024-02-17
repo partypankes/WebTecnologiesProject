@@ -1,7 +1,7 @@
 .slider-container {
     overflow: hidden;
     width: 100%;
-    margin: auto;
+    margin: 2% auto;
 }
 
 .slider {
@@ -10,15 +10,21 @@
 }
 
 .review {
-    box-sizing: border-box;
     margin: 10px;
     padding: 20px;
-    background-color: #121212;
-    color: #fff;
+    background-color: var(--main_color);
+    color: var(--header-color);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 300px;
     flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rec{
+
 }
 
 .name {
@@ -32,7 +38,7 @@
 
 .rating {
     font-size: 1.2em;
-    color: gold; /* Colore delle stelle */
+    color: var(--color-3);
 }
 
 

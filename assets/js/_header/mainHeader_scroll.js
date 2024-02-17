@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY;
-        const triggerPosition = window.innerHeight / 3.8;
+        const triggerPosition = window.innerHeight / 4;
 
         // Controlla se la posizione di scroll supera la soglia e aggiorna la trasformazione di conseguenza
         if (scrollPosition > triggerPosition) {
