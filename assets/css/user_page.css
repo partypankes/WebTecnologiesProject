@@ -79,10 +79,10 @@ main {
     align-items: center;
     margin-left: 200px;
 }
-#account{
+#account, #post{
     width: 80%;
 }
-#account h2{
+#account h2, #post h2{
     text-align: center;
 
 }
@@ -148,4 +148,9 @@ main {
 
 #crea_piatto{
     width: 100%;
+}
+
+
+.post{
+    border: 2px solid red;
 }

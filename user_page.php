@@ -89,7 +89,11 @@
 
             <section id="post" class="section_show" style="display:none;">
                 <h2>I miei post</h2>
-                <p>VISUALIZZARE I POST CAROSELLO????</p>
+                <div class="post">
+                    <div id="post-section">
+
+                    </div>
+                </div>
             </section>
 
             <section id="assistenza" class="section_show" style="display:none;">
