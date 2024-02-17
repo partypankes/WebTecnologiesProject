@@ -31,87 +31,13 @@
                 <div class="best-ricette">
                     <h2>Le migliori ricette SapurEat</h2>
                     <div class="sezione-ricette">
+                        <?php if (isset($_SESSION['loggedin'])){
+                            include 'core/ricette_homepage.php';
+                        } ?>
 
-                        <div class="ycard">
-                            <div class="y-banner">
-                                <img class="banner-ycard" src="resources/img/IMG2.jpg"/>
-                                <p id="user-ycard">by <span>gilvestro_03aaaa</span></p>
-                            </div>
 
-                            <div class="info-ycard">
-                                <a href="dettagli_ricetta.php?id='. $row['id'] . '">PlumcakesaaaaaasasasfaadPlumca</a>
-                                <div class="extra-ycard">
-                                    <p><span id="minutes">15</span>'<i class="fa-regular fa-clock"></i></p>
-                                    <p><span id="voto">4</span>/5<i class="fa-solid fa-star"></i></p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="ycard">
-                            <div class="y-banner">
-                                <img class="banner-ycard" src="resources/img/IMG1.jpg"/>
-                                <p id="user-ycard">by <span>gilvestro_03aaaa</span></p>
-                            </div>
-
-                            <div class="info-ycard">
-                                <a href="dettagli_ricetta.php?id='. $row['id'] . '">PlumcakesaaaaaasaPlumcakesaaaaaasasasfaadpp</a>
-                                <div class="extra-ycard">
-                                    <p><span id="minutes">15</span>'<i class="fa-regular fa-clock"></i></p>
-                                    <p><span id="voto">4</span>/5<i class="fa-solid fa-star"></i></p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="ycard">
-                            <div class="y-banner">
-                                <img class="banner-ycard" src="resources/img/IMG5.jpg"/>
-                                <p id="user-ycard">by <span>gilvestro_03aaaa</span></p>
-                            </div>
-
-                            <div class="info-ycard">
-                                <a href="dettagli_ricetta.php?id='. $row['id'] . '">PlumcakesaaaaaasasasfaadPlumcakesaasasasfaadpp</a>
-                                <div class="extra-ycard">
-                                    <p><span id="minutes">15</span>'<i class="fa-regular fa-clock"></i></p>
-                                    <p><span id="voto">4</span>/5<i class="fa-solid fa-star"></i></p>
-                                </div>
-
-                            </div>
-                        </div><div class="ycard">
-                            <div class="y-banner">
-                                <img class="banner-ycard" src="resources/img/IMG4.jpg"/>
-                                <p id="user-ycard">by <span>gilvestro_03aaaa</span></p>
-                            </div>
-
-                            <div class="info-ycard">
-                                <a href="dettagli_ricetta.php?id='. $row['id'] . '">PlumcakesaaaaaasasasfaadPlumcakesaaaaaasasasfaadpp</a>
-                                <div class="extra-ycard">
-                                    <p><span id="minutes">15</span>'<i class="fa-regular fa-clock"></i></p>
-                                    <p><span id="voto">4</span>/5<i class="fa-solid fa-star"></i></p>
-                                </div>
-
-                            </div>
-                        </div><div class="ycard">
-                            <div class="y-banner">
-                                <img class="banner-ycard" src="resources/img/IMG3.jpg"/>
-                                <p id="user-ycard">by <span>gilvestro_03aaaa</span></p>
-                            </div>
-
-                            <div class="info-ycard">
-                                <a href="dettagli_ricetta.php?id='. $row['id'] . '">Plumcakesaaaaaasasasumcakesaaaaaasasasfaadpp</a>
-                                <div class="extra-ycard">
-                                    <p><span id="minutes">15</span>'<i class="fa-regular fa-clock"></i></p>
-                                    <p><span id="voto">4</span>/5<i class="fa-solid fa-star"></i></p>
-                                </div>
-
-                            </div>
 
                     </div>
-
-
-
-
-                </div>
 
                 <div class="nuove-ricette">
 
