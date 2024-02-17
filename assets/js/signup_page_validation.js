@@ -1,3 +1,5 @@
+
+
 document.getElementById('next-button').addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -43,7 +45,7 @@ document.getElementById('next-button').addEventListener('click', function(event)
 
     /*scroll se dati sono validi*/
     if(isValid){
-        scrollToSection('section2', 'section1')
+        scrollToSection();
         document.getElementById('errorMessage').textContent = "";
     }
 });
@@ -56,6 +58,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     var email = document.getElementById('email').value;
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var password = document.getElementById('password').value;
+    var confirmpassword = document.getElementById('confirmpassword').value;
 
     /*lunghezza username*/
     if (username.length < 6 || username.length > 16) {
@@ -101,12 +104,16 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     /*controllo presenza carattere speciale*/
     if(!(password.match(/[^a-zA-Z0-9]/))){
         document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere speciale";
-
         return;
     }
 
 
     /*CONTROLLO SE LE DUE PASSWORD SONO UGUALI*/
+
+    if(!(confirmpassword.match(password))){
+        document.getElementById('errorMessage').textContent = "Le password non coincidono";
+        return;
+    }
 
 
     /*trasforma scritta sopra ai requsiiti in verede se sono tutti rispettati*/
@@ -141,6 +148,15 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     xhr.send(formData);
 });
 
+document.getElementById('back-button').addEventListener('click', function(event){
+
+    scrollToSection();
+});
+
+document.getElementById('SignUp-button').addEventListener('click', function(event){
+
+    scrollToSection();
+});
 
 function clearPlaceholder(element) {
     element.placeholder = '';
@@ -178,12 +194,36 @@ function showText(divID){
 }
 
 
-function scrollToSection(sectionId, sectionId1) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-    var a = document.getElementById(sectionId1);
-    setTimeout(function(){a.hidden = true}, 485);
+var mammt = true; // Assicurati che sia definita globalmente
+
+function scrollToSection() {
+    var targetSection = mammt ? 'section2' : 'section1';
+    var otherSection = mammt ? 'section1' : 'section2';
+
+    console.log(mammt);
+
+    document.getElementById(targetSection).style.display = 'block'; // Mostra la sezione destinazione
+    setTimeout(() => {
+        document.getElementById(targetSection).scrollIntoView({ behavior: 'smooth' });
+        // Imposta un timeout più lungo per assicurare che lo scroll sia completato
+        setTimeout(function() {
+            document.getElementById(otherSection).style.display = 'none'; // Nascondi l'altra sezione
+        }, 600); // Potrebbe essere necessario regolare questo valore
+    }, 100); // Dà tempo alla sezione di diventare visibile prima di iniziare lo scroll
+
+    mammt = !mammt;
 }
 
+
+/*
+function scrollToSection(sectionId2, sectionId1) {
+    document.getElementById(sectionId1).scrollIntoView({ behavior: 'smooth' });
+    var a = document.getElementById(sectionId1);
+    setTimeout(function(){a.hidden = false}, 0);
+    var b = document.getElementById(sectionId2);
+    setTimeout(function(){b.hidden = true}, 485);
+}
+*/
 
 document.getElementById('password').addEventListener('input', function () {
     const password = this.value;

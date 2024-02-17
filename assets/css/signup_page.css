@@ -1,6 +1,7 @@
 
 .login-container {
 
+
     max-width: 45%;
     margin: 5% auto;
     padding: 2%;
@@ -11,7 +12,6 @@
 }
 
 .login-data {
-
 
     margin: auto;
     padding: 2%;
@@ -120,6 +120,10 @@ input[type="radio"]:checked::before {
     font-size: 1.2em;
 }
 
+input[type="button"]{
+    font-family: "MontSerrat T", serif;
+}
+
 .remember-me-container label {
     margin-left: 2%;
     cursor: pointer;
@@ -131,6 +135,7 @@ input[type="radio"]:checked::before {
     justify-content: center;
     align-items: center;
     height: 5%;
+    font-family:'MontSerrat T',serif
 }
 
 .submit-button{
@@ -175,13 +180,7 @@ input[type="radio"]:checked::before {
 
 }
 
-/*
-.no-account {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*/
+
 .scroll-container {
     display: flex;
     overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -198,5 +197,23 @@ input[type="radio"]:checked::before {
 .info-password{
     display: none;
     color: grey;
+}
+
+.back-button{
+
+    padding: 0.5%;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: darkgrey;
+    text-underline: darkgrey ;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10%;
+    width: 10%;
+
 }
 

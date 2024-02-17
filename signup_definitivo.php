@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up -SapurEat</title>
+    <title>Login or Sign Up -SapurEat</title>
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/signup_page.css">
 </head>
@@ -21,7 +21,6 @@
             <div class="scroll-container">
                 <div id="section1" class="scroll-section">
 
-                    <!-- Section 1: Personal Information -->
                     <div class="input-container">
                         <label for="name">Name:</label>
                         <input type="text" name="nome" id="name" class="input-field" placeholder="Name">
@@ -48,8 +47,9 @@
                         <button type="button" id="next-button" class="submit-button" form="signupForm1" ><div style="font-family:'MontSerrat T',serif" >Next</div> </button>
                     </div>
 
-
                 </div>
+
+
                 <div id="section2" class="scroll-section">
                     <div class="input-container">
                         <label for="username">Username:</label>
@@ -83,6 +83,11 @@
                     <div class = "login">
                         <input type="submit" class="submit-button" form="signupForm" value="Register">
                     </div>
+
+                    <div class = "login">
+                        <button type="button" id="back-button" class="back-button" form="signupForm" ><div style="font-family:'MontSerrat T',serif" >Back</div> </button>
+                    </div>
+
                 </div>
             </div>
         </form>
