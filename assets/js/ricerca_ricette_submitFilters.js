@@ -4,9 +4,20 @@ let portata = document.getElementsByName('portata');
 
 let search_bar = document.getElementById('search'); // Assicurati che questo sia l'ID corretto
 let ricerca;
+const params = new URLSearchParams(window.location.search);
 
+
+const input = params.get('input');
+
+if (input !== null) {
+    search_bar.value = input;
+    
+}
 
 document.addEventListener('DOMContentLoaded', function() {
+
+
+
     search_bar.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
 
