@@ -9,8 +9,10 @@
     <title>User Page - SapurEat</title>
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/user_page.css">
+    <link rel="stylesheet" href="assets/css/xcard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="assets/js/user_page/user_page_script.js"></script>
+    <script src="assets/js/user_page/ajax_ricette.js"></script>
 </head>
 <body>
 
@@ -25,7 +27,7 @@
         <div class="sidebar">
             <a><i class="fas fa-user-edit"></i> Account</a>
             <a><i class="fas fa-blog"></i> Post</a>
-            <a><i class="fas fa-headset"></i> Assistenza</a>
+            <a onclick="ajax_ricette()"><i class="fas fa-headset"></i> Assistenza</a>
             <a><i class="fas fa-star"></i> Recensioni</a>
             <a><i class="fas fa-utensils"></i> Crea un piatto</a>
 
