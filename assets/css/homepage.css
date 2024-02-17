@@ -1,14 +1,13 @@
 body,html{
     scroll-behavior: smooth;
-}
-.intro{
 
 }
-.backdrop {
-
+.home{
+    width:100%;
 }
+
 main {
-    margin: 2% 5vw;
+    margin: 0 5vw;
     background-color: white;
 
 }
