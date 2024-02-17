@@ -13,13 +13,16 @@ $username = $_SESSION['username'];
     if($result) {
         $row = pg_fetch_assoc($result);
 
-        echo '<p>Username: ' . $row['username'] . '</p>
-                        <p>Nome: <span>'. $row['nome'] . '</span></p>
-                        <p>Cognome: <span>'. $row['cognome'] .'</span></p>
-                        <p>Data: <span>'. $row['data_di_nascita'] .'</span></p>
-                        <p>Sesso: <span>'. $row['sesso'].'</span></p>
-                        <p>Email: <span>'. $row['email']. '</span></p>';
+        echo '<div class="user-profile">
+                    <p class="username">Username: <span>' . $row['username'] . '</span></p>
+                    <p class="name">Nome: <span>'. $row['nome'] . '</span></p>
+                    <p class="surname">Cognome: <span>'. $row['cognome'] .'</span></p>
+                    <p class="birthdate">Data di nascita: <span>'. $row['data_di_nascita'] .'</span></p>
+                    <p class="gender">Sesso: <span>'. $row['sesso'].'</span></p>
+                    <p class="email">Email: <span>'. $row['email']. '</span></p>
+                </div>';
 
 
 
-}
+
+    }

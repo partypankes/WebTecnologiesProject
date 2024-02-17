@@ -78,10 +78,10 @@ main {
     align-items: center;
     margin-left: 200px;
 }
-#account, #post, #crea_piatto, #reviews{
+#account, #post, #crea_piatto, #reviews, #assistenza{
     width: 95%;
 }
-#account h2, #post h2, #reviews h2{
+h2{
     text-align: center;
 
 }
@@ -112,7 +112,7 @@ main {
     font-size: 16px;
     box-sizing: border-box;
 }
-.conferma, .modifica{
+.conferma, .modifica, .invia{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +148,7 @@ main {
 
 
 
-.post, .anagrafica, #account form, .reviews{
+.post, .anagrafica, #account form, .reviews, .assistenza{
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -183,7 +183,7 @@ main {
     padding-bottom:1%;
 }
 
-.conferma-btn, .modifica-btn{
+.conferma-btn, .modifica-btn, .invia-btn{
     width:100%;
     margin-top: 1%;
     display: flex;
@@ -191,7 +191,7 @@ main {
     justify-content: center;
 }
 
-#account button{
+.content button{
     width:35%;
     padding: 1%;
 

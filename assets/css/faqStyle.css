@@ -96,3 +96,10 @@
 .risposta-faq:not(.active) + .domanda-faq {
     border-top: 1px solid #ddd;
 }
+
+.risposta-faq a{
+    color: darkmagenta;
+}
+.risposta-faq a:hover{
+    text-decoration: underline;
+}

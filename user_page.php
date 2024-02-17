@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/user_page/user_page.css">
     <link rel="stylesheet" href="assets/css/xcard.css">
-    <link rel="stylesheet" href="assets/css/user_page/user_page_review.css">
+    <link rel="stylesheet" href="assets/css/user_page/user_page_2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="assets/js/user_page/user_page_script.js"></script>
     <script src="assets/js/user_page/funzion_ajax.js"></script>
@@ -126,7 +126,33 @@
             </section>
 
             <section id="assistenza" class="section_show" style="display:none;">
-                <?php include('structure/faqs.html'); ?>
+                <div class="assistenza">
+                    <h2>Assistenza</h2>
+                    <div class="assistenza-contenuti">
+
+
+                        <div class="support-section">
+                            <h2>Contattaci per Assistenza</h2>
+                            <form class="support-form">
+                                <label for="name">Nome:</label>
+                                <input type="text" id="name" name="name" required>
+
+                                <label for="email">La tua Email:</label>
+                                <input type="email" id="email" name="email" required>
+
+                                <label for="message">Messaggio:</label>
+                                <textarea id="message" name="message" required></textarea>
+                                <div class="invia">
+                                    <button type="submit" class="invia-btn">Invia</button>
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <?php include('structure/faqs.html'); ?>
+                    </div>
+                </div>
+
             </section>
 
             <section id="reviews" class="section_show" style="display:none;">
@@ -144,6 +170,7 @@
 
             </section>
         </div>
+
 
     </section>
 
