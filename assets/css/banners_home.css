@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     background-color: #6a5f6c;
+    z-index: 0;
 }
 
 #bg-video{
@@ -46,7 +47,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
+    z-index: 3;
     padding: 10px;
 }
 .content{

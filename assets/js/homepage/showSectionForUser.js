@@ -1,5 +1,5 @@
 function hideSection() {
-    let main = document.getElementById('logged-home');
+    let main = document.getElementById('main-home');
     main.style.display = "none";
 }
 

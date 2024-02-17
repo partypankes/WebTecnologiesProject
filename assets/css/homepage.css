@@ -2,16 +2,17 @@ body,html{
     scroll-behavior: smooth;
 
 }
-.home{
-    width:100%;
+
+main{
+    background-color: var(--main_color);
 }
-
-main {
-    margin: 0 5vw;
-    background-color: white;
-
+.home{
+    padding: 2% 0;
+    margin: 0  5vw;
 }
 .best-ricette{
+    width: 100%;
+    height: auto;
 
 }
 

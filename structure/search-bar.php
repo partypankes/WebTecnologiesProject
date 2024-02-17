@@ -3,7 +3,7 @@
 
 <div class="bn-search">
     <div class="box">
-        <input type="text" id="search"  placeholder="Trova qui la tua ispirazione..." maxlength="60">
+        <input type="text" id="search"  placeholder="Trova qui la tua ispirazione..." maxlength="60" autocomplete="off">
         <!--
         onclick="goToPage()"
         !-->
