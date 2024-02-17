@@ -15,6 +15,7 @@ main {
     position: fixed;
     top: 0;
     bottom: 0;
+    left: 0;
     margin-top: 51px;
 }
 
@@ -79,8 +80,8 @@ main {
     align-items: center;
     margin-left: 200px;
 }
-#account, #post{
-    width: 80%;
+#account, #post, #crea_piatto{
+    width: 95%;
 }
 #account h2, #post h2{
     text-align: center;
@@ -146,11 +147,20 @@ main {
     cursor: pointer;
 }
 
-#crea_piatto{
-    width: 100%;
-}
-
 
 .post{
-    border: 2px solid red;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2%;
 }
+#post-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+

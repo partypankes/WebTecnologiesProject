@@ -90,8 +90,9 @@
 
 
             <section id="post" class="section_show" style="display:none;">
-                <h2>I miei post</h2>
+
                 <div class="post">
+                    <h2>I miei post</h2>
                     <div id="post-section">
 
                     </div>
@@ -103,8 +104,12 @@
             </section>
 
             <section id="reviews" class="section_show" style="display:none;">
-                <h2>Le mie recensioni</h2>
-                <p>Qui puoi visualizzare ed eliminare le tue recensioni.</p>
+                <div class="reviews">
+                    <h2>Le mie reviews</h2>
+                    <div id="utente-reviews">
+
+                    </div>
+                </div>
             </section>
 
             <section id="crea_piatto" class="section_show" style="display:none;">
