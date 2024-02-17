@@ -118,14 +118,7 @@ main {
     align-items: center;
     margin-top: 0.5em;
 }
-#account form button, .modifica-btn{
-   cursor: pointer;
-    padding: 5px;
-    border-radius: 10px;
-    border-color: transparent;
-    background: darkblue;
-    color: white;
-}
+
 
 #account form input[type="radio"] {
     margin-right: 0.5em;
@@ -156,3 +149,44 @@ main {
 
 }
 
+.form-section1 {
+    width:100%;
+    height: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 2% 3%;
+
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#anagrafica .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.375rem;
+    padding-bottom:1%;
+}
+
+.conferma-btn, .modifica-btn{
+    width:100%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#account button{
+    width:35%;
+    padding: 1%;
+
+
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+
+    border: 1px solid #ce0dd8;
+    border-radius: 50px;
+    background-color: #ce0dd8;
+    color: #fff;
+}

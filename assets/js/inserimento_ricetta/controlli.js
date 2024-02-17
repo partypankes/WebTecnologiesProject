@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    document.querySelectorAll('input, textarea, select').forEach(input => {
+    form.querySelectorAll('input, textarea, select').forEach(input => {
         input.addEventListener('focus', function() {
             this.classList.remove('error');
             this.placeholder = '';

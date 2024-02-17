@@ -56,33 +56,55 @@
                 </div>
 
                 <form id="anagrafica">
-                    <label for="name">Nome</label>
-                    <input type="text" id="name" name="nome" placeholder="Nome">
 
-                    <label for="surname">Cognome</label>
-                    <input type="text" id="surname" name="cognome" placeholder="Cognome">
-
-                    <label for="birthdate">Data di nascita</label>
-                    <input type="date" id="birthdate" name="data_di_nascita" placeholder="14/02/2003">
-
-                    <label for="gender">Sesso</label>
-                    <div class="gender_div">
-                        <input type="radio" id="male" name="sesso" value="M">
-                        <label for="male">M</label>
-                        <input type="radio" id="female" name="sesso" value="F">
-                        <label for="female">F</label>
-                        <input type="radio" id="other" name="sesso" value="O">
-                        <label for="other">O</label>
+                    <div class="title">
+                        <h1>Modifica i tuoi dati personali</h1>
                     </div>
 
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="E-mail">
+                    <div class="form-section1">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="nome" placeholder="Nome">
+                    </div>
 
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Password">
+                    <div class="form-section1">
+                        <label for="surname">Cognome</label>
+                        <input type="text" id="surname" name="cognome" placeholder="Cognome">
+                    </div>
 
-                    <label for="new-password">Nuova password</label>
-                    <input type="password" id="new-password" name="new_password" placeholder="Nuova password">
+                    <div class="form-section1">
+                        <label for="birthdate">Data di nascita</label>
+                        <input type="date" id="birthdate" name="data_di_nascita" placeholder="14/02/2003">
+                    </div>
+
+                    <div class="form-section1">
+                        <label for="gender">Sesso</label>
+                        <div class="gender_div">
+                            <input type="radio" id="male" name="sesso" value="M">
+                            <label for="male">M</label>
+                            <input type="radio" id="female" name="sesso" value="F">
+                            <label for="female">F</label>
+                            <input type="radio" id="other" name="sesso" value="O">
+                            <label for="other">O</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-section1">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="E-mail">
+                    </div>
+
+
+                    <div class="form-section1">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password">
+                    </div>
+
+                    <div class="form-section1">
+                        <label for="new-password">Nuova password</label>
+                        <input type="password" id="new-password" name="new_password" placeholder="Nuova password">
+                    </div>
+
 
 
                     <div class="conferma">
