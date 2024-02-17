@@ -42,7 +42,7 @@
                 <div class="anagrafica">
                     <div id="content-anagrafica">
                         <!--Caricamento Asincrono!-->
-                        <?php include 'core/user_page/fetch_dati_utente.php' ?>
+                        <?php include 'core/user_page/fetch_dati_utente.php';?>
                     </div>
 
                     <div class="modifica">
@@ -52,22 +52,22 @@
 
                 <form id="anagrafica">
                     <label for="name">Nome</label>
-                    <input type="text" id="name" name="name" placeholder="Nome">
+                    <input type="text" id="name" name="nome" placeholder="Nome">
 
                     <label for="surname">Cognome</label>
-                    <input type="text" id="surname" name="surname" placeholder="Cognome">
+                    <input type="text" id="surname" name="cognome" placeholder="Cognome">
 
                     <label for="birthdate">Data di nascita</label>
-                    <input type="date" id="birthdate" name="birthdate" placeholder="14/02/2003">
+                    <input type="date" id="birthdate" name="data_di_nascita" placeholder="14/02/2003">
 
                     <label for="gender">Sesso</label>
                     <div class="gender_div">
-                        <input type="radio" id="male" name="gender" value="male">
-                        <label for="male">Uomo</label>
-                        <input type="radio" id="female" name="gender" value="female">
-                        <label for="female">Donna</label>
-                        <input type="radio" id="other" name="gender" value="other">
-                        <label for="other">Altro</label>
+                        <input type="radio" id="male" name="sesso" value="M">
+                        <label for="male">M</label>
+                        <input type="radio" id="female" name="sesso" value="F">
+                        <label for="female">F</label>
+                        <input type="radio" id="other" name="sesso" value="O">
+                        <label for="other">O</label>
                     </div>
 
                     <label for="email">E-mail</label>
@@ -81,7 +81,7 @@
 
 
                     <div class="conferma">
-                        <button id="conferma-anagrafica" class="conferma-btn" type="button">Conferma</button>
+                        <button   id="conferma-anagrafica" class="conferma-btn" type="submit">Conferma</button>
                     </div>
                 </form>
             </section>
