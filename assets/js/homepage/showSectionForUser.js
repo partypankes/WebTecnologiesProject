@@ -1,7 +1,5 @@
-function showSection(status) {
-    var main = document.getElementById('home-main');
-    if(!status){
-        main.style.display = "none";
-    }
+function hideSection() {
+    let main = document.getElementById('logged-home');
+    main.style.display = "none";
 }
 

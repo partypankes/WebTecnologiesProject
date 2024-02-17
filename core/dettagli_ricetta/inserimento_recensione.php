@@ -24,6 +24,7 @@ if(isset($db)) {
 
     if($result) {
         carica_recensione($id);
+        include '../media_voto.php';
     }
 
 

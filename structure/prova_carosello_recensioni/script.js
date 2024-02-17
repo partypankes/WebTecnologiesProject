@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inizia lo scorrimento iniziale
     let initialOffset = 0;
     function startScrolling() {
-        initialOffset -= .8; // Regola questo valore per controllare la velocità di scorrimento
+        initialOffset -= 0.6; // Regola questo valore per controllare la velocità di scorrimento
         slider.style.transform = `translateX(${initialOffset}px)`;
 
         requestAnimationFrame(startScrolling);
