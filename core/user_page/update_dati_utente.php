@@ -46,10 +46,10 @@ if(!empty($condizioni)) {
         $sql = "UPDATE utente SET " . implode(",",$condizioni) . " WHERE username = $" . $i;
         $result = pg_query_params($db,$sql,$parametri);
 
-        include 'fetch_dati_utente.php';
+
     }
 
 
 }
 
-
+include 'fetch_dati_utente.php';
