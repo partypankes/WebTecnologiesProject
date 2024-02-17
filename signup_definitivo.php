@@ -47,6 +47,10 @@
                         <button type="button" id="next-button" class="submit-button" form="signupForm1" ><div style="font-family:'MontSerrat T',serif" >Next</div> </button>
                     </div>
 
+                    <div class = "login">
+                        <button type="button" id="login-button" class="login-button" form="signupForm" ><div style="font-family:'MontSerrat T',serif" >Vai al Login</div> </button>
+                    </div>
+
                 </div>
 
 

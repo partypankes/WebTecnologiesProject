@@ -49,7 +49,7 @@
         <hr class="divider" />
 
         <div class="no-account">
-            <p> I don't have an account. <a href="signup_definitivo.php">Sign up</a></p>
+            <p> I don't have an account. <button type="button" id="toSignUp-button" class="back-button" form="signupForm" ><div style="font-family:'MontSerrat T',serif" >Sign Up</div> </button></p>
         </div>
 
     </div>
