@@ -8,8 +8,9 @@
     <meta charset="UTF-8">
     <title>User Page - SapurEat</title>
     <link rel="stylesheet" href="assets/global.css">
-    <link rel="stylesheet" href="assets/css/user_page.css">
+    <link rel="stylesheet" href="assets/css/user_page/user_page.css">
     <link rel="stylesheet" href="assets/css/xcard.css">
+    <link rel="stylesheet" href="assets/css/user_page/user_page_review.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="assets/js/user_page/user_page_script.js"></script>
     <script src="assets/js/user_page/funzion_ajax.js"></script>
@@ -96,12 +97,12 @@
 
 
                     <div class="form-section1">
-                        <label for="password">Password</label>
+                        <label for="password">Nuova Password</label>
                         <input type="password" id="password" name="password" placeholder="Password">
                     </div>
 
                     <div class="form-section1">
-                        <label for="new-password">Nuova password</label>
+                        <label for="new-password">Conferma password</label>
                         <input type="password" id="new-password" name="new_password" placeholder="Nuova password">
                     </div>
 

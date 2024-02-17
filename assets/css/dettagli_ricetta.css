@@ -18,7 +18,7 @@ h1 {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-
+    word-break: break-all;
     background-color: var(--header-color);
     border-radius: 30px;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 Q50,50 100,100 Q75,90 50,100 Q25,110 0,100" fill="none" stroke="magenta" stroke-width=".5"/></svg>');
