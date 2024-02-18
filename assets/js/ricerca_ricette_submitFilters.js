@@ -4,10 +4,7 @@ let portata = document.getElementsByName('portata');
 
 let search_bar = document.getElementById('search');
 
-
-
 const params = new URLSearchParams(window.location.search);
-
 
 const input = params.get('input');
 
@@ -17,8 +14,6 @@ if (input !== null) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-
-
 
     search_bar.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {
@@ -37,9 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
     richiedi_pagina(1);
 
 });
-
-console.log(portata);
-
 
 function richiedi_pagina(np) {
 
@@ -62,7 +54,6 @@ function richiedi_pagina(np) {
     });
 
     var risultati = document.getElementById('sezione-ricette');
-    var controlli = document.getElementById('pagination_controls');
     risultati.innerHTML = "caricamento...";
 
     var xhr = new XMLHttpRequest();
@@ -75,9 +66,5 @@ function richiedi_pagina(np) {
     }
 
     xhr.send("tempo_preparazione=" + encodeURIComponent(tempo_box) + "&portata=" + encodeURIComponent(portata_box) + "&ricerca=" + encodeURIComponent(ricerca) + "&np=" + encodeURIComponent(np));
-
-
-
-
 
 }

@@ -7,7 +7,17 @@ include '../auth.php';
 
 $sql = 'SELECT * FROM ricetta WHERE utente = $1';
 
-$parametri[] = $_SESSION['username'];
+if(isset($db)) {
+    $result = pg_query_params($db,$sql,array($_SESSION['username']));
+    $string = "";
 
-include '../xcard.php';
+    while($row = pg_fetch_assoc($result)) {
+        include '../xcard.php';
+    }
+
+    echo $string;
+}
+
+
+
 

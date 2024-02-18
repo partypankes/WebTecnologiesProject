@@ -44,7 +44,6 @@ if(isset($db)) {
 
 
     $sql3 = "INSERT INTO ingrediente (nome) VALUES ($1) ON CONFLICT DO NOTHING;";
-    //$sql3 = "INSERT INTO ingrediente (ingrediente_name) VALUES ($1) ON CONFLICT (ingrediente_name) DO NOTHING;";
 
     $sql4 = "INSERT INTO relazione_ingrediente (ricetta, ingrediente,quantita,misurazione) VALUES ($1, (SELECT nome FROM ingrediente WHERE nome = $2),$3,$4);";
     $iter = 0;
@@ -55,10 +54,4 @@ if(isset($db)) {
     }
 
 
-
-    /*$sql5 = "INSERT INTO immagini (ricetta,immagine) VALUES ($1,$2) ;";
-    foreach ($_FILES['images']['tmp_name'] as $key => $tmp_name) {
-        $data = file_get_contents($_FILES['images']['tmp_name'][$key]);
-        pg_query_params($db,$sql5,array($id,pg_escape_bytea($data)));
-    }*/
 }
