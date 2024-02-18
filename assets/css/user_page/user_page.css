@@ -81,7 +81,7 @@ main {
 #account, #post, #crea_piatto, #reviews, #assistenza{
     width: 95%;
 }
-h2{
+.container h2{
     text-align: center;
 
 }
@@ -191,7 +191,7 @@ h2{
     justify-content: center;
 }
 
-.content button{
+#account button{
     width:35%;
     padding: 1%;
 

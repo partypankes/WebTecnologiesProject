@@ -1,0 +1,145 @@
+.container {
+    max-width: 45%;
+    margin: 5% auto;
+    padding: 2%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.login-section{
+    width: 100%;
+}
+.signup-section{
+    width: 100%;
+
+}
+
+/*Titolo Container*/
+.title {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.title h1 {
+    font-size: 3em;
+    margin-bottom: 0;
+}
+.title p {
+    margin-top: 1%;
+    color: grey;
+    font-size: 1.2em;
+}
+
+/*Container Form*/
+.form-div{
+    width: 100%;
+    height: auto;
+
+
+    border: 1px solid red;
+}
+.form-div form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+
+.input-container {
+    position: relative;
+    align-items: center;
+}
+
+.input-container label {
+    margin-bottom: 2%;
+}
+
+.input-field{
+    width: 100%;
+    padding: 2%;
+    margin: 2% 0;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+    border: 2px transparent;
+}
+
+.input-field:focus {
+    border-color: #c235e2;
+    outline: none;
+    box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
+}
+
+.input-icon {
+    position: absolute;
+    right: 3%;
+    top: 62%;
+    transform: translateY(-50%);
+}
+
+#togglePassword{
+    cursor: pointer; font-weight: normal;
+}
+
+/*Submit Button*/
+.colored-btn {
+    margin:auto;
+}
+
+.submit-button {
+
+    border: 2px solid #ce0dd8;
+    border-radius: 50px;
+    background-color: #ce0dd8;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: transparent;
+    border: 2px solid #252525;
+    color: #252525;
+}
+
+/*Sub Form*/
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: lightgrey;
+    margin: 4% 5% 2%;
+}
+
+.no-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 460px) {
+    .input-icon {
+        top: 75%;
+    }
+}
+
+/*bottoni back e Sign Up (nel login)*/
+.change-btn{
+    padding: 0.5%;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: darkgrey;
+    text-underline: darkgrey ;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10%;
+    width: 10%;
+}

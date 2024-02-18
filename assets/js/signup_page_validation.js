@@ -13,7 +13,7 @@ document.getElementById('next-button').addEventListener('click', function(event)
     var isValid= true;
 
     /*controllo genere*/
-    for(var i = 0; i < genderRadios.length; i++) {
+    for(let i = 0; i < genderRadios.length; i++) {
         if (genderRadios[i].checked) {
             selected = true;
             break;
@@ -45,7 +45,8 @@ document.getElementById('next-button').addEventListener('click', function(event)
 
     /*scroll se dati sono validi*/
     if(isValid){
-        scrollToSection();
+        /* Mettere logica di cambio form
+        scrollToSection();*/
         document.getElementById('errorMessage').textContent = "";
     }
 });
@@ -193,7 +194,7 @@ function showText(divID){
     document.getElementById(divID).style.display='inline';
 }
 
-
+/*
 var mammt = true; // Assicurati che sia definita globalmente
 
 function scrollToSection() {
@@ -213,7 +214,7 @@ function scrollToSection() {
 
     mammt = !mammt;
 }
-
+*/
 
 /*
 function scrollToSection(sectionId2, sectionId1) {

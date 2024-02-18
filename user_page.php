@@ -130,25 +130,6 @@
                     <h2>Assistenza</h2>
                     <div class="assistenza-contenuti">
 
-
-                        <div class="support-section">
-                            <h2>Contattaci per Assistenza</h2>
-                            <form class="support-form">
-                                <label for="name">Nome:</label>
-                                <input type="text" id="name" name="name" required>
-
-                                <label for="email">La tua Email:</label>
-                                <input type="email" id="email" name="email" required>
-
-                                <label for="message">Messaggio:</label>
-                                <textarea id="message" name="message" required></textarea>
-                                <div class="invia">
-                                    <button type="submit" class="invia-btn">Invia</button>
-                                </div>
-
-                            </form>
-                        </div>
-
                         <?php include('structure/faqs.html'); ?>
                     </div>
                 </div>
