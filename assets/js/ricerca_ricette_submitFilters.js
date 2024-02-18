@@ -2,8 +2,10 @@ let tempo = document.getElementsByName('tempo');
 
 let portata = document.getElementsByName('portata');
 
-let search_bar = document.getElementById('search'); // Assicurati che questo sia l'ID corretto
-let ricerca;
+let search_bar = document.getElementById('search');
+
+
+
 const params = new URLSearchParams(window.location.search);
 
 
@@ -28,19 +30,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     document.getElementById("search_button").addEventListener("click", function (event) {
         event.preventDefault();
-        submitFilter();
+        richiedi_pagina(1);
 
     });
+
+    richiedi_pagina(1);
+
 });
 
 console.log(portata);
 
-function submitFilter(){
+
+function richiedi_pagina(np) {
+
     var portata_box;
     var tempo_box;
 
 
-    ricerca = search_bar.value;
+    var ricerca = search_bar.value;
 
     portata.forEach(function(checkbox) {
         if(checkbox.checked) {
@@ -49,27 +56,28 @@ function submitFilter(){
     });
 
     tempo.forEach(function (checkbox){
-       if(checkbox.checked) {
-           tempo_box = checkbox.value;
-       }
+        if(checkbox.checked) {
+            tempo_box = checkbox.value;
+        }
     });
 
+    var risultati = document.getElementById('sezione-ricette');
+    var controlli = document.getElementById('pagination_controls');
+    risultati.innerHTML = "caricamento...";
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST",'core/ricerca_ricette/query_ricerca.php', true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById('sezione-ricette').innerHTML = xhr.responseText;
-
+    xhr.open("POST", "core/ricerca_ricette/query_ricerca.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState === 4 && xhr.status === 200) {
+            risultati.innerHTML = xhr.responseText;
         }
-    };
+    }
+
+    xhr.send("tempo_preparazione=" + encodeURIComponent(tempo_box) + "&portata=" + encodeURIComponent(portata_box) + "&ricerca=" + encodeURIComponent(ricerca) + "&np=" + encodeURIComponent(np));
 
 
 
-    xhr.send("tempo_preparazione=" + encodeURIComponent(tempo_box) + "&portata=" + encodeURIComponent(portata_box) + "&ricerca=" + encodeURIComponent(ricerca));
 
 
 }
