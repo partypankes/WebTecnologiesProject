@@ -1,17 +1,22 @@
 main {
-    margin: 3% 5vw;
+    margin: 2% 5vw;
 
 }
 .ricerca-ricetta{
-    height:50vh;
-    max-height: 70vh;
-    width: 100%;
-    background-color: var(--header-color);
-    border:1px solid green;
+    width: 95%;
+    min-height:35vh;
+    margin: auto;
+
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    flex-direction: column;
+
+    border-radius: 30px;
+    background-color: #f6e0ed;
+
+    /* #EAFFFD;
+    #FECEE9*/
 }
 #search-bar{
     width: 60%;
@@ -72,25 +77,44 @@ main {
 
 
 
+
 /* Sezione ricette*/
 
 .sezione-ricette{
-    width: 100%;
+    min-height: 50vh;
+    width: 95%;
+
+    margin: 1.5% auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
 
-    /*margin:auto;*/
-    border: 1px solid yellow;
+    background-color: #f6e0ed95;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+
 }
 .container-control{
-    width: 100%;
+    width: 30%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
-    /*margin:auto;*/
+    justify-content: center;
+    gap:2%;
     border: 1px solid red;
+}
+.container-control i{
+    margin: 0 3%;
+    padding: 0.3%;
+    border-radius: 30px;
+    background-color: var(--main_color);
+    color: var(--header-color);
+}
+
+.container-control i:hover{
+    padding: 0.3%;
+    border-radius: 30px;
+    background-color: var(--color-3);
+    color: var(--main_color);
 }

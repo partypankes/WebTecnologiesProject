@@ -28,16 +28,25 @@
     <main id="main-home">
         <section class="home">
             <section id="logged-home">
+
                 <div class="best-ricette">
-                    <h2>Le migliori ricette SapurEat</h2>
+                    <h2>Le 5 migliori ricette SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
                             include 'core/ricette_homepage.php';
                         } ?>
+                </div>
 
 
+                <div class="best-ricette">
+                    <h2>I 5 migliori Primi Piatti SapurEat</h2>
+                    <div class="sezione-ricette">
+                        <?php if (isset($_SESSION['loggedin'])){
+                            include 'core/ricette_homepage.php';
+                        } ?>
+                </div>
 
-                    </div>
+
 
                 <div class="nuove-ricette">
 

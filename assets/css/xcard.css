@@ -1,24 +1,23 @@
 .container-xcard{
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
+
     flex-wrap: wrap;
-    /*margin:auto;*/
-    border: 1px solid green;
 }
 
 .xcard{
-    width:500px;
-    height: 250px;
+    width:24%;
+    height: 200px;
+    margin: 1% 0.5%;
 
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    background-color: #dcdcdc;
+    background-color: var(--color-3);
     border-radius: 30px;
-    margin:1%;
+    border: 2px solid var(--header-color);
 
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -29,55 +28,72 @@
 }
 
 .banner-xcard{
+    aspect-ratio: 1;
     object-fit: cover;
-    width: 250px;
-    height: 250px;
-    min-width: 250px;
-    min-height: 250px;
+    width: 100%;
+    height: 100%;
 
     border-radius: 30px;
-    border: 3px solid black;
-
+    border: 3px solid var(--header-color);
 }
 
 .info-xcard{
     width:100%;
     height:100%;
-    padding:4%;
+    padding:2%;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .info-xcard a{
     font-weight: 600;
-    font-size: 25px;
+    font-size: 1.4rem;
+    color: var(--main_color);
+    transition: color 0.3s ease;
+    word-break: break-word;
 }
+.info-xcard a:hover{
+    color: var(--color-3);
+}
+
+
 .sub-xcard{
     width:100%;
-    height:100%;
+    color: var(--main_color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.sub-xcard p{
-    font-weight: 300;
-    font-size:18px;
+.sub-xcard .user-sub{
+    font-weight: 400;
+    font-size:1rem;
+    font-style: italic;
+}
+.sub-xcard .user-sub span{
+    transition: color 0.3s ease;
+}
+.sub-xcard .user-sub span:hover{
+    color: var(--main_color)
 }
 
 .extra-xcard{
+    padding: 0 1%;
     display: flex;
     justify-content: space-between;
-    /*align-items: flex-start;*/
+    align-items: center;
 
+    font-weight: 400;
+    font-size:1.2rem;
+    cursor: default;
 }
 .extra-card p{
     text-align: center;
+
 }
 
 .extra-xcard i{
-    padding-left:3px;
+    margin-left:3px;
 }
 

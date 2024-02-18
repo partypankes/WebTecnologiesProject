@@ -11,6 +11,7 @@ require 'core/auth.php'
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/ricerca_ricette.css">
     <link rel="stylesheet" href="assets/css/xcard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 </head>
 <body>
@@ -28,6 +29,9 @@ require 'core/auth.php'
             include('structure/search-bar.php')
             ?>
         </div>
+
+        <div class="filters">
+
 
 
         <div class="filter-container">
@@ -60,6 +64,9 @@ require 'core/auth.php'
         </div>
 
     </section>
+
+
+
     <section id="sezione-ricette" class="sezione-ricette">
 
 
