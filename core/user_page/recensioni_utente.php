@@ -22,6 +22,9 @@ if(isset($db)) {
                     <p id="voto-p">' . $stars .'</p>
                 </div>
                 <p id="rec-p">' . $row['descrizione_recensione'] . '</p>
+                 <div class="elimina">
+                        <button id="elimina-review" class="elimina-btn" type="submit"><i class="fas fa-trash-alt"></i>Elimina</button>
+                    </div>
             </div>' ;
     }
 }

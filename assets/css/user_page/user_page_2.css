@@ -2,11 +2,11 @@
     background: white;
     border: 1px solid grey;
     width: 400px;
-    height: 300px;
+    min-height: 300px;
     margin-bottom: 20px;
     margin-top: 20px;
     margin-right: 20px;
-
+    position: relative;
 }
 
 .up-rec .review-title{
@@ -25,6 +25,33 @@
 #rec-p{
     padding: 10px 20px 20px 10px;
 }
+.elimina{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid grey;
+    background: ghostwhite;
+    cursor: pointer;
+}
 
+.elimina button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
 
+.elimina:hover{
+    background: lightgrey;
+}
+
+.elimina i{
+    margin-right: 10px;
+}
 
