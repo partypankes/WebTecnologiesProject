@@ -75,8 +75,8 @@ if(isset ($db)) {
         while ($row = pg_fetch_assoc($result)) {
             include '../xcard.php';
         }
-        echo $string;
-        echo $controls;
+        echo '<div class="container-xcard">' . $string . '</div>';
+        echo '<div class="container-control">' . $controls . '</div>';
     }
 }
 
