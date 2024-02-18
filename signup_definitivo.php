@@ -110,6 +110,7 @@
             <p> Sono già registrato. <button type="button" id="toSignUp-button" class="change-btn" form="signupForm" >Log in</button></p>
         </div>
     </div>
+
     <script src="assets/js/signup_page_validation.js"></script>
 
 </body>
