@@ -13,11 +13,11 @@ $username = $_SESSION['username'];
     if($result) {
         $row = pg_fetch_assoc($result);
         if($row['sesso'] == 'M') {
-            $sesso = "Male";
+            $sesso = "Uomo";
         } else if ($row['sesso'] == 'F') {
-            $sesso = "Female";
+            $sesso = "Donna";
         } else {
-            $sesso = "Other";
+            $sesso = "Altro";
         }
         echo '<div class="user-profile">
                     <p class="username">Username: <span>' . $row['username'] . '</span></p>
