@@ -36,11 +36,11 @@ require 'core/auth.php'
                     <span class="faq-toggle">&#5167;</span>
                 </div>
                 <div class="risposta-faq" id="faq1">
-                    <label><input class="filtro" type="radio" onclick="submitFilter()" name="portata" value="antipasto">Antipasto</label>
-                    <label><input class="filtro" type="radio" onclick="submitFilter()" name="portata" value="primoPiatto">Primo Piatto</label>
-                    <label><input class="filtro" type="radio" onclick="submitFilter()" name="portata" value="secondoPiatto">Secondo Piatto</label>
-                    <label><input class="filtro" type="radio" onclick="submitFilter()" name="portata" value="dessert" >Dessert</label>
-                    <label><input class="filtro" type="radio" onclick="submitFilter()" name="portata" value="brunch" >Brunch</label>
+                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="portata" value="antipasto">Antipasto</label>
+                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="portata" value="primoPiatto">Primo Piatto</label>
+                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="portata" value="secondoPiatto">Secondo Piatto</label>
+                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="portata" value="dessert" >Dessert</label>
+                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="portata" value="brunch" >Brunch</label>
                 </div>
             </div>
 
@@ -50,18 +50,19 @@ require 'core/auth.php'
                     <span class="faq-toggle">&#5167;</span>
                 </div>
                 <div class="risposta-faq" id="faq1">
-                    <label><input class="filtro" type="radio" onclick="submitFilter()" name="tempo" value="15">< 15 min></label>
-                    <label><input class="filtro" type="radio" onclick="submitFilter()" name="tempo" value="30">< 30 min</label>
+                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="tempo" value="15">< 15 min></label>
+                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="tempo" value="30">< 30 min</label>
 
                 </div>
             </div>
 
         </div>
     </section>
-
     <section id="sezione-ricette" class="sezione-ricette">
-            <?php include 'core/ricerca_ricette/inizializzazione_pagina.php' ?>
+
+
     </section>
+
 </main>
 
     <?php
@@ -70,5 +71,6 @@ require 'core/auth.php'
 
     <script src="assets/js/faqs_script.js"></script>
     <script src="assets/js/ricerca_ricette_submitFilters.js"></script>
+
 </body>
 </html>
