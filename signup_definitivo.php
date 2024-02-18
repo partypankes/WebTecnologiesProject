@@ -48,7 +48,7 @@
                     </div>
 
                     <div class = "login">
-                        <button type="button" id="login-button" class="login-button" form="signupForm" ><div style="font-family:'MontSerrat T',serif" >Vai al Login</div> </button>
+                        <button type="button" id="toLogin-button" class="login-button" form="signupForm" ><div style="font-family:'MontSerrat T',serif" >Vai al Login</div> </button>
                     </div>
 
                 </div>
