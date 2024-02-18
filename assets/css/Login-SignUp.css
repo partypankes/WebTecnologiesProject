@@ -33,10 +33,6 @@
 /*Container Form*/
 .form-div{
     width: 100%;
-
-
-
-    border: 1px solid red;
 }
 .form-div form{
     width: 100%;
@@ -59,20 +55,21 @@
 
 .input-container {
     width: 100%;
+    margin:1% 0;
 }
 
 .input-container label {
-    margin: 0 0 2% 1%;
+
 }
 
 .input-field{
     width: 100%;
     padding: 2%;
-    margin: 2% 0;
+    margin: 1% 0 0 0;
     border-radius: 30px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
-    border: 2px transparent;
+    border: 2px #d5d4d4;
 }
 .input-field:focus {
     border-color: var(--color-3);
@@ -135,7 +132,7 @@
     border: 0;
     height: 1px;
     background-color: lightgrey;
-    margin: 3% 0;
+    margin: 3% 0 1% 0;
 }
 
 .no-account {

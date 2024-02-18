@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login or Sign Up -SapurEat</title>
-    <link rel="stylesheet" href="assets/global.css">
-    <link rel="stylesheet" href="assets/css/signup_page.css">
-</head>
-<body>
-
-
 
     <div class="title">
         <h1>Sign Up</h1>
@@ -96,9 +84,8 @@
                 </div>
             !-->
 
-                <div class = "login">
-                    <button type="button" id="back-button" class="change-btn" form="signupForm" >Back </button>
-                </div>
+                <button type="button" id="back-button" class="change-btn">Back </button>
+
 
 
                 <div class="colored-btn">
@@ -114,11 +101,7 @@
         <hr class="divider" />
 
         <div class="no-account">
-            <p> Sono già registrato. <button type="button" id="toSignUp-button" class="change-btn" form="signupForm" >Log in</button></p>
+            <p> Sono già registrato. <button type="button" id="toSignUp-button" class="change-btn">Log in</button></p>
         </div>
     </div>
-
-    <script src="assets/js/signup_page_validation.js"></script>
-
-</body>
-</html>
+    
