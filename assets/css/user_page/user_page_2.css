@@ -1,12 +1,11 @@
 .review{
     background: white;
-    border: 1px solid black;
-    width: 300px;
-    min-height: 200px;
+    border: 1px solid grey;
+    width: 400px;
+    height: 300px;
     margin-bottom: 20px;
     margin-top: 20px;
     margin-right: 20px;
-    border-radius: 20px;
 
 }
 
@@ -17,7 +16,6 @@
     padding: 10px 10px 5px;
     font-size: 20px;
     word-break: break-all;
-    text-align: center;
 }
 #voto-p{
     padding-left: 10px;
@@ -27,59 +25,6 @@
 #rec-p{
     padding: 10px 20px 20px 10px;
 }
-
-.user-profile {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.user-profile p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.5;
-}
-
-.user-profile p span {
-    font-weight: bold;
-}
-
-.username, .name, .surname, .birthdate, .gender, .email {
-    margin-bottom: 10px;
-}
-
-.username span, .name span, .surname span, .birthdate span, .gender span, .email span {
-    color: darkmagenta;
-}
-
-.support-section {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 80%;
-    margin: 20px auto;
-}
-
-.support-form label {
-    display: block;
-    margin-top: 10px;
-}
-
-.support-form input[type="text"],
-.support-form input[type="email"],
-.support-form textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
-
-
 
 
 
