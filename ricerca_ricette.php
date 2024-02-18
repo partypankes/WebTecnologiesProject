@@ -78,8 +78,8 @@ require 'core/auth.php'
         include('structure/footer.html');
     ?>
 
-    <script src="assets/js/filters_script.js"></script>
-    <script src="assets/js/ricerca_ricette_submitFilters.js"></script>
+    <script src="assets/js/ricerca_ricetta/filters_script.js"></script>
+    <script src="assets/js/ricerca_ricetta/ricerca_ricette_submitFilters.js"></script>
 
 </body>
 </html>
