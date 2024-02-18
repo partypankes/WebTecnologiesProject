@@ -40,7 +40,7 @@ if (!empty($condizioni)) {
 
 include '../dbconnection.php';
 if(isset ($db)) {
-    $rpp = 10;
+    $rpp = 12;
     $resultTotal = pg_query_params($db, $sql_paginazione, $parametri);
     $rowTotal = pg_fetch_assoc($resultTotal);
     $total_rows = $rowTotal['total'];

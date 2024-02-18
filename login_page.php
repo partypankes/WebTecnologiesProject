@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/global.css">
-    <link rel="stylesheet" href="assets/css/login_page.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-</head>
-<body>
 
     <div class="title">
         <h1>Log in</h1>
@@ -53,11 +42,8 @@
         <hr class="divider" />
 
         <div class="no-account">
-            <p> I don't have an account. <button type="button" id="toSignUp-button" class="change-btn" form="signupForm" >Sign Up</button></p>
+            <p> I don't have an account. <button type="button" id="toSignUp-button" class="change-btn">Sign Up</button></p>
         </div>
 
     </div>
 
-    <script src="assets/js/login_page_validation.js"></script>
-</body>
-</html>

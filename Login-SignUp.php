@@ -23,7 +23,7 @@
             ?>
         </section>
 
-        <section id="signup-section" class="signup-section" >
+        <section id="signup-section" class="signup-section" style="display: none">
             <?php
                 include('signup_definitivo.php');
             ?>
