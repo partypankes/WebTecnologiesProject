@@ -2,7 +2,7 @@
     <div class="title">
         <h1>Log in</h1>
         <p> Enter your details to continue </p>
-        <p id="errorMessage" style="color:red;"></p>
+        <p id="errorMessage_login" style="color:red;"></p>
     </div>
 
     <div class="form-div">
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="colored-btn">
-                    <button class="submit-button" type="submit">Login</button>
+                    <button class="submit-button" id="submit-btn_login" type="submit">Login</button>
                 </div>
 
             </section>

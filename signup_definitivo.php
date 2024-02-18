@@ -2,7 +2,7 @@
     <div class="title">
         <h1>Sign Up</h1>
         <p>Join our community and start sharing!</p>
-        <p id="errorMessage" style="color:red;"></p>
+        <p id="errorMessage_signup" style="color:red;"></p>
     </div>
 
     <div class="form-div">
@@ -28,25 +28,25 @@
                 <div class="input-container">
                     <label for="Gender">Gender: </label>
                     <label for="Gender" > &emsp;Uomo</label>
-                    <input type="radio" id="Gender" name="sesso" value="M">
+                    <input type="radio" id="Gender1" name="sesso" value="M">
                     <label for="Gender"> &emsp;Donna</label>
-                    <input type="radio" id="Gender" name="sesso" value="F">
+                    <input type="radio" id="Gender2" name="sesso" value="F">
                     <label for="Gender"> &emsp;Altro</label>
-                    <input type="radio" id="Gender" name="sesso" value="O">
+                    <input type="radio" id="Gender3" name="sesso" value="O">
                 </div>
 
                 <div class="colored-btn">
-                    <button id="next-button" class="submit-button" type="button">Next</button>
+                    <button id="next-button" class="submit-button" type="button" onclick="">Next</button>
                 </div>
 
             </section>
 
 
-            <section id="section2">
+            <section id="section2" style="display: none">
 
                 <div class="input-container">
                     <label for="username">Username:</label>
-                    <input type="text" name="username" id="username" class="input-field" placeholder="Username" maxlength="16" autocomplete="off">
+                    <input type="text" name="username" id="username_signup" class="input-field" placeholder="Username" maxlength="16" autocomplete="off">
                 </div>
 
                 <div class="input-container">
@@ -57,11 +57,11 @@
                 <div class="input-container" id="password-div">
                     <label for="password">Password:</label>
                     <div class="input-icon">
-                        <input type="password" name="password" id="password" class="input-field" placeholder="Password" onfocus="showText('info-password')" onblur="hideText('info-password')" maxlength="20" autocomplete="off">
-                        <i id="togglePassword" class="fas fa-eye-slash"></i>
+                        <input type="password" name="password" id="password_signup" class="input-field" placeholder="Password" onfocus="showText('info_password')" onblur="hideText('info_password')" maxlength="20" autocomplete="off">
+                        <i id="togglePassword" class="fas fa-eye-slash" style="cursor: pointer; font-weight: normal;"></i>
                     </div>
 
-                    <div class="info-password" id="info-password">
+                    <div class="info_password" id="info_password">
                         <label for="password" id="intro_requisiti">La password deve avere:</label>
                         <ul>
                             <li id="lunghezza">Una lunghezza compresa tra 8 e 20 caratteri</li>
@@ -89,7 +89,7 @@
 
 
                 <div class="colored-btn">
-                    <button class="submit-button" type="submit">Registrati</button>
+                    <button class="submit-button" id="submit-btn_signup" type="submit">Registrati</button>
                 </div>
             </section>
 
@@ -101,7 +101,7 @@
         <hr class="divider" />
 
         <div class="no-account">
-            <p> Sono già registrato. <button type="button" id="toSignUp-button" class="change-btn">Log in</button></p>
+            <p> Sono già registrato. <button type="button" id="toLogin-button" class="change-btn">Log in</button></p>
         </div>
     </div>
     

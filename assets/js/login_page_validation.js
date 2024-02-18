@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         if (xhr.readyState === 4 && xhr.status === 200) {
                 var data = xhr.responseText;
                 if (data) {
-                    document.getElementById('errorMessage').textContent = data;
+                    document.getElementById('errorMessage_login').textContent = data;
                 } else {
                     window.location.href = 'homepage.php';
                 }

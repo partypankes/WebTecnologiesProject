@@ -28,10 +28,7 @@ input[type="button"]{
 }
 */
 
-
-
-
-.info-password{
+.info_password{
     display: none;
     color: grey;
 }
