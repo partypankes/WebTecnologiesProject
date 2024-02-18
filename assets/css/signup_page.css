@@ -1,99 +1,4 @@
-
-.login-container {
-
-
-    max-width: 45%;
-    margin: 5% auto;
-    padding: 2%;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-}
-
-.login-data {
-
-    margin: auto;
-    padding: 2%;
-    background-color: #fff;
-    position: relative;
-    align-items: center;
-
-}
-
-.title {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.title h1 {
-    font-size: 3em;
-    margin-bottom: 0;
-}
-
-.title p {
-    margin-top: 1%;
-    color: grey;
-    font-size: 1.2em;
-}
-
-.input-container {
-    position: relative;
-    align-items: center;
-}
-
-.input-container label {
-    margin-bottom: 2%;
-}
-
-.input-field{
-    width: 100%;
-    padding: 2%;
-    margin: 2% 0;
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s;
-    border: 2px transparent;
-}
-
-.input-field:focus {
-    border-color: #c235e2;
-    outline: none;
-    box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
-}
-
-.input-icon {
-    position: absolute;
-    right: 3%;
-    top: 62%;
-    transform: translateY(-50%);
-}
-
-/*.input-field select option {
-     -webkit-appearance: none;
-     -moz-appearance: none;
-     appearance: none;
-    width: 200%;
-    padding: 2%;
-    padding-right: 50px;
-    margin: 2% 0;
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
-    border: 2px transparent;
-    }
- */
-
-
-
-.remember-me-container {
-    display: flex;
-    align-items: center;
-    padding-left: 2%;
-    margin-top: 4%;
-    margin-bottom: 2%;
-}
-
+/*Radio Button*/
 input[type="radio"]{
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -119,101 +24,20 @@ input[type="radio"]:checked::before {
     color: #c235e2;
     font-size: 1.2em;
 }
-
+/*
 input[type="button"]{
     font-family: "MontSerrat T", serif;
 }
+*/
 
-.remember-me-container label {
-    margin-left: 2%;
-    cursor: pointer;
+/*Sezioni di Form*/
+.form-div form section{
+   width: 100%;
 }
 
-.login {
-    padding-top: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5%;
-    font-family:'MontSerrat T',serif
-}
-
-.submit-button{
-    padding: 1%;
-    border: 2px solid #ce0dd8;
-    border-radius: 50px;
-    background-color: #ce0dd8;
-    color: #fff;
-    font-size: 1.2em;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 5%;
-    width: 90%;
-}
-
-.submit-button:hover {
-    background-color: transparent;
-    border: 2px solid #252525;
-    color: #252525;
-}
-
-.divider {
-    border: 0;
-    height: 1px;
-    background-color: lightgrey;
-    margin: 4% 5% 2%;
-}
-
-.no-account {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@media (max-width: 460px) {
-
-    .input-icon {
-        top: 75%;
-    }
-
-}
-
-
-.scroll-container {
-    display: flex;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    scroll-behavior: smooth; /* Smooth scrolling */
-
-}
-.scroll-section {
-    flex: 0 0 100%; /* Each section takes full width of the container */
-    padding: 2%;
-    box-sizing: border-box;
-    height: inherit;
-}
 
 .info-password{
     display: none;
     color: grey;
-}
-
-.back-button{
-
-    padding: 0.5%;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    background-color: #ffffff;
-    color: darkgrey;
-    text-underline: darkgrey ;
-    font-size: 1em;
-    text-align: center;
-    text-decoration: underline;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10%;
-    width: 10%;
-
 }
 
