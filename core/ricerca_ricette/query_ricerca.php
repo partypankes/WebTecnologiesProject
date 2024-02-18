@@ -36,7 +36,8 @@ if (!empty($condizioni)) {
     $sql_paginazione .= " WHERE titolo ILIKE $" . $i++;
     $parametri[] = '%' . pg_escape_string($ricerca) . '%';
 }
-//include '../xcard.php';
+
+
 include '../dbconnection.php';
 if(isset ($db)) {
     $rpp = 10;
