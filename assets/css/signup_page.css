@@ -1,7 +1,5 @@
 /*Radio Button*/
 input[type="radio"]{
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     width: 1.2em;
     height: 1.2em;
@@ -30,10 +28,7 @@ input[type="button"]{
 }
 */
 
-/*Sezioni di Form*/
-.form-div form section{
-   width: 100%;
-}
+
 
 
 .info-password{

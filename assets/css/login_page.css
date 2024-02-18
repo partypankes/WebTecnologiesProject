@@ -1,14 +1,14 @@
 .remember-me-container {
+    width: 100%;
+    margin:0;
     display: flex;
-    align-items: center;
-    padding-left: 2%;
-    margin-top: 4%;
-    margin-bottom: 2%;
+    align-items: flex-start;
+    justify-content: space-between;
+
 }
 
 .remember-me-container input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    position: relative;
     appearance: none;
     width: 1.2em;
     height: 1.2em;
@@ -18,7 +18,7 @@
     border-radius: 3px;
     outline: none;
     cursor: pointer;
-    position: relative;
+
 }
 
 .remember-me-container input[type="checkbox"]:checked::before {
@@ -27,11 +27,11 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: #c235e2;
+    color: var(--color-3);
     font-size: 1.2em;
 }
 
 .remember-me-container label {
-    margin-left: 2%;
+    width: 30%;
     cursor: pointer;
 }

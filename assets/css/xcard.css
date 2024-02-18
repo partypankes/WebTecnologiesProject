@@ -1,10 +1,10 @@
-.sezione-ricette{
-    display: flex;
+.container-xcard{
+    width: 100%;
 
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
     /*margin:auto;*/
     border: 1px solid green;
 }

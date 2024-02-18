@@ -1,9 +1,9 @@
 .container {
-    max-width: 45%;
+    max-width:50%;
     margin: 5% auto;
     padding: 2%;
-    background-color: #fff;
-    border-radius: 20px;
+    background-color: var(--main_color);
+    border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .login-section{
@@ -33,113 +33,133 @@
 /*Container Form*/
 .form-div{
     width: 100%;
-    height: auto;
+
 
 
     border: 1px solid red;
 }
 .form-div form{
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+}
+
+/*Sezioni di Form*/
+.form-div form section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+/*Intra Form*/
+
+.input-container {
     width: 100%;
 }
 
-
-
-
-.input-container {
-    position: relative;
-    align-items: center;
-}
-
 .input-container label {
-    margin-bottom: 2%;
+    margin: 0 0 2% 1%;
 }
 
 .input-field{
     width: 100%;
     padding: 2%;
     margin: 2% 0;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
     border: 2px transparent;
 }
-
 .input-field:focus {
-    border-color: #c235e2;
+    border-color: var(--color-3);
     outline: none;
     box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
 }
 
-.input-icon {
+.input-icon{
+    position: relative;
+    width: 100%;
+}
+.input-icon i{
     position: absolute;
-    right: 3%;
-    top: 62%;
-    transform: translateY(-50%);
+    top: 37%;
+    right:2%;
 }
-
 #togglePassword{
-    cursor: pointer; font-weight: normal;
-}
-
-/*Submit Button*/
-.colored-btn {
-    margin:auto;
-}
-
-.submit-button {
-
-    border: 2px solid #ce0dd8;
-    border-radius: 50px;
-    background-color: #ce0dd8;
-    color: #fff;
-    font-size: 1.2em;
-    text-align: center;
-    text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
-
-.submit-button:hover {
-    background-color: transparent;
-    border: 2px solid #252525;
-    color: #252525;
-}
-
-/*Sub Form*/
-.divider {
-    border: 0;
-    height: 1px;
-    background-color: lightgrey;
-    margin: 4% 5% 2%;
-}
-
-.no-account {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 @media (max-width: 460px) {
     .input-icon {
         top: 75%;
     }
 }
 
+
+/*Submit Button*/
+.colored-btn {
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+
+}
+.submit-button {
+    width:70%;
+    margin:auto;
+    padding: 1% 2%;
+    border: 2px solid #ce0dd8;
+    border-radius: 50px;
+    background-color: #ce0dd8;
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-button:hover {
+    background-color: var(--header-color);
+    border: 2px solid #252525;
+    color: #252525;
+}
+
+/*Sub Form*/
+.sub-form{
+    width:100%;
+    margin:auto;
+}
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: lightgrey;
+    margin: 3% 0;
+}
+
+.no-account {
+    width: 100%;
+}
+.no-account p{
+
+}
+
 /*bottoni back e Sign Up (nel login)*/
-.change-btn{
+.no-account p .change-btn{
+    width: 20%;
     padding: 0.5%;
+
+    color: darkgrey;
+    text-underline: darkgrey ;
     border: 1px solid #ffffff;
     border-radius: 10px;
     background-color: #ffffff;
-    color: darkgrey;
-    text-underline: darkgrey ;
     font-size: 1em;
     text-align: center;
     text-decoration: underline;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 10%;
-    width: 10%;
+
+
 }
