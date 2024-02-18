@@ -8,7 +8,7 @@ include '../auth.php';
 $username = $_SESSION['username'];
 
 if(isset($db)) {
-    $sql = "SELECT descrizione_recensione,voto,ricetta FROM recensione WHERE utente = $1";
+    $sql = "SELECT id,descrizione_recensione,voto,ricetta FROM recensione WHERE utente = $1";
     $result = pg_query_params($db, $sql, array($username));
     while($row = pg_fetch_assoc($result)){
         $sql_ricetta = "SELECT titolo FROM ricetta WHERE id = $1";
@@ -25,7 +25,7 @@ if(isset($db)) {
                 </div>
                 <p id="rec-p">' . $row['descrizione_recensione'] . '</p>
                  <div class="elimina">
-                        <button id="elimina-review" class="elimina-btn" type="submit"><i class="fas fa-trash-alt"></i>Elimina</button>
+                        <button id="elimina-review" onclick="eliminaRecensione('. $row['id'] .')" class="elimina-btn" type="submit"><i class="fas fa-trash-alt"></i>Elimina</button>
                     </div>
             </div>' ;
     }
