@@ -19,11 +19,13 @@ $username = $_SESSION['username'];
         } else {
             $sesso = "Altro";
         }
-        echo '<p>Username: <span>' . $row['username'] . '</span></p>
-                    <p>Nome: <span>'. $row['nome'] . '</span></p>
-                    <p>Cognome: <span>'. $row['cognome'] .'</span></p>
-                    <p>Data di nascita: <span>'. $row['data_di_nascita'] .'</span></p>
-                    <p>Sesso: <span>'. $sesso .'</span></p>
-                    <p>Email: <span>'. $row['email']. '</span></p>';
+        echo '<div class="user-profile">
+                    <p class="username">Username: <span>' . $row['username'] . '</span></p>
+                    <p class="name">Nome: <span>'. $row['nome'] . '</span></p>
+                    <p class="surname">Cognome: <span>'. $row['cognome'] .'</span></p>
+                    <p class="birthdate">Data di nascita: <span>'. $row['data_di_nascita'] .'</span></p>
+                    <p class="gender">Sesso: <span>'. $sesso .'</span></p>
+                    <p class="email">Email: <span>'. $row['email']. '</span></p>
+                </div>';
 
     }
