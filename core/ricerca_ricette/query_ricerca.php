@@ -41,36 +41,43 @@ if (!empty($condizioni)) {
 include '../dbconnection.php';
 if(isset ($db)) {
     $rpp = 10;
-    $resultTotal = pg_query_params($db, $sql_paginazione,$parametri);
+    $resultTotal = pg_query_params($db, $sql_paginazione, $parametri);
     $rowTotal = pg_fetch_assoc($resultTotal);
     $total_rows = $rowTotal['total'];
     $last = ceil($total_rows / $rpp);
-    if($last < 1) {
+    if ($last < 1) {
         $last = 1;
     }
 
-    if($np < 1) {
+    if ($np < 1) {
         $np = 1;
-    } else if($np > $last) {
+    } else if ($np > $last) {
         $np = $last;
     }
 
     $controls = "";
 
-    if($last != 1) {
-        if($np > 1) {
-            $controls .= '<button onclick="richiedi_pagina(' . ($np-1) . ')">&lt;</button>';
+    if ($last != 1) {
+        if ($np > 1) {
+            $controls .= '<button onclick="richiedi_pagina(' . ($np - 1) . ')">&lt;</button>';
         }
         $controls .= '<b> Page ' . $np . ' of ' . $last . '</b>';
-        if($np != $last) {
-            $controls .= '<button onclick="richiedi_pagina('. ($np+1) . ')">&gt;</button>';
+        if ($np != $last) {
+            $controls .= '<button onclick="richiedi_pagina(' . ($np + 1) . ')">&gt;</button>';
         }
     }
 
 
-
-    $sql .= ' LIMIT ' . $rpp . ' OFFSET ' .($np - 1 )*$rpp;
-    include 'paginazione_xcard.php';
+    $sql .= ' LIMIT ' . $rpp . ' OFFSET ' . ($np - 1) * $rpp;
+    $result = pg_query_params($db, $sql, $parametri);
+    if ($result) {
+        $string = "";
+        while ($row = pg_fetch_assoc($result)) {
+            include '../xcard.php';
+        }
+        echo $string;
+        echo $controls;
+    }
 }
 
 
