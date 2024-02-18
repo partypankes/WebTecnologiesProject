@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     //Ajax Form Anagrafica
     var form = document.getElementById('anagrafica');
     form.addEventListener('submit', function(e) {
-        e.preventDefault(); 
+        e.preventDefault();
         var formData = new FormData(this);
         let xhr = new XMLHttpRequest();
 

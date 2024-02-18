@@ -28,35 +28,37 @@ require 'core/auth.php'
             include('structure/search-bar.php')
             ?>
         </div>
-        <div class="filters">
 
-            <div class="box-filtro">
-                <div class="domanda-faq">
+
+        <div class="filter-container">
+
+            <div class="filter-box">
+                <div class="filter-question" onclick="toggleFilter('filter-course')">
                     <h3>Ricette per portata</h3>
-                    <span class="faq-toggle">&#5167;</span>
+                    <span class="filter-toggle">&#x25BC;</span>
                 </div>
-                <div class="risposta-faq" id="faq1">
-                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="portata" value="antipasto">Antipasto</label>
-                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="portata" value="primoPiatto">Primo Piatto</label>
-                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="portata" value="secondoPiatto">Secondo Piatto</label>
-                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="portata" value="dessert" >Dessert</label>
-                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="portata" value="brunch" >Brunch</label>
+                <div class="filter-answer" id="filter-course">
+                    <label><input type="radio" name="portata" value="antipasto" onclick="richiedi_pagina(1)">Antipasto</label>
+                    <label><input type="radio" name="portata" value="primoPiatto" onclick="richiedi_pagina(1)">Primo Piatto</label>
+                    <label><input type="radio" name="portata" value="secondoPiatto" onclick="richiedi_pagina(1)">Secondo Piatto</label>
+                    <label><input type="radio" name="portata" value="dessert" onclick="richiedi_pagina(1)">Dessert</label>
+                    <label><input type="radio" name="portata" value="brunch" onclick="richiedi_pagina(1)">Brunch</label>
                 </div>
             </div>
 
-            <div class="box-filtro">
-                <div class="domanda-faq">
+            <div class="filter-box">
+                <div class="filter-question" onclick="toggleFilter('filter-time')">
                     <h3>Ricette per tempo</h3>
-                    <span class="faq-toggle">&#5167;</span>
+                    <span class="filter-toggle">&#x25BC;</span>
                 </div>
-                <div class="risposta-faq" id="faq1">
-                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="tempo" value="15">< 15 min></label>
-                    <label><input class="filtro" type="radio" onclick="richiedi_pagina(1)" name="tempo" value="30">< 30 min</label>
-
+                <div class="filter-answer" id="filter-time">
+                    <label><input type="radio" name="tempo" value="15" onclick="richiedi_pagina(1)"> < 15 min</label>
+                    <label><input type="radio" name="tempo" value="30" onclick="richiedi_pagina(1)"> < 30 min</label>
                 </div>
             </div>
 
         </div>
+
     </section>
     <section id="sezione-ricette" class="sezione-ricette">
 
@@ -69,7 +71,7 @@ require 'core/auth.php'
         include('structure/footer.html');
     ?>
 
-    <script src="assets/js/faqs_script.js"></script>
+    <script src="assets/js/filters_script.js"></script>
     <script src="assets/js/ricerca_ricette_submitFilters.js"></script>
 
 </body>

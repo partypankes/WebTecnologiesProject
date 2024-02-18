@@ -20,90 +20,57 @@ main {
     align-items: center;
     justify-content: center;
 }
-.filters{
+
+
+.filter-container {
     display: flex;
-    align-items: center;
+    justify-content: start;
+    gap: 1.25rem;
 }
 
-.box-filtro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position:relative;
+.filter-box {
+    width: auto;
 }
 
-.domanda-faq {
-    border-top: 1px solid #ddd;
-    padding: 15px;
+.filter-question {
     cursor: pointer;
-
-
+    user-select: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease;
+    padding: 0.625rem;
+    transition: background-color 0.2s ease;
 }
 
-.domanda-faq h3 {
-    margin: 0;
-    font-size: 12px;
-}
-
-.faq-toggle{
-    width: 10px;
-    height: 10px;
-    border-width: 0 2px 2px 0;
-    padding: 3px;
-    transform: rotate(0deg);
-    margin-left: auto;
-    line-height: 1;
-    display: inline-block;
-    transition: transform 0.1s ease;
-    transform-origin: center;
-    font-size: 12px;
-}
-
-.risposta-faq{
-    max-height: 0;
+.filter-answer {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    opacity: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-    padding: 0 10px;
-    border-bottom: 1px solid #ddd;
+    visibility: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0s 0.5s;
+    margin-left: 1.875rem;
 }
 
-.risposta-faq p {
-    margin: 0;
-    color: #666;
-    line-height: 1.5;
+.filter-question.active + .filter-answer {
+    opacity: 1;
+    max-height: 31.25rem;
+    visibility: visible;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 
+.filter-toggle {
+    transition: transform 0.2s ease;
+    transform-origin: center center;
+}
 
-.domanda-faq.active .faq-toggle {
+.filter-question.active .filter-toggle {
     transform: rotate(180deg);
     transition: transform 0.1s ease;
 }
 
-.domanda-faq.active + .risposta-faq {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
 
-.domanda-faq.active {
-    border-bottom: none;
-}
-
-.risposta-faq:not(.active) {
-    border-bottom: none;
-}
-
-
-.risposta-faq:not(.active) + .domanda-faq {
-    border-top: 1px solid #ddd;
-}
 
 /* Sezione ricette*/
 
