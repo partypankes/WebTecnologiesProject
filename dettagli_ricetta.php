@@ -67,7 +67,7 @@ include('structure/_header/baseHeader.php');
                 <textarea id = "review-content" name = "descrizione-recensione" placeholder = "La tua recensione" required maxlength="255"></textarea >
                 <div id = "div-voto-recensione" >
                     <label for="voto-recensione" > Voto:</label >
-                    <select id = "voto-recensione" name = "voto-recensione" onchange = "nascondiOpzioneIniziale()" >
+                    <select id = "voto-recensione" name = "voto-recensione" required >
                         <option value = "" disabled selected > Voto</option >
                         <option value = "1" > 1 / 5</option >
                         <option value = "2" > 2 / 5</option >

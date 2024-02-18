@@ -27,9 +27,9 @@
     <section class="container">
         <div class="sidebar">
             <a><i class="fas fa-user-edit"></i> Account</a>
-            <a onclick="ajax_ricette()"><i class="fas fa-blog"></i> Post</a>
+            <a onclick="richiedi_post_utente(1)"><i class="fas fa-blog"></i> Post</a>
             <a ><i class="fas fa-headset"></i> Assistenza</a>
-            <a onclick="ajax_recensioni()"><i class="fas fa-star"></i> Recensioni</a>
+            <a onclick="richiedi_recensione_utente(1)"><i class="fas fa-star"></i> Recensioni</a>
             <a><i class="fas fa-utensils"></i> Crea un piatto</a>
 
             <div class="logout">

@@ -14,8 +14,6 @@ function caricaContenuto(sezione) {
         if (xhr.status === 200) {
             // Aggiorna il contenuto della pagina con la risposta
             document.getElementById('recipe-content').innerHTML = xhr.responseText;
-        } else {
-            document.getElementById('recipe-content').innerHTML = '<table border="1" id="tabella-ingredienti"><tr><th>Numero</th><th>Quantità</th><th>Nome Ingrediente</th></tr></table>';
         }
     };
 
@@ -28,6 +26,7 @@ function caricaContenuto(sezione) {
 
     xhr.send();
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // Aggiunge la classe 'active' al primo elemento della lista

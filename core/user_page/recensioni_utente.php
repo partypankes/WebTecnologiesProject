@@ -1,15 +1,21 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
 <?php
 
 include '../dbconnection.php';
 include '../auth.php';
 
-$username = $_SESSION['username'];
+$sql = "SELECT id,descrizione_recensione,voto,ricetta FROM recensione WHERE utente = $1";
+$sql_paginazione = 'SELECT COUNT(*) as total FROM recensione WHERE utente = $1';
+$parametri[] = $_SESSION['username'];
+$func = 'richiedi_recensione_utente';
+include '../paginazione.php';
+if(isset($db) && isset($controls)) {
 
-if(isset($db)) {
-    $sql = "SELECT id,descrizione_recensione,voto,ricetta FROM recensione WHERE utente = $1";
-    $result = pg_query_params($db, $sql, array($username));
+    $result = pg_query_params($db, $sql, $parametri);
+    $string = "";
+    if(pg_fetch_assoc($result) == 0) {
+        echo "<strong>Non ci sono risultati</strong>";
+    }
     while($row = pg_fetch_assoc($result)){
         $sql_ricetta = "SELECT titolo FROM ricetta WHERE id = $1";
         $result2 = pg_query_params($db,$sql_ricetta,array($row['ricetta']));
@@ -18,7 +24,7 @@ if(isset($db)) {
         if($row['voto']<5){
             $stars .= str_repeat('<i class="fa-regular fa-star"></i>', 5-$row['voto']);
         }
-        echo '<div class="review">
+        $string.=  '<div class="review">
                 <div class="up-rec">
                     <a href="dettagli_ricetta.php?id='. $row['ricetta'] .'"><strong class="review-title">'. $row2['titolo'] .'</strong><a/>
                     <p id="voto-p">' . $stars .'</p>
@@ -29,4 +35,7 @@ if(isset($db)) {
                     </div>
             </div>' ;
     }
+
+    echo '<div class="container-xcard">' . $string . '</div>';
+    echo '<div class="container-control">' . $controls . '</div>';
 }

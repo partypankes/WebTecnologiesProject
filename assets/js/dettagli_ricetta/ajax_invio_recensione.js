@@ -1,5 +1,4 @@
-if(document.getElementById('review-form')  ) {
-    document.getElementById('review-form').addEventListener('submit', function(e) {
+document.getElementById('review-form').addEventListener('submit', function(e) {
         e.preventDefault();
         const queryString = window.location.search;
 
@@ -23,6 +22,6 @@ if(document.getElementById('review-form')  ) {
 
         xhr.send(formData);
 
-    });
-}
+});
+
 
