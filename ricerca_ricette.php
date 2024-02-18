@@ -10,7 +10,7 @@ require 'core/auth.php'
     <title>Ricette - SapurEat</title>
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/ricerca_ricette.css">
-    <link rel="stylesheet" href="assets/css/xcard.css">
+    <link rel="stylesheet" href="assets/css/card_ricette.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 </head>

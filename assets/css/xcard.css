@@ -49,7 +49,7 @@
 
 .info-xcard a{
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1.4vw;
     color: var(--main_color);
     transition: color 0.3s ease;
     word-break: break-word;
@@ -68,7 +68,7 @@
 }
 .sub-xcard .user-sub{
     font-weight: 400;
-    font-size:1rem;
+    font-size:1vw;
     font-style: italic;
 }
 .sub-xcard .user-sub span{
@@ -85,7 +85,7 @@
     align-items: center;
 
     font-weight: 400;
-    font-size:1.2rem;
+    font-size:1.2vw;
     cursor: default;
 }
 .extra-card p{

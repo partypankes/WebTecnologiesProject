@@ -47,7 +47,7 @@ if(isset($db) && isset($controls)) {
     if ($result) {
         $string = "";
         while ($row = pg_fetch_assoc($result)) {
-            include '../xcard.php';
+            include '../card_ricette.php';
         }
         echo '<div class="container-xcard">' . $string . '</div>';
         echo '<div class="container-control">' . $controls . '</div>';

@@ -1,0 +1,84 @@
+.container-xcard{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    margin:1%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 1px 3px 3px rgba(0,0,0,0.2), -1px -1px 4px rgba(0,0,0,0.2);
+    height: 300px;
+    position: relative;
+    transition: box-shadow 130ms ease-in-out;
+    width: 300px;
+}
+
+.card:hover {
+    box-shadow:
+            2px 6px 6px rgba(0,0,0,0.2),
+            -1px -1px 7px rgba(0,0,0,0.2);
+}
+
+.rating {
+    padding: 0.75em;
+}
+
+.rating .star {
+    display: inline-block;
+    position: relative;
+}
+
+.rating .star:before {
+    background-color: rgba(0,0,0,0.05);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+    content: '';
+    height: 12px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 3px;
+    width: 12px;
+    z-index: 0;
+    border-radius: 50%;
+}
+
+
+
+
+.favorite {
+    transition: all 111ms ease-in-out;
+}
+
+
+
+.food-info {
+    background-color: whitesmoke;
+    bottom: 0;
+    left: 0;
+    padding: 1em 2em 2em 1em;
+    position: absolute;
+    right: 0;
+    word-break: break-all;
+}
+
+.food-info p {
+    margin: 0;
+}
+
+.food-info p span {
+    color: gray;
+    font-size: 14px;
+}
+
+.food-info .favorite {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
