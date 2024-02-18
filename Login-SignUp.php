@@ -12,17 +12,19 @@
     </head>
 
     <body>
+        <div id="scroll-container">
+            <div id="Login-section" class="login-section">
+                <?php include('login_page.php');?>
+            </div>
 
-        <div id="Login-section" class="login-section">
-            <?php include('login_page.php');?>
-        </div>
-
-        <div id="SignUp-section" class="signup-section" style="display: none">
-            <?php include('signup_definitivo.php');?>
+            <div id="SignUp-section" class="signup-section" style="display: none">
+                <?php include('signup_definitivo.php');?>
+            </div>
         </div>
 
     <script src="assets/js/signup_page_validation.js"></script>
     <script src="assets/js/login_page_validation.js"></script>
+    <script src="assets/js/Login-SignUp_validation.js"></script>
 
     </body>
 </html>
