@@ -7,29 +7,29 @@ main {
 
 .sidebar{
     background: var(--main_color);
-    width: 200px;
-    min-width: 200px;
+    width: 12.5rem;
+    min-width: 12.5rem;
     overflow-x: hidden;
-    padding-top: 3px;
+    padding-top: 0.1875rem;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
-    margin-top: 51px;
+    margin-top: 3.1875rem;
 }
 
 .sidebar a{
     color: #333;
-    padding: 15px 20px;
-    font-size: 16px;
+    padding: 0.9375rem 1.25rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     border-left: 3px solid transparent;
 }
 
 .sidebar i {
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 .sidebar a:hover,
@@ -43,13 +43,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 1.875rem;
 }
 
 .logout-btn{
-    padding: 10px;
+    padding: 0.625rem;
     border-radius: 15px;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     border: none;
     background: none;
@@ -105,11 +105,11 @@ main {
 #account form input[type="password"],
 #account form input[type="date"] {
     width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 0.625rem;
+    margin-bottom: 0.625rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1rem;
     box-sizing: border-box;
 }
 .conferma, .modifica, .invia{

@@ -163,6 +163,7 @@ select option[disabled] {
     text-align: center;
     cursor: pointer;
 
+    transition: background-color 0.3s ease;
     border: 1px solid #ce0dd8;
     border-radius: 50px;
     background-color: #ce0dd8;

@@ -1,43 +1,47 @@
 .review{
     background: white;
     border: 1px solid grey;
-    width: 400px;
-    min-height: 300px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-right: 20px;
+    width: 25rem;
+    min-height: 18.75rem;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+    margin-right: 1.25rem;
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .up-rec .review-title{
     box-sizing: border-box;
     border-bottom: 1px solid black;
     display: block;
-    padding: 10px 10px 5px;
-    font-size: 20px;
+    padding: 0.625rem 0.625rem 0.3125rem;
+    font-size: 1.25rem;
     word-break: break-all;
 }
 #voto-p{
-    padding-left: 10px;
-    padding-top: 10px;
+    padding-left: 0.625rem;
+    padding-top: 0.625rem;
 }
 
 #rec-p{
-    padding: 10px 20px 20px 10px;
+    padding: 0.625rem 1.25rem 1.25rem 0.625rem;
 }
 .elimina{
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
     right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
     border-top: 1px solid grey;
     background: ghostwhite;
     cursor: pointer;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .elimina button{
@@ -49,9 +53,10 @@
 
 .elimina:hover{
     background: lightgrey;
+    transition: background-color 0.3s ease;
 }
 
 .elimina i{
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
