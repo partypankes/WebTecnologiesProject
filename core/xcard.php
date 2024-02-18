@@ -1,13 +1,6 @@
 <?php
 
-require 'dbconnection.php';
-
-if(isset($db) && isset($sql) && isset($parametri)) {
-    $result = pg_query_params($db,$sql,$parametri);
-    if($result) {
-        $string = "";
-        while($row = pg_fetch_assoc($result)) {
-
+if(isset($string) && isset($row)) {
             $imageData = pg_unescape_bytea($row['banner']);
             $string  .= '<div class="xcard"> 
                     <img class="banner-xcard" src="data:image/jpeg;base64,'. base64_encode($imageData) .'"/>'.
@@ -22,8 +15,5 @@ if(isset($db) && isset($sql) && isset($parametri)) {
                         </div>
                     </div>
                 </div>';
-        }
-    echo $string;
-    }
 
 }
