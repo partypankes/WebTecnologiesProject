@@ -1,7 +1,7 @@
 
 /*CONTROLLO DATI SIGNUP SECTION1*/
 document.getElementById('next-button').addEventListener('click', function(event) {
-    /*event.preventDefault();*/
+    event.preventDefault();
 
     var name = document.getElementById('name').value;
     var surname = document.getElementById('surname').value;
@@ -31,6 +31,8 @@ document.getElementById('next-button').addEventListener('click', function(event)
         isValid = false;
     }
 
+    /*controllo limiti date*/
+
     /*inserimento cognome*/
     if (!surname.trim()) {
         document.getElementById('errorMessage_signup').textContent = "Inserire il cognome";
@@ -39,9 +41,14 @@ document.getElementById('next-button').addEventListener('click', function(event)
 
     /*inserimento nome*/
     if (!name.trim()) {
-        document.getElementById('errorMessage_signup').innerText = "Inserire il nome";
+        document.getElementById('errorMessage_signup').textContent = "Inserire il nome";
         isValid = false;
     }
+
+    /*controllo nome e cognome lunghezza*/
+
+    /*controllo nome e cognome presenza numeri*/
+
 
     /*scroll se dati sono validi*/
     if(isValid){
@@ -52,30 +59,31 @@ document.getElementById('next-button').addEventListener('click', function(event)
 
 
 /*CONTROLLO DATI SIGNUP SECTION2*/
-document.getElementById('submit-btn_signup').addEventListener('submit', function(event) {
+document.getElementById('signupForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
 
-    var username = document.getElementById('username').value;
+    var username = document.getElementById('username_signup').value;
     var email = document.getElementById('email').value;
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    var password = document.getElementById('password').value;
+    var password = document.getElementById('password_signup').value;
     var confirmpassword = document.getElementById('confirmpassword').value;
 
     /*lunghezza username*/
     if (username.length < 6 || username.length > 16) {
-        document.getElementById('errorMessage').textContent = "Lo username deve essere compreso tra i 6 e 16 caratteri";
+        document.getElementById('errorMessage_signup').textContent = "Lo username deve essere compreso tra i 6 e 16 caratteri";
         return;
     }
-    /*fine controllo username*/
+
+    /*controllo username giá in uso*/
 
     /*controllo validita email*/
     if (!validaEmail(email)) {
-        document.getElementById('errorMessage').textContent = "L'E-mail inserita non e' valida"
+        document.getElementById('errorMessage_signup').textContent = "L'E-mail inserita non e' valida"
         return;
     }
-    /*fine controllo email*/
 
+    /*controllo mail giá in uso*/
 
     /********************************************** INIZIO CONTROLLO PASSWORD **********************************************/
 
@@ -113,7 +121,6 @@ document.getElementById('submit-btn_signup').addEventListener('submit', function
         return;
     }
 
-    /*trasforma scritta sopra ai requsiiti in verede se sono tutti rispettati*/
 
     /********************************************** FINE CONTROLLO PASSWORD **********************************************/
 
@@ -127,7 +134,7 @@ document.getElementById('submit-btn_signup').addEventListener('submit', function
             // Richiesta completata con successo
             var data = this.responseText;
             if (data) {
-                document.getElementById('errorMessage').textContent = data;
+                document.getElementById('errorMessage_signup').textContent = data;
             } else {
                 window.location.href = 'homepage.php';
             }
@@ -146,17 +153,25 @@ document.getElementById('submit-btn_signup').addEventListener('submit', function
 });
 
 
-function changesection(){
+/*function changesection(){
 
     document.getElementById('section1').style.display="none";
     document.getElementById('section2').style.display="block";
 
 }
 
-document.getElementById('back-button').addEventListener('click', function(event) {
+
+
+function backbutton() {
+
+    let info = document.getElementById('info_password').style.display;
+
+    if( info === "block"){
+        info = "none";
+    }
     document.getElementById('section2').style.display="none";
     document.getElementById('section1').style.display="block";
-});
+}*/
 
 
 function clearPlaceholder(element) {
@@ -175,24 +190,24 @@ function validaEmail(email) {
 }
 
 
-/*document.getElementById('togglePassword').addEventListener('click', function () {
-    const password = document.getElementById('password');
+document.getElementById('togglePassword_signup').addEventListener('click', function () {
+    const password = document.getElementById('password_signup');
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
 
     // Cambia l'icona
     this.classList.toggle('fa-eye');
     this.classList.toggle('fa-eye-slash');
-});*/
+});
 
 
-function hideText(divID){
+/*function hideText(divID){
     document.getElementById(divID).style.display='none';
 }
 
 function showText(divID){
-    document.getElementById(divID).style.display='inline';
-}
+    document.getElementById(divID).style.display='block';
+}*/
 
 
 
