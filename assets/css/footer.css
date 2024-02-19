@@ -5,9 +5,8 @@
     font-size: 1rem;
     line-height: 20px;
 
-    background-color: var(--ex-header-color);
+    background-color: var(--header-color);
     color: var(--main-color);
-
 }
 
 .footer-container {

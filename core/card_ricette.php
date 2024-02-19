@@ -14,7 +14,7 @@ if(isset($string) && isset($row)) {
                             <div class="top-card">
                                 <div class="container-top">
                                     <p><span id="voto">'. $stars . '</span></p>
-                                    <p><span id="time">'. $row['tempo_preparazione'] . '</span><i class="fa-regular fa-clock"></i></p>
+                                    <p><span id="time">'. $row['tempo_preparazione'] . '\'</span><i class="fa-regular fa-clock"></i></p>
                                 </div>
                             </div>
                         

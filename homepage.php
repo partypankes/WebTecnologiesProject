@@ -11,8 +11,9 @@
     <title>Homepage - SapurEat</title>
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/card_ricette.css">
-    <link rel="stylesheet" href="assets/css/homepage.css">
     <link rel="stylesheet" href="assets/css/banners_home.css">
+    <link rel="stylesheet" href="assets/css/homepage.css">
+
 
 
     <script src="assets/js/homepage/showSectionForUser.js"></script>
@@ -23,22 +24,24 @@
         include('structure/_header/mainHeader.php');
     ?>
 
-    <?php
-        include('structure/banners_home.php');
-    ?>
+<?php
+    include('structure/banners_home.php');
+?>
 
     <main id="main-home">
         <section class="home">
+
+            <div class="best-ricette">
+                <h2>Le 5 migliori ricette SapurEat</h2>
+                <div class="sezione-ricette">
+                    <?php
+                        top5();
+                    ?>
+                </div>
+            </div>
+
             <section id="logged-home">
 
-                <div class="best-ricette">
-                    <h2>Le 5 migliori ricette SapurEat</h2>
-                    <div class="sezione-ricette">
-                        <?php if (isset($_SESSION['loggedin'])){
-                            top5();
-                        } ?>
-                    </div>
-                </div>
 
 
                 <div class="best-ricette">
@@ -49,25 +52,46 @@
                         } ?>
                     </div>
                 </div>
+                <div class="best-ricette">
+                    <h2>I 5 migliori Secondi Piatti SapurEat</h2>
+                    <div class="sezione-ricette">
+                        <?php if (isset($_SESSION['loggedin'])){
 
-
-
-                <div class="nuove-ricette">
-
-                    <div id="ricette-btn-altro">
-                        <button><span>Scopri altre ricette</span></button>
+                        } ?>
                     </div>
-                    <div class="ricette-title">
-                        <p id="ricette-top">Scopri qui le nuove e deliziose ricette</p>
-                        <p id="ricette-sub">Esplora una varietà di ricette per piatto e preferenze.</p>
+                </div>
+
+                <div class="best-ricette">
+                    <h2>I 5 migliori Dessert SapurEat</h2>
+                    <div class="sezione-ricette">
+                        <?php if (isset($_SESSION['loggedin'])){
+
+                        } ?>
                     </div>
+                </div>
+                <div class="best-ricette">
+                    <h2>Le 5 ricette più veloci SapurEat</h2>
+                    <div class="sezione-ricette">
+                        <?php if (isset($_SESSION['loggedin'])){
 
-                    <div class="table-ricette">
-
+                        } ?>
                     </div>
                 </div>
 
             </section>
+
+            <div class="nuove-ricette">
+
+                <button><span>Entra nella community!</span></button>
+
+                <div class="ricette-title">
+                    <p id="ricette-top">Scopri qui le nuove e deliziose ricette</p>
+                    <p id="ricette-sub">Esplora una varietà di ricette per piatto e preferenze.</p>
+                </div>
+
+            </div>
+
+
         </section>
     </main>
 
