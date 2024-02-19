@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <script src="assets/js/user_page/user_page_script.js"></script>
-    <script src="assets/js/user_page/funzion_ajax.js"></script>
+    <script src="assets/js/user_page/funzioni_ajax.js"></script>
 </head>
 <body>
 

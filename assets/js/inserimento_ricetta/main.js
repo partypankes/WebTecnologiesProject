@@ -1,5 +1,3 @@
-
-
 function aggiungiIconaEliminazione(elemento) {
     var iconaEliminazione = document.createElement('span');
     iconaEliminazione.className = 'icona-eliminazione';

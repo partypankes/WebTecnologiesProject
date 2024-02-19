@@ -1,5 +1,3 @@
-
-
 function aggiungiTips() {
     var container = document.getElementById('tips');
     var gruppo = document.createElement('div');

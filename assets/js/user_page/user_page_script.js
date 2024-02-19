@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    //Ajax Form Anagrafica
     var form = document.getElementById('anagrafica');
     form.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -56,6 +55,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 let bool = true;
+
 function showFormAnagrafica(){
     bool = !bool;
 
@@ -72,5 +72,5 @@ function showFormAnagrafica(){
 }
 
 
-// Modifica il listener del form per utilizzare la callback
+
 

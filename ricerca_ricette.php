@@ -79,7 +79,7 @@ require 'core/auth.php'
     ?>
 
     <script src="assets/js/ricerca_ricetta/filters_script.js"></script>
-    <script src="assets/js/ricerca_ricetta/ricerca_ricette_submitFilters.js"></script>
+    <script src="assets/js/ricerca_ricetta/ricerca_ricette_funzioni.js"></script>
 
 </body>
 </html>

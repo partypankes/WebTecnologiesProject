@@ -1,4 +1,3 @@
-
 function caricaContenuto(sezione) {
 
     const queryString = window.location.search;
@@ -42,9 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
             this.classList.add('active');
         });
     });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
     caricaContenuto('ingredienti');
 });
+
+
 

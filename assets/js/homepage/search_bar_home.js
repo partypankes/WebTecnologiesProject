@@ -1,6 +1,5 @@
 let search_bar = document.getElementById('search');
 
-
 document.addEventListener('DOMContentLoaded', function() {
     search_bar.addEventListener("keydown", function (event) {
         if (event.key === "Enter") {

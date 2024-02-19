@@ -68,3 +68,10 @@ function richiedi_pagina(np) {
     xhr.send("tempo_preparazione=" + encodeURIComponent(tempo_box) + "&portata=" + encodeURIComponent(portata_box) + "&ricerca=" + encodeURIComponent(ricerca) + "&np=" + encodeURIComponent(np));
 
 }
+
+function toggleFilter(filterId) {
+    var answer = document.getElementById(filterId);
+    var question = answer.previousElementSibling;
+    question.classList.toggle("active");
+    answer.classList.toggle("active"); // Assicurati che anche .filter-answer abbia la classe "active" per l'animazione
+}
