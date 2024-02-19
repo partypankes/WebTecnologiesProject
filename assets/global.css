@@ -5,15 +5,19 @@
     --ex-header-color: #3f0c44;
     --header-color: #c1185b;
     --main-color: #f5f5ff;
-
     --main-hover: #b709b7;
     --color-2: #C9F0FF;
     --color-3: #c1185b;
     --color-4: #f6e0ed;
     --color-5: #c2c2c2;
 
-    --text-color: #0A0A0A;
-    --main-shadow-no-color: 0px 4px 4px 0px;
+    /*COLORI PROPOSTI*/
+    --header-color: #C8195F; /* Magenta vivace */
+    --main-color: #F5F5F5; /* Grigio molto chiaro, quasi bianco */
+    --secondary-color: #E0E0E0; /* Grigio chiaro */
+    --deep-blue-gray: #2E4052; /* Blu-grigio scuro */
+    --accent-color-1: #102B3F; /* Blu-navy scuro */
+    --accent-color-2: #5E6973; /* Grigio-azzurro medio */
 
     font-size: 16px;
 }
