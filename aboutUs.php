@@ -1,3 +1,5 @@
+<?php include 'core/auth.php'?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
