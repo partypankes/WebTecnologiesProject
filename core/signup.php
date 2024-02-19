@@ -1,8 +1,5 @@
 <?php
 
-session_start();
-
-
 require_once 'dbconnection.php';
 if(isset($db)) {
     $username = $_POST['username'];
@@ -18,6 +15,7 @@ if(isset($db)) {
     else {
         $sql = 'INSERT INTO utente (username, email, password, nome, cognome, sesso,data_di_nascita) VALUES ($1,$2,$3,$4,$5,$6,$7)';
         $result = pg_query_params($db,$sql,array($username,$email,$password,$nome,$cognome,$sesso,$data_di_nascita));
+        include 'login.php';
     }
 
 }

@@ -12,12 +12,12 @@
 
                 <div class="input-container">
                     <label for="name">Nome:</label>
-                    <input type="text" name="nome" id="name" class="input-field" placeholder="Nome" autocomplete="off" maxlength="30" pattern="[a-zA-ZÀ-ÖØ-öø-ÿ\s]"> <!-- il pattern inserito permette oltre all'inserimento di lettere, anche l'inserimento di letere accentate, spazi e trattini. L'apostorfo è stato rimosso perchè può essere usato per attacchi di injection!-->
+                    <input type="text" name="nome" id="name" class="input-field" placeholder="Nome" autocomplete="off" maxlength="30"> <!-- il pattern inserito permette oltre all'inserimento di lettere, anche l'inserimento di letere accentate, spazi e trattini. L'apostorfo è stato rimosso perchè può essere usato per attacchi di injection!-->
                 </div>
 
                 <div class="input-container">
                     <label for="surname">Cognome:</label>
-                    <input type="text" name="cognome" id="surname" class="input-field" placeholder="Cognome" autocomplete="off" maxlength="30" pattern="[a-zA-ZÀ-ÖØ-öø-ÿ\s]">
+                    <input type="text" name="cognome" id="surname" class="input-field" placeholder="Cognome" autocomplete="off" maxlength="30" >
                 </div>
 
                 <div class="input-container">

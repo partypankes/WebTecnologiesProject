@@ -52,7 +52,7 @@ document.getElementById('next-button').addEventListener('click', function(event)
         isValid = false;
     }
 
-    if(surname.match(/[0-9]/) || surname.match(/[^a-zA-Z0-9]/)) {
+    if(surname.match(/[0-9]/) || surname.match(/[^a-zA-Z0-9 ]/)) {
         document.getElementById('errorMessage_signup').textContent = "Caratteri non autorizzati nel cognome";
         isValid = false;
     }
@@ -68,7 +68,7 @@ document.getElementById('next-button').addEventListener('click', function(event)
         isValid = false;
     }
 
-    if(name.match(/[0-9]/) || name.match(/[^a-zA-Z0-9]/)) {
+    if(name.match(/[0-9]/) || name.match(/[^a-zA-Z0-9 ]/)) {
         document.getElementById('errorMessage_signup').textContent = "Caratteri non autorizzati nel nome";
         isValid = false;
     }
@@ -162,16 +162,10 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
             } else {
                 window.location.href = 'homepage.php';
             }
-        } else {
-            // Gestisci errori di rete o errori HTTP qui
-            console.error('Errore nella richiesta:', this.statusText);
         }
     };
 
-    xhr.onerror = function() {
-        // Gestisci errori di rete qui
-        console.error('Errore nella richiesta di rete');
-    };
+
 
     xhr.send(formData);
 });
