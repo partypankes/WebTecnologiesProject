@@ -33,46 +33,102 @@ main{
 
 .best-ricette h2{
     width: 100%;
-    color: whitesmoke;
+    color: var(--main-color);
     font-size: 1.8rem;
     font-weight: 600;
 }
 
-.ricette-home{
 
-}
-
-.ricette{
-    position:relative;
+/*Sezioni Discover*/
+.discover-home{
     width: 100%;
     height: 50vh;
+    padding:2%;
 
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+    align-items: center;
+    justify-content: space-between;
 
-.ricette-btn-altro{
-    position: absolute;
-    height: 2rem;
-    right:0;
-    padding:1%;
+    background-color: #c2c2c2;
+    border-radius:30px;
 }
-
-.ricette-title{
+.discover-img{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    height: 100%;
+    aspect-ratio: 4/3;
+
+    border: 3px solid var(--header-color);
+    border-radius: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/19/11/38/avocado-1838785_1280.jpg");
+
+    transition: transform 0.2s ease-in-out;
 }
-#ricette-top{
-    font-size: 2rem;
+.discover-img:hover{
+    transform: scaleX(100.5%) scaleY(100.5%);
+}
+
+.discover{
+    width: 100%;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.discover-content{
+    margin: auto;
+    text-align: center;
+}
+.discover p:first-child{
+color: var(--header-color);
+    font-size:2.3vw;
+    min-font-size: 2vw;
     font-weight: 600;
 }
-#ricette-sub{
-    font-size: 0.8rem;
-    font-weight: 400;
-}
-.table-ricette{
+.discover p:first-child + p{
 
+    font-size:1.2vw;
+    min-font-size: 0.7vw;
+    font-weight: 500;
+}
+#login-discover-btn{
+    width: 60%;
+    margin: 2% auto;
+    padding: 10px 20px;
+    background-color: var(--header-color); /* Assicurati che questa variabile CSS sia definita */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+}
+#login-discover-btn:hover {
+    transform: scaleX(102%) scaleY(102%);
+    background-color: var(--color-4);
+    color: black;
+}
+
+
+@media (max-width: 768px) {
+    .discover-home {
+        flex-direction: column;
+        height: auto;
+    }
+    .discover-img{
+        width: 50%;
+        height: 50%;
+    }
+    .discover-img, .discover {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .discover p:first-child, .discover p:first-child + p {
+
+    }
 }

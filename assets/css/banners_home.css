@@ -67,7 +67,6 @@
     font-size:4vw;
     min-font-size: 3vw;
     font-weight: 500;
-
 }
 #key{
     color: var(--color-3);
@@ -88,7 +87,7 @@
     font-size:1.2vw;
     min-font-size: 1vw;
     font-weight: 300;
-    color: #dedede;
+    color: black;
 }
 
 @media (max-width: 1280px){

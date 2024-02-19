@@ -10,6 +10,8 @@ header{
     font-size: 2rem;
     font-weight: 600;
     color: var(--main-color);
+    transition: padding 0.5s ease-in-out;
+
 }
 
 .menu{
@@ -24,13 +26,16 @@ header{
     color: #ffffff;
     font-size: 1.1rem;
     font-weight: 500;
-    padding: 0.5rem 0;
+    padding:0;
     margin:0 2rem;
-    transition: all .50s ease;
+    transition: background-color 0.4s linear, padding 0.2s ease-in-out, transform 0.2s ease-in-out;
+    border-radius: 30px;
 }
 .menu a:hover {
-    color: var(--main-hover);
-    transition: 0.3s ease;
+    padding: 0.5rem 0.5rem;
+    background-color: var(--color-4);
+    color: var(--header-color);
+    transform: scaleX(110%) scaleY(110%);
 }
 
 .r-side {
@@ -44,11 +49,11 @@ header{
     color: #ffffff;
     font-size: 1.2rem;
     font-weight: 600;
-    transition: all .50s ease;
+    transition: background-color 0.4s linear, padding 0.2s ease-in-out, transform 0.2s ease-in-out;
+    border-radius: 30px;
 }
 .r-side i{
     margin:auto;
-    padding: 0 10%;
 }
 .user {
     display: flex;
@@ -60,20 +65,31 @@ header{
     font-size: 2rem;
     margin-right: 0.5rem;
 }
-.user > a{
-    margin:0.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 #logout-icon{
+    border-radius: 30px;
     margin:0;
     text-align: center;
+    transition: background-color 0.4s linear, padding 0.2s ease-in-out;
 }
-.r-side a:hover {
-    color: var(--main-hover);
-    transition: 0.3s ease;
+#logout-icon:hover{
+    padding: 0.1rem 0.3rem;
+    background-color: var(--color-4);
+    color: var(--header-color);
+    transform: scaleX(110%) scaleY(110%);
 }
+
+.r-side > a:hover{
+    padding: 0.1rem 0.3rem;
+    background-color: var(--color-4);
+    color: var(--header-color);
+    transform: scaleX(110%) scaleY(110%);
+}
+.r-side > a:hover i{
+    color: var(--header-color);
+}
+
+
 #menu-icon {
     font-size: 2rem;
     color: var(--main-color);
@@ -107,7 +123,7 @@ header{
         right:-100%;
         width: 12rem;
         height: auto;
-        background-color: var(--ex-header-color);
+        background-color: var(--header-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

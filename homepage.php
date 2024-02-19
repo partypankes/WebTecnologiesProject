@@ -80,13 +80,16 @@
 
             </section>
 
-            <div class="nuove-ricette">
+            <div id="discover-1" class="discover-home">
 
-                <button><span>Entra nella community!</span></button>
+                <div class="discover-img"></div>
 
-                <div class="ricette-title">
-                    <p id="ricette-top">Scopri qui le nuove e deliziose ricette</p>
-                    <p id="ricette-sub">Esplora una varietà di ricette per piatto e preferenze.</p>
+                <div class="discover">
+                    <div class="discover-content">
+                        <p class="discover-title">Sei Ispirato e vuoi Ispirare?</p>
+                        <p class="discover-sub">Già cuoco nella tua cucina? Porta le tue ricette su SapurEat e lascia che tutti si delizino con le tue creazioni!</p>
+                    </div>
+                    <button id="login-discover-btn">Entra nella community!</button>
                 </div>
 
             </div>
