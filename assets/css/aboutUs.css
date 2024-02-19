@@ -1,91 +1,142 @@
-.intro {
-    background-color: #f1f1f1;
-    padding: 100px 0;
+:root {
+    --main_color2: #333;
+    --background-light: #f4dfeb; /* Sfondo per le sezioni alternate chiare */
+    --background-dark: #ecd5e7; /* Sfondo per le sezioni alternate scure */
+}
+
+.about-us{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.about-us section {
+    padding: 4rem 10%;
     text-align: center;
 }
 
-.intro h2 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
+
+.intro, .why-choose-us, .testimonials, .mission-visio, .our-team{
+    background-color: var(--background-light);
 }
 
-.intro p {
-    font-size: 1.1em;
-    margin-bottom: 1em;
+.our-story, .how-it-works, .join-us, .experience {
+    background-color: var(--background-dark);
 }
 
-.platform-info {
-    margin-left: 7%;
-    margin-right: 7%;
+.about-us h2 {
+    font-size: 2.5rem;
+    color: var(--main_color2);
+    margin-bottom: 1.25rem;
+    font-weight: bold;
 }
 
-.buttons {
-    margin-top: 1em;
+.about-us p {
+    font-size: 1rem;
+    margin: 0 auto 2em auto;
+    color: #666;
+    max-width: 800px;
+    line-height: 1.6;
 }
 
-.button {
-    background-color: var(--color-2);
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1em;
-    padding: 10px 20px;
-    text-decoration: none;
-    margin-right: 1em;
+
+.about-us i {
+    margin: 0 0.625em 0.9375em;
 }
 
-.button:hover {
-    background-color: var(--main_color);
-}
-
-.team {
-    padding: 50px 0;
+.intro-icons {
     text-align: center;
+    margin: 1.25rem 0;
 }
 
-.team-members {
+
+.intro-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 3.125rem;
+}
+
+.intro_card {
+    background-color: white;
+    padding: 1.25rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 0.65rem;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.intro_card:hover {
+    transform: translateY(-10px);
+}
+
+.intro_card h3 {
+    margin: 0.65rem 0;
+}
+
+.intro_card p {
+    font-size: 0.875rem;
+}
+
+
+.container, .team-members, .stats {
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.team-member {
-    flex: 1 1 300px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    text-align: center;
+
+.team-member, .stat {
+    background-color: white;
+    border-radius: 0.625rem;
+    margin: 0.9375rem;
+    padding: 1.25rem;
+    width: calc(50% - 1.875rem);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
-.team-member img {
-    width: 100%;
-    height: auto;
+.team-member h3, .stat h3 {
+    font-size: 1.125rem;
+    color: var(--main_color2);
 }
 
-.join-us {
-    background-color: #f1f1f1;
-    padding: 50px 0;
-    text-align: center;
+.team-member p, .stat p {
+    font-size: 1rem;
+    color: #666;
 }
 
-.experience {
-    padding: 50px 0;
-    text-align: center;
+.team-member:hover, .stat:hover {
+    transform: translateY(-10px);
 }
 
-.stats {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 1em;
+
+@media (max-width: 1024px) {
+    .team-member, .stat {
+        width: calc(50% - 1.875rem); /* 2 per riga */
+    }
 }
 
-.stat {
-    flex: 1 1 300px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    text-align: center;
+@media (max-width: 768px) {
+    .team-member, .stat {
+        width: 100%;
+        margin: 0.9375rem 0;
+    }
 }
+
+@media (max-width: 480px) {
+    .about-us h2 {
+        font-size: 2rem;
+    }
+
+    .about-us p {
+        font-size: 0.9rem;
+        margin: 0 auto 1.5em auto;
+    }
+
+}
+
+
+
