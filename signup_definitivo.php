@@ -58,11 +58,11 @@
                     <label for="password">Password:</label>
                     <div class="input-icon">
                         <input type="password" name="password" id="password_signup" class="input-field" placeholder="Password" onfocus="showText('info_password')" onblur="hideText('info_password')" maxlength="20" autocomplete="off">
-                        <i id="togglePassword" class="fas fa-eye-slash" style="cursor: pointer; font-weight: normal;"></i>
+                        <i id="togglePassword_signup" class="fas fa-eye-slash" style="cursor: pointer; font-weight: normal;"></i>
                     </div>
 
                     <div class="info_password" id="info_password">
-                        <label for="password" id="intro_requisiti">La password deve avere:</label>
+                        <label for="password_signup" id="intro_requisiti">La password deve avere:</label>
                         <ul>
                             <li id="lunghezza">Una lunghezza compresa tra 8 e 20 caratteri</li>
                             <li id="maiuscola">Almeno una lettera maiuscola</li>
@@ -84,8 +84,9 @@
                 </div>
             !-->
 
-                <button type="button" id="back-button" class="change-btn">Back </button>
-
+                <div class="no-account"> <!-- cambio in class="bck-btn" !-->
+                    <button type="button" id="back-button" class="change-btn" onclick="backbutton()"><--Back</button>
+                </div>
 
 
                 <div class="colored-btn">
