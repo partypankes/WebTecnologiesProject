@@ -10,9 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage - SapurEat</title>
     <link rel="stylesheet" href="assets/global.css">
+    <link rel="stylesheet" href="assets/css/card_ricette.css">
     <link rel="stylesheet" href="assets/css/homepage.css">
     <link rel="stylesheet" href="assets/css/banners_home.css">
-    <link rel="stylesheet" href="assets/css/card_ricette.css">
+
 
     <script src="assets/js/homepage/showSectionForUser.js"></script>
 </head>
@@ -36,6 +37,7 @@
                         <?php if (isset($_SESSION['loggedin'])){
                             top5();
                         } ?>
+                    </div>
                 </div>
 
 
@@ -45,6 +47,7 @@
                         <?php if (isset($_SESSION['loggedin'])){
                             primi_piatti();
                         } ?>
+                    </div>
                 </div>
 
 
@@ -63,6 +66,7 @@
 
                     </div>
                 </div>
+
             </section>
         </section>
     </main>
