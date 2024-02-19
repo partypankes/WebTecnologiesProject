@@ -44,14 +44,20 @@ header{
     justify-content: space-between;
 }
 .r-side a {
-    margin-right: 1.5rem;
-    margin-left: 1.5rem;
-    color: #ffffff;
+    color: var(--main-color);
+    margin-left: 0.7rem;
     font-size: 1.2rem;
     font-weight: 600;
     transition: background-color 0.4s linear, padding 0.2s ease-in-out, transform 0.2s ease-in-out;
     border-radius: 30px;
 }
+.r-side a:hover{
+    padding: 0.2rem 0.3rem;
+    background-color: var(--color-4);
+    color: var(--header-color);
+    transform: scaleX(110%) scaleY(110%);
+}
+
 .r-side i{
     margin:auto;
 }
@@ -66,6 +72,7 @@ header{
     margin-right: 0.5rem;
 }
 
+
 #logout-icon{
     border-radius: 30px;
     margin:0;
@@ -73,10 +80,10 @@ header{
     transition: background-color 0.4s linear, padding 0.2s ease-in-out;
 }
 #logout-icon:hover{
-    padding: 0.1rem 0.3rem;
+    padding: 0.1rem 0.1rem;
     background-color: var(--color-4);
     color: var(--header-color);
-    transform: scaleX(110%) scaleY(110%);
+    transform: scaleX(105%) scaleY(105%);
 }
 
 .r-side > a:hover{
@@ -88,7 +95,6 @@ header{
 .r-side > a:hover i{
     color: var(--header-color);
 }
-
 
 #menu-icon {
     font-size: 2rem;

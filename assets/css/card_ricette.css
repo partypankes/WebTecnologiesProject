@@ -14,7 +14,7 @@
     box-shadow: 1px 3px 3px rgb(138, 0,138,0.2),  -1px -1px 4px rgba(0,0,0,0.2);
     height: 280px;
     position: relative;
-    transition: box-shadow 130ms ease-in-out;
+    transition: box-shadow 130ms ease-in-out, padding 0.3s ease-in-out;
     width: 280px;
     border: 2px solid var(--ex-header-color);
     border-radius: 20px;
@@ -118,4 +118,41 @@
 
 .food-info p span {
     font-size: 1rem;
+}
+
+/*Icona per Eliminare la ricetta*/
+
+.elimina-icon{
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.elimina-icon i{
+    display: none;
+    margin:auto;
+    background-color: var(--header-color);
+    color: var(--main-color);
+
+    padding:0;
+    border-radius:30px;
+    font-size:2rem;
+
+}
+
+.card:hover .elimina-icon{
+    display: flex;
+    width: 100%;
+    height: 90%;
+    align-items: flex-end;
+}
+.card:hover .elimina-icon i{
+    display: flex;
+    padding:1rem;
+}
+.card:hover .elimina-icon i:hover{
+    color: var(--header-color);
+    background-color: var(--main-color);
 }

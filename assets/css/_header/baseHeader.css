@@ -1,5 +1,5 @@
 header{
-    background-color: var(--color-3);
+    background-color: var(--header-color);
     padding: 1.6rem;
 }
 .h-header{

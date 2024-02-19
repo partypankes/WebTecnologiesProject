@@ -44,7 +44,7 @@
 
 
 
-                <div class="best-ricette">
+                <div class="best-ricette even-div">
                     <h2>I 5 migliori Primi Piatti SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
@@ -52,7 +52,7 @@
                         } ?>
                     </div>
                 </div>
-                <div class="best-ricette">
+                <div class="best-ricette odd-div">
                     <h2>I 5 migliori Secondi Piatti SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
@@ -61,7 +61,7 @@
                     </div>
                 </div>
 
-                <div class="best-ricette">
+                <div class="best-ricette even-div">
                     <h2>I 5 migliori Dessert SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
@@ -69,7 +69,7 @@
                         } ?>
                     </div>
                 </div>
-                <div class="best-ricette">
+                <div class="best-ricette odd-div">
                     <h2>Le 5 ricette più veloci SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
