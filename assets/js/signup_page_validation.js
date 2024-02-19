@@ -32,22 +32,46 @@ document.getElementById('next-button').addEventListener('click', function(event)
     }
 
     /*controllo limiti date*/
+    var dataInserita = new Date(birthdate)
+    var dataMassima = new Date('2014-12-31');
+    var dataMinima = new Date('1900-01-01');
 
-    /*inserimento cognome*/
+    if (dataInserita < dataMinima || dataInserita > dataMassima) {
+        document.getElementById('errorMessage_signup').textContent = "Inserire una data valida";
+        isValid = false;
+    }
+
+    /*inserimento cognome, controllo lunghezza minima e presenza numeri o caratteri speciali*/
     if (!surname.trim()) {
         document.getElementById('errorMessage_signup').textContent = "Inserire il cognome";
         isValid = false;
     }
 
-    /*inserimento nome*/
+    if(surname.length<2) {
+        document.getElementById('errorMessage_signup').textContent = "Inserisci un cognome valido";
+        isValid = false;
+    }
+
+    if(surname.match(/[0-9]/) || surname.match(/[^a-zA-Z0-9]/)) {
+        document.getElementById('errorMessage_signup').textContent = "Caratteri non autorizzati nel cognome";
+        isValid = false;
+    }
+
+    /*inserimento nome, controllo lunghezza minima e presenza numeri o caratteri speciali*/
     if (!name.trim()) {
         document.getElementById('errorMessage_signup').textContent = "Inserire il nome";
         isValid = false;
     }
 
-    /*controllo nome e cognome lunghezza*/
+    if(name.length<2) {
+        document.getElementById('errorMessage_signup').textContent = "Inserisci un nome valido";
+        isValid = false;
+    }
 
-    /*controllo nome e cognome presenza numeri*/
+    if(name.match(/[0-9]/) || name.match(/[^a-zA-Z0-9]/)) {
+        document.getElementById('errorMessage_signup').textContent = "Caratteri non autorizzati nel nome";
+        isValid = false;
+    }
 
 
     /*scroll se dati sono validi*/
@@ -152,26 +176,21 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     xhr.send(formData);
 });
 
-
-/*function changesection(){
+/*le due funzioni successive si possono unire in un unica funzione passando a changesection le sezioni come parametri e cancellando il textContent dell'errorMessage*/
+function changesection(){
 
     document.getElementById('section1').style.display="none";
     document.getElementById('section2').style.display="block";
 
 }
 
-
-
 function backbutton() {
 
-    let info = document.getElementById('info_password').style.display;
-
-    if( info === "block"){
-        info = "none";
-    }
     document.getElementById('section2').style.display="none";
     document.getElementById('section1').style.display="block";
-}*/
+    document.getElementById('errorMessage_signup').textContent = ""; //cancella errore nell'errorMessage quando si va nella prima section
+
+}
 
 
 function clearPlaceholder(element) {
@@ -201,13 +220,13 @@ document.getElementById('togglePassword_signup').addEventListener('click', funct
 });
 
 
-/*function hideText(divID){
+function hideText(divID){
     document.getElementById(divID).style.display='none';
 }
 
 function showText(divID){
     document.getElementById(divID).style.display='block';
-}*/
+}
 
 
 

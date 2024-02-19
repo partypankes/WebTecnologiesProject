@@ -41,22 +41,44 @@ input[type="button"]{
     list-style: disc;
 }
 
-/*
-.bck-btn{
+#togglePassword_signup{
+    cursor: pointer;
+    font-weight: normal;
+}
 
-        width: 10%;
-        padding: 0.5%;
-        color: #ffffff;
-        text-underline: #ffffff;
-        border: 1px solid #ffffff;
-        border-radius: 10px;
-        background-color: #ffffff;
-        font-size: 1em;
-        text-align: center;
-        text-decoration: underline;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+.bck-btn p .change-btn{
 
-    }
+    width: 7%;
+    padding: 0.5%;
 
-}*/
+    color: #a19696;
+    text-underline: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2%;
+
+}
+
+.bck-btn p .change-btn:hover{
+
+
+    color: black;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: lightgray;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+
+section #section2{
+    display: none;
+}

@@ -11,35 +11,6 @@
         <link rel="stylesheet" href="assets/css/Login-SignUp.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-        <script>
-
-            function changesection(){
-
-                document.getElementById('section1').style.display="none";
-                document.getElementById('section2').style.display="block";
-
-            }
-
-            function backbutton() {
-
-                let info = document.getElementById('info_password').style.display;
-
-                if( info === "block"){
-                    info ="none";
-                }
-                document.getElementById('section2').style.display="none";
-                document.getElementById('section1').style.display="block";
-            }
-
-            function hideText(divID){
-                document.getElementById(divID).style.display='none';
-            }
-
-            function showText(divID){
-                document.getElementById(divID).style.display='block';
-            }
-
-        </script>
     </head>
 
     <body>
@@ -53,7 +24,7 @@
             ?>
         </section>
 
-        <section id="signup-section" class="signup-section" style="display: none">
+        <section id="signup-section" class="signup-section">
             <?php
                 include('signup_definitivo.php');
             ?>

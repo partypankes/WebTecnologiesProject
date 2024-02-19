@@ -2,7 +2,7 @@
     <div class="title">
         <h1>Log in</h1>
         <p> Inserisci i tuoi dati per continuare </p>
-        <p id="errorMessage_login" style="color:red;"></p>
+        <p class="errorMessage" id="errorMessage_login" ></p>
     </div>
 
     <div class="form-div">
@@ -20,7 +20,7 @@
                     <label for="password">Inserisci Password:</label>
                     <div class="input-icon">
                         <input type="password" id="password" class="input-field" name="password" placeholder="La tua password" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Your Password')" autocomplete="off">
-                        <i id="togglePassword" class="fas fa-eye-slash" style="cursor: pointer; font-weight: normal;"></i>
+                        <i id="togglePassword" class="fas fa-eye-slash"></i>
                     </div>
                 </div>
 

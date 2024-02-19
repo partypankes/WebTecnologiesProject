@@ -2,7 +2,7 @@
     <div class="title">
         <h1>Sign Up</h1>
         <p>Join our community and start sharing!</p>
-        <p id="errorMessage_signup" style="color:red;"></p>
+        <p class= "errorMessage" id="errorMessage_signup"></p>
     </div>
 
     <div class="form-div">
@@ -12,12 +12,12 @@
 
                 <div class="input-container">
                     <label for="name">Nome:</label>
-                    <input type="text" name="nome" id="name" class="input-field" placeholder="Nome" autocomplete="off">
+                    <input type="text" name="nome" id="name" class="input-field" placeholder="Nome" autocomplete="off" maxlength="30" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s.-]+"> <!-- il pattern inserito permette oltre all'inserimento di lettere, anche l'inserimento di letere accentate, spazi e trattini. L'apostorfo è stato rimosso perchè può essere usato per attacchi di injection!-->
                 </div>
 
                 <div class="input-container">
                     <label for="surname">Cognome:</label>
-                    <input type="text" name="cognome" id="surname" class="input-field" placeholder="Cognome" autocomplete="off">
+                    <input type="text" name="cognome" id="surname" class="input-field" placeholder="Cognome" autocomplete="off" maxlength="30" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s.-]+">
                 </div>
 
                 <div class="input-container">
@@ -42,7 +42,7 @@
             </section>
 
 
-            <section id="section2" style="display: none">
+            <section id="section2">
 
                 <div class="input-container">
                     <label for="username">Username:</label>
@@ -58,7 +58,7 @@
                     <label for="password">Password:</label>
                     <div class="input-icon">
                         <input type="password" name="password" id="password_signup" class="input-field" placeholder="Password" onfocus="showText('info_password')" onblur="hideText('info_password')" maxlength="20" autocomplete="off">
-                        <i id="togglePassword_signup" class="fas fa-eye-slash" style="cursor: pointer; font-weight: normal;"></i>
+                        <i id="togglePassword_signup" class="fas fa-eye-slash"></i>
                     </div>
 
                     <div class="info_password" id="info_password">
@@ -78,14 +78,15 @@
                     <input type="password" name="confirmpassword" id="confirmpassword" class="input-field" placeholder="Confirm Password" autocomplete="off">
                 </div>
 
-                <div class="no-account"> <!-- cambio in class="bck-btn" !-->
-                    <p><button type="button" id="back-button" class="change-btn" onclick="backbutton()">Indietro</button></p>
-                </div>
-
 
                 <div class="colored-btn">
                     <button class="submit-button" id="submit-btn_signup" type="submit">Registrati</button>
                 </div>
+
+                <div class="bck-btn"> <!-- cambio in class="bck-btn" !-->
+                    <p><button type="button" id="back-button" class="change-btn" onclick="backbutton()"><i class="fa-solid fa-arrow-left-long"></i></button></p>
+                </div>
+
             </section>
 
         </form>
