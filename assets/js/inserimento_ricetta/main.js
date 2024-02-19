@@ -54,6 +54,8 @@ function aggiungiIngrediente() {
     inputIngrediente.type = 'text';
     inputIngrediente.name = 'ingredienti[]';
     inputIngrediente.className = 'ingrediente';
+    inputIngrediente.placeholder = 'Nome';
+    inputIngrediente.maxLength = 40;
 
     var inputQuantita = document.createElement('input');
     inputQuantita.type = 'text';
@@ -74,7 +76,7 @@ function aggiungiIngrediente() {
     selectUnita.appendChild(optionPlaceholder);
 
     // Aggiungi le altre opzioni
-    var unita = ["grammi", "litri", /* altre unità */];
+    var unita = ["n/a","grammi","chili", "litri","millilitri","cucchiai","cucchiaini"];
     unita.forEach(function(u) {
         var option = document.createElement('option');
         option.value = u;

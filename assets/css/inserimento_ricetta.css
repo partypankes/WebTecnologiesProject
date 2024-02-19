@@ -73,7 +73,11 @@ textarea, input, select{
     border-radius: 4px;
     border: 1px solid #ddd;
 }
-
+#tempo_preparazione {
+    width: 8%;
+    padding: 0.625rem;
+    border-radius: 4px;
+}
 textarea {
     height: 150px;
     box-sizing: border-box;
@@ -215,7 +219,9 @@ select option[disabled] {
 .ingrediente-gruppo .ingrediente, .ingrediente-gruppo .quantita {
     flex-grow: 1;
 }
-
+.quantita {
+    width: 40%;
+}
 .ingrediente-gruppo .unita {
     flex-basis: 15%;
 }

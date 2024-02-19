@@ -59,7 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function validateField(field) {
         if (!field.value.trim()) {
             field.classList.add('error');
-            field.placeholder = '*Campo obbligatorio';
+            if(!(field.id === 'tempo_preparazione'))
+            {
+                field.placeholder = '*Campo obbligatorio';
+            }
+
             return false;
         } else {
             field.classList.remove('error');

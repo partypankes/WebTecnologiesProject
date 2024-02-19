@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Seleziona tutte le sezioni e i link nella sidebar per la gestione della navigazione
     const sections = document.querySelectorAll('.section_show');
     const sidebarLinks = document.querySelectorAll('.sidebar a');
+
     // Funzione per nascondere tutte le sezioni e rimuovere la classe 'active' dai link della sidebar
     function resetActiveSection() {
         // Nasconde ogni sezione
@@ -33,43 +34,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             sections[index].style.display = 'block'; // Mostra la sezione corrispondente al link cliccato
         });
+
     });
-
-    var form = document.getElementById('anagrafica');
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var formData = new FormData(this);
-        let xhr = new XMLHttpRequest();
-
-        xhr.open('POST', 'core/user_page/update_dati_utente.php', true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                // Passa showFormAnagrafica come callback a fetch_dati
-                document.getElementById("content-anagrafica").innerHTML = xhr.responseText;
-                showFormAnagrafica();
-            }
-        };
-        xhr.send(formData);
-    });
-
 });
 
-let bool = true;
 
-function showFormAnagrafica(){
-    bool = !bool;
 
-    let form_anagrafica = document.getElementById('anagrafica');
-    let anagrafica = document.querySelector('.anagrafica');
-    if(bool){
-        form_anagrafica.style.display = "none";
-        anagrafica.style.display = "block";
-    }else{
-        form_anagrafica.style.display = "block";
-        anagrafica.style.display = "none";
-    }
 
-}
 
 
 

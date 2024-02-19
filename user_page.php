@@ -62,7 +62,7 @@
                     <div class="title">
                         <h1>Modifica i tuoi dati personali</h1>
                     </div>
-
+                    <p id="errorMessage_signup"></p>
                     <div class="form-section1">
                         <label for="name">Nome</label>
                         <input type="text" id="name" name="nome" placeholder="Nome">
@@ -100,7 +100,18 @@
                     <div class="form-section1">
                         <label for="password">Nuova Password</label>
                         <input type="password" id="password" name="password" placeholder="Password">
+                        <label for="password_signup" id="intro_requisiti">La password deve avere:</label>
+                        <div class="info_password" id="info_password">
+                            <ul>
+                                <li id="lunghezza">Una lunghezza compresa tra 8 e 20 caratteri</li>
+                                <li id="maiuscola">Almeno una lettera maiuscola</li>
+                                <li id="minuscola">Almeno una lettera minuscola</li>
+                                <li id="numero">Almeno un numero</li>
+                                <li id="carspeciale">Almeno un carattere speciale</li>
+                            </ul>
+                        </div>
                     </div>
+
 
                     <div class="form-section1">
                         <label for="new-password">Conferma password</label>
@@ -158,7 +169,7 @@
 
 </main>
 
-
+<script src="assets/js/user_page/controlli_anagrafica.js"></script>
 
 </body>
 </html>

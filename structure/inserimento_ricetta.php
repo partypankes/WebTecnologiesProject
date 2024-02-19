@@ -32,7 +32,7 @@
                             <option value="" disabled selected>Seleziona una Portata</option>
                             <option value="antipasto">Antipasto</option>
                             <option value="primoPiatto">Primo Piatto</option>
-                            <option value="secondoPiatto">SecondoPiatto</option>
+                            <option value="secondoPiatto">Secondo Piatto</option>
                             <option value="dessert">Dessert</option>
                             <option value="piattoUnico">Piatto Unico</option>
                             <option value="brunch">Bruch</option>
@@ -42,16 +42,22 @@
             </div>
 
             <div class="form-section" id="ingredienti">
+                <label for="tempo_preparazione">Tempo Preparazione in Minuti:</label>
+                <input type="number" id="tempo_preparazione" name="tempo_preparazione" placeholder="min" min="1" max="999">
                 <label for="ingredienti[]">Ingredienti:</label>
-                <input type="number" id="tempo_preparazione" name="tempo_preparazione" placeholder="Inserisci il tempo di preparazione" maxlength="3">
                 <div class="ingrediente-gruppo">
 
-                    <input type="text" class="ingrediente" name="ingredienti[]" maxlength="40">
+                    <input type="text" class="ingrediente" name="ingredienti[]"  placeholder="Nome" maxlength="40">
                     <input type="number" class="quantita" name="quantita[]" maxlength="3" placeholder="Quantità" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Quantità')">
                     <select class="unita" name="unita[]">
                         <option value="" disabled selected>-</option>
+                        <option value="n/a">n/a</option>
                         <option value="grammi">grammi</option>
+                        <option value="chili">chili</option>
                         <option value="litri">litri</option>
+                        <option value="millilitri">millilitri</option>
+                        <option value="cucchiai">cucchiai</option>
+                        <option value="cucchiaini">cucchiaini</option>
                     </select>
                 </div>
                 <button type="button" class="aggiungi-ingrediente" onclick="aggiungiIngrediente()">+</button>
