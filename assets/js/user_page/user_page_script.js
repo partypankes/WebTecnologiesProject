@@ -38,7 +38,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-
+function logout() {
+    window.location.href = 'core/logout.php';
+}
 
 
 

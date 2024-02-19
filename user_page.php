@@ -35,7 +35,7 @@
             <a><i class="fas fa-utensils"></i> Crea un piatto</a>
 
             <div class="logout">
-                <button class="logout-btn" type="submit"><i class="fas fa-sign-out-alt"></i>Logout</button>
+                <button class="logout-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i>Logout</button>
             </div>
         </div>
 
