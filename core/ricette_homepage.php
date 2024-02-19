@@ -5,6 +5,10 @@ include 'core/dbconnection.php';
 if(isset($db)) {
     $sql = "SELECT * FROM ricetta WHERE voto IS NOT NULL ORDER BY voto DESC LIMIT 5 ;";
     $result = pg_query($db,$sql);
+    $string = "";
+
+    include 'core/card_ricette.php';
+    /*
     while($row = pg_fetch_assoc($result)) {
         $imageData = pg_unescape_bytea($row['banner']);
         echo  '<div class="ycard">
@@ -24,5 +28,5 @@ if(isset($db)) {
                         </div>';
 
     }
-
+*/
 }

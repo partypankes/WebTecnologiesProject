@@ -1,4 +1,4 @@
-.container-xcard{
+.container-card{
     width: 100%;
     display: flex;
     align-items: center;
@@ -8,75 +8,90 @@
 }
 
 .card {
-    margin:1%;
+    margin:1% 2%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    box-shadow: 1px 3px 3px rgba(0,0,0,0.2), -1px -1px 4px rgba(0,0,0,0.2);
+    box-shadow: 1px 3px 3px rgb(138, 0,138,0.2),  -1px -1px 4px rgba(0,0,0,0.2);
     height: 300px;
     position: relative;
     transition: box-shadow 130ms ease-in-out;
     width: 300px;
+    border: 2px solid var(--header-color);
+    border-radius: 20px;
 }
-
 .card:hover {
     box-shadow:
-            2px 6px 6px rgba(0,0,0,0.2),
+            2px 6px 6px rgb(138, 0,138,0.2),
             -1px -1px 7px rgba(0,0,0,0.2);
 }
 
-.rating {
-    padding: 0.75em;
-}
-
-.rating .star {
-    display: inline-block;
+.top-card {
     position: relative;
+    height:auto;
+    width: 93%;
+    margin:2% auto;
+}
+.top-card .container-top {
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.top-card .container-top p{
+    padding: 3px 6px;
+
+    color: var(--color-3);
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #f4deeb;
+    border: 1px solid var(--header-color);
+    border-radius: 30px;
+
+    opacity: 80%;
+    transition: opacity 0.3s ease-in-out;
+}
+.top-card .container-top p:hover{
+    opacity: 100%;
 }
 
-.rating .star:before {
-    background-color: rgba(0,0,0,0.05);
+.top-card .container-top p span + i{
+    margin-left: 3px;
+    font-size: 1.3rem;
+    transition: all 0.3s ease-in-out;
+}
+.top-card .container-top:before {
+    background-color: rgba(250, 5, 5, 0.05);
     box-shadow: 0 2px 3px rgba(0,0,0,0.15);
     content: '';
-    height: 12px;
-    left: 0;
     margin: 0 auto;
     position: absolute;
-    right: 0;
-    top: 3px;
-    width: 12px;
-    z-index: 0;
     border-radius: 50%;
 }
 
 
-
-
-.favorite {
-    transition: all 111ms ease-in-out;
-}
-
-
-
 .food-info {
-    background-color: whitesmoke;
+    position: absolute;
     bottom: 0;
     left: 0;
-    padding: 1em 2em 2em 1em;
-    position: absolute;
     right: 0;
-    word-break: break-all;
-}
+    padding: 0.6em 2em 1em 0.8em;
+    border-radius: 0 0 20px 20px;
 
+    word-break: break-word;
+    background-color: #f4deeb;
+}
 .food-info p {
     margin: 0;
 }
-
 .food-info p span {
     color: gray;
-    font-size: 14px;
+    font-size: 1rem;
 }
-
 .food-info .favorite {
     position: absolute;
     right: 10px;
