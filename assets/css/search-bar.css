@@ -21,14 +21,14 @@
     outline: none;
     border: none;
     background: transparent;
-    color: var(--main_color);
+    color: var(--main-color);
     font-weight: 400;
     font-size: 1rem;
 }
 
 .box button{
     cursor: pointer;
-    color: var(--main_color);
+    color: var(--main-color);
     font-size: 1.3rem;
     background: none;
     border: none;

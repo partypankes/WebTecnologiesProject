@@ -36,6 +36,6 @@ if(isset($db) && isset($controls)) {
             </div>' ;
     }
 
-    echo '<div class="container-xcard">' . $string . '</div>';
+    echo '<div class="container-card">' . $string . '</div>';
     echo '<div class="container-control">' . $controls . '</div>';
 }

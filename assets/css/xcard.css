@@ -50,7 +50,7 @@
 .info-xcard a{
     font-weight: 600;
     font-size: 1.4vw;
-    color: var(--main_color);
+    color: var(--main-color);
     transition: color 0.3s ease;
     word-break: break-word;
 }
@@ -61,7 +61,7 @@
 
 .sub-xcard{
     width:100%;
-    color: var(--main_color);
+    color: var(--main-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -75,7 +75,7 @@
     transition: color 0.3s ease;
 }
 .sub-xcard .user-sub span:hover{
-    color: var(--main_color)
+    color: var(--main-color)
 }
 
 .extra-xcard{

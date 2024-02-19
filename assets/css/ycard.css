@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    color:var(--main_color);
+    color:var(--main-color);
     transition: height 0.3s ease-in-out;
     padding: 1% 0;
     border-top: 1px solid #0A0A0A;
@@ -53,7 +53,7 @@
     bottom: 1%;
     width: 100%;
     font-size: 1rem;
-    color: var(--main_color);
+    color: var(--main-color);
 
 }
 #user-ycard p span{
@@ -77,7 +77,7 @@
 .info-ycard a{
     font-weight: 600;
     font-size: 1.4rem;
-    color: var(--main_color);
+    color: var(--main-color);
     transition: color 0.3s ease;
     word-break: break-word;
 }
@@ -87,7 +87,7 @@
 .info-ycard p{
     font-weight: 400;
     font-size: 1.2rem;
-    color: var(--main_color);
+    color: var(--main-color);
 }
 
 .extra-ycard {
@@ -104,7 +104,7 @@
 .extra-ycard i{
     padding-left:3px;
     font-size:1.2rem;
-    color: var(--main_color);
+    color: var(--main-color);
 }
 
 

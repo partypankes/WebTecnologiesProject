@@ -9,7 +9,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dettagli Ricetta - SapurEat</title>
-    <meta name="description" content="A delicious and easy homemade pizza recipe by John Doe">
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/dettagli_ricetta.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
@@ -27,7 +26,10 @@ include('structure/_header/baseHeader.php');
 
     <section id="title">
         <div class="text"><?php name_and_user($_GET['id'])?></div>
-        <div class="photo"><!--<div class="photo" style="background-image: url('<*?php echo immagine_banner($_GET['id']); ?>');">-->
+        <!--<div class="photo" style="background-image: url('<*?php echo immagine_banner($_GET['id']); ?>');">-->
+
+        <div class="photo">
+
             <img src="<?php echo immagine_banner($_GET['id'])?>" alt="Banner Ricetta">
         </div>
     </section>

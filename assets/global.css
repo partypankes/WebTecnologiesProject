@@ -3,11 +3,11 @@
 
 :root{
     --header-color: #3f0c44;
-    --main_color: #F5F5F5;
-    --main-hover: #b400b4;
+    --main-color: #F5F5F5;
+    --main-hover: #b709b7;
     --color-2: #C9F0FF;
     --color-3: #8a008a;
-    --bg-color: #F5F5F5;
+    --color-4: #f6e0ed;
 
     --text-color: #0A0A0A;
     --main-shadow-no-color: 0px 4px 4px 0px;
@@ -24,6 +24,7 @@
     box-sizing: border-box;
 }
 html{
+    scroll-behavior: smooth;
     height: 100%;
 }
 body{
@@ -43,7 +44,6 @@ body{
     background-position: center center;
     z-index: -1;
 }
-
 
 
 @media (max-width: 1090px) {

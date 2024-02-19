@@ -1,12 +1,17 @@
 main {
     margin: 2% 0;
 }
+.card {
+    height: 260px;
+    width: 260px;
+}
+
 .container{
     display: flex;
 }
 
 .sidebar{
-    background: var(--main_color);
+    background: var(--main-color);
     width: 12.5rem;
     min-width: 12.5rem;
     overflow-x: hidden;
@@ -157,11 +162,11 @@ main {
     padding: 2%;
 }
 #post-section, #utente-reviews{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
 
 .form-section1 {
@@ -175,6 +180,7 @@ main {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 #anagrafica .title{
     display: flex;
     justify-content: center;
