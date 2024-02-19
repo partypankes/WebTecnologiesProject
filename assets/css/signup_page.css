@@ -33,3 +33,30 @@ input[type="button"]{
     color: grey;
 }
 
+.info_password ul{
+    margin-left: 3%;
+}
+
+.info_password ul li{
+    list-style: disc;
+}
+
+/*
+.bck-btn{
+
+        width: 10%;
+        padding: 0.5%;
+        color: #ffffff;
+        text-underline: #ffffff;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+        background-color: #ffffff;
+        font-size: 1em;
+        text-align: center;
+        text-decoration: underline;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+    }
+
+}*/

@@ -18,24 +18,11 @@ if(isset ($db) && isset($controls)) {
             echo "<strong>Non ci sono risultati</strong>";
         }
         while($row = pg_fetch_assoc($result)) {
-            $imageData = pg_unescape_bytea($row['banner']);
-            $string  .= '<div class="xcard"> 
-                    <img class="banner-xcard" src="data:image/jpeg;base64,'. base64_encode($imageData) .'"/>'.
-                '<div class="info-xcard">
-                        <a href="dettagli_ricetta.php?id='. $row['id'] . '">' . $row['titolo'] . '</a>
-                        <div class="sub-xcard">
-                            <p>by <span>' . $row['utente'] . '</span></p>
-                            <div class="extra-xcard">
-                                <p><span id="minutes">'. $row['tempo_preparazione'] . '</span><i class="fa-regular fa-clock"></i></p>
-                                <p><span id="voto">'. $row['voto'] . '</span>/5<i class="fa-solid fa-star"></i></p>
-                                <p><i class="fas fa-trash-alt" onclick="eliminaRicetta('. $row['id'] .')"></i></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>';
+            include '../card_ricette.php';
+
         }
 
-        echo '<div class="container-xcard">' . $string . '</div>';
+        echo '<div class="container-card">' . $string . '</div>';
         echo '<div class="container-control">' . $controls . '</div>';
     }
 

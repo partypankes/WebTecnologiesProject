@@ -19,18 +19,19 @@ if(isset ($db) && isset($sql_paginazione) && isset($parametri) && isset($sql) &&
         $np = $last;
     }
 
-    $controls = "";
+    $controls = "<i class='fa-solid fa-arrow-left'></i>";
 
     if ($last != 1) {
         if ($np > 1) {
-            $controls .= '<button onclick="'.$func.'(' . ($np - 1) . ')">&lt;</button>';
+            $controls .= '<i class="fa-solid fa-arrow-left" onclick="'.$func .'(' . ($np + 1) . ')"></i>';
         }
         $controls .= '<b> Page ' . $np . ' of ' . $last . '</b>';
         if ($np != $last) {
-            $controls .= '<button onclick="'.$func .'(' . ($np + 1) . ')">&gt;</button>';
+            $controls .= '<i class="fa-solid fa-arrow-right" onclick="'.$func .'(' . ($np + 1) . ')"></i>';
         }
+
     }
 
-
     $sql .= ' LIMIT ' . $rpp . ' OFFSET ' . ($np - 1) * $rpp;
+
 }

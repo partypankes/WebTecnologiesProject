@@ -9,7 +9,7 @@
     <title>User Page - SapurEat</title>
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/user_page/user_page.css">
-    <link rel="stylesheet" href="assets/css/xcard.css">
+    <link rel="stylesheet" href="assets/css/card_ricette.css">
     <link rel="stylesheet" href="assets/css/user_page/user_page_2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="assets/js/user_page/user_page_script.js"></script>

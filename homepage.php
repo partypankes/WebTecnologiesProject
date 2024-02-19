@@ -1,5 +1,6 @@
 <?php
     require('core/auth.php');
+    include 'core/ricette_homepage.php'
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/homepage.css">
     <link rel="stylesheet" href="assets/css/banners_home.css">
-    <link rel="stylesheet" href="assets/css/ycard.css">
+    <link rel="stylesheet" href="assets/css/card_ricette.css">
 
     <script src="assets/js/homepage/showSectionForUser.js"></script>
 </head>
@@ -33,7 +34,7 @@
                     <h2>Le 5 migliori ricette SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
-                            include 'core/ricette_homepage.php';
+                            top5();
                         } ?>
                 </div>
 
@@ -42,7 +43,7 @@
                     <h2>I 5 migliori Primi Piatti SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
-                            include 'core/ricette_homepage.php';
+                            primi_piatti();
                         } ?>
                 </div>
 

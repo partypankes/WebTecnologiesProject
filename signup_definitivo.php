@@ -11,22 +11,22 @@
             <section id="section1">
 
                 <div class="input-container">
-                    <label for="name">Name:</label>
-                    <input type="text" name="nome" id="name" class="input-field" placeholder="Name" autocomplete="off">
+                    <label for="name">Nome:</label>
+                    <input type="text" name="nome" id="name" class="input-field" placeholder="Nome" autocomplete="off">
                 </div>
 
                 <div class="input-container">
-                    <label for="surname">Surname:</label>
-                    <input type="text" name="cognome" id="surname" class="input-field" placeholder="Surname" autocomplete="off">
+                    <label for="surname">Cognome:</label>
+                    <input type="text" name="cognome" id="surname" class="input-field" placeholder="Cognome" autocomplete="off">
                 </div>
 
                 <div class="input-container">
-                    <label for="birthdate">Date of Birth:</label>
-                    <input type="date" name="data_di_nascita" id="birthdate" class="input-field" placeholder="Date of Birth" autocomplete="off">
+                    <label for="birthdate">Data di Nascita:</label>
+                    <input type="date" name="data_di_nascita" id="birthdate" class="input-field" placeholder="Data Di Nascita" autocomplete="off">
                 </div>
 
                 <div class="input-container">
-                    <label for="Gender">Gender: </label>
+                    <label for="Gender">Sesso: </label>
                     <label for="Gender" > &emsp;Uomo</label>
                     <input type="radio" id="Gender1" name="sesso" value="M">
                     <label for="Gender"> &emsp;Donna</label>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="colored-btn">
-                    <button id="next-button" class="submit-button" type="button" onclick="">Next</button>
+                    <button id="next-button" class="submit-button" type="button" onclick="">Avanti</button>
                 </div>
 
             </section>
@@ -58,11 +58,11 @@
                     <label for="password">Password:</label>
                     <div class="input-icon">
                         <input type="password" name="password" id="password_signup" class="input-field" placeholder="Password" onfocus="showText('info_password')" onblur="hideText('info_password')" maxlength="20" autocomplete="off">
-                        <i id="togglePassword" class="fas fa-eye-slash" style="cursor: pointer; font-weight: normal;"></i>
+                        <i id="togglePassword_signup" class="fas fa-eye-slash" style="cursor: pointer; font-weight: normal;"></i>
                     </div>
 
                     <div class="info_password" id="info_password">
-                        <label for="password" id="intro_requisiti">La password deve avere:</label>
+                        <label for="password_signup" id="intro_requisiti">La password deve avere:</label>
                         <ul>
                             <li id="lunghezza">Una lunghezza compresa tra 8 e 20 caratteri</li>
                             <li id="maiuscola">Almeno una lettera maiuscola</li>
@@ -78,14 +78,9 @@
                     <input type="password" name="confirmpassword" id="confirmpassword" class="input-field" placeholder="Confirm Password" autocomplete="off">
                 </div>
 
-            <!--
-                <div class = "login">
-                    <input type="submit" class="change-btn" form="signupForm" value="Register">
+                <div class="no-account"> <!-- cambio in class="bck-btn" !-->
+                    <p><button type="button" id="back-button" class="change-btn" onclick="backbutton()">Indietro</button></p>
                 </div>
-            !-->
-
-                <button type="button" id="back-button" class="change-btn">Back </button>
-
 
 
                 <div class="colored-btn">
@@ -101,7 +96,7 @@
         <hr class="divider" />
 
         <div class="no-account">
-            <p> Sono già registrato. <button type="button" id="toLogin-button" class="change-btn">Log in</button></p>
+            <p> Sei giá registrato? <button type="button" id="toLogin-button" class="change-btn">Log in</button></p>
         </div>
     </div>
     

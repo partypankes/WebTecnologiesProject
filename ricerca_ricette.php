@@ -30,11 +30,8 @@ require 'core/auth.php'
             ?>
         </div>
 
-        <div class="filters">
 
-
-
-        <div class="filter-container">
+            <div class="filter-container">
 
             <div class="filter-box">
                 <div class="filter-question" onclick="toggleFilter('filter-course')">
