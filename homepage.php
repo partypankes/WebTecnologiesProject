@@ -56,7 +56,7 @@
                     <h2>I 5 migliori Secondi Piatti SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
-
+                            secondi_piatti();
                         } ?>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                     <h2>I 5 migliori Dessert SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
-
+                                dessert();
                         } ?>
                     </div>
                 </div>
@@ -73,7 +73,7 @@
                     <h2>Le 5 ricette più veloci SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
-
+                                veloci();
                         } ?>
                     </div>
                 </div>
