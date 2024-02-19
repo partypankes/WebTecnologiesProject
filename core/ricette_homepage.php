@@ -1,13 +1,39 @@
 <?php
+function top5(): void
+{
+    include 'core/dbconnection.php';
 
-include 'core/dbconnection.php';
+    if (isset($db)) {
 
-if(isset($db)) {
-    $sql = "SELECT * FROM ricetta WHERE voto IS NOT NULL ORDER BY voto DESC LIMIT 5 ;";
-    $result = pg_query($db,$sql);
-    $string = "";
+        $sql = "SELECT * FROM ricetta WHERE voto IS NOT NULL ORDER BY voto DESC LIMIT 5 ;";
+        $result = pg_query($db, $sql);
+        $string = "";
 
-    include 'core/card_ricette.php';
+        while ($row = pg_fetch_assoc($result)) {
+            include 'core/card_ricette.php';
+        }
+        echo $string;
+    }
+}
+
+    function primi_piatti(): void
+    {
+        include 'core/dbconnection.php';
+
+        if (isset($db)) {
+
+            $sql = "SELECT * FROM ricetta WHERE portata = $1 AND voto IS NOT NULL ORDER BY voto DESC LIMIT 5 ;";
+            $result = pg_query_params($db, $sql, array("primoPiatto"));
+            $string = "";
+
+            while ($row = pg_fetch_assoc($result)) {
+                include 'core/card_ricette.php';
+            }
+            echo $string;
+        }
+    }
+
+
     /*
     while($row = pg_fetch_assoc($result)) {
         $imageData = pg_unescape_bytea($row['banner']);
@@ -29,4 +55,3 @@ if(isset($db)) {
 
     }
 */
-}
