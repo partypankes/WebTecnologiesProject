@@ -107,7 +107,7 @@ header{
         right:-100%;
         width: 12rem;
         height: auto;
-        background-color: var(--header-color);
+        background-color: var(--ex-header-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

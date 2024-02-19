@@ -1,5 +1,5 @@
 main{
-    background-color: var(--color-4);
+    background-color: ;
 }
 .home{
     padding: 2% 0;
@@ -23,7 +23,7 @@ main{
     padding:1%;
     margin:0 0 2% 0;
     border-radius: 30px;
-    border: 5px solid var(--header-color);
+    border: 5px solid var(--ex-header-color);
     transition: transform 0.3s ease-in-out;
     background-color: var(--color-3);
 }

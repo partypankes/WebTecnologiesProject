@@ -18,7 +18,7 @@
     justify-content: flex-start;
     flex-direction: column;
 
-    background-color: var(--header-color);
+    background-color: var(--ex-header-color);
     border: 2px solid var(--color-3);
     border-radius: 30px;
     margin: 1% 1.3% ;
