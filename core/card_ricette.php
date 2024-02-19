@@ -19,8 +19,8 @@ if(isset($string) && isset($row)) {
                             </div>
                         
                             <div class="food-info">
-                                <p><a href="dettagli_ricetta.php?id='. $row['id'] . '">'. $row['titolo'] .'</a><br/><span>By '. $row['utente'].'</span></p>
-                        
+                                <p><a href="dettagli_ricetta.php?id='. $row['id'] . '">'. $row['titolo'] .'</a></p>
+                                <p>by <span>'. $row['utente'].'</span></p>
                             </div>
                         </div>';
 

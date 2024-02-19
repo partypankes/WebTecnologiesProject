@@ -4,7 +4,7 @@
 :root{
     --header-color: #3f0c44;
     --main_color: #F5F5F5;
-    --main-hover: #dc2ddc;
+    --main-hover: #b400b4;
     --color-2: #C9F0FF;
     --color-3: #8a008a;
     --bg-color: #F5F5F5;
@@ -23,8 +23,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body,html{
+html{
+    height: 100%;
+}
+body{
     margin: 0;
     padding: 0;
 }
@@ -41,11 +43,6 @@ body,html{
     background-position: center center;
     z-index: -1;
 }
-/*
-body{
-    margin: 0;
-
-}*/
 
 
 

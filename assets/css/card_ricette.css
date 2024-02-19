@@ -4,26 +4,23 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
 }
 
 .card {
-    margin:1% 2%;
+    margin:1% 1%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     box-shadow: 1px 3px 3px rgb(138, 0,138,0.2),  -1px -1px 4px rgba(0,0,0,0.2);
-    height: 300px;
+    height: 280px;
     position: relative;
     transition: box-shadow 130ms ease-in-out;
-    width: 300px;
+    width: 280px;
     border: 2px solid var(--header-color);
     border-radius: 20px;
 }
 .card:hover {
-    box-shadow:
-            2px 6px 6px rgb(138, 0,138,0.2),
-            -1px -1px 7px rgba(0,0,0,0.2);
+    box-shadow: 2px 6px 6px rgb(138, 0,138,0.2), -1px -1px 7px rgba(0,0,0,0.2);
 }
 
 .top-card {
@@ -39,8 +36,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
 }
 .top-card .container-top p{
     padding: 3px 6px;
@@ -51,27 +46,37 @@
     background-color: #f4deeb;
     border: 1px solid var(--header-color);
     border-radius: 30px;
+    box-shadow: 1px 3px 3px rgb(138, 0,138,0.2),  -1px -1px 4px rgba(0,0,0,0.2);
 
     opacity: 80%;
     transition: opacity 0.3s ease-in-out;
 }
+
 .top-card .container-top p:hover{
     opacity: 100%;
 }
 
+.top-card .container-top p:first-child i{
+    font-size: 1.2rem;
+    transition: font-size 0.2s ease-in-out;
+}
+.top-card .container-top p:first-child i:hover{
+    font-size: 1.25rem;
+}
+
+
+.top-card .container-top p:last-child{
+    font-size: 1.2rem;
+    transition: font-size 0.2s ease-in-out;
+}
+.top-card .container-top p:last-child *:hover{
+    font-size: 1.25rem;
+}
+
 .top-card .container-top p span + i{
     margin-left: 3px;
-    font-size: 1.3rem;
-    transition: all 0.3s ease-in-out;
 }
-.top-card .container-top:before {
-    background-color: rgba(250, 5, 5, 0.05);
-    box-shadow: 0 2px 3px rgba(0,0,0,0.15);
-    content: '';
-    margin: 0 auto;
-    position: absolute;
-    border-radius: 50%;
-}
+
 
 
 .food-info {
@@ -79,21 +84,38 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 0.6em 2em 1em 0.8em;
+    padding: 0.6em 2em 0.6em 0.8em;
     border-radius: 0 0 20px 20px;
 
     word-break: break-word;
     background-color: #f4deeb;
 }
-.food-info p {
+.food-info p:first-child{
+    padding-bottom: 5px;
+    font-size: 1.15rem;
+    font-weight: 500;
     margin: 0;
+    color: var(--color-3);
+    transition: color 0.3s ease-in-out, font-size 0.1s ease-in-out;
 }
+.food-info p:first-child:hover {
+    font-size: 1.2rem;
+}
+
+.food-info p:first-child a:link{
+    color: var(--color-3);
+}
+.food-info p:first-child a:visited{
+    color: #1f687e;
+}
+
+
+.food-info p:last-child {
+    color: #5b5b5b;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
 .food-info p span {
-    color: gray;
     font-size: 1rem;
-}
-.food-info .favorite {
-    position: absolute;
-    right: 10px;
-    top: 10px;
 }
