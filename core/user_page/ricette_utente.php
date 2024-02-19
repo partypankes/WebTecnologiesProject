@@ -14,7 +14,7 @@ if(isset ($db) && isset($controls)) {
     $result = pg_query_params($db,$sql,$parametri);
     $string = "";
     if($result) {
-        if(pg_fetch_assoc($result) == 0) {
+        if(pg_num_rows($result) == 0) {
             echo "<strong>Non ci sono risultati</strong>";
         }
         while($row = pg_fetch_assoc($result)) {

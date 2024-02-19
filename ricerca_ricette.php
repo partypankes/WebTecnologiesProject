@@ -45,6 +45,7 @@ require 'core/auth.php'
                     <label><input type="radio" name="portata" value="secondoPiatto" onclick="richiedi_pagina(1)">Secondo Piatto</label>
                     <label><input type="radio" name="portata" value="dessert" onclick="richiedi_pagina(1)">Dessert</label>
                     <label><input type="radio" name="portata" value="brunch" onclick="richiedi_pagina(1)">Brunch</label>
+                    <label><input type="radio" name="portata" value="" onclick="richiedi_pagina(1)">Qualsiasi</label>
                 </div>
             </div>
 
@@ -54,8 +55,9 @@ require 'core/auth.php'
                     <span class="filter-toggle">&#x25BC;</span>
                 </div>
                 <div class="filter-answer" id="filter-time">
-                    <label><input type="radio" name="tempo" value="15" onclick="richiedi_pagina(1)"> < 15 min</label>
-                    <label><input type="radio" name="tempo" value="30" onclick="richiedi_pagina(1)"> < 30 min</label>
+                    <label><input type="radio" name="tempo" value="15" onclick="richiedi_pagina(1)"> <= 15 min</label>
+                    <label><input type="radio" name="tempo" value="30" onclick="richiedi_pagina(1)"> <= 30 min</label>
+                    <label><input type="radio" name="tempo" value="10000" onclick="richiedi_pagina(1)"> Qualsiasi</label>
                 </div>
             </div>
 

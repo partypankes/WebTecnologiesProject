@@ -20,7 +20,7 @@ if(isset($db)) {
 
     }
     $result = pg_query_params($db,$sql,array($descrizione_recensione,$voto,$username,$id));
-    pg_close();
+
 
     if($result) {
         carica_recensione($id);

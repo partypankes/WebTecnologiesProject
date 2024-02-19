@@ -11,8 +11,8 @@ function caricaContenuto(sezione) {
     xhr.open('GET',  'core/dettagli_ricetta/dettagli_ricetta_query.php?section=' + encodeURIComponent(sezione) + '&id=' + encodeURIComponent(id), true);
 
     xhr.onload = function() {
-        if (xhr.status === 200) {
-            // Aggiorna il contenuto della pagina con la risposta
+        if (xhr.readyState === 4 && xhr.status === 200) {
+
             document.getElementById('recipe-content').innerHTML = xhr.responseText;
         }
     };
@@ -21,12 +21,8 @@ function caricaContenuto(sezione) {
         console.error('Errore nella richiesta di rete');
     };
 
-
-
-
     xhr.send();
 }
-
 
 document.addEventListener("DOMContentLoaded", function() {
     // Aggiunge la classe 'active' al primo elemento della lista

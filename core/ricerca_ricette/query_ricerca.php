@@ -10,11 +10,11 @@ $parametri = [];
 $i = 1; // Contatore per i segnaposto dei parametri
 
 if (!($_POST['tempo_preparazione'] == 'undefined')) {
-    $condizioni[] = "tempo_preparazione < $" . $i++;
+    $condizioni[] = "tempo_preparazione <= $" . $i++;
     $parametri[] = $_POST['tempo_preparazione'];
 }
 
-if (!($_POST['portata'] == 'undefined')) {
+if (!($_POST['portata'] == 'undefined') && !($_POST['portata'] == '')) {
     $condizioni[] = "portata = $" . $i++;
     $parametri[] = $_POST['portata'];
 }
@@ -45,12 +45,17 @@ if(isset($db) && isset($controls)) {
 
     $result = pg_query_params($db, $sql, $parametri);
     if ($result) {
-        $string = "";
-        while ($row = pg_fetch_assoc($result)) {
-            include '../card_ricette.php';
+        if(pg_num_rows($result) == 0) {
+            echo '<div class="container-card" style="margin:auto;"><h2>Non ci sono Risultati</h2></div>';
+        } else {
+            $string = "";
+            while ($row = pg_fetch_assoc($result)) {
+                include '../card_ricette.php';
+            }
+            echo '<div class="container-card">' . $string . '</div>';
+            echo '<div class="container-control">' . $controls . '</div>';
         }
-        echo '<div class="container-card">' . $string . '</div>';
-        echo '<div class="container-control">' . $controls . '</div>';
+
     }
 }
 
