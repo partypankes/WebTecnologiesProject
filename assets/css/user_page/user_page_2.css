@@ -1,7 +1,7 @@
 .review{
     background: white;
     border: 1px solid grey;
-    width: 25rem;
+    width: 27rem;
     min-height: 18.75rem;
     margin-bottom: 1.25rem;
     margin-top: 1.25rem;
@@ -9,6 +9,7 @@
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    word-break: break-word;
 }
 
 .up-rec .review-title{
@@ -17,7 +18,7 @@
     display: block;
     padding: 0.625rem 0.625rem 0.3125rem;
     font-size: 1.25rem;
-    word-break: break-all;
+    word-break: break-word;
 }
 #voto-p{
     padding-left: 0.625rem;

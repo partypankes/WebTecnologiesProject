@@ -12,7 +12,7 @@ function top5(): void
         while ($row = pg_fetch_assoc($result)) {
             include 'core/card_ricette.php';
         }
-        echo $string;
+        echo '<div class="container-card">' . $string . '</div>';
     }
 }
 
@@ -29,7 +29,7 @@ function top5(): void
             while ($row = pg_fetch_assoc($result)) {
                 include 'core/card_ricette.php';
             }
-            echo $string;
+            echo '<div class="container-card">' . $string . '</div>';
         }
     }
 
