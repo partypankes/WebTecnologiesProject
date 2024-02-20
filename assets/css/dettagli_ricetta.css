@@ -15,7 +15,7 @@ section {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    word-break: break-all;
+    word-break: break-word;
 
     border-radius: 30px;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 Q50,50 130,100 Q45,90 50,100 Q25,110 0,100" fill="none" stroke="rgb(200, 25, 95)" stroke-width=".5"/></svg>');
