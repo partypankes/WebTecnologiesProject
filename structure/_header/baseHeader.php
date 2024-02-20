@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="assets/css/_header/styleHeader.css">
 <link rel="stylesheet" href="assets/css/_header/baseHeader.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 
 <!--Header Altro-->

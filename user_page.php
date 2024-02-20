@@ -6,7 +6,15 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>User Page - SapurEat</title>
+
+    <?php if(isset($_SESSION['loggedin'])){
+        echo '<title>' . $_SESSION['username'] .' - SapurEat</title>';
+    }else{
+        echo '<title>User Page - SapurEat</title>';
+    }
+    ?>
+
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/card_ricette.css">
     <link rel="stylesheet" href="assets/css/user_page/user_page.css">
