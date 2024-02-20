@@ -94,9 +94,13 @@ main .best-ricette:first-child{
     min-font-size: 0.7vw;
     font-weight: 500;
 }
-#login-discover-btn{
-    width: 60%;
+.discover > a {
+    width:60%;
     margin: 2% auto;
+}
+#login-discover-btn{
+    width: 100%;
+
     padding: 10px 20px;
     background-color: var(--header-color); /* Assicurati che questa variabile CSS sia definita */
     color: #FFFFFF;
