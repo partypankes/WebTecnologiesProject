@@ -297,7 +297,7 @@ strong i {
     width: 95%;
     font-size: 1rem;
     word-wrap: break-word;
-    word-break: break-all;
+    word-break: break-word;
     border-left: 4px solid var(--header-color);
 }
 

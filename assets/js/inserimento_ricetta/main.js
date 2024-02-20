@@ -136,7 +136,7 @@ function aggiungiProcedimento() {
     inputProcedimento.type = 'text';
     inputProcedimento.className = 'procedimento';
     inputProcedimento.name = 'procedimentiRicetta[]';
-    inputProcedimento.maxLength = 150;
+    inputProcedimento.maxLength = 250;
     inputProcedimento.autocomplete = "off";
 
     nuovoProcedimento.appendChild(spanNumero);

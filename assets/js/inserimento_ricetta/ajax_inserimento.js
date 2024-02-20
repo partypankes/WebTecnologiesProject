@@ -12,7 +12,6 @@ function ajax_inserimento() {
 
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById("ricetta-form").reset(); // Gestisce la risposta del server
             window.location.href = 'dettagli_ricetta.php?id=' + xhr.responseText;
         }
     };
