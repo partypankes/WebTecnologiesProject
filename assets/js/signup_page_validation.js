@@ -99,6 +99,11 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         return;
     }
 
+    if (username.match(/[^a-zA-Z0-9_.]/)) {
+        document.getElementById('errorMessage_signup').textContent = "Caratteri non autorizzati nell'username";
+        return;
+    }
+
     /*controllo username giá in uso*/
 
     /*controllo validita email*/
@@ -205,8 +210,10 @@ function validaEmail(email) {
 
 document.getElementById('togglePassword_signup').addEventListener('click', function () {
     const password = document.getElementById('password_signup');
+    const confpassword = document.getElementById('confirmpassword');
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
     password.setAttribute('type', type);
+    confpassword.setAttribute('type', type);
 
     // Cambia l'icona
     this.classList.toggle('fa-eye');
