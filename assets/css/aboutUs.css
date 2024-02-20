@@ -1,32 +1,17 @@
-:root {
-    --main_color2: #333;
-    --background-light: #f4dfeb; /* Sfondo per le sezioni alternate chiare */
-    --background-dark: #ecd5e7; /* Sfondo per le sezioni alternate scure */
-}
-
 .about-us{
+    margin-top:1%;
     margin-left: 10%;
     margin-right: 10%;
 }
-
 
 .about-us section {
     padding: 4rem 10%;
     text-align: center;
 }
 
-
-.intro, .why-choose-us, .testimonials, .mission-visio, .our-team{
-    background-color: var(--background-light);
-}
-
-.our-story-card, .how-it-works-card, .join-us-card, .experience {
-    background-color: var(--background-dark);
-}
-
 .about-us h2 {
     font-size: 2.5rem;
-    color: var(--main_color2);
+    color: var(--accent-color-1);
     margin-bottom: 1.25rem;
     font-weight: bold;
 }
@@ -34,7 +19,7 @@
 .about-us p {
     font-size: 1rem;
     margin: 0 auto 2em auto;
-    color: #666;
+    color: var(--deep-blue-gray);
     max-width: 800px;
     line-height: 1.6;
 }
@@ -42,6 +27,7 @@
 
 .about-us i {
     margin: 0 0.625em 0.9375em;
+    color: var(--header-color);
 }
 
 .intro-icons {
@@ -59,7 +45,7 @@
 }
 
 .intro_card {
-    background-color: white;
+    background-color: var(--accent-color-1);
     padding: 1.25rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border-radius: 0.65rem;
@@ -74,10 +60,12 @@
 
 .intro_card h3 {
     margin: 0.65rem 0;
+    color: var(--main-color);
 }
 
 .intro_card p {
     font-size: 0.875rem;
+    color: var(--secondary-color);
 }
 
 
@@ -89,7 +77,7 @@
 
 
 .team-member, .stat {
-    background-color: white;
+    background-color: var(--accent-color-1);
     border-radius: 0.625rem;
     margin: 0.9375rem;
     padding: 1.25rem;
@@ -100,12 +88,12 @@
 
 .team-member h3, .stat h3 {
     font-size: 1.125rem;
-    color: var(--main_color2);
+    color: var(--main-color);
 }
 
 .team-member p, .stat p {
     font-size: 1rem;
-    color: #666;
+    color: var(--secondary-color);
 }
 
 .team-member:hover, .stat:hover {

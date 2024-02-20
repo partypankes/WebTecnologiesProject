@@ -12,6 +12,7 @@
     word-break: break-word;
 }
 
+
 .up-rec .review-title{
     box-sizing: border-box;
     border-bottom: 1px solid black;
@@ -19,6 +20,11 @@
     padding: 0.625rem 0.625rem 0.3125rem;
     font-size: 1.25rem;
     word-break: break-word;
+    color: var(--accent-color-1);
+    transition: color 0.3s ease-in-out;
+}
+.up-rec .review-title:hover{
+    color: var(--header-color);
 }
 #voto-p{
     padding-left: 0.625rem;
@@ -39,22 +45,28 @@
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
     border-top: 1px solid grey;
-    background: var(--main-color);
+    background: var(--main-color-darker);
     cursor: pointer;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .elimina button{
+    width:100%;
     background: none;
     border: none;
     cursor: pointer;
     font-weight: bold;
+    color: var(--accent-color-1);
+    transition: color 0.3s ease-in-out;
 }
-
 .elimina:hover{
     background: lightgrey;
-    transition: background-color 0.3s ease;
+    color: var(--header-color);
+}
+.elimina button:hover{
+    color: var(--header-color);
 }
 
 .elimina i{
@@ -63,12 +75,12 @@
 
 
 .user-profile {
-    background-color: #f9f9f9;
+    background-color: var(--main-color);
     border-radius: 8px;
     padding: 1.25rem;
     margin: 1.25rem auto;
     width: 80%;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px var(--text-color);
 }
 
 

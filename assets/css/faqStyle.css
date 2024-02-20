@@ -1,11 +1,10 @@
-
 /* Annulla il box-sizing solo per la sezione FAQ */
 .sezione-faq * {
     box-sizing: content-box;
 }
 
 .sezione-faq {
-    background: #ffffff;
+    background: var(--main-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     max-width: 700px;
@@ -97,9 +96,3 @@
     border-top: 1px solid #ddd;
 }
 
-.risposta-faq a{
-    color: darkmagenta;
-}
-.risposta-faq a:hover{
-    text-decoration: underline;
-}

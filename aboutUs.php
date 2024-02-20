@@ -20,7 +20,7 @@ include('structure/_header/baseHeader.php');
 
 
     <!-- Intro -->
-    <section class="intro" >
+    <section class="intro even-div" >
         <div class="intro-icons">
             <i class="fas fa-utensils fa-2x"></i>
             <i class="fas fa-globe fa-2x"></i>
@@ -51,35 +51,35 @@ include('structure/_header/baseHeader.php');
     </section>
 
     <!-- La Nostra Storia -->
-    <section class="our-story-card">
+    <section class="our-story-card odd-div">
         <i class="fas fa-book-open fa-3x"></i>
         <h2>La Nostra Storia</h2>
         <p>Nata dall'idea di quattro studenti di ingegneria informatica, SapurEat è il risultato di un sogno che mirava a collegare le persone attraverso il linguaggio universale del cibo. Da quelle prime discussioni in aule universitarie, attraverso notti insonni di codifica e brainstorming, fino al lancio della nostra piattaforma, ogni passo è stato guidato dalla nostra passione per il cibo e dalla convinzione che condividere un pasto vada oltre la semplice nutrizione. È un atto di amore, un momento di connessione, una finestra su nuove culture e tradizioni.</p>
     </section>
 
     <!-- Perché Scegliere SapurEat -->
-    <section class="why-choose-us">
+    <section class="why-choose-us even-div">
         <i class="fas fa-heart fa-3x"></i>
         <h2>Perché Scegliere SapurEat</h2>
         <p>SapurEat è il luogo dove la passione per il cibo si trasforma in connessioni significative, esplorazioni culinarie e condivisione di esperienze indimenticabili. La nostra piattaforma accogliente e intuitiva ti offre l'opportunità di scoprire nuove ricette, condividere le tue creazioni culinarie e connetterti con una comunità globale di food lover. Unisciti a noi e immergiti in un mondo di sapori, colori e tradizioni culinarie.</p>
     </section>
 
     <!-- Come Funziona -->
-    <section class="how-it-works-card">
+    <section class="how-it-works-card odd-div">
         <i class="fas fa-cogs fa-3x"></i>
         <h2>Come Funziona</h2>
         <p>Scopri il piacere della cucina con SapurEat. Carica le tue ricette preferite, esplora creazioni culinarie da tutto il mondo e condividi il tuo amore per il cibo con una comunità appassionata. Grazie alla nostra interfaccia intuitiva e alle funzionalità social avanzate, ogni esperienza su SapurEat è un'avventura culinaria senza pari. Siamo qui per ispirarti, connetterti e trasformare il modo in cui vivi il cibo.</p>
     </section>
 
     <!-- Testimonianze -->
-    <section class="testimonials">
+    <section class="testimonials even-div">
         <i class="fas fa-users fa-3x"></i>
         <h2>Testimonianze</h2>
         <p>Le storie di successo dei nostri utenti sono la nostra più grande motivazione. Da cuochi amatoriali a professionisti del settore, la nostra comunità di food lover è ricca di esperienze uniche e ispiratrici. Leggi le testimonianze e scopri come SapurEat ha trasformato la vita culinaria di persone come te in un'avventura senza fine.</p>
     </section>
 
     <!-- Unisciti a Noi -->
-    <section class="join-us-card">
+    <section class="join-us-card odd-div">
         <i class="fas fa-user-plus fa-3x"></i>
         <h2>Unisciti a Noi</h2>
         <p>Diventa parte della nostra famiglia culinaria su SapurEat. Sia che tu sia un cuoco appassionato, un esperto del gusto o semplicemente un curioso amante del cibo, c'è un posto per te nella nostra comunità. Iscriviti oggi stesso per scoprire nuove ricette, condividere le tue creazioni e connetterti con persone appassionate come te.</p>
@@ -87,7 +87,7 @@ include('structure/_header/baseHeader.php');
 
 
 
-    <section class="our-team">
+    <section class="our-team even-div">
         <h2>Il Nostro Team</h2>
         <div class="container">
             <div class="team-members">
@@ -124,7 +124,7 @@ include('structure/_header/baseHeader.php');
         </div>
     </section>
 
-    <section class="experience">
+    <section class="experience odd-div">
         <h2>Esperienza SapurEat</h2>
         <p>Partecipa alle nostre sfide di cucina, interagisci con la comunità e lasciati ispirare da ricette uniche.</p>
         <div class="stats">

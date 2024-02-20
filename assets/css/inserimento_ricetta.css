@@ -71,7 +71,7 @@ textarea, input, select{
     width: 100%;
     padding: 0.625rem;
     border-radius: 4px;
-    border: 1px solid var(--main-color-opacity);
+    border: 1px solid var(--accent-color-2);
 }
 #tempo_preparazione {
     width: 8%;
@@ -137,7 +137,7 @@ select option[disabled] {
     position: relative;
     display: inline-block;
     margin-right: .625rem;
-    border: 1px solid var(--main-color-opacity);
+    border: 1px solid var(--accent-color-2);
     padding: .3125rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: .25rem;
