@@ -51,7 +51,7 @@ include('structure/_header/baseHeader.php');
     </section>
 
     <!-- La Nostra Storia -->
-    <section class="our-story card">
+    <section class="our-story-card">
         <i class="fas fa-book-open fa-3x"></i>
         <h2>La Nostra Storia</h2>
         <p>Nata dall'idea di quattro studenti di ingegneria informatica, SapurEat è il risultato di un sogno che mirava a collegare le persone attraverso il linguaggio universale del cibo. Da quelle prime discussioni in aule universitarie, attraverso notti insonni di codifica e brainstorming, fino al lancio della nostra piattaforma, ogni passo è stato guidato dalla nostra passione per il cibo e dalla convinzione che condividere un pasto vada oltre la semplice nutrizione. È un atto di amore, un momento di connessione, una finestra su nuove culture e tradizioni.</p>
@@ -65,7 +65,7 @@ include('structure/_header/baseHeader.php');
     </section>
 
     <!-- Come Funziona -->
-    <section class="how-it-works card">
+    <section class="how-it-works-card">
         <i class="fas fa-cogs fa-3x"></i>
         <h2>Come Funziona</h2>
         <p>Scopri il piacere della cucina con SapurEat. Carica le tue ricette preferite, esplora creazioni culinarie da tutto il mondo e condividi il tuo amore per il cibo con una comunità appassionata. Grazie alla nostra interfaccia intuitiva e alle funzionalità social avanzate, ogni esperienza su SapurEat è un'avventura culinaria senza pari. Siamo qui per ispirarti, connetterti e trasformare il modo in cui vivi il cibo.</p>
@@ -79,7 +79,7 @@ include('structure/_header/baseHeader.php');
     </section>
 
     <!-- Unisciti a Noi -->
-    <section class="join-us card">
+    <section class="join-us-card">
         <i class="fas fa-user-plus fa-3x"></i>
         <h2>Unisciti a Noi</h2>
         <p>Diventa parte della nostra famiglia culinaria su SapurEat. Sia che tu sia un cuoco appassionato, un esperto del gusto o semplicemente un curioso amante del cibo, c'è un posto per te nella nostra comunità. Iscriviti oggi stesso per scoprire nuove ricette, condividere le tue creazioni e connetterti con persone appassionate come te.</p>

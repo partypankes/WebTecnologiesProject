@@ -20,7 +20,7 @@
     background-color: var(--background-light);
 }
 
-.our-story, .how-it-works, .join-us, .experience {
+.our-story-card, .how-it-works-card, .join-us-card, .experience {
     background-color: var(--background-dark);
 }
 
