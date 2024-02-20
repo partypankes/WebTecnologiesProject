@@ -66,7 +66,7 @@ include('structure/_header/baseHeader.php');
                     echo $_SESSION['username'];
             echo '</strong >
             <div id = "recensione" >
-                <textarea id = "review-content" name = "descrizione-recensione" placeholder = "La tua recensione" required maxlength="255"></textarea >
+                <textarea id = "review-content" name = "descrizione-recensione" placeholder = "La tua recensione" required maxlength="245"></textarea >
                 <div id = "div-voto-recensione" >
                     <label for="voto-recensione" > Voto:</label >
                     <select id = "voto-recensione" name = "voto-recensione" required >

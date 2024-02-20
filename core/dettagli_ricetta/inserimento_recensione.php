@@ -19,7 +19,7 @@ if(isset($db)) {
         $sql = "INSERT INTO recensione (descrizione_recensione,voto,utente,ricetta) VALUES ($1,$2,$3,$4)";
 
     }
-    $result = pg_query_params($db,$sql,array($descrizione_recensione,$voto,$username,$id));
+    $result = pg_query_params($db,$sql,array(htmlspecialchars($descrizione_recensione),$voto,$username,$id));
 
 
     if($result) {
