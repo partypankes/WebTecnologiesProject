@@ -35,7 +35,7 @@
                             <option value="secondoPiatto">Secondo Piatto</option>
                             <option value="dessert">Dessert</option>
                             <option value="piattoUnico">Piatto Unico</option>
-                            <option value="brunch">Bruch</option>
+                            <option value="bevande">Bevande</option>
                         </select>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                 <label for="procedimentiRicetta">Procedimento:</label>
                 <div class="procedimento-gruppo" id="procedimento1">
                     <span class="procedimento-numero">1.</span>
-                    <input type="text" class="procedimento" name="procedimentiRicetta[]" maxlength="150" autocomplete="off">
+                    <input type="text" class="procedimento" name="procedimentiRicetta[]" maxlength="250" autocomplete="off">
                 </div>
                 <button type="button" class="aggiungi-procedimento" onclick="aggiungiProcedimento()">+</button>
             </div>
@@ -75,7 +75,7 @@
             <div class="form-section" id="tips">
                 <label for="tips[]">Tips:</label>
                 <div class="gruppo-tips">
-                    <input type="text" class="tips" name="tips[]" maxlength="150" autocomplete="off">
+                    <input type="text" class="tips" name="tips[]" maxlength="200" autocomplete="off">
                 </div>
                 <button type="button" class="aggiungi-tips" onclick="aggiungiTips()">+</button>
             </div>
