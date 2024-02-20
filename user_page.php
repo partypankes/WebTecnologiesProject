@@ -48,8 +48,6 @@
                     <div id="content-anagrafica">
                         <!--Caricamento Asincrono!-->
                         <?php include 'core/user_page/fetch_dati_utente.php';?>
-
-
                     </div>
 
                     <div class="modifica">
@@ -63,7 +61,7 @@
                     <div class="title">
                         <h1>Modifica i tuoi dati personali</h1>
                     </div>
-                    <p id="errorMessage_signup"></p>
+
                     <div class="form-section1">
                         <label for="name">Nome</label>
                         <input type="text" id="name" name="nome" placeholder="Nome">
@@ -91,12 +89,10 @@
                         </div>
                     </div>
 
-
                     <div class="form-section1">
                         <label for="email">E-mail</label>
                         <input type="email" id="email" name="email" placeholder="E-mail">
                     </div>
-
 
                     <div class="form-section1">
                         <label for="password">Nuova Password</label>
@@ -113,7 +109,6 @@
                         </div>
                     </div>
 
-
                     <div class="form-section1">
                         <label for="new-password">Conferma password</label>
                         <input type="password" id="new-password" name="new_password" placeholder="Nuova password">
@@ -122,8 +117,10 @@
 
 
                     <div class="conferma">
-                        <button   id="conferma-anagrafica" class="conferma-btn" type="submit">Conferma</button>
+                        <p id="errorMessage"></p>
+                        <button id="conferma-anagrafica" class="conferma-btn" type="submit">Conferma</button>
                     </div>
+
                 </form>
             </section>
 
@@ -136,9 +133,11 @@
 
                     </div>
                 </div>
+
             </section>
 
             <section id="assistenza" class="section_show" style="display:none;">
+
                 <div class="assistenza">
                     <h2>Assistenza</h2>
                     <div class="assistenza-contenuti">

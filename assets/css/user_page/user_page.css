@@ -43,14 +43,12 @@ main {
     background-color: var(--accent-color-1);
     border-left: 3px solid var(--main-color);
 }
-
 .logout{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1.875rem;
 }
-
 .logout-btn{
     padding: 0.625rem;
     border-radius: 15px;
@@ -61,8 +59,13 @@ main {
 }
 
 
+
+/* ANAGRAFICA */
 #anagrafica{
     display: none;
+}
+.anagrafica > h2{
+    color: var(--accent-color-1);
 }
 .content-anagrafica p{
     font-weight: 500;
@@ -73,7 +76,6 @@ main {
     font-weight: 400;
     font-size: 1.2rem;
 }
-
 
 .content{
     flex-grow: 1;
@@ -87,7 +89,6 @@ main {
 }
 .container h2{
     text-align: center;
-
 }
 
 
@@ -96,7 +97,6 @@ main {
     position: relative;
     align-items: center;
 }
-
 #account .gender_div label{
     margin-top: 1.8%;
     margin-right: 10%;
@@ -122,11 +122,13 @@ main {
     align-items: center;
     margin-top: 0.5em;
 }
-
+.conferma{
+    flex-direction: column;
+}
+.conferma p{
+    color: red;
+}
 #account form input[type="radio"]{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     width: 1.2em;
     height: 1.2em;
     margin: 0;
@@ -136,7 +138,6 @@ main {
     outline: none;
     cursor: pointer;
     position: relative;
-
 }
 
 /*Da global.css*/
@@ -145,11 +146,10 @@ main {
 
 
 .post, .anagrafica, #account form, .reviews, .assistenza{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--main-color-opacity);
+    border: 1px solid var(--main-color-darker);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 2%;
 }
 #post-section, #utente-reviews{
@@ -161,13 +161,12 @@ main {
 }
 
 .form-section1 {
-    width:100%;
+    width:80%;
     height: 100%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin: 1% auto 1%;
     padding: 2% 3%;
 
-    background-color: #ffffff;
+    background-color: var(--main-color);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -180,7 +179,7 @@ main {
     padding-bottom:1%;
 }
 
-.conferma-btn, .modifica-btn, .invia-btn{
+.conferma-btn, .invia-btn{
     width:100%;
     margin-top: 1%;
     display: flex;
@@ -189,17 +188,64 @@ main {
 }
 
 #account button{
-    width:35%;
-    padding: 1%;
-
-
+    width:25%;
+    padding: 1% 0.5%;
     font-size: 1em;
+    font-weight: 600;
     text-align: center;
     cursor: pointer;
-
-    border: 1px solid #ce0dd8;
-    border-radius: 50px;
-    background-color: #ce0dd8;
-    color: #fff;
+    border-radius: 30px;
+    border:0;
+    background-color: var(--header-color);
+    color: var(--main-color);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+#account button:hover {
+    transform: scale(1.02);
+    background-color: var(--accent-color-1);
+}
+
+
+.user-profile p {
+    font-size: 1rem;
+    color: var(--accent-color-2);
+    line-height: 1.5;
+}
+
+.user-profile p span {
+    font-weight: 600;
+    color: var(--header-color);
+}
+
+.username, .name, .surname, .birthdate, .gender, .email {
+    margin-bottom: 0.625rem;
+}
+
+.support-section {
+    background-color: var(--main-color);
+    padding: 1.25rem;
+    border-radius: 5px;
+    width: 80%;
+    margin: 1.25rem auto;
+}
+
+.support-form label {
+    display: block;
+    margin-top: 0.625rem;
+}
+
+.support-form input[type="text"],
+.support-form input[type="email"],
+.support-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3125rem;
+    margin-bottom: 0.625rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.post > h2, .assistenza > h2, .reviews > h2{
+    color: var(--accent-color-1);
+}

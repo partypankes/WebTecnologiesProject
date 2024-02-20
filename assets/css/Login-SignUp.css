@@ -103,8 +103,7 @@ form section:last-child{
 }
 
 /*Da global.css*/
-input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {
-}
+input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {}
 
 @media (max-width: 460px) {
     .input-icon {
