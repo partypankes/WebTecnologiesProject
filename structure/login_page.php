@@ -6,7 +6,7 @@
     </div>
 
     <div class="form-div">
-        <form id="loginForm" action="core/login.php" method="post">
+        <form id="loginForm" action="../core/login.php" method="post">
             <section>
                 <div class="input-container">
                     <label for="username">Inserisci username:</label>

@@ -3,7 +3,7 @@ main {
 }
 section {
     width: 100%;
-    background-color: #f4deeb;
+    background-color: var(--accent-color-1);
 }
 
 /*Titolo, descrizione e banner ricetta*/
@@ -18,7 +18,7 @@ section {
     word-break: break-all;
 
     border-radius: 30px;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 Q50,50 130,100 Q45,90 50,100 Q25,110 0,100" fill="none" stroke="red" stroke-width=".5"/></svg>');
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 Q50,50 130,100 Q45,90 50,100 Q25,110 0,100" fill="none" stroke="rgb(200, 25, 95)" stroke-width=".5"/></svg>');
 }
 
 #title .text {
@@ -35,20 +35,22 @@ section {
 .text p {
     font-size: 1.3em;
     font-weight: 400;
-    color: #d2d2d2;
+    color: var(--secondary-color);
     text-align: justify;
 }
 .text #user{
     font-size: 1.1em;
     font-weight: 300;
-    color: lightgray;
+    color: var(--secondary-color);
     margin: 1% 0 0 0 ;
     font-style: italic;
-    transition: color 0.7s ease;
+}
+.text #user span{
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
 }
 .text #user span:hover{
-    transition: color 0.7s ease;
-    color: var(--color-3);
+    color: var(--header-color);
 }
 
 #title .photo {
@@ -71,13 +73,10 @@ section {
     border-radius: 30px;
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
     border: 3px solid var(--header-color);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-
+    transition: transform 0.3s ease-in-out;
 }
 #title .photo img:hover {
     transform: scale(1.05);
-    transition: transform 0.3s ease;
 }
 /*
 Fatto da Daniele
@@ -113,14 +112,12 @@ Fatto da Daniele
     height: auto;
     padding: 2%;
     margin: 2% auto;
-
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     gap: 1rem;
-
-    background-color: var(--main-color);
+    background-color: var(--main-color-opacity);
     border-radius: 30px;
 }
 
@@ -130,33 +127,44 @@ Fatto da Daniele
 }
 #contents ul{
     width: 100%;
+    padding: 0 2%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-#contents li{
-    width: 30%;
-    text-align: center;
+#contents ul li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
-    color: var(--main-color);
 }
+
 #contents a {
-    display: block;
-    padding: 2% 0;
-    font-weight: 500;
-    background-color: var(--color-3);
+    width: 50%;
+    padding: 3% 1%;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    background-color: var(--accent-color-1);
+    color: var(--main-color);
     border-radius: 20px;
+    transition: transform 0.3s ease-in-out,
+                padding 0.3s ease-in-out,
+                width 0.9s cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
 #contents a:hover{
     transform: scale(1.03);
-    transition: transform 0.3s ease;
 }
 #contents a.active{
-    padding: 4% 0;
+    background-color: var(--header-color);
+    width: 75%;
 }
 
 #recipe-content {
     width:100%;
+    transition: display 0.5s ease;
 }
 #recipe-content h2 {
     font-size: 2rem;
@@ -171,25 +179,39 @@ Fatto da Daniele
     border-spacing: 0;
     margin: 0;
 }
+#ingredienti p {
+    margin: 0;
+    font-size: 2rem;
+}
 
 #ingredienti td, #ingredienti th {
     padding: 1em;
-    border-bottom: 1px solid #ddd;
     text-align: left;
 }
 
 #ingredienti th {
-    background-color: var(--ex-header-color);
+    background-color: var(--header-color);
     color: var(--main-color);
     font-weight: 600;
+    border: 1px solid var(--main-color-opacity);
 }
-
 #ingredienti th:first-child {
-     border-top-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-right: 0;
 }
 #ingredienti th:last-child {
     border-top-right-radius: 20px;
+    border-left: 0;
 }
+#ingredienti td{
+    background-color: var(--main-color);
+}
+/* Mette i bordi all'interno*/
+#ingredienti tr td:first-child + td{
+    border-right: 1px solid var(--main-color-opacity);
+    border-left: 1px solid var(--main-color-opacity);
+}
+
 /* Rimuove il bordo dall'ultima riga in basso */
 #ingredienti tr:last-child td{
     border-bottom: none;
@@ -201,47 +223,35 @@ Fatto da Daniele
     border-bottom-left-radius: 20px;
 }
 
-.preparazione{
+.preparazione, .consigli{
     margin-bottom: 10px;
     padding: 8px;
-    background-color: whitesmoke;
-    border-left: 4px solid darkmagenta;
-}
-.consigli{
-    margin-bottom: 10px;
-    padding: 8px;
-    background-color: whitesmoke;
-    border-left: 4px solid darkmagenta;
-}
-#ingredienti p {
-    margin: 0;
-    font-size: 1rem;
-}
-/*
-#gallery {
-    box-sizing: border-box;
-}
-#gallery .textGallery {
+    color: var(--text-color);
+    background-color: var(--main-color);
+    border-left: 4px solid var(--header-color);
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
 }
-*/
+.preparazione p, .consigli p{
+    margin:0;
+}
+
 
 
 /*Sezione Recensioni*/
-
 #reviews-section{
     width: 100%;
     padding: 2%;
-    background-color: var(--main-color);
+    background-color: var(--main-color-darker);
     border-radius: 30px;
 }
-
 .reviews-title{
     text-align: center;
-    border-bottom: 1px solid gray;
+    color: var(--text-color);
+    border-bottom: 1px solid var(--accent-color-1);
     padding-bottom: 0.2%;
 }
 
@@ -258,16 +268,6 @@ Fatto da Daniele
     gap: 1%;
     margin: 1% 0 0.3% 0;
 }
-
-#rec-p{
-    margin: 5px 0 10px 1.6%;
-    padding: 0 0 0 0.5%;
-    width: 95%;
-    font-size: 1rem;
-    word-wrap: break-word;
-    word-break: break-all;
-    border-left: 4px solid darkmagenta;
-}
 #voto-p{
     display: flex;
     align-items: center;
@@ -277,26 +277,33 @@ Fatto da Daniele
 }
 #voto-p i{
     font-size: 1.2rem;
-
+    color: var(--accent-color-1);
 }
-
 strong{
     font-weight: 600;
     font-size: 1.3vw;
-}
-
-i{
-    color: var(--color-3);
+    display: flex;
+    align-items: center;
 }
 strong i {
     font-size: 2rem;
     margin-right: 0.5rem;
-}
+    color: var(--accent-color-1);
 
+}
+#rec-p{
+    margin: 5px 0 10px 1.6%;
+    padding: 0 0 0 0.5%;
+    width: 95%;
+    font-size: 1rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-left: 4px solid var(--header-color);
+}
 
 #review-form{
     padding-top: 0.5%;
-    border-top: 1px solid gray;
+    border-top: 1px solid var(--accent-color-2);
 }
 
 #review-form textarea {
@@ -306,15 +313,28 @@ strong i {
 
     resize: none;
     border-radius: 10px;
-    border: 2px solid lightgrey;
+    border: 2px solid lightgray;
 }
+
 #voto-recensione{
     margin-bottom: 10px;
     margin-left: 8px;
     padding: 5px;
     border-radius: 10px;
-    border: 2px solid lightgrey;
+    border: 2px solid lightgray;
     cursor: pointer;
+}
+#review-form textarea:focus, #voto-recensione:focus{
+    border-color: var(--accent-color-1);
+}
+
+#voto-recensione > option {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+#voto-recensione > option:hover {
+    color: var(--secondary-color);
+    border-radius: 10px;
 }
 
 .invio-recensione{
@@ -323,16 +343,17 @@ strong i {
     align-items: center;
 }
 #review-form button {
-    background-color: var(--color-3);
+    background-color: var(--header-color);
     color: var(--main-color);
     padding: 1% 2%;
     border: none;
     cursor: pointer;
     border-radius: 30px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease-in-out;
 }
 #review-form button:hover {
-    background-color: var(--main-hover);
+    background-color: var(--accent-color-1);
+    transform: scale(1.05);
 }
 
 

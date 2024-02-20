@@ -10,6 +10,7 @@
     margin: 0 3%;
     padding: 0.8% 1%;
     border-radius: 30px;
+    cursor: pointer;
     background-color: var(--header-color);
     color: var(--main-color);
     transition: background-color 0.2s ease-in-out;

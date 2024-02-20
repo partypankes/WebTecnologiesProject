@@ -39,11 +39,8 @@ main {
     width: auto;
     padding-bottom: 2%;
     border-radius:30px;
-    transition:background-color 0.3s ease-in-out;
 }
-.filter-box:hover {
-    background-color: var(--secondary-color);
-}
+
 .filter-question {
     cursor: pointer;
     user-select: none;
@@ -53,11 +50,9 @@ main {
     align-items: center;
     padding: 0.625rem;
 
-
     transition: color 0.3s ease-in-out;
 }
 .filter-question:hover {
-
     color: var(--accent-color-1);
 }
 .filter-answer {
@@ -72,29 +67,32 @@ main {
 }
 .filter-answer > label{
     color: var(--accent-color-1);
+    padding-left: 5px;
+    border-radius: 30px;
     font-weight: 500;
     font-size:1.1rem;
+    transition:background-color 0.3s ease-in-out;
 }
+.filter-answer > label:hover {
+    background-color: var(--secondary-color);
+}
+
 .filter-answer > label > input{
     margin-right: 1rem;
 }
 .filter-answer > label > input[type="radio"]:checked::after{
     color: var(--header-color);
 }
-
-
 .filter-question.active + .filter-answer {
     opacity: 1;
     max-height: 31.25rem;
     visibility: visible;
     transition: opacity 0.5s ease, max-height 0.5s ease;
 }
-
 .filter-toggle {
     transition: transform 0.2s ease;
     transform-origin: center center;
 }
-
 .filter-question.active .filter-toggle {
     transform: rotate(180deg);
     transition: transform 0.1s ease;

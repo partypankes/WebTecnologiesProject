@@ -5,6 +5,7 @@
     --header-color: #C8195F; /* Magenta vivace */
     --header-color-opacity: #C8195F60;
     --main-color: #F5F5F5; /* WhiteSmoke */
+    --main-color-darker: #eaeaea;
     --main-color-opacity:#F5F5F580;
     --secondary-color: #E0E0E0; /* Platinum */
     --deep-blue-gray: #2E4052; /* Blu-grigio scuro */
@@ -49,40 +50,6 @@ body{
 }
 .odd-div{
     background-color: var(--secondary-color);
-}
-
-.primary-text {
-    background-color: var(--primary-text-color);
-    color: #F5F5F5;
-}
-
-.section-title {
-    background-color: transparent;
-    color: var(--deep-blue-gray);
-}
-
-.card {
-    background-color: #FFFFFF;
-    border: 1px solid var(--deep-blue-gray);
-}
-
-.button-outline {
-    background-color: transparent;
-    color: var(--deep-blue-gray);
-    border: 2px solid var(--deep-blue-gray);
-}
-
-.button-outline:hover {
-    background-color: var(--deep-blue-gray);
-    color: #FFFFFF;
-}
-
-.text-primary {
-    color: var(--primary-text-color);
-}
-
-.text-secondary {
-    color: var(--secondary-text-color);
 }
 
 @media (max-width: 1090px) {

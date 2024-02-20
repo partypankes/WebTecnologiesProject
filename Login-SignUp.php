@@ -19,13 +19,13 @@
 
                 <section id="login-section" class="login-section">
                     <?php
-                    include('login_page.php');
+                    include('structure/login_page.php');
                     ?>
                 </section>
 
                 <section id="signup-section" class="signup-section">
                     <?php
-                    include('signup_definitivo.php');
+                    include('structure/signup_definitivo.php');
                     ?>
                 </section>
 

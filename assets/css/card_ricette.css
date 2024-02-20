@@ -7,20 +7,20 @@
 }
 
 .card {
+    position: relative;
+    height: 280px;
+    width: 280px;
     margin:1% 1%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    box-shadow: 1px 3px 3px var(--header-color-opacity),  -1px -1px 4px rgba(0,0,0,0.2);
-    height: 280px;
-    position: relative;
-    transition: box-shadow 130ms ease-in-out, padding 0.3s ease-in-out;
-    width: 280px;
-    border: 2px solid var(--header-color);
+    box-shadow: 1px 2px 2px var(--header-color-opacity),  -1px -1px 4px rgba(0,0,0,0.2);
+    border: 2px solid var(--accent-color-1);
     border-radius: 20px;
+    transition: box-shadow 130ms ease-in-out, padding 0.3s ease-in-out;
 }
 .card:hover {
-    box-shadow: 2px 6px 6px var(--header-color-opacity), -1px -1px 7px rgba(0,0,0,0.2);
+    box-shadow: 2px 4px 4px var(--header-color-opacity), -1px -1px 7px rgba(0,0,0,0.2);
 }
 
 .top-card {
@@ -111,6 +111,9 @@
 }
 .food-info p:first-child a:visited{
     color: var(--accent-color-2);
+}
+.food-info p:first-child a:visited:hover{
+    color: var(--deep-blue-gray);
 }
 
 
