@@ -13,17 +13,19 @@ main {
     flex-direction: column;
 
     border-radius: 30px;
-    background-color: #f6e0ed;
-
-    /* #EAFFFD;
-    #FECEE9*/
+    background-color: var(--main-color);
 }
 #search-bar{
-    width: 60%;
-    margin: 3% 0;
+    width: 80%;
+    margin: 3% 0 2% 0;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#search-bar .bn-search{
+    width: 100%;
+    background-color: var(--accent-color-1);
+    transition: background-color 1s ease-in-out;
 }
 
 
@@ -35,18 +37,29 @@ main {
 
 .filter-box {
     width: auto;
+    padding-bottom: 2%;
+    border-radius:30px;
+    transition:background-color 0.3s ease-in-out;
 }
-
+.filter-box:hover {
+    background-color: var(--secondary-color);
+}
 .filter-question {
     cursor: pointer;
     user-select: none;
+    color: var(--header-color);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0.625rem;
-    transition: background-color 0.2s ease;
-}
 
+
+    transition: color 0.3s ease-in-out;
+}
+.filter-question:hover {
+
+    color: var(--accent-color-1);
+}
 .filter-answer {
     display: flex;
     flex-direction: column;
@@ -57,6 +70,18 @@ main {
     transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0s 0.5s;
     margin-left: 1.875rem;
 }
+.filter-answer > label{
+    color: var(--accent-color-1);
+    font-weight: 500;
+    font-size:1.1rem;
+}
+.filter-answer > label > input{
+    margin-right: 1rem;
+}
+.filter-answer > label > input[type="radio"]:checked::after{
+    color: var(--header-color);
+}
+
 
 .filter-question.active + .filter-answer {
     opacity: 1;
@@ -77,7 +102,6 @@ main {
 
 
 
-
 /* Sezione ricette*/
 
 .sezione-ricette{
@@ -91,7 +115,7 @@ main {
     justify-content: space-between;
     flex-direction: column;
 
-    background-color: #f6e0ed95;
+    background-color: var(--main-color-opacity);
     border-radius: 30px;
     backdrop-filter: blur(10px);
 

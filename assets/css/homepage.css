@@ -1,13 +1,34 @@
 main{
     background-color: var(--main-color);
 }
-.home{
-    padding: 2% 0;
-    margin: 0  8vw;
+main .best-ricette:first-child{
+    padding-top: 2%;
+}
+
+.best-ricette{
+    width: 100%;
+    height: auto;
+    padding:1%;
+}
+
+
+.best-ricette h2{
+    width: 82%;
+    margin: 0 auto 1%;
+    border-bottom: 4px solid var(--accent-color-1);
+    color: var(--accent-color-1);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.sezione-ricette{
+    width: 85%;
+    margin: 0 auto;
 }
 .container-card{
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
 }
+
 .card{
     width: 270px;
     height: 270px;
@@ -17,40 +38,20 @@ main{
     transform: scaleX(103%) scaleY(103%);
 }
 
-.best-ricette{
-    width: 100%;
-    height: auto;
-    padding:1%;
-    margin:0 0 2% 0;
-    border-radius: 30px;
-    border: 5px solid var(--ex-header-color);
-    transition: transform 0.3s ease-in-out;
-    background-color: var(--color-3);
-}
-.best-ricette:hover{
-    transform: scaleX(100.5%) scaleY(100.5%);
-}
-
-.best-ricette h2{
-    width: 100%;
-    color: var(--main-color);
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
 
 /*Sezioni Discover*/
 .discover-home{
     width: 100%;
     height: 50vh;
-    padding:2%;
-
+}
+.discover-home > div{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    background-color: #c2c2c2;
-    border-radius:30px;
+    width:85%;
+    height: 100%;
+    padding:2%;
+    margin:auto;
 }
 .discover-img{
     width: 100%;
@@ -72,9 +73,8 @@ main{
 
 .discover{
     width: 100%;
-
+    padding:2%;
     margin: auto;
-
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -84,13 +84,12 @@ main{
     text-align: center;
 }
 .discover p:first-child{
-color: var(--header-color);
+    color: var(--header-color);
     font-size:2.3vw;
     min-font-size: 2vw;
     font-weight: 600;
 }
 .discover p:first-child + p{
-
     font-size:1.2vw;
     min-font-size: 0.7vw;
     font-weight: 500;
@@ -109,8 +108,8 @@ color: var(--header-color);
 }
 #login-discover-btn:hover {
     transform: scaleX(102%) scaleY(102%);
-    background-color: var(--color-4);
-    color: black;
+    background-color: var(--accent-color-1);
+    color: var(--main-color);
 }
 
 
@@ -126,9 +125,5 @@ color: var(--header-color);
     .discover-img, .discover {
         width: 90%;
         margin: 10px auto;
-    }
-
-    .discover p:first-child, .discover p:first-child + p {
-
     }
 }

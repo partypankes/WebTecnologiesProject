@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="assets/css/banners_home.css">
     <link rel="stylesheet" href="assets/css/homepage.css">
 
-
-
     <script src="assets/js/homepage/showSectionForUser.js"></script>
 </head>
 <body>
@@ -29,9 +27,8 @@
 ?>
 
     <main id="main-home">
-        <section class="home">
 
-            <div class="best-ricette">
+            <div class="best-ricette odd-div">
                 <h2>Le 5 migliori ricette SapurEat</h2>
                 <div class="sezione-ricette">
                     <?php
@@ -42,8 +39,6 @@
 
             <section id="logged-home">
 
-
-
                 <div class="best-ricette even-div">
                     <h2>I 5 migliori Primi Piatti SapurEat</h2>
                     <div class="sezione-ricette">
@@ -52,6 +47,7 @@
                         } ?>
                     </div>
                 </div>
+
                 <div class="best-ricette odd-div">
                     <h2>I 5 migliori Secondi Piatti SapurEat</h2>
                     <div class="sezione-ricette">
@@ -69,6 +65,7 @@
                         } ?>
                     </div>
                 </div>
+
                 <div class="best-ricette odd-div">
                     <h2>Le 5 ricette più veloci SapurEat</h2>
                     <div class="sezione-ricette">
@@ -80,22 +77,19 @@
 
             </section>
 
-            <div id="discover-1" class="discover-home">
+            <div id="discover-1" class="discover-home even-div">
+                <div>
+                    <div class="discover-img"></div>
 
-                <div class="discover-img"></div>
-
-                <div class="discover">
-                    <div class="discover-content">
-                        <p class="discover-title">Sei Ispirato e vuoi Ispirare?</p>
-                        <p class="discover-sub">Già cuoco nella tua cucina? Porta le tue ricette su SapurEat e lascia che tutti si delizino con le tue creazioni!</p>
+                    <div class="discover">
+                        <div class="discover-content">
+                            <p class="discover-title">Sei Ispirato e vuoi Ispirare?</p>
+                            <p class="discover-sub">Già cuoco nella tua cucina? Porta le tue ricette su SapurEat e lascia che tutti si delizino con le tue creazioni!</p>
+                        </div>
+                        <button id="login-discover-btn">Entra nella community!</button>
                     </div>
-                    <button id="login-discover-btn">Entra nella community!</button>
                 </div>
-
             </div>
-
-
-        </section>
     </main>
 
     <?php

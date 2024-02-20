@@ -2,26 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
 
 :root{
-    --ex-header-color: #3f0c44;
-    --header-color: #c1185b;
-    --main-color: #f5f5ff;
-    --main-hover: #b709b7;
-    --color-2: #C9F0FF;
-    --color-3: #c1185b;
-    --color-4: #f6e0ed;
-    --color-5: #c2c2c2;
-
-    /*COLORI PROPOSTI*/
     --header-color: #C8195F; /* Magenta vivace */
-    --main-color: #F5F5F5; /* Grigio molto chiaro, quasi bianco */
-    --secondary-color: #E0E0E0; /* Grigio chiaro */
+    --header-color-opacity: #C8195F60;
+    --main-color: #F5F5F5; /* WhiteSmoke */
+    --main-color-opacity:#F5F5F580;
+    --secondary-color: #E0E0E0; /* Platinum */
     --deep-blue-gray: #2E4052; /* Blu-grigio scuro */
     --accent-color-1: #102B3F; /* Blu-navy scuro */
     --accent-color-2: #5E6973; /* Grigio-azzurro medio */
+    --text-color: #0F151A; /* Rich Black */
 
     font-size: 16px;
 }
-
 *{
     text-decoration: none;
     list-style: none;
@@ -52,6 +44,46 @@ body{
     z-index: -1;
 }
 
+.even-div{
+    background-color: var(--main-color);
+}
+.odd-div{
+    background-color: var(--secondary-color);
+}
+
+.primary-text {
+    background-color: var(--primary-text-color);
+    color: #F5F5F5;
+}
+
+.section-title {
+    background-color: transparent;
+    color: var(--deep-blue-gray);
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--deep-blue-gray);
+}
+
+.button-outline {
+    background-color: transparent;
+    color: var(--deep-blue-gray);
+    border: 2px solid var(--deep-blue-gray);
+}
+
+.button-outline:hover {
+    background-color: var(--deep-blue-gray);
+    color: #FFFFFF;
+}
+
+.text-primary {
+    color: var(--primary-text-color);
+}
+
+.text-secondary {
+    color: var(--secondary-text-color);
+}
 
 @media (max-width: 1090px) {
 

@@ -14,22 +14,24 @@
 
     <body>
     <div class="backdrop"></div>
+        <div>
+            <div class="container">
 
-    <div class="container">
+                <section id="login-section" class="login-section">
+                    <?php
+                    include('login_page.php');
+                    ?>
+                </section>
 
-        <section id="login-section" class="login-section">
-            <?php
-                include('login_page.php');
-            ?>
-        </section>
+                <section id="signup-section" class="signup-section">
+                    <?php
+                    include('signup_definitivo.php');
+                    ?>
+                </section>
 
-        <section id="signup-section" class="signup-section">
-            <?php
-                include('signup_definitivo.php');
-            ?>
-        </section>
+            </div>
+        </div>
 
-    </div>
 
     <script src="assets/js/signup_page_validation.js"></script>
     <script src="assets/js/login_page_validation.js"></script>

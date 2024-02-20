@@ -1,12 +1,17 @@
 .bn-search{
-    width:100%;
+    width:90%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 30px;
     cursor: pointer;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    background-color: var(--color-3);
+    background-color: rgb(16, 43, 63, 0.8);
+    transition: background-color 1s ease-in-out, width 0.8s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+.bn-search:hover{
+    width:100%;
+    background-color: rgb(200, 25, 95, 0.6);
 }
 .box{
     width: 100%;

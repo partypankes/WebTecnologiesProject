@@ -55,9 +55,9 @@ require 'core/auth.php'
                     <span class="filter-toggle">&#x25BC;</span>
                 </div>
                 <div class="filter-answer" id="filter-time">
-                    <label><input type="radio" name="tempo" value="15" onclick="richiedi_pagina(1)"> <= 15 min</label>
-                    <label><input type="radio" name="tempo" value="30" onclick="richiedi_pagina(1)"> <= 30 min</label>
-                    <label><input type="radio" name="tempo" value="10000" onclick="richiedi_pagina(1)"> Qualsiasi</label>
+                    <label for="tempo-1"><input type="radio" name="tempo" value="15" onclick="richiedi_pagina(1)"><= 15 min</label>
+                    <label for="tempo-2"><input type="radio" name="tempo" value="30" onclick="richiedi_pagina(1)"><= 30 min</label>
+                    <label for="tempo-3"><input type="radio" name="tempo" value="10000" onclick="richiedi_pagina(1)">Qualsiasi</label>
                 </div>
             </div>
 

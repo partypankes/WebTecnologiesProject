@@ -46,37 +46,6 @@ input[type="button"]{
     font-weight: normal;
 }
 
-.bck-btn p .change-btn{
-
-    width: 7%;
-    padding: 0.5%;
-
-    color: #a19696;
-    text-underline: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    background-color: #ffffff;
-    font-size: 1em;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 2%;
-
-}
-
-.bck-btn p .change-btn:hover{
-
-
-    color: black;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    background-color: lightgray;
-    font-size: 1em;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-}
 
 
 section #section2{

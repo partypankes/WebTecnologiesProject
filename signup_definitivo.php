@@ -1,5 +1,6 @@
 
     <div class="title">
+
         <h1>Sign Up</h1>
         <p>Join our community and start sharing!</p>
         <p class= "errorMessage" id="errorMessage_signup"></p>
@@ -44,6 +45,10 @@
 
             <section id="section2">
 
+                <div class="bck-btn "> <!-- cambio in class="bck-btn" !-->
+                    <button type="button" id="back-button"  onclick="backbutton()"><i class="fa-solid fa-arrow-left-long"></i></button>
+                </div>
+
                 <div class="input-container">
                     <label for="username">Username:</label>
                     <input type="text" name="username" id="username_signup" class="input-field" placeholder="Username" maxlength="16" autocomplete="off">
@@ -83,9 +88,7 @@
                     <button class="submit-button" id="submit-btn_signup" type="submit">Registrati</button>
                 </div>
 
-                <div class="bck-btn"> <!-- cambio in class="bck-btn" !-->
-                    <p><button type="button" id="back-button" class="change-btn" onclick="backbutton()"><i class="fa-solid fa-arrow-left-long"></i></button></p>
-                </div>
+
 
             </section>
 

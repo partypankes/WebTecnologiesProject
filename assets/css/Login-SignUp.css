@@ -1,6 +1,12 @@
+.backdrop + div{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
 .container {
-    max-width:50%;
-    margin: 5% auto;
+    width:40%;
+    margin: auto;
     padding: 2%;
     background-color: var(--main-color);
     border-radius: 30px;
@@ -54,6 +60,10 @@
     justify-content: space-between;
 }
 
+form section:last-child{
+    position: relative;
+}
+
 
 /*Intra Form*/
 
@@ -73,12 +83,13 @@
     border-radius: 30px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
-    border: 2px #d5d4d4;
+    border: 2px var(--accent-color-2);
+    background-color: var(--main_color2);
 }
 .input-field:focus {
-    border-color: var(--color-3);
+    border-color: var(--header-color);
     outline: none;
-    box-shadow: 1px 1px 8px rgba(156, 39, 176, 0.5);
+    box-shadow: 1px 1px 8px rgb(200, 25, 95, 0.25);
 }
 
 .input-icon{
@@ -87,10 +98,19 @@
 }
 .input-icon i{
     position: absolute;
-    top: 37%;
-    right:2%;
+    top: 40%;
+    right: 2%;
 }
 
+input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {
+    content: '✓';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--accent-color-2);
+    font-size: 1.2em;
+}
 
 @media (max-width: 460px) {
     .input-icon {
@@ -110,19 +130,18 @@
     width:70%;
     margin:auto;
     padding: 1% 2%;
-    border: 2px solid #ce0dd8;
-    border-radius: 50px;
-    background-color: #ce0dd8;
-    color: #fff;
+
+    border: 0;
+    color: var(--main-color);
     font-size: 1.2em;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: var(--header-color);
+    border-radius: 50px;
+    transition: background-color 0.3s ease-in-out;
 }
 .submit-button:hover {
-    background-color: var(--color-3);
-    border: 2px solid #252525;
-    color: white;
+    background-color: var(--accent-color-1);
 }
 
 /*Sub Form*/
@@ -145,32 +164,47 @@
 }
 
 /*bottoni back e Sign Up (nel login)*/
-.no-account p .change-btn{
+.change-btn{
     width: 15%;
-    padding: 0.5%;
-    margin-left: 1%;
-    color: darkgrey;
-    border: 1px solid #ffffff;
+    padding: 0.5% 0.1%;
+    margin-left: 0.5%;
+    color: var(--accent-color-2);
+    border: 0;
     border-radius: 10px;
-    background-color: #ffffff;
     font-size: 1em;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.no-account p .change-btn:hover{
-    width: 15%;
-    padding: 0.5%;
-    margin-left: 1%;
-    color: black;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    background-color: lightgray;
-    font-size: 1em;
+.change-btn:hover{
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+}
+
+.bck-btn{
+    position: absolute;
+    top: -23%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    border-radius: 30px;
     text-align: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-in-out;
+}
+.bck-btn:hover{
+    background-color: var(--secondary-color);
+}
 
+.bck-btn button{
+    border: 0;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+    background: transparent;
+    color: var(--text-color);
+    transition:color 0.3s ease-in-out;
 }

@@ -4,10 +4,9 @@
 
     display: flex;
     align-items: flex-start;
-
 }
 
-.remember-me-container input[type="checkbox"] {
+.remember-me-container input[type="checkbox"]{
     position: relative;
     appearance: none;
     width: 1.2em;
@@ -18,18 +17,9 @@
     border-radius: 3px;
     outline: none;
     cursor: pointer;
-
 }
 
-.remember-me-container input[type="checkbox"]:checked::before {
-    content: '✓';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--color-3);
-    font-size: 1.2em;
-}
+
 
 .remember-me-container label {
     width: 30%;

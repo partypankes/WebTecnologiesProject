@@ -3,6 +3,7 @@ main {
 }
 section {
     width: 100%;
+    background-color: #f4deeb;
 }
 
 /*Titolo, descrizione e banner ricetta*/
@@ -15,9 +16,9 @@ section {
     align-items: flex-start;
     justify-content: flex-start;
     word-break: break-all;
-    background-color: var(--ex-header-color);
+
     border-radius: 30px;
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 Q50,50 100,100 Q75,90 50,100 Q25,110 0,100" fill="none" stroke="magenta" stroke-width=".5"/></svg>');
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 Q50,50 130,100 Q45,90 50,100 Q25,110 0,100" fill="none" stroke="red" stroke-width=".5"/></svg>');
 }
 
 #title .text {
@@ -48,7 +49,6 @@ section {
 .text #user span:hover{
     transition: color 0.7s ease;
     color: var(--color-3);
-    /*cursor: pointer;*/
 }
 
 #title .photo {
@@ -70,8 +70,7 @@ section {
     max-width: 350px;
     border-radius: 30px;
     box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
-    border: 3px solid transparent;
-    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ff69b4, #8a2be2);
+    border: 3px solid var(--header-color);
     background-origin: border-box;
     background-clip: content-box, border-box;
 

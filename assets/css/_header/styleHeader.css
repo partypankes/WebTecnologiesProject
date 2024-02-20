@@ -29,11 +29,11 @@ header{
     padding:0;
     margin:0 2rem;
     transition: background-color 0.4s linear, padding 0.2s ease-in-out, transform 0.2s ease-in-out;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 .menu a:hover {
     padding: 0.5rem 0.5rem;
-    background-color: var(--color-4);
+    background-color: var(--accent-color-1);
     color: var(--header-color);
     transform: scaleX(110%) scaleY(110%);
 }
@@ -49,13 +49,13 @@ header{
     font-size: 1.2rem;
     font-weight: 600;
     transition: background-color 0.4s linear, padding 0.2s ease-in-out, transform 0.2s ease-in-out;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 .r-side a:hover{
     padding: 0.2rem 0.3rem;
-    background-color: var(--color-4);
+    background-color: var(--accent-color-1);
     color: var(--header-color);
-    transform: scaleX(110%) scaleY(110%);
+
 }
 
 .r-side i{
@@ -72,29 +72,29 @@ header{
     margin-right: 0.5rem;
 }
 
+.r-side > a:hover{
+    padding: 0.1rem 0.30rem 0.1rem 0rem;
+    background-color: var(--accent-color-1);
+    color: var(--header-color);
+    transform: scaleX(108%) scaleY(108%);
+}
+.r-side > a:hover i{
+    color: var(--header-color);
+}
+
 
 #logout-icon{
-    border-radius: 30px;
+    border-radius: 20px;
     margin:0;
     text-align: center;
     transition: background-color 0.4s linear, padding 0.2s ease-in-out;
 }
 #logout-icon:hover{
     padding: 0.1rem 0.1rem;
-    background-color: var(--color-4);
+    background-color: var(--accent-color-1);
     color: var(--header-color);
-    transform: scaleX(105%) scaleY(105%);
 }
 
-.r-side > a:hover{
-    padding: 0.1rem 0.3rem;
-    background-color: var(--color-4);
-    color: var(--header-color);
-    transform: scaleX(110%) scaleY(110%);
-}
-.r-side > a:hover i{
-    color: var(--header-color);
-}
 
 #menu-icon {
     font-size: 2rem;
@@ -122,10 +122,11 @@ header{
 @media (max-width: 1090px){
     #menu-icon {
         display: block;
+        margin-left:30%;
     }
     .menu{
         position: absolute;
-        top: 3.5rem;
+        top: 2.5rem;
         right:-100%;
         width: 12rem;
         height: auto;
@@ -138,12 +139,12 @@ header{
     }
     .menu a{
         display: block;
-        margin: 0.8rem 0;
+        margin: 0.35rem 0;
         padding: 0 1rem;
         transition: all .50s ease;
+        border-radius: 10px;
     }
     .menu a:hover{
-        color: #ffffff;
         transform: translateY(0.4rem);
     }
     /*.menu a. pagina attiva*/
