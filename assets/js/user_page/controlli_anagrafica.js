@@ -11,27 +11,27 @@ document.getElementById('anagrafica').addEventListener('submit', function(event)
     var dataMinima = new Date('1900-01-01');
 
     if (dataInserita < dataMinima || dataInserita > dataMassima) {
-        document.getElementById('errorMessage_signup').textContent = "Inserire una data valida";
+        document.getElementById('errorMessage').textContent = "Inserire una data valida";
         isValid = false;
     }
 
     if(surname.trim() && surname.length<2) {
-        document.getElementById('errorMessage_signup').textContent = "Inserisci un cognome valido";
+        document.getElementById('errorMessage').textContent = "Inserisci un cognome valido";
         isValid = false;
     }
 
     if(surname.match(/[0-9]/) || surname.match(/[^a-zA-Z0-9 ]/)) {
-        document.getElementById('errorMessage_signup').textContent = "Caratteri non autorizzati nel cognome";
+        document.getElementById('errorMessage').textContent = "Caratteri non autorizzati nel cognome";
         isValid = false;
     }
 
     if(name.trim() && name.length<2) {
-        document.getElementById('errorMessage_signup').textContent = "Inserisci un nome valido";
+        document.getElementById('errorMessage').textContent = "Inserisci un nome valido";
         isValid = false;
     }
 
     if(name.match(/[0-9]/) || name.match(/[^a-zA-Z0-9 ]/)) {
-        document.getElementById('errorMessage_signup').textContent = "Caratteri non autorizzati nel nome";
+        document.getElementById('errorMessage').textContent = "Caratteri non autorizzati nel nome";
         isValid = false;
     }
 
@@ -43,7 +43,7 @@ document.getElementById('anagrafica').addEventListener('submit', function(event)
 
     /*controllo validita email*/
     if (email.trim() && !validaEmail(email) ) {
-        document.getElementById('errorMessage_signup').textContent = "L'E-mail inserita non e' valida"
+        document.getElementById('errorMessage').textContent = "L'E-mail inserita non e' valida"
         return;
     }
 
@@ -53,35 +53,35 @@ document.getElementById('anagrafica').addEventListener('submit', function(event)
 
     /*Controllo lunghezza password*/
     if (password.trim() && !(password.length >= 8 && password.length <= 20)) {
-        document.getElementById('errorMessage_signup').textContent = "La password deve essere compresa tra gli 8 e 20 caratteri";
+        document.getElementById('errorMessage').textContent = "La password deve essere compresa tra gli 8 e 20 caratteri";
         return;
     }
     /*controllo presenza lettere maiuscole*/
     if (password.trim() && !(password.match(/[A-Z]/))) {
-        document.getElementById('errorMessage_signup').textContent = "La password deve contenere almeno un carattere maiuscolo ";
+        document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere maiuscolo ";
         return;
     }
     /*controllo presenza lettere minuscole*/
     if (password.trim() && !(password.match(/[a-z]/))) {
-        document.getElementById('errorMessage_signup').textContent = "La password deve contenere almeno un carattere maiuscolo";
+        document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere maiuscolo";
         return;
     }
 
     /*controllo presenza numeri*/
     if (password.trim() && !(password.match(/[0-9]/))) {
-        document.getElementById('errorMessage_signup').textContent = "La password deve contenere almeno un numero";
+        document.getElementById('errorMessage').textContent = "La password deve contenere almeno un numero";
         return;
     }
 
     /*controllo presenza carattere speciale*/
     if (password.trim() && !(password.match(/[^a-zA-Z0-9]/))) {
-        document.getElementById('errorMessage_signup').textContent = "La password deve contenere almeno un carattere speciale";
+        document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere speciale";
         return;
     }
 
     /*CONTROLLO SE LE DUE PASSWORD SONO UGUALI*/
     if (password.trim() && !(confirmpassword.match(password))) {
-        document.getElementById('errorMessage_signup').textContent = "Le password non coincidono";
+        document.getElementById('errorMessage').textContent = "Le password non coincidono";
 
     }
 
