@@ -102,14 +102,8 @@ form section:last-child{
     right: 2%;
 }
 
+/*Da global.css*/
 input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {
-    content: '✓';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--accent-color-2);
-    font-size: 1.2em;
 }
 
 @media (max-width: 460px) {
