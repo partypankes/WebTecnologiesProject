@@ -56,12 +56,17 @@ function aggiungiIngrediente() {
     inputIngrediente.className = 'ingrediente';
     inputIngrediente.placeholder = 'Nome';
     inputIngrediente.maxLength = 40;
+    inputIngrediente.autocomplete = "off";
 
     var inputQuantita = document.createElement('input');
-    inputQuantita.type = 'text';
+    inputQuantita.type = 'number';
     inputQuantita.name = 'quantita[]';
     inputQuantita.className = 'quantita';
-    inputQuantita.placeholder = 'Quantità'; // Aggiungi il placeholder
+    inputQuantita.placeholder = 'Quantità';
+    inputQuantita.min = "1" // Aggiungi il placeholder
+    inputQuantita.max = "999";
+    inputQuantita.autocomplete = "off";
+
 
     var selectUnita = document.createElement('select');
     selectUnita.name = 'unita[]';
@@ -131,6 +136,8 @@ function aggiungiProcedimento() {
     inputProcedimento.type = 'text';
     inputProcedimento.className = 'procedimento';
     inputProcedimento.name = 'procedimentiRicetta[]';
+    inputProcedimento.maxLength = 150;
+    inputProcedimento.autocomplete = "off";
 
     nuovoProcedimento.appendChild(spanNumero);
     nuovoProcedimento.appendChild(inputProcedimento);

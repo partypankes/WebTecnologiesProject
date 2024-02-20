@@ -13,6 +13,8 @@ function aggiungiTips() {
     inputTips.type = 'text';
     inputTips.name = 'tips[]';
     inputTips.className = 'tips';
+    inputTips.maxLength = 150;
+    inputTips.autocomplete = "off";
 
     gruppo.appendChild(inputTips);
 

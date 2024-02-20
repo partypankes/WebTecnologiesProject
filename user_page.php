@@ -64,17 +64,17 @@
 
                     <div class="form-section1">
                         <label for="name">Nome</label>
-                        <input type="text" id="name" name="nome" placeholder="Nome">
+                        <input type="text" id="name" name="nome" placeholder="Nome" autocomplete="off">
                     </div>
 
                     <div class="form-section1">
                         <label for="surname">Cognome</label>
-                        <input type="text" id="surname" name="cognome" placeholder="Cognome">
+                        <input type="text" id="surname" name="cognome" placeholder="Cognome" autocomplete="off">
                     </div>
 
                     <div class="form-section1">
                         <label for="birthdate">Data di nascita</label>
-                        <input type="date" id="birthdate" name="data_di_nascita" placeholder="14/02/2003">
+                        <input type="date" id="birthdate" name="data_di_nascita" placeholder="14/02/2003" autocomplete="off">
                     </div>
 
                     <div class="form-section1">
@@ -91,12 +91,12 @@
 
                     <div class="form-section1">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="E-mail">
+                        <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="off">
                     </div>
 
                     <div class="form-section1">
                         <label for="password">Nuova Password</label>
-                        <input type="password" id="password" name="password" placeholder="Password">
+                        <input type="password" id="password" name="password" placeholder="Password" autocomplete="off">
                         <label for="password_signup" id="intro_requisiti">La password deve avere:</label>
                         <div class="info_password" id="info_password">
                             <ul>
@@ -111,7 +111,7 @@
 
                     <div class="form-section1">
                         <label for="new-password">Conferma password</label>
-                        <input type="password" id="new-password" name="new_password" placeholder="Nuova password">
+                        <input type="password" id="new-password" name="new_password" placeholder="Nuova password" autocomplete="off">
                     </div>
 
 

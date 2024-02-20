@@ -12,12 +12,12 @@
 
             <div class="form-section">
                 <label for="titoloRicetta">Titolo Ricetta:</label>
-                <input type="text" id="titoloRicetta" name="titoloRicetta" maxlength="50">
+                <input type="text" id="titoloRicetta" name="titoloRicetta" maxlength="50" autocomplete="off">
             </div>
 
             <div class="form-section" >
                 <label for="descrizioneRicetta">Descrizione:</label>
-                <textarea id="descrizioneRicetta" name="descrizioneRicetta" maxlength="800"></textarea>
+                <textarea id="descrizioneRicetta" name="descrizioneRicetta" maxlength="800" autocomplete="off"></textarea>
             </div>
 
             <div class="form-section" id="banner">
@@ -43,12 +43,12 @@
 
             <div class="form-section" id="ingredienti">
                 <label for="tempo_preparazione">Tempo Preparazione in Minuti:</label>
-                <input type="number" id="tempo_preparazione" name="tempo_preparazione" placeholder="min" min="1" max="999">
+                <input type="number" id="tempo_preparazione" name="tempo_preparazione" placeholder="min" min="1" max="999" autocomplete="off">
                 <label for="ingredienti[]">Ingredienti:</label>
                 <div class="ingrediente-gruppo">
 
-                    <input type="text" class="ingrediente" name="ingredienti[]"  placeholder="Nome" maxlength="40">
-                    <input type="number" class="quantita" name="quantita[]" maxlength="3" placeholder="Quantità" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Quantità')">
+                    <input type="text" class="ingrediente" name="ingredienti[]"  placeholder="Nome" maxlength="40" autocomplete="off">
+                    <input type="number" class="quantita" name="quantita[]"  min="1" max="999" placeholder="Quantità" onfocus="clearPlaceholder(this)" onblur="restorePlaceholder(this, 'Quantità')" autocomplete="off">
                     <select class="unita" name="unita[]">
                         <option value="" disabled selected>-</option>
                         <option value="n/a">n/a</option>
@@ -67,7 +67,7 @@
                 <label for="procedimentiRicetta">Procedimento:</label>
                 <div class="procedimento-gruppo" id="procedimento1">
                     <span class="procedimento-numero">1.</span>
-                    <input type="text" class="procedimento" name="procedimentiRicetta[]" maxlength="150">
+                    <input type="text" class="procedimento" name="procedimentiRicetta[]" maxlength="150" autocomplete="off">
                 </div>
                 <button type="button" class="aggiungi-procedimento" onclick="aggiungiProcedimento()">+</button>
             </div>
@@ -75,7 +75,7 @@
             <div class="form-section" id="tips">
                 <label for="tips[]">Tips:</label>
                 <div class="gruppo-tips">
-                    <input type="text" class="tips" name="tips[]" maxlength="150">
+                    <input type="text" class="tips" name="tips[]" maxlength="150" autocomplete="off">
                 </div>
                 <button type="button" class="aggiungi-tips" onclick="aggiungiTips()">+</button>
             </div>
