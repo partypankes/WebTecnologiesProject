@@ -43,18 +43,21 @@
 
 #search_button:hover{
     transform: translateX(2px) translateY(-1px);
-
 }
 
 input[type="text"]::placeholder {
     font-style: italic;
-    color: #ffffff;
+    color: var(--main-color);
     font-size: 1rem;
 }
 
 @media (max-width: 1280px) {
     .bn-search {
-        width: 80%;
+        width: 70%;
         transition: .2s ease;
+    }
+    .bn-search:hover{
+        width:80%;
+        background-color: rgb(200, 25, 95, 0.6);
     }
 }

@@ -54,7 +54,7 @@
     margin: 0.1%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 980px) {
     .footer-column {
         width: 50%;
         margin-bottom: 2%;

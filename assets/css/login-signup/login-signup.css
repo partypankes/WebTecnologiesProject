@@ -5,7 +5,7 @@
     align-items: center;
 }
 .container {
-    width:40%;
+    width: calc(100% - 50vw);
     margin: auto;
     padding: 2%;
     background-color: var(--main-color);
@@ -72,10 +72,6 @@ form section:last-child{
     margin:1% 0;
 }
 
-.input-container label {
-
-}
-
 .input-field{
     width: 100%;
     padding: 2%;
@@ -84,7 +80,7 @@ form section:last-child{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s;
     border: 2px var(--accent-color-2);
-    background-color: var(--main_color2);
+    background-color: var(--main-color-darker);
 }
 .input-field:focus {
     border-color: var(--header-color);
@@ -104,11 +100,6 @@ form section:last-child{
 
 /* input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {} preso da global.css*/
 
-@media (max-width: 460px) {
-    .input-icon {
-        top: 75%;
-    }
-}
 
 /*Submit Button*/
 .colored-btn {
@@ -199,4 +190,15 @@ form section:last-child{
     background: transparent;
     color: var(--text-color);
     transition:color 0.3s ease-in-out;
+}
+
+
+
+@media (max-width: 460px) {
+    .input-icon {
+        top: 30%;
+    }
+    .container {
+
+    }
 }

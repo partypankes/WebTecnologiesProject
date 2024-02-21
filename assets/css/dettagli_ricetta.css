@@ -19,6 +19,7 @@ section {
 
     border-radius: 30px;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M100,0 Q50,50 130,100 Q45,90 50,100 Q25,110 0,100" fill="none" stroke="rgb(200, 25, 95)" stroke-width=".5"/></svg>');
+    transition: border 0.3s ease-in-out;
 }
 
 #title .text {
@@ -101,6 +102,31 @@ section {
     .text #user{
         font-size: 0.8em;
     }
+    #title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-radius: 20px;
+    }
+    #title .text {
+        width: 100%;
+    }
+    #title .photo {
+        margin-top: 1%;
+        width:100%;
+    }
+}
+@media (max-width: 426px) {
+    .text h1 {
+        font-size: 1.4em;
+    }
+    .text p {
+        font-size: 0.6em;
+    }
+    .text #user{
+        font-size: 0.7em;
+    }
 }
 
 /*Parte dei dettagli riguardanti la ricetta*/
@@ -120,7 +146,6 @@ section {
 
 #contents{
     width:100%;
-
 }
 #contents ul{
     width: 100%;
@@ -139,7 +164,7 @@ section {
 }
 
 #contents a {
-    width: 50%;
+    width: 55%;
     padding: 3% 1%;
     margin: auto;
     text-align: center;
@@ -175,17 +200,13 @@ section {
     border-collapse: separate;
     border-spacing: 0;
     margin: 0;
-}
-#ingredienti p {
-    margin: 0;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 #ingredienti td, #ingredienti th {
     padding: 1em;
     text-align: left;
 }
-
 #ingredienti th {
     background-color: var(--header-color);
     color: var(--main-color);
@@ -218,6 +239,37 @@ section {
 }
 #ingredienti tr:last-child td:first-child{
     border-bottom-left-radius: 20px;
+}
+
+@media (max-width: 1090px) {
+    #contents a{
+        font-size: 0.8rem;
+        padding: 5% 4%;
+    }
+    #ingredienti td, #ingredienti th {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #contents a{
+        width: 60%;
+        font-size: 0.6rem;
+        padding: 5% 4%;
+    }
+    #ingredienti td, #ingredienti th {
+        font-size: 0.8rem;
+    }
+}
+@media(max-width: 426px){
+    #contents a{
+        width: 75%;
+        font-size: 0.5rem;
+        padding: 5% 5%;
+    }
+    #ingredienti td, #ingredienti th {
+        font-size: 0.7rem;
+    }
 }
 
 .preparazione, .consigli{
@@ -278,7 +330,7 @@ section {
 }
 strong{
     font-weight: 600;
-    font-size: 1.3vw;
+    font-size: 1.3rem;
     display: flex;
     align-items: center;
 }
@@ -354,4 +406,26 @@ strong i {
 }
 
 
+@media (max-width: 768px) {
+    strong{
+        font-size: 1.1rem;
+    }
+    #voto-p i{
+        font-size: 1rem;
+    }
+    #rec-p{
+        font-size: 0.9rem;
+    }
+}
 
+@media(max-width: 426px){
+    strong{
+        font-size: 1rem;
+    }
+    #voto-p i{
+        font-size: 0.8rem;
+    }
+    #rec-p{
+        font-size: 0.7rem;
+    }
+}

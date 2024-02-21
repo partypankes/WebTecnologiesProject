@@ -40,7 +40,7 @@ main .best-ricette:first-child{
 /*Sezioni Discover*/
 .discover-home{
     width: 100%;
-    height: 50vh;
+    height: auto;
 }
 .discover-home > div{
     display: flex;
@@ -53,7 +53,6 @@ main .best-ricette:first-child{
 }
 .discover-img{
     width: 100%;
-    height: 100%;
     aspect-ratio: 4/3;
 
     border: 3px solid var(--header-color);
@@ -84,12 +83,10 @@ main .best-ricette:first-child{
 .discover p:first-child{
     color: var(--header-color);
     font-size:2.3vw;
-    min-font-size: 2vw;
     font-weight: 600;
 }
 .discover p:first-child + p{
     font-size:1.2vw;
-    min-font-size: 0.7vw;
     font-weight: 500;
 }
 .discover > a {
@@ -98,10 +95,9 @@ main .best-ricette:first-child{
 }
 #login-discover-btn{
     width: 100%;
-
     padding: 10px 20px;
     background-color: var(--header-color);
-    color: #FFFFFF;
+    color: var(--main-color);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -114,7 +110,12 @@ main .best-ricette:first-child{
     color: var(--main-color);
 }
 
-
+@media (max-width: 980px) {
+    #login-discover-btn{
+        padding: 10px 30px;
+        font-size: 0.8rem;
+    }
+}
 @media (max-width: 768px) {
     .discover-home {
         flex-direction: column;
@@ -127,5 +128,8 @@ main .best-ricette:first-child{
     .discover-img, .discover {
         width: 90%;
         margin: 10px auto;
+    }
+    #login-discover-btn{
+        font-size: 0.8rem;
     }
 }

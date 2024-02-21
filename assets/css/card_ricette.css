@@ -9,9 +9,9 @@
 
 .card {
     position: relative;
-    height: 14.5em;
-    width: 14.5em;
-    margin: 1% 1%;
+    aspect-ratio: 1;
+    width: 15%;
+    margin: 1% 0.5%;
     font-size: 16px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,6 +25,45 @@
     box-shadow: 2px 4px 4px var(--header-color-opacity), -1px -1px 7px rgba(0,0,0,0.2);
 }
 
+@media(max-width: 1920px){
+    .card{
+        font-size: 15px;
+    }
+}
+@media(max-width: 1440px){
+    .card{
+        font-size: 14px;
+    }
+}
+@media(max-width: 1280px){
+    .card{
+        font-size: 12px;
+    }
+}
+@media(max-width: 1090px){
+    .card{
+        width: 28%;
+        margin: 1% 1.2%;
+        font-size: 16px;
+    }
+}
+@media(max-width: 768px){
+    .card{
+        font-size: 14px;
+    }
+}
+@media(max-width: 624px){
+    .card{
+        width: 42%;
+        margin: 1% 1.5%;
+        font-size: 15px;
+    }
+}
+@media(max-width: 480px){
+    .card{
+        font-size: 13px;
+    }
+}
 
 .top-card {
     position: relative;
@@ -44,7 +83,7 @@
 .top-card .container-top p{
     padding: 3px 6px;
     color: var(--accent-color-1);
-    font-size: calc(1em + 1px);
+    font-size: calc(0.9em + 1px);
     font-weight: 500;
     background-color: var(--main-color);
     border-radius: 30px;
@@ -58,19 +97,19 @@
 }
 
 .top-card .container-top p:first-child i{
-    font-size: calc(1em + 1px);
+    font-size: calc(0.9em + 1px);
     transition: font-size 0.2s ease-in-out;
 }
 .top-card .container-top p:first-child i:hover{
-    font-size: calc(1em + 2px);
+    font-size: calc(0.9em + 2px);
 }
 
 .top-card .container-top p:last-child{
-    font-size: calc(1em + 1px);
+    font-size: calc(0.9em + 1px);
     transition: font-size 0.2s ease-in-out;
 }
 .top-card .container-top p:last-child *:hover{
-    font-size: calc(1em + 2px);
+    font-size: calc(0.9em + 2px);
 }
 .top-card .container-top p span + i{
     margin-left: 3px;
@@ -118,51 +157,6 @@
 .food-info p:first-child a:visited:hover{
     color: var(--deep-blue-gray);
 }
-
-@media(max-width: 1920px){
-    .card{
-
-        font-size: 1rem;
-    }
-}
-@media(max-width: 1832px){
-    .card{
-
-        font-size: 0.95rem;
-    }
-}
-@media (max-width: 1680px) {
-    .card{
-
-        font-size: 0.85rem;
-    }
-}
-@media (max-width: 1532px) {
-    .card{
-
-    }
-}
-@media (max-width: 1466px) {
-    .card{
-
-        font-size: 0.75rem;
-    }
-}
-@media (max-width: 1332px) {
-    .card{
-
-        font-size: 0.65rem;
-    }
-}
-@media (max-width: 1216px) {
-    .card{
-
-        font-size: 0.60rem;
-    }
-}
-
-
-
 
 /*Icona per Eliminare la ricetta*/
 .elimina-icon{
