@@ -1,6 +1,6 @@
     <div class="title">
         <h1>Sign Up</h1>
-        <p>Join our community and start sharing!</p>
+        <p>Unisciti alla nostra community e inizia a condividere!</p>
         <p class= "errorMessage" id="errorMessage_signup"></p>
     </div>
 
