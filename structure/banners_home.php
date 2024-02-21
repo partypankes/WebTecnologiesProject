@@ -4,7 +4,7 @@
                 <video id="bg-video-logged" src="resources/videos/video_prova.mp4" autoplay muted loop disablePictureInPicture></video>
     <div class="bn-intro">
         <div class="content">
-            <p id="intro">Benvenuto <span id="key">' . $_SESSION['username'] . '</span>...</p>
+            <p id="intro">Benvenuto <span id="key">' . $_SESSION['username'] . '</span></p>
             <p id="sub">Su SapurEat lasciati ispirare da 100+ ricette scelte dagli utenti, lanciati in un mondo culinario tutto nuovo</p>
         </div>';
     }else{

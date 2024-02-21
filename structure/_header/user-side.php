@@ -5,6 +5,6 @@ if(isset($_SESSION['loggedin'])){
                         <i id="logout-icon" class="fa-solid fa-right-from-bracket"></i>
                     </a><a href="user_page.php">' . $_SESSION['username'] . '</a></div>';
 }else{
-    echo '<a class="user" href="Login-SignUp.php"><i class="fa-solid fa-circle-user"></i>Accedi</a>';
+    echo '<a class="user" href="login-signup.php"><i class="fa-solid fa-circle-user"></i>Accedi</a>';
 }
 
