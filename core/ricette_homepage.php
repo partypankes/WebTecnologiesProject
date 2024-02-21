@@ -1,12 +1,12 @@
 <?php
 
-function top5(): void
+function top6(): void
 {
     include 'core/dbconnection.php';
 
     if (isset($db)) {
 
-        $sql = "SELECT * FROM ricetta WHERE voto IS NOT NULL ORDER BY voto DESC LIMIT 5 ;";
+        $sql = "SELECT * FROM ricetta WHERE voto IS NOT NULL ORDER BY voto DESC LIMIT 6 ;";
         $result = pg_query($db, $sql);
         $string = "";
 

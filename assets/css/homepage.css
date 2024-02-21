@@ -13,7 +13,7 @@ main .best-ricette:first-child{
 
 
 .best-ricette h2{
-    width: 82%;
+    width: 85%;
     margin: 0 auto 1%;
     border-bottom: 4px solid var(--accent-color-1);
     color: var(--accent-color-1);
@@ -21,7 +21,7 @@ main .best-ricette:first-child{
     font-weight: 600;
 }
 .sezione-ricette{
-    width: 85%;
+    width: 92%;
     margin: 0 auto;
 }
 .container-card{
@@ -30,14 +30,12 @@ main .best-ricette:first-child{
 }
 
 .card{
-    width: 270px;
-    height: 270px;
-    transition: transform 0.3s ease-in-out;
+
+    transition: transform 0.3s ease-in-out, width 0.2s ease-in-out, height 0.2s ease-in-out;
 }
 .card:hover{
     transform: scaleX(103%) scaleY(103%);
 }
-
 
 /*Sezioni Discover*/
 .discover-home{

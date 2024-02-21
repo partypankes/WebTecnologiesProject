@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="assets/css/login-signup/login_page.css">
         <link rel="stylesheet" href="assets/css/login-signup/signup_page.css">
         <link rel="stylesheet" href="assets/css/login-signup/login-signup.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     </head>
 

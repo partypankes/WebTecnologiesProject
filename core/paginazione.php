@@ -2,7 +2,7 @@
 
 if(isset ($db) && isset($sql_paginazione) && isset($parametri) && isset($sql) && isset($func)) {
     $np = $_POST['np'];
-    $rpp = 10;
+    $rpp = 12;
 
 
     $resultTotal = pg_query_params($db, $sql_paginazione, $parametri);

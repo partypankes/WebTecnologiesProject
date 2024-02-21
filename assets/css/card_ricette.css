@@ -4,13 +4,15 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 16px;
 }
 
 .card {
     position: relative;
-    height: 280px;
-    width: 280px;
-    margin:1% 1%;
+    height: 14.5em;
+    width: 14.5em;
+    margin: 1% 1%;
+    font-size: 16px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -23,11 +25,13 @@
     box-shadow: 2px 4px 4px var(--header-color-opacity), -1px -1px 7px rgba(0,0,0,0.2);
 }
 
+
 .top-card {
     position: relative;
     height:auto;
     width: 93%;
     margin:2% auto;
+
 }
 .top-card .container-top {
     position: absolute;
@@ -40,12 +44,11 @@
 .top-card .container-top p{
     padding: 3px 6px;
     color: var(--accent-color-1);
-    font-size: 1.2rem;
+    font-size: calc(1em + 1px);
     font-weight: 500;
     background-color: var(--main-color);
     border-radius: 30px;
     box-shadow: 1px 3px 3px var(--header-color-opacity),  -1px -1px 4px rgba(0,0,0,0.2);
-
     opacity: 80%;
     transition: opacity 0.3s ease-in-out;
 }
@@ -55,27 +58,23 @@
 }
 
 .top-card .container-top p:first-child i{
-    font-size: 1.2rem;
+    font-size: calc(1em + 1px);
     transition: font-size 0.2s ease-in-out;
 }
 .top-card .container-top p:first-child i:hover{
-    font-size: 1.25rem;
+    font-size: calc(1em + 2px);
 }
 
-
 .top-card .container-top p:last-child{
-    font-size: 1.2rem;
+    font-size: calc(1em + 1px);
     transition: font-size 0.2s ease-in-out;
 }
 .top-card .container-top p:last-child *:hover{
-    font-size: 1.25rem;
+    font-size: calc(1em + 2px);
 }
-
 .top-card .container-top p span + i{
     margin-left: 3px;
 }
-
-
 
 .food-info {
     position: absolute;
@@ -90,16 +89,23 @@
 }
 .food-info p:first-child{
     padding-bottom: 5px;
-    font-size: 1.15rem;
+    font-size: 1em;
     font-weight: 500;
     margin: 0;
     color: var(--accent-color-1);
     transition: color 0.3s ease-in-out, font-size 0.1s ease-in-out;
 }
 .food-info p:first-child:hover {
-    font-size: 1.2rem;
+    font-size: calc(1em + 2px);
 }
-
+.food-info p:last-child {
+    color: var(--accent-color-2);
+    font-size: calc(1em - 1px);
+    font-style: italic;
+}
+.food-info p span {
+    font-size: calc(1em + 1px);
+}
 .food-info p:first-child a:link{
     color: var(--accent-color-1);
 }
@@ -113,19 +119,52 @@
     color: var(--deep-blue-gray);
 }
 
+@media(max-width: 1920px){
+    .card{
 
-.food-info p:last-child {
-    color: var(--accent-color-2);
-    font-size: 0.9rem;
-    font-style: italic;
+        font-size: 1rem;
+    }
+}
+@media(max-width: 1832px){
+    .card{
+
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 1680px) {
+    .card{
+
+        font-size: 0.85rem;
+    }
+}
+@media (max-width: 1532px) {
+    .card{
+
+    }
+}
+@media (max-width: 1466px) {
+    .card{
+
+        font-size: 0.75rem;
+    }
+}
+@media (max-width: 1332px) {
+    .card{
+
+        font-size: 0.65rem;
+    }
+}
+@media (max-width: 1216px) {
+    .card{
+
+        font-size: 0.60rem;
+    }
 }
 
-.food-info p span {
-    font-size: 1rem;
-}
+
+
 
 /*Icona per Eliminare la ricetta*/
-
 .elimina-icon{
     position: absolute;
     width: 0;
@@ -145,7 +184,6 @@
     font-size:2rem;
 
 }
-
 .card:hover .elimina-icon{
     display: flex;
     width: 100%;

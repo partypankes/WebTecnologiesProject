@@ -33,7 +33,7 @@
                 <h2>Le 5 migliori ricette SapurEat</h2>
                 <div class="sezione-ricette">
                     <?php
-                        top5();
+                        top6();
                     ?>
                 </div>
             </div>
