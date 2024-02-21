@@ -8,7 +8,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - SapurEat</title>
+    <title>Home - SapurEat</title>
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/card_ricette.css">
     <link rel="stylesheet" href="assets/css/banners_home.css">
@@ -89,7 +90,7 @@
                         <?php if (isset($_SESSION['loggedin'])){
                             echo '<a href="user_page.php"><button id="login-discover-btn">Entra nella community!</button></a>';
                         } else {
-                            echo '<a href="Login-SignUp.php"><button id="login-discover-btn">Entra nella community!</button></a>';
+                            echo '<a href="login-signup.php"><button id="login-discover-btn">Entra nella community!</button></a>';
                         } ?>
 
                     </div>
