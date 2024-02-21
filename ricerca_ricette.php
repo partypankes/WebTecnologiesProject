@@ -44,6 +44,7 @@ require 'core/auth.php'
                     <label><input type="radio" name="portata" value="antipasto" onclick="richiedi_pagina(1)">Antipasto</label>
                     <label><input type="radio" name="portata" value="primoPiatto" onclick="richiedi_pagina(1)">Primo Piatto</label>
                     <label><input type="radio" name="portata" value="secondoPiatto" onclick="richiedi_pagina(1)">Secondo Piatto</label>
+                    <label><input type="radio" name="portata" value="piattoUnico" onclick="richiedi_pagina(1)">Piatto Unico</label>
                     <label><input type="radio" name="portata" value="dessert" onclick="richiedi_pagina(1)">Dessert</label>
                     <label><input type="radio" name="portata" value="bevande" onclick="richiedi_pagina(1)">Bevande</label>
                     <label><input type="radio" name="portata" value="" onclick="richiedi_pagina(1)">Qualsiasi</label>
