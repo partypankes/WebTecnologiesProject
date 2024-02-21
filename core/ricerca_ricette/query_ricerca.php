@@ -7,7 +7,7 @@ $np = preg_replace('#[^0-9]#','',$_POST['np']);
 
 $condizioni = [];
 $parametri = [];
-$i = 1; // Contatore per i segnaposto dei parametri
+$i = 1;
 
 if (!($_POST['tempo_preparazione'] == 'undefined')) {
     $condizioni[] = "tempo_preparazione <= $" . $i++;

@@ -102,7 +102,7 @@ main .best-ricette:first-child{
     width: 100%;
 
     padding: 10px 20px;
-    background-color: var(--header-color); /* Assicurati che questa variabile CSS sia definita */
+    background-color: var(--header-color);
     color: #FFFFFF;
     border: none;
     border-radius: 10px;

@@ -102,8 +102,7 @@ form section:last-child{
     right: 2%;
 }
 
-/*Da global.css*/
-input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {}
+/* input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {} preso da global.css*/
 
 @media (max-width: 460px) {
     .input-icon {

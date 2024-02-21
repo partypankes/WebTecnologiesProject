@@ -3,7 +3,6 @@ require_once '../dbconnection.php';
 $section = $_GET['section'] ?? '';
 $id = $_GET['id'];
 
-
 if(isset($db)) {
     switch ($section) {
         case 'ingredienti':
@@ -16,13 +15,11 @@ if(isset($db)) {
                     $tableHTML .= "<tr><td>".$row['nome']."</td><td>".$row['quantita']."</td><td>".$row['misurazione']."</td></tr>";
                 }
                 $tableHTML .= "</table>";
-                pg_close($db);
                 echo $tableHTML;
-            } else {
-                echo "Errore nella query.";
             }
-
             break;
+
+
         case 'preparazione':
             $query = 'SELECT procedimento FROM ricetta WHERE id = $1';
             $result = pg_query_params($db, $query,array($id));
@@ -34,10 +31,8 @@ if(isset($db)) {
                             <p>" . $elemento['id'] . ") " . $elemento['text'] . "</p>
                         </div>";
                 }
-            } else {
-                echo "errore nella query";
             }
-            pg_close($db);
+
             break;
 
         case 'tips' :
@@ -52,10 +47,8 @@ if(isset($db)) {
                             <p>" . $elemento['text'] . "</p>
                         </div>";
                 }
-            } else {
-                echo "Errore nella query";
             }
-            pg_close($db);
+
             break;
 
     }

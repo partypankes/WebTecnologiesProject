@@ -86,22 +86,34 @@ document.getElementById('anagrafica').addEventListener('submit', function(event)
     }
 
 if(isValid){
-    var form = document.getElementById('anagrafica');
+    xhr = new XMLHttpRequest();
+    xhr.open('POST', 'core/user_page/esistenza_email.php', true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            if(xhr.responseText === "false") {
+                document.getElementById('errorMessage').textContent = "L'E-mail inserita é giá esistente"
+                isValid = false;
+            } else {
+                var form = document.getElementById('anagrafica');
 
-        var formData = new FormData(this);
-        let xhr = new XMLHttpRequest();
+                var formData = new FormData(form);
+                let xhr_update = new XMLHttpRequest();
 
-        xhr.open('POST', 'core/user_page/update_dati_utente.php', true);
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                // Passa showFormAnagrafica come callback a fetch_dati
-                document.getElementById("content-anagrafica").innerHTML = xhr.responseText;
-                showFormAnagrafica();
+                xhr_update.open('POST', 'core/user_page/update_dati_utente.php', true);
+                xhr_update.onreadystatechange = function() {
+                    if (xhr_update.readyState === 4 && xhr_update.status === 200) {
+                        document.getElementById("content-anagrafica").innerHTML = xhr_update.responseText;
+                        showFormAnagrafica();
+                    }
+                };
+                xhr_update.send(formData);
+
             }
-        };
-        xhr.send(formData);
+        }
+    };
 
-
+    xhr.send("email=" + encodeURIComponent(email));
 }
 
 
@@ -109,6 +121,7 @@ if(isValid){
 });
 function validaEmail(email) {
     var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
     return regex.test(email);
 }
 

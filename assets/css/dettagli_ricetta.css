@@ -78,10 +78,7 @@ section {
 #title .photo img:hover {
     transform: scale(1.05);
 }
-/*
-Fatto da Daniele
 
- */
 @media (max-width: 1090px) {
     .text h1 {
         font-size: 1.8em;

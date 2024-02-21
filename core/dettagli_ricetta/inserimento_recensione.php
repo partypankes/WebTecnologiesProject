@@ -21,7 +21,6 @@ if(isset($db)) {
     }
     $result = pg_query_params($db,$sql,array(htmlspecialchars($descrizione_recensione),$voto,$username,$id));
 
-
     if($result) {
         carica_recensione($id);
         include '../media_voto.php';

@@ -179,7 +179,7 @@ select option[disabled] {
 
 
 
-.aggiungi-ingrediente, .aggiungi-procedimento, /*.aggiungi-immagine,*/ .aggiungi-tips{
+.aggiungi-ingrediente, .aggiungi-procedimento, .aggiungi-tips{
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;

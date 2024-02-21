@@ -25,7 +25,7 @@ function immagine_banner($id): string
             return 'data:image/jpeg;base64,' . base64_encode($imageData);
         }
     }
-    return ''; // Ritorna una stringa vuota in caso di errore
+    return '';
 }
 
 function carica_recensione($id): void

@@ -28,9 +28,6 @@ if(isset($db)) {
         echo "Username non trovato";
     }
 }
-else {
-    echo "Db connection error";
-}
 
 
 

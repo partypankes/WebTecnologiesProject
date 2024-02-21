@@ -7,11 +7,11 @@ require '../auth.php';
 $condizioni = [];
 $parametri = [];
 $i = 1;
-
-
 if (!($_POST['email'] == '')) {
-    $condizioni[] = " email = $" . $i++;
-    $parametri[] = $_POST['email'];
+
+            $condizioni[] = " email = $" . $i++;
+            $parametri[] = $_POST['email'];
+
 }
 
 if (!($_POST['password'] == '')) {

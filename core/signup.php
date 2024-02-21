@@ -1,6 +1,7 @@
 <?php
 
 require_once 'dbconnection.php';
+
 if(isset($db)) {
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -17,16 +18,10 @@ if(isset($db)) {
         $result = pg_query_params($db,$sql,array($username,$email,$password,$nome,$cognome,$sesso,$data_di_nascita));
         include 'login.php';
     }
-
 }
-else {
-    echo "Db connection error";
-}
-
 
 function userValidation($db,$username,$email): bool
 {
-
     $sql = 'SELECT COUNT(*) FROM utente WHERE username = $1 OR email = $2';
     $result = pg_query_params($db,$sql,array((string)$username, (string)$email));
 
@@ -35,5 +30,4 @@ function userValidation($db,$username,$email): bool
     } else {
         return false;
     }
-
 }
