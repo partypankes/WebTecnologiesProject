@@ -26,7 +26,7 @@ if(isset($db) && isset($controls)) {
         }
         $string.=  '<div class="review">
                 <div class="up-rec">
-                    <a href="dettagli_ricetta.php?id='. $row['ricetta'] .'"><strong class="review-title">'. $row2['titolo'] .'</strong><a/>
+                    <a href="dettagli_ricetta.php?id='. $row['ricetta'] .'"><strong class="review-title">'. $row2['titolo'] .'</strong></a>
                     <p id="voto-p">' . $stars .'</p>
                 </div>
                 <p id="rec-p">' . $row['descrizione_recensione'] . '</p>

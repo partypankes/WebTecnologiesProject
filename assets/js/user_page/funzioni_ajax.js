@@ -43,12 +43,15 @@ function eliminaRicetta(id) {
 }
 
 function richiedi_recensione_utente(np) {
+    var risultati = document.getElementById('utente-reviews');
+    risultati.innerHTML = "caricamento...";
+
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "core/user_page/recensioni_utente.php?np=", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function () {
         if(xhr.readyState === 4 && xhr.status === 200) {
-            document.getElementById("utente-reviews").innerHTML = xhr.responseText;
+            risultati.innerHTML = xhr.responseText;
         }
     }
 

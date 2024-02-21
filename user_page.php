@@ -13,7 +13,6 @@
         echo '<title>User Page - SapurEat</title>';
     }
     ?>
-
     <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
     <link rel="stylesheet" href="assets/global.css">
     <link rel="stylesheet" href="assets/css/card_ricette.css">
