@@ -24,23 +24,28 @@ function caricaContenuto(sezione) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Aggiunge la classe 'active' al primo elemento della lista
+    // Trova il primo link all'interno dell'elemento con id 'contents' e lo assegna alla variabile 'firstElement'.
     var firstElement = document.querySelector('#contents a:first-child');
+    // Aggiunge la classe 'active' al primo elemento trovato per evidenziarlo come attivo.
     firstElement.classList.add('active');
 
-    // Aggiungi un listener per tutti gli elementi '#contents a'
+    // Seleziona tutti gli elementi 'a' (link) all'interno dell'elemento con id 'contents' e li assegna alla variabile 'links'.
     var links = document.querySelectorAll('#contents a');
+    // Itera su ogni elemento 'link' trovato.
     links.forEach(function(link) {
+        // Aggiunge un listener per l'evento 'click' a ogni link.
         link.addEventListener('click', function() {
-            // Rimuove la classe 'active' da tutti gli elementi
+            // Quando un link viene cliccato, rimuove la classe 'active' da tutti i link per resettare lo stato attivo.
             links.forEach(function(lnk) {
                 lnk.classList.remove('active');
             });
 
-            // Aggiunge la classe 'active' all'elemento cliccato
+            // Aggiunge la classe 'active' al link cliccato per marcarlo come attivo.
             this.classList.add('active');
         });
     });
+
+    // Chiama la funzione 'caricaContenuto' con l'argomento 'ingredienti' per caricare il contenuto iniziale.
     caricaContenuto('ingredienti');
 });
 
