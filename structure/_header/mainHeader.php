@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="assets/css/_header/styleHeader.css">
 <link rel="stylesheet" href="assets/css/_header/mainHeader.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 <!--Header HomePage-->
 <header>
     <nav id="nav-container">
         <!--Background dietro navbar-->
         <div class="navbar-bg"></div>
+
         <div class="navbar">
             <a class="logo" href="homepage.php">SapurEat</a>
 
@@ -23,6 +23,7 @@
 
                 <i id="menu-icon" class="fa-solid fa-bars"></i>
             </div>
+
         </div>
 
     </nav>

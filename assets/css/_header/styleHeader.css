@@ -2,15 +2,15 @@ header{
     position: fixed;
     width: 100%;
     top: 0;
-    height:5%;
+    height:1.6rem;
     z-index: 1000;
 }
 
 .logo{
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: 600;
     color: var(--main-color);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
 }
 .logo:hover{
     transform: scale(105%);
@@ -38,12 +38,12 @@ header{
 
 .menu a{
     color: var(--main-color);
-    font-size: 1.1rem;
+    font-size: 1.1em;
     font-weight: 500;
     padding:0;
     margin:0 2rem;
 
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
     border-radius: 20px;
 }
 
@@ -54,10 +54,10 @@ header{
 }
 .r-side a {
     color: var(--main-color);
-    margin-left: 0.7rem;
-    font-size: 1.2rem;
+    margin-left: 0.7em;
+    font-size: 1.2em;
     font-weight: 600;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
     border-radius: 20px;
 }
 .r-side a:hover{
@@ -74,18 +74,14 @@ header{
 }
 .user i {
     color: var(--main-color);
-    font-size: 2rem;
-    margin-right: 0.5rem;
+    font-size: 1.8em;
+    margin-right: 0.5em;
 }
-
-.r-side > a:hover{
-    transform: scale(110%);
-}
-
 
 #logout-icon{
     border-radius: 20px;
     margin:0;
+    font-size: 1.6em;
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -95,7 +91,7 @@ header{
 
 
 #menu-icon {
-    font-size: 2rem;
+    font-size: 2em;
     color: var(--main-color);
     cursor: pointer;
     display: none;
@@ -104,8 +100,7 @@ header{
 
 @media (max-width: 1280px){
     .logo{
-        font-size: 2rem;
-        font-weight: 600;
+        font-size: 1.7em;
     }
     .navbar{
         padding: 0.5rem 2%;
@@ -114,40 +109,82 @@ header{
     .menu a{
         padding: 0.5rem 0;
         margin: 0 1.5rem;
+        font-size: 1em;
+    }
+    .r-side a {
+        font-size: 1.1em;
     }
 }
 
 @media (max-width: 1090px){
+    .user{
+        margin-right: 3.5rem;
+    }
     #menu-icon {
         display: block;
-        margin-left:30%;
+        font-size: 1.6rem;
+        transition: transform 0.3s ease-in-out,font-size 0.3s ease-in-out;
+    }
+    #menu-icon:hover{
+        transform: scale(110%);
     }
     .menu{
         position: absolute;
-        top: 6rem;
+        top: 3.5rem;
         right:-100%;
         width: auto;
         height: 80px;
-        background-color: var(--header-color-opacity);
+        background-color: var(--header-color);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         border-radius: 10px;
-        transition: all .50s ease;
+        transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
     }
     .menu a{
         display: block;
         margin: 0.35rem 0;
         padding: 0 1rem;
-        transition: all .50s ease;
         border-radius: 10px;
+        transition: all .50s ease;
     }
     .menu a:hover{
         transform: translateY(0.4rem);
     }
     /*.menu a. pagina attiva*/
     .menu.open{
-        right:2%;
+        right:10%;
+    }
+}
+
+@media(max-width: 532px){
+    .r-side a {
+        margin: 0.3rem;
+        font-size: 1em;
+    }
+    .user{
+       margin-right:2.8rem;
+    }
+}
+@media(max-width: 425px){
+    .user{
+        margin-right: 0.5rem;
+    }
+    .logo{
+        font-size: 1.5em;
+    }
+    .menu a{
+        font-size: 1.1em;
+    }
+    .r-side a {
+        margin: 0.1rem;
+        font-size: 1em;
+    }
+    #menu-icon {
+        font-size: 1.3rem;
+    }
+    #logout-icon{
+        font-size: 1.3em;
     }
 }
