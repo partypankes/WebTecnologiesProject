@@ -86,7 +86,7 @@ document.getElementById('anagrafica').addEventListener('submit', function(event)
     }
 
 if(isValid){
-    xhr = new XMLHttpRequest();
+    var xhr = new XMLHttpRequest();
     xhr.open('POST', 'core/user_page/esistenza_email.php', true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
