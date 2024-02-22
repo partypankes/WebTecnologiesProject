@@ -41,7 +41,7 @@
             <section id="logged-home">
 
                 <div class="best-ricette even-div">
-                    <h2>I 5 migliori Primi Piatti SapurEat</h2>
+                    <h2>I migliori Primi Piatti SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
                             primi_piatti();
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="best-ricette odd-div">
-                    <h2>I 5 migliori Secondi Piatti SapurEat</h2>
+                    <h2>I migliori Secondi Piatti SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
                             secondi_piatti();
@@ -59,7 +59,7 @@
                 </div>
 
                 <div class="best-ricette even-div">
-                    <h2>I 5 migliori Dessert SapurEat</h2>
+                    <h2>I migliori Dessert SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
                                 dessert();
@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="best-ricette odd-div">
-                    <h2>Le 5 ricette più veloci SapurEat</h2>
+                    <h2>Le ricette più veloci SapurEat</h2>
                     <div class="sezione-ricette">
                         <?php if (isset($_SESSION['loggedin'])){
                                 veloci();
@@ -90,7 +90,7 @@
                         <?php if (isset($_SESSION['loggedin'])){
                             echo '<a href="user_page.php"><button id="login-discover-btn">Entra nella community!</button></a>';
                         } else {
-                            echo '<a href="login-signup.php"><button id="login-discover-btn">Entra nella community!</button></a>';
+                            echo '<a href="login-signup.php"><button id="login-discover-btn">Crea ora il tuo piatto!</button></a>';
                         } ?>
 
                     </div>
