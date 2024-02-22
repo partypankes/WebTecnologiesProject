@@ -5,12 +5,27 @@
     align-items: center;
 }
 .container {
-    width: calc(100% - 50vw);
+    width: 45%;
     margin: auto;
     padding: 2%;
     background-color: var(--main-color);
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media(max-width: 768px){
+    .container {
+        width: 68%;
+    }
+}
+@media(max-width: 460px){
+    .container {
+        width: 88%;
+    }
+}
+@media(max-width: 320px){
+    .container {
+        width: 98%;
+    }
 }
 .login-section{
     width: 100%;
@@ -148,7 +163,7 @@ form section:last-child{
 
 /*bottoni back e Sign Up (nel login)*/
 .change-btn{
-    width: 15%;
+    width: 22%;
     padding: 0.5% 0.1%;
     margin-left: 0.5%;
     color: var(--accent-color-2);
@@ -167,7 +182,7 @@ form section:last-child{
 
 .bck-btn{
     position: absolute;
-    top: -23%;
+    top: -30%;
     padding: 0.5rem;
     display: flex;
     align-items: center;
