@@ -30,7 +30,7 @@
     <main id="main-home">
 
             <div class="best-ricette odd-div">
-                <h2>Le 5 migliori ricette SapurEat</h2>
+                <h2>Le migliori ricette SapurEat</h2>
                 <div class="sezione-ricette">
                     <?php
                         top6();
