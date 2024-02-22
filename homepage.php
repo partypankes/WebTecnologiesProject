@@ -88,9 +88,9 @@
                             <p class="discover-sub">Già cuoco nella tua cucina? Porta le tue ricette su SapurEat e lascia che tutti si delizino con le tue creazioni!</p>
                         </div>
                         <?php if (isset($_SESSION['loggedin'])){
-                            echo '<a href="user_page.php"><button id="login-discover-btn">Entra nella community!</button></a>';
+                            echo '<a href="user_page.php"><button id="login-discover-btn">Crea ora il tuo piatto!</button></a>';
                         } else {
-                            echo '<a href="login-signup.php"><button id="login-discover-btn">Crea ora il tuo piatto!</button></a>';
+                            echo '<a href="login-signup.php"><button id="login-discover-btn">Entra nella community!</button></a>';
                         } ?>
 
                     </div>
