@@ -10,17 +10,17 @@ function aggiungiIconaEliminazione(elemento) {
 
     iconaEliminazione.appendChild(menuEliminazione);
     iconaEliminazione.onclick = function(event) {
-        event.stopPropagation(); // Impedisce al click di propagarsi agli elementi superiori
+        event.stopPropagation();
         var isMenuOpen = menuEliminazione.style.display === 'block';
-        // Chiudi tutti i menu aperti
+
         document.querySelectorAll('.menu-eliminazione').forEach(function(menu) {
             menu.style.display = 'none';
         });
-        // Apri o chiudi questo menu specifico
+
         menuEliminazione.style.display = isMenuOpen ? 'none' : 'block';
     };
 
-    // Aggiungi l'icona all'interno dell'elemento specificato
+
     elemento.appendChild(iconaEliminazione);
 }
 

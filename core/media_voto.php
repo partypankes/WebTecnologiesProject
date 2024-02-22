@@ -1,7 +1,5 @@
 <?php
 
-
-
 if(isset($db) && isset($id)) {
 
     $sql = "SELECT voto FROM recensione WHERE ricetta = $1";

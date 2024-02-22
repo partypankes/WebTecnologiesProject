@@ -175,7 +175,6 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     xhr.send(formData);
 });
 
-/*le due funzioni successive si possono unire in un unica funzione passando a changesection le sezioni come parametri e cancellando il textContent dell'errorMessage*/
 function changesection(){
 
     document.getElementById('section1').style.display="none";

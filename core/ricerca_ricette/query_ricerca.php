@@ -3,7 +3,7 @@
 $tempo_preparazione = $_POST['tempo_preparazione'];
 $portata = $_POST['portata'];
 $ricerca = $_POST['ricerca'];
-$np = preg_replace('#[^0-9]#','',$_POST['np']);
+$np = $_POST['np'];
 
 $condizioni = [];
 $parametri = [];

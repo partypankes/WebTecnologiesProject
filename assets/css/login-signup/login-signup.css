@@ -113,8 +113,6 @@ form section:last-child{
     right: 2%;
 }
 
-/* input[type="checkbox"]:checked::before, input[type="radio"]:checked::before {} preso da global.css*/
-
 
 /*Submit Button*/
 .colored-btn {

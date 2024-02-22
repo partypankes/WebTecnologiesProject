@@ -43,7 +43,7 @@
 
             <section id="section2">
 
-                <div class="bck-btn "> <!-- cambio in class="bck-btn" !-->
+                <div class="bck-btn ">
                     <button type="button" id="back-button"  onclick="backbutton()"><i class="fa-solid fa-arrow-left-long"></i></button>
                 </div>
 
