@@ -82,6 +82,8 @@ main {
     }
 }
 
+
+
 .content{
     flex-grow: 1;
     display: flex;
@@ -246,6 +248,7 @@ main {
 
 .username, .name, .surname, .birthdate, .gender, .email {
     margin-bottom: 0.625rem;
+    word-break: break-word;
 }
 
 .support-section {
