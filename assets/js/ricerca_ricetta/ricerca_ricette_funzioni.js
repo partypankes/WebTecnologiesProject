@@ -54,7 +54,7 @@ function richiedi_pagina(np) {
     });
 
     var risultati = document.getElementById('sezione-ricette');
-    risultati.innerHTML = "<i class='fa-duotone fa-spinner fa-spin-pulse'></i>";
+    risultati.innerHTML = "Caricamento...";
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "core/ricerca_ricette/query_ricerca.php", true);

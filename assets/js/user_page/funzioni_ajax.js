@@ -13,7 +13,7 @@ function eliminaRecensione(id) {
 function richiedi_post_utente(np) {
 
         var risultati = document.getElementById('post-section');
-        risultati.innerHTML = "caricamento...";
+        risultati.innerHTML = "Caricamento...";
 
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "core/user_page/ricette_utente.php", true);
@@ -44,7 +44,7 @@ function eliminaRicetta(id) {
 
 function richiedi_recensione_utente(np) {
     var risultati = document.getElementById('utente-reviews');
-    risultati.innerHTML = "caricamento...";
+    risultati.innerHTML = "Caricamento...";
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "core/user_page/recensioni_utente.php?np=", true);
