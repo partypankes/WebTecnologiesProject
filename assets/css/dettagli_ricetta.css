@@ -261,11 +261,11 @@ section {
         font-size: 0.8rem;
     }
 }
-@media(max-width: 426px){
+@media(max-width: 480px){
     #contents a{
-        width: 75%;
+        width: 65%;
         font-size: 0.5rem;
-        padding: 5% 5%;
+        padding: 5% 6%;
     }
     #ingredienti td, #ingredienti th {
         font-size: 0.7rem;
