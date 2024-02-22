@@ -28,17 +28,17 @@ document.getElementById('input-banner').addEventListener('change', function() {
 
 
 
-//Funzione HandleFile relativa al banner, crea un'anteprima e si occupa dell'immagine
+
 function handleFiles(files) {
     icon.style.display = "none";
         if (files[0].type.startsWith('image/') && banner[0] === undefined) {
-            banner.push(files[0]); // Aggiungi il file all'array
+            banner.push(files[0]);
             var reader = new FileReader();
             reader.onload = function(e) {
                 var anteprimaDiv = document.createElement('div');
                 anteprimaDiv.className = 'anteprimaDiv';
 
-                // Aggiungi l'icona di eliminazione
+
                 var iconaEliminazione = document.createElement('i');
                 iconaEliminazione.className = 'fas fa-trash icona-eliminazione';
                 var img = document.createElement('img');
@@ -53,8 +53,8 @@ function handleFiles(files) {
                     eliminazioneInCorso = true;
                     var index = banner.indexOf(files[0]);
                     if (index > -1) {
-                        banner.splice(index, 1); // Rimuovi il file dall'array
-                        anteprimaDiv.remove(); // Rimuovi l'anteprima dell'immagine
+                        banner.splice(index, 1);
+                        anteprimaDiv.remove();
                         document.getElementById('input-banner').value = "";
                     }
 

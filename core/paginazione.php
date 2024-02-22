@@ -4,7 +4,6 @@ if(isset ($db) && isset($sql_paginazione) && isset($parametri) && isset($sql) &&
     $np = $_POST['np'];
     $rpp = 12;
 
-
     $resultTotal = pg_query_params($db, $sql_paginazione, $parametri);
     $rowTotal = pg_fetch_assoc($resultTotal);
     $total_rows = $rowTotal['total'];

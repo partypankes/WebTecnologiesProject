@@ -76,6 +76,13 @@ main {
     font-weight: 400;
     font-size: 1.2rem;
 }
+@media (max-width: 768px) {
+    .user-profile p, .user-profile p span {
+        font-size: 0.875rem;
+    }
+}
+
+
 
 .content{
     flex-grow: 1;
@@ -139,6 +146,18 @@ main {
     cursor: pointer;
     position: relative;
 }
+
+@media (max-width: 768px) {
+    #account .gender_div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #account .gender_div label {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
 
 /*Da global.css*/
 #account form input[type="radio"]:checked::before {}
@@ -206,6 +225,15 @@ main {
     background-color: var(--accent-color-1);
 }
 
+@media (max-width: 768px) {
+    #account button {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+        width: auto;
+        margin: 0.5rem 0;
+    }
+}
+
 
 .user-profile p {
     font-size: 1rem;
@@ -220,6 +248,7 @@ main {
 
 .username, .name, .surname, .birthdate, .gender, .email {
     margin-bottom: 0.625rem;
+    word-break: break-word;
 }
 
 .support-section {

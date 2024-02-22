@@ -41,45 +41,45 @@ document.getElementById('anagrafica').addEventListener('submit', function(event)
     var confirmpassword = document.getElementById('new-password').value;
 
 
-    /*controllo validita email*/
+
     if (email.trim() && !validaEmail(email) ) {
         document.getElementById('errorMessage').textContent = "L'E-mail inserita non e' valida"
         return;
     }
 
-    /*controllo mail giá in uso*/
+
 
     /********************************************** INIZIO CONTROLLO PASSWORD **********************************************/
 
-    /*Controllo lunghezza password*/
+
     if (password.trim() && !(password.length >= 8 && password.length <= 20)) {
         document.getElementById('errorMessage').textContent = "La password deve essere compresa tra gli 8 e 20 caratteri";
         return;
     }
-    /*controllo presenza lettere maiuscole*/
+
     if (password.trim() && !(password.match(/[A-Z]/))) {
         document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere maiuscolo ";
         return;
     }
-    /*controllo presenza lettere minuscole*/
+
     if (password.trim() && !(password.match(/[a-z]/))) {
         document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere maiuscolo";
         return;
     }
 
-    /*controllo presenza numeri*/
+
     if (password.trim() && !(password.match(/[0-9]/))) {
         document.getElementById('errorMessage').textContent = "La password deve contenere almeno un numero";
         return;
     }
 
-    /*controllo presenza carattere speciale*/
+
     if (password.trim() && !(password.match(/[^a-zA-Z0-9]/))) {
         document.getElementById('errorMessage').textContent = "La password deve contenere almeno un carattere speciale";
         return;
     }
 
-    /*CONTROLLO SE LE DUE PASSWORD SONO UGUALI*/
+
     if (password.trim() && !(confirmpassword.match(password))) {
         document.getElementById('errorMessage').textContent = "Le password non coincidono";
 

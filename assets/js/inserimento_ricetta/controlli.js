@@ -2,20 +2,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('ricetta-form');
 
     form.addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevents form submission
+        e.preventDefault();
         let isFormValid = true;
         const inputs = form.querySelectorAll('input, textarea, select');
         let validInputs = 0;
 
         inputs.forEach(input => {
-            if (validateField(input)) { // Validates the field at the time of submit
+            if (validateField(input)) {
                 validInputs += 1;
             }
         });
 
         console.log("Valid inputs: " + validInputs);
 
-        // Check on images
+
         const imageInput = document.getElementById('input-banner');
         const imageContainer = document.getElementById('immagine_banner');
         if (!imageInput.files.length) {
@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log("Form valid before image check: " + isFormValid);
 
-        // Final form validity check
+
         isFormValid = isFormValid && (validInputs === inputs.length);
 
         console.log("Form valid after image check: " + isFormValid);
 
         if (isFormValid) {
-            ajax_inserimento(); // Submits the form if all fields are filled
+            ajax_inserimento();
         }
     });
 
@@ -44,11 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         input.addEventListener('blur', function() {
-            validateField(this); // Validates the field when it loses focus
+            validateField(this);
         });
 
         input.addEventListener('input', function() {
-            // Removes the error state during typing
+
             if (this.classList.contains('error')) {
                 this.classList.remove('error');
                 this.placeholder = '';

@@ -19,7 +19,6 @@ if(isset($db)) {
             }
             break;
 
-
         case 'preparazione':
             $query = 'SELECT procedimento FROM ricetta WHERE id = $1';
             $result = pg_query_params($db, $query,array($id));

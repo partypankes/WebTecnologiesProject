@@ -1,8 +1,8 @@
-//Chiamata Ajax per l'inserimento
+
 function ajax_inserimento() {
     var formData = new FormData(document.getElementById('ricetta-form'));
     banner.forEach(function(file, index) {
-        if (file instanceof Blob) { // Assicurati che l'oggetto sia un Blob o File
+        if (file instanceof Blob) {
             formData.append('images[]', file, file.name);
         }
     });
@@ -16,7 +16,7 @@ function ajax_inserimento() {
         }
     };
 
-    // Invia i dati del form, inclusi i file
+
     xhr.send(formData);
 
 }

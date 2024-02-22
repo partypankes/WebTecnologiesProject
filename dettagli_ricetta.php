@@ -26,7 +26,7 @@ include('structure/_header/baseHeader.php');
 
     <section id="title">
         <div class="text"><?php name_and_user($_GET['id'])?></div>
-        <!--<div class="photo" style="background-image: url('<*?php echo immagine_banner($_GET['id']); ?>');">-->
+
 
         <div class="photo">
 

@@ -46,7 +46,7 @@
         height: 80px;
         background-color: var(--header-color);
     }
-    /*.menu a. pagina attiva*/
+
     .menu.open{
         right:7%;
     }

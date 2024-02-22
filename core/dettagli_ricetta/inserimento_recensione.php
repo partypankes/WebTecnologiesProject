@@ -4,7 +4,6 @@ require '../dbconnection.php';
 require '../query_function.php';
 require '../auth.php';
 
-
 $descrizione_recensione = $_POST['descrizione-recensione'];
 $voto = $_POST['voto-recensione'];
 $id = $_POST['id'];
@@ -25,8 +24,5 @@ if(isset($db)) {
         carica_recensione($id);
         include '../media_voto.php';
     }
-
-
-
 
 }

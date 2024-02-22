@@ -1,4 +1,4 @@
-/* Annulla il box-sizing solo per la sezione FAQ */
+
 .sezione-faq * {
     box-sizing: content-box;
 }
