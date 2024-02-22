@@ -36,6 +36,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
 
     });
+
+    const queryString = window.location.search;
+
+    const urlParams = new URLSearchParams(queryString);
+
+    const inserimento = urlParams.get('inserimento');
+
+    if(inserimento === "true") {
+        document.getElementById('inserimento_ricetta').click();
+    }
+
 });
 
 function logout() {

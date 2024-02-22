@@ -38,7 +38,7 @@
             <a onclick="richiedi_post_utente(1)"><i class="fas fa-blog"></i> Post</a>
             <a ><i class="fas fa-headset"></i> Assistenza</a>
             <a onclick="richiedi_recensione_utente(1)"><i class="fas fa-star"></i> Recensioni</a>
-            <a><i class="fas fa-utensils"></i> Crea un piatto</a>
+            <a id="inserimento_ricetta"><i class="fas fa-utensils"></i> Crea un piatto</a>
 
             <div class="logout">
                 <button class="logout-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i>Logout</button>
