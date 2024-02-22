@@ -298,3 +298,49 @@ select option[disabled] {
     border-color: red;
 }
 
+@media (max-width: 768px) {
+    #container {
+        padding: 5%;
+    }
+    #ricetta-form {
+        width: 90%;
+    }
+    .form-section {
+        margin: 2% 1%;
+        padding: 4% 3%;
+    }
+    #tempo_preparazione {
+        width: 15%;
+    }
+    .invio button {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        padding: 10%;
+    }
+    #ricetta-form {
+        width: 100%;
+    }
+    .form-section {
+        margin: 3% 1%;
+        padding: 5% 3%;
+    }
+    #tempo_preparazione {
+        width: 25%;
+    }
+    .invio button {
+        width: 70%;
+    }
+    .ingrediente-gruppo, .procedimento-gruppo, #mini-container {
+        flex-direction: column;
+    }
+    .ingrediente-gruppo .ingrediente, .ingrediente-gruppo .quantita, .ingrediente-gruppo .unita, .procedimento-gruppo .procedimento {
+        width: 100%;
+    }
+    .icona-eliminazione {
+        right: 0;
+    }
+}
